@@ -1,0 +1,108 @@
+bookmarks = {
+	bookmark = {
+		name = "Trouble On The Horizon"
+		desc = "trouble_bookmark_loc"
+		date = 108.1.1.12
+		picture = "GFX_new_bookmark"
+		default_country = "DOC"
+		default = yes
+
+		
+		DOC ={
+			history = DOC_bookmark_desc_loc
+			ideology = neutrality
+			ideas= {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		ROC ={
+			history = ROC_bookmark_desc_loc
+			ideology = neutrality
+			ideas= {
+
+			}
+			focuses = {
+
+			}
+		}
+
+
+		FPJ ={
+			history = FPJ_bookmark_desc_loc
+			ideology = democratic
+			ideas= {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		COC ={
+			history = FPJ_bookmark_desc_loc
+			ideology = communism
+			ideas= {
+
+			}
+			focuses = {
+
+			}
+		}
+		CIS ={
+			history = FPJ_bookmark_desc_loc
+			ideology = fascism
+			ideas= {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		FAE ={
+			history = FPJ_bookmark_desc_loc
+			ideology = fascism
+			ideas= {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		WAL ={
+			history = FPJ_bookmark_desc_loc
+			ideology = fascism
+			ideas= {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		CAE ={
+			history = FPJ_bookmark_desc_loc
+			ideology = fascism
+			ideas= {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		"---" = {
+			history = "default_bookmark_nation_loc"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

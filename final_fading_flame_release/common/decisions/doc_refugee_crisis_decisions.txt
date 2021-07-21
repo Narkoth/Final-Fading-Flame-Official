@@ -1,0 +1,373 @@
+DOC_refugee_crisis = {
+
+	handle_1 = {
+
+		icon = GFX_decision_icon_generic
+
+		priority = 10000
+
+		available = {
+			has_idea = DOC_exiled_refugees
+			NOT = {has_country_flag = DOC_handling_refugee_crisis_decision_active}
+		}
+
+		visible = {
+			has_idea = DOC_exiled_refugees
+		}
+
+		fire_only_once = yes
+		cost = 15
+
+		complete_effect = {
+			set_country_flag = DOC_handling_refugee_crisis_decision_active
+			set_country_flag = DOC_initial_refugee_crisis_aid
+		}
+
+		days_remove = 75
+
+		remove_effect = {
+			clr_country_flag = DOC_handling_refugee_crisis_decision_active
+			add_to_variable = {
+				var = DOC_r_crisis_variable
+				value = 1
+			}
+			custom_effect_tooltip = DOC_refugee_crisis_progress
+			1176 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	handle_2 = {
+
+		icon = GFX_decision_icon_generic
+
+		priority = 10000
+
+		available = {
+			has_idea = DOC_exiled_refugees
+			NOT = {has_country_flag = DOC_handling_refugee_crisis_decision_active}
+			has_country_flag = DOC_initial_refugee_crisis_aid
+		}
+
+		visible = {
+			has_idea = DOC_exiled_refugees
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {
+			set_country_flag = DOC_handling_refugee_crisis_decision_active
+		}
+
+		days_remove = 75
+
+		remove_effect = {
+			clr_country_flag = DOC_handling_refugee_crisis_decision_active
+			add_to_variable = {
+				var = DOC_r_crisis_variable
+				value = 1
+			}
+			custom_effect_tooltip = DOC_refugee_crisis_progress
+			730 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	handle_3 = {
+
+		icon = GFX_decision_icon_generic
+
+		priority = 10000
+
+		available = {
+			has_idea = DOC_exiled_refugees
+			NOT = {has_country_flag = DOC_handling_refugee_crisis_decision_active}
+			has_country_flag = DOC_initial_refugee_crisis_aid
+		}
+
+		visible = {
+			has_idea = DOC_exiled_refugees
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {
+			set_country_flag = DOC_handling_refugee_crisis_decision_active
+		}
+
+		days_remove = 75
+
+		remove_effect = {
+			clr_country_flag = DOC_handling_refugee_crisis_decision_active
+			add_to_variable = {
+				var = DOC_r_crisis_variable
+				value = 1
+			}
+			custom_effect_tooltip = DOC_refugee_crisis_progress
+			737 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	handle_4 = {
+
+		icon = GFX_decision_icon_generic
+
+		priority = 10000
+
+		available = {
+			has_idea = DOC_exiled_refugees
+			NOT = {has_country_flag = DOC_handling_refugee_crisis_decision_active}
+			has_country_flag = DOC_initial_refugee_crisis_aid
+		}
+
+		visible = {
+			has_idea = DOC_exiled_refugees
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {
+			set_country_flag = DOC_handling_refugee_crisis_decision_active
+		}
+
+		days_remove = 75
+
+		remove_effect = {
+			clr_country_flag = DOC_handling_refugee_crisis_decision_active
+			add_to_variable = {
+				var = DOC_r_crisis_variable
+				value = 1
+			}
+			custom_effect_tooltip = DOC_refugee_crisis_progress
+			716 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	handle_5 = {
+
+		icon = GFX_decision_icon_generic
+
+		priority = 10000
+
+		available = {
+			has_idea = DOC_exiled_refugees
+			NOT = {has_country_flag = DOC_handling_refugee_crisis_decision_active}
+			has_country_flag = DOC_initial_refugee_crisis_aid
+		}
+
+		visible = {
+			has_idea = DOC_exiled_refugees
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {
+			set_country_flag = DOC_handling_refugee_crisis_decision_active
+		}
+
+		days_remove = 75
+
+		remove_effect = {
+			clr_country_flag = DOC_handling_refugee_crisis_decision_active
+			add_to_variable = {
+				var = DOC_r_crisis_variable
+				value = 1
+			}
+			custom_effect_tooltip = DOC_refugee_crisis_progress
+			1172 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	handle_6 = {
+
+		icon = GFX_decision_icon_generic
+
+		priority = 10000
+
+		available = {
+			has_idea = DOC_exiled_refugees
+			NOT = {has_country_flag = DOC_handling_refugee_crisis_decision_active}
+			custom_trigger_tooltip = {
+				tooltip = DOC_refugee_crisis_infra_complete
+				check_variable = {
+					DOC_r_crisis_variable = 5
+				}
+			}
+		}
+
+		visible = {
+			has_idea = DOC_exiled_refugees
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {
+			set_country_flag = DOC_handling_refugee_crisis_decision_active
+		}
+
+		days_remove = 75
+
+		remove_effect = {
+			clr_country_flag = DOC_handling_refugee_crisis_decision_active
+			add_to_variable = {
+				var = DOC_r_crisis_variable
+				value = 1
+			}
+			custom_effect_tooltip = DOC_refugee_crisis_progress
+			1176 = {
+				add_manpower = -550725
+			}
+			1214 = {
+				add_manpower = 550725
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	handle_7 = {
+
+		icon = GFX_decision_icon_generic
+
+		priority = 10000
+
+		available = {
+			has_idea = DOC_exiled_refugees
+			NOT = {has_country_flag = DOC_handling_refugee_crisis_decision_active}
+			custom_trigger_tooltip = {
+				tooltip = DOC_refugee_crisis_all_complete
+				check_variable = {
+					DOC_r_crisis_variable = 6
+				}
+			}
+		}
+
+		visible = {
+			has_idea = DOC_exiled_refugees
+		}
+
+		fire_only_once = yes
+		cost = 100
+
+		complete_effect = {
+			set_country_flag = DOC_handling_refugee_crisis_decision_active
+		}
+
+		days_remove = 75
+
+		remove_effect = {
+			clr_country_flag = DOC_handling_refugee_crisis_decision_active
+			add_to_variable = {
+				var = DOC_r_crisis_variable
+				value = 1
+			}
+			1176 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			remove_ideas = DOC_exiled_refugees
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+}

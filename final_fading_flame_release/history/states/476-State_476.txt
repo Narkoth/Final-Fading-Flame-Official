@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=476
+	name="STATE_476"
+	provinces={
+		2 457 2360 3336 3572 4420 7821 8801 9648 9984 10299 11015 11028 
+	}
+	history={
+		owner = ECD
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ECD
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

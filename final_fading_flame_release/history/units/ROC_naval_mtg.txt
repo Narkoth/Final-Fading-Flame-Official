@@ -1,0 +1,41 @@
+﻿
+
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "Fleet Remnants"			
+		naval_base = 12679
+		task_force = {
+			name = "Fleet of Castor"
+			location = 12679
+			
+			ship = { name = "Narvik" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROC version_name = "Basic Destroyer"} } }
+			ship = { name = "Blencathra" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROC version_name = "Basic Destroyer"} } }
+			ship = { name = "Moresby" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROC version_name = "Basic Destroyer"} } }
+			ship = { name = "Comet" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROC version_name = "Basic Destroyer"} } }
+			ship = { name = "Harrow" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROC version_name = "Basic Destroyer"} } }
+			ship = { name = "Grace" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROC version_name = "Basic Destroyer"} } }
+			ship = { name = "Locust" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROC version_name = "Basic Destroyer"} } }
+
+			ship = { name = "Wellington" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Vanneau" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Ranger" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Tamar" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Sterling" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Kilberry" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Aire" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Forfar" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Nymphe" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Destiny" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Ariel" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Pose" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Pincher" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Defia" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Sabine" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Haddock" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+			ship = { name = "Poole" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ROC version_name = "Basic Submarine" } } }
+		}								
+	}
+}
+

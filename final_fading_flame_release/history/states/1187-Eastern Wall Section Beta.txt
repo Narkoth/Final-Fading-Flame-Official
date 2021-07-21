@@ -1,0 +1,22 @@
+state={
+	id=1187
+	name="STATE_1187"
+	provinces={
+		3181 6403 6729 8303 8522 12466 12522 12601 
+	}
+	history={
+		owner = WAL
+		#victory_points = {
+		#	4158 15 
+		#}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+	}
+		add_core_of = WAL
+
+	}
+	manpower=133541
+	state_category=city
+	buildings_max_level_factor=1.000
+}

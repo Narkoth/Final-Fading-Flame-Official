@@ -1,0 +1,37 @@
+
+state={
+	id=1223
+	name="STATE_1224"
+
+	history={
+		victory_points = { 7104 10}
+		victory_points = { 6152 5 }
+		owner = FAE
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			dockyard = 1
+			6152 = {
+				naval_base = 3
+			}
+			7104 = {
+				naval_base = 3
+			}
+		}
+		add_claim_by = CAE
+		add_core_of = FAE
+
+	}
+
+	resources = {
+		rubber = 45
+		oil = 15
+	}
+
+	provinces={
+		6152 7061 7104 8317 
+	}
+	manpower=541222
+	buildings_max_level_factor=1.000
+	state_category=town
+}

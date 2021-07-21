@@ -1,0 +1,32 @@
+
+state={
+	id=645
+	name="Lowlake Land"
+
+	history={
+		owner = R01
+		victory_points = {
+			12151 15 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 5
+			arms_factory = 2
+			12089 = {
+				naval_base = 4
+
+			}
+
+		}
+		add_core_of = R01
+		add_core_of = DOC
+		add_core_of = ROC
+	}
+
+	provinces={
+		1298 3325 8014 8038 9329 12089 12151 12181 12284 12305 
+	}
+	manpower=3451222
+	buildings_max_level_factor=1.000
+	state_category=city
+}

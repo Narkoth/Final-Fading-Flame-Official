@@ -1,0 +1,251 @@
+puppet_decisions = {
+
+	send_pp = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_political_power > 250
+			all_owned_state = {
+				is_controlled_by = ROOT
+			}
+			NOT = {
+				all_neighbor_country = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 50
+
+		complete_effect = {
+			OVERLORD = {
+				add_political_power = 50
+			}
+		}
+
+		days_remove = 180 #Want to make sure that we don't drain them of PP too quickly
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	send_guns = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 4999
+			}
+			all_owned_state = {
+				is_controlled_by = ROOT
+			}
+			NOT = {
+				all_neighbor_country = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 25
+
+		complete_effect = {
+			ROOT = {
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 2500
+					target = OVERLORD
+				}
+			}
+		}
+
+		days_remove = 180 
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	send_arty = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_equipment = {
+				artillery_equipment > 999
+			}
+			all_owned_state = {
+				is_controlled_by = ROOT
+			}
+			NOT = {
+				all_neighbor_country = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 25
+
+		complete_effect = {
+			ROOT = {
+				send_equipment = {
+					equipment = artillery_equipment
+					amount = 250
+					target = OVERLORD
+				}
+			}
+		}
+
+		days_remove = 180 
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	send_support_equipment = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_equipment = {
+				support_equipment > 999
+			}
+			all_owned_state = {
+				is_controlled_by = ROOT
+			}
+			NOT = {
+				all_neighbor_country = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 25
+
+		complete_effect = {
+			ROOT = {
+				send_equipment = {
+					equipment = support_equipment
+					amount = 250
+					target = OVERLORD
+				}
+			}
+		}
+
+		days_remove = 180 
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	send_convoys = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_equipment = {
+				convoy > 499
+			}
+			all_owned_state = {
+				is_controlled_by = ROOT
+			}
+			NOT = {
+				all_neighbor_country = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 25
+
+		complete_effect = {
+			ROOT = {
+				send_equipment = {
+					equipment = convoy
+					amount = 100
+					target = OVERLORD
+				}
+			}
+		}
+
+		days_remove = 180 
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	send_volunteers = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_manpower > 100000
+			all_owned_state = {
+				is_controlled_by = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = puppet_decisions_overlord_has_war_tooltip
+				OVERLORD = {
+					has_war = yes
+				}
+			}
+			NOT = {
+				all_neighbor_country = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 200
+
+		complete_effect = {
+			OVERLORD = {
+				add_manpower = 25000
+			}
+		}
+
+		days_remove = 180 
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+}

@@ -1,0 +1,115 @@
+
+focus_tree = {
+	id = aaa_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = AAA
+			}
+		}
+	}
+
+	
+
+	focus = {
+		id = AAA_game_start_2
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 0
+		cost = 1
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			every_country = {
+				country_event = general.3
+				country_event = general.4
+			}
+		}
+	}
+
+	focus = {
+		id = AAA_game_start
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 1
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AAA_game_start_2}
+		relative_position_id = AAA_game_start_2
+		available = {
+		}
+		completion_reward = {
+			every_country = {
+				country_event = general.2
+			}
+		}
+	}
+
+	focus = {
+		id = AAA_the_dig
+		icon = GFX_goal_DOC_carnegia
+		x = 10
+		y = 0
+		cost = 1
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			date > 108.5.6
+		}
+		completion_reward = {
+			every_country = {
+				news_event = aaa.1
+			}
+		}
+	}
+
+	focus = {
+		id = AAA_castorian_reveal
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 1
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = AAA_the_dig
+		prerequisite = {focus = AAA_the_dig}
+		available = {
+			date > 111.5.1
+		}
+		completion_reward = {
+			every_country = {
+				news_event = aaa.2
+			}
+		}
+	}
+
+	focus = {
+		id = AAA_mad_queen
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 1
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = AAA_castorian_reveal
+		prerequisite = {focus = AAA_castorian_reveal}
+		available = {
+			date > 112.8.1
+		}
+		completion_reward = {
+			DOC = {
+				news_event = aaa.3
+			}
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 75 y = 1000 }
+
+  
+
+
+}
+	

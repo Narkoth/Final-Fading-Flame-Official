@@ -1,0 +1,122 @@
+﻿division_template = {
+	name = "Border Guard"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "People Police"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+air_wings = {
+	1177 = { 
+		fighter_equipment_0 = {
+			owner = "FPJ" 
+			amount = 32
+		}
+		tac_bomber_equipment_0 = {
+			owner = "FPJ" 
+			amount = 15
+		}
+	}
+}
+
+
+units = {
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1060  # Perth
+		division_template = "Border Guard"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1178  # Perth
+		division_template = "Border Guard"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 4217 # Perth
+		division_template = "Border Guard"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 2246 # Perth
+		division_template = "Border Guard"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 12946 # Perth
+		division_template = "Border Guard"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 12889 # Perth
+		division_template = "Border Guard"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 7725 # Perth
+		division_template = "Border Guard"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+}
+
+##### Starting Production #####
+

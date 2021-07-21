@@ -1,0 +1,22 @@
+#########################
+# Events Specific To the Region of Caer/Castor
+#########################
+
+add_namespace = caer_events
+
+news_event = {
+	id = caer_events.1
+	title = caer_events.1.t
+	desc = caer_events.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = caer_events.1.a
+		ai_chance = { 
+			factor = 100
+		}
+		set_global_flag = castor_in_flames
+	}
+}

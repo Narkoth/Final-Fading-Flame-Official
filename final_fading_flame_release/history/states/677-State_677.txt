@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=677
+	name="STATE_677"
+	provinces={
+		1338 1351 3301 3933 4325 4364 4849 4989 5622 6290 6645 7081 7268 7543 7750 7939 8558 9357 12235 12324 12411 12420 12436 12437 12473 12530 12535 12545 12549 12560 12626 
+	}
+	history={
+		#owner = MEA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MEA
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

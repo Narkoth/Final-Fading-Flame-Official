@@ -1,0 +1,37 @@
+
+FPJ_leave_doc = {
+	enable = {
+		tag = FPJ
+		has_country_flag = FPJ_leave_doc
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+			type = alliance
+			id = "DOC"
+			value = -200
+	}
+	ai_strategy = {
+			type = antagonize
+			id = "DOC"
+			value = 200
+	}
+}
+
+#Motivate FPJ to always build an army. Without this, they will refuse to build an army until war is about to break out, which is often far too late for them
+#Will stop forcing building an army once it is at war, so it can move manpower to reserves to account for casualties in the war
+FPJ_build_army_damnit = {
+	enable = {
+		tag = FPJ
+		FPJ = {
+			has_war = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 100
+    }
+}

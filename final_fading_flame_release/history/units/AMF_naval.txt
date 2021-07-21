@@ -1,0 +1,69 @@
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "1st Amazon Navy"			
+		naval_base = 5194
+		task_force = {
+			name = "1st Amazon Navy"
+			location = 5194
+
+			ship = { name = "Seahawk"  definition = battleship equipment = { battleship_1 = { amount = 1 owner = AMF } } }
+
+
+			ship = { name = "Scorcher" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Condor" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = AMF } } }
+
+
+			ship = { name = "Alonzo" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AMF} } }
+			ship = { name = "Defender" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AMF} } }
+			ship = { name = "Blean" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AMF} } }
+			ship = { name = "Weazle" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AMF} } }
+			ship = { name = "Colleen" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AMF} } }
+			ship = { name = "Uranie" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AMF} } }
+			ship = { name = "Musk" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AMF} } }
+
+
+			ship = { name = "Paul" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Unicorn" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Cam" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Tetcott" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Unbroken" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Griffin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Pert" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Nurton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Leeds" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Rugby" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Minstrel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Kilbane" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Weazel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Seafire" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Fundy" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Omdurman" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Oxlip" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Keats" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AMF } } }
+
+
+			ship = { name = "Opal" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Downley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Ligaera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Vega" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Hawke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Burford" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Ouragan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Evans" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Heron" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Nesbitt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Mulette" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Junon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Alisma" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Melton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AMF } } }
+
+			ship = { name = "Havant" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Mull" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AMF } } }
+			ship = { name = "Ister" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AMF } } }
+
+
+		}								
+	}
+}

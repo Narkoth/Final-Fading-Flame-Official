@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=525
+	name="STATE_525"
+	provinces={
+		1464 5360 6189 7427 7904 8327 8763 9077 9918 11215 11241 11395 11396 11406 
+	}
+	history={
+		#owner = CPK
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CPK
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

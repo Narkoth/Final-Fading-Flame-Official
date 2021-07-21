@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=1098
+	name="STATE_1098"
+	provinces={
+		696 772 1376 1535 1748 2622 3117 3462 4147 4452 4481 4487 4831 5168 5783 6389 7177 8126 8715 9419 9508 15520 15535 15591 15643 15650 15714 15726 15760 15774 15805 
+	}
+	history={
+		#owner = SMS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SMS
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

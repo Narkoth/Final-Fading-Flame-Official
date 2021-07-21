@@ -1,0 +1,389 @@
+ideas = {
+	country = {
+		SHI_oligarchy_government = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.10
+				political_power_factor = -0.30
+			}
+		}
+
+		SHI_occupation_ministry = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.10
+				resistance_growth = -0.10
+			}
+		}
+
+		SHI_experts_in_logistics = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_leader_start_level = 1
+				army_leader_start_logistics_level = 1
+				supply_consumption_factor = -0.05
+			}
+			research_bonus = { 
+				land_doctrine = 0.10 
+			}
+		}
+
+		SHI_build_military_industry = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+
+		SHI_build_infra = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+			}
+		}
+
+		SHI_civ_construction_speed = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+
+		SHI_standardize_fighters = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				nav_bomber_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+		}
+
+		SHI_air_heroism_idea = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				air_ace_generation_chance_factor = 0.15
+			}
+		}
+
+		SHI_advanced_radar = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				spotting_chance = 0.10
+				air_superiority_detect_factor= 0.10
+				air_interception_detect_factor = 0.10
+			}
+		}
+
+		SHI_increase_naval_production = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+
+		SHI_professional_military_academy = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_leader_start_level = 1
+				
+			}
+			research_bonus = { 
+				land_doctrine = 0.10 
+			} 
+		}
+
+		SHI_need_food_imports = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		SHI_food_exporter_idea = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		SHI_rise_of_strata_idea = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				totalitarianism_drift = 0.15
+			}
+		}
+
+		SHI_shi_youth = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				conscription = 0.02
+			}
+		}
+
+		SHI_path_towards_control = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.25
+				industrial_capacity_factory = -0.30
+				industrial_capacity_dockyard = -0.50
+			}
+		}
+
+		SHI_oligarchy_government2 = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				political_power_factor = -0.30
+				war_support_factor = -0.50
+				min_export = 0.10
+			}
+		}
+
+		SHI_underfunded_infrastructure = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				research_speed_factor = -0.15
+				stability_factor = -0.10
+			}
+		}
+
+		SHI_infrastructure_for_those_who_can_afford_it = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.10
+				stability_factor = -0.15
+			}
+		}
+
+		SHI_zing = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.15
+				monthly_population = -0.10
+			}
+		}
+
+		shi_naval_support = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+
+		SHI_naval_dominance_and_experts = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				naval_coordination = 0.10
+				positioning = 0.10
+				experience_gain_navy = 0.15
+			}
+		}
+
+	}
+}

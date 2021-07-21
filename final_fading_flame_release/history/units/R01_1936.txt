@@ -1,0 +1,346 @@
+division_template = {
+	name = "Rebel Militia Division"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Rebel Brigands"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+
+
+
+units = {
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Militia Division"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+    division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Militia Division"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+    division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Militia Division"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+    division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Militia Division"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+    division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Militia Division"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Militia Division"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Militia Division"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Militia Division"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12226  # Perth
+		division_template = "Rebel Brigands"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "R01"
+		}
+		requested_factories = 2
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "R01"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+}

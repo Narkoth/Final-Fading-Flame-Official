@@ -1,0 +1,22 @@
+state={ state_category = city
+	id=701
+	name="Forqamsk"
+	provinces={
+		2848 4654 5033 6239 6968 9202 12607 12654 12659 12660 12696 12735 
+	}
+	history={
+		owner = WAL
+		add_core_of = WAL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+			12696 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = D55
+	}
+	manpower=177810
+	buildings_max_level_factor=1.000
+}

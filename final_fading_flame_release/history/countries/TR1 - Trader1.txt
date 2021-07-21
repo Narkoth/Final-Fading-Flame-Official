@@ -1,0 +1,66 @@
+capital = 105
+
+oob = "TR1_1936"
+#set_naval_oob = "TR1_1936_naval"
+
+set_stability = 0.5
+
+set_research_slots = 2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gwtank = 1
+	#light_arty = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	fuel_silos = 1
+	#medium_arty = 1
+	gw_artillery = 1
+	early_bomber = 1
+}
+
+set_technology = {
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battlecruiser = 1
+	early_battleship = 1
+	early_carrier = 1
+	transport = 1
+	early_submarine = 1
+}
+
+set_convoys = 120
+
+set_politics = {
+	ruling_party = guildism
+	last_election = "1934.7.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	guildism = 100
+}
+
+create_country_leader = {
+	name = "Vanessa"
+	desc = "POLITICS_COLUMBIA_DESC"
+	picture = "Portrait_Vanessa.dds"
+	expire = "8888.1.1"
+	ideology = guildism_type
+	traits = {
+		#
+	}
+}
+
+add_ideas = {
+	trader_playstyle
+	trader_merc_hub
+}
+

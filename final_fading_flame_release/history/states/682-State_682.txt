@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=682
+	name="STATE_682"
+	provinces={
+		2232 3031 3781 3849 4110 4725 4980 5245 5252 5347 6361 6506 6734 7815 7937 8472 8473 8784 9312 9395 9482 12359 12421 12439 12451 12524 12546 12575 12597 12621 12639 12733 
+	}
+	history={
+		#owner = MOC
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MOC
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

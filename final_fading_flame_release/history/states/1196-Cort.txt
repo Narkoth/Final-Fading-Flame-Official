@@ -1,0 +1,18 @@
+state={
+	id=1196
+	name="STATE_1196"
+	provinces={
+		87 722 7428 11993 12000 12030 
+	}
+	history={
+		owner = WAL
+		add_core_of = WAL
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = D60
+	}
+	manpower=87541
+	state_category=city
+	buildings_max_level_factor=1.000
+}

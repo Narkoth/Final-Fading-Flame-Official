@@ -1,0 +1,126 @@
+division_template = {
+	name = "Security Brigade"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "Border Patrol"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+
+
+units = {
+	division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7192
+		division_template = "Border Patrol"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 8750
+		division_template = "Border Patrol"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7768
+		division_template = "Border Patrol"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 776
+		division_template = "Border Patrol"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3219
+		division_template = "Border Patrol"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12716
+		division_template = "Border Patrol"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+
+
+
+	division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4245
+		division_template = "Security Brigade"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 935
+		division_template = "Security Brigade"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1758
+		division_template = "Security Brigade"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+}
+

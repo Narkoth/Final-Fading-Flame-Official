@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+		AMR_massive_migration = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				monthly_population = 1.75
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,19 @@
+
+state={
+	id=602
+	name="Penninsular Duunland"
+	provinces={
+		838 1638 5350 6281 6635 9638 11930 11940 11981 12108 
+	}
+	history={
+		#owner = D52
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		#add_core_of = D52
+	}
+	manpower=134555
+	buildings_max_level_factor=1.000
+	state_category=city
+}

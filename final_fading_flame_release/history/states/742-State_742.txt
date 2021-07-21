@@ -1,0 +1,24 @@
+
+state={
+	id=742
+	name="STATE_742"
+	provinces={
+		1304 1602 4425 7725 8469 
+	}
+	history={
+		owner = FPJ
+		victory_points = { 7725 5 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = FPJ
+	}
+	resources = {
+		steel = 8
+	}
+	manpower=1984221
+	buildings_max_level_factor=1.000
+	state_category=city
+}

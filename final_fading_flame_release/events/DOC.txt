@@ -1,0 +1,259 @@
+###########################
+# ROC GENERAL EVENTS
+###########################
+
+add_namespace = DOC_general_events
+
+# Aid Sent
+country_event = {
+	id = DOC_general_events.1
+	title = "An Alliance Offer to Retake the Homeland" #Can also be set in localization
+	desc = DOC_general_events.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Absolutely!"
+		ai_chance = { 
+			factor = 100
+		}
+		DOC = {
+			if = {
+				limit = {is_in_faction = yes}
+				add_to_faction = ROOT
+			}
+			if = {
+				limit = {is_in_faction = no}
+				create_faction = "The Kingdom"
+				add_to_faction = ROOT
+			}
+		}
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "DOC"
+				value = 200
+			}
+		}
+	}
+}
+
+country_event = {
+	id = DOC_general_events.2
+	title = "Food from FPJ" #Can also be set in localization
+	desc = "FPJ has offered us a share of their annual harvest in order to help us beat back Ronard."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Excellent"
+		DOC = {
+			add_ideas = DOC_import_from_FPJ
+		}
+	}
+}
+
+country_event = {
+	id = DOC_general_events.3
+	title = DOC_general_events.3.t
+	desc = DOC_general_events.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = DOC_general_events.3.a
+		DOC = {
+			add_political_power = -50
+		}
+	}
+}
+
+#state visit from Eastern Territories
+country_event = {
+	id = DOC_general_events.4
+	title = DOC_general_events.4.t
+	desc = DOC_general_events.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = DOC_general_events.4.a
+		DOC = {
+			add_opinion_modifier = { target = WAL modifier = large_increase }
+		}
+		WAL = {
+			add_opinion_modifier = { target = DOC modifier = large_increase }
+		}
+	}
+}
+
+
+#Eastern Territories becomes our willing puppet
+country_event = {
+	id = DOC_general_events.5
+	title = DOC_general_events.5.t
+	desc = DOC_general_events.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = DOC_general_events.5.a
+	}
+}
+
+#Shi wish to join the Kingdom
+country_event = {
+	id = DOC_general_events.6
+	title = DOC_general_events.6.t
+	desc = DOC_general_events.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = DOC_general_events.6
+		DOC = {
+			add_to_faction = SHI
+		}
+	}
+}
+
+#FPJ Wishes to Join the Kingdom
+country_event = {
+	id = DOC_general_events.7
+	title = DOC_general_events.7.t
+	desc = DOC_general_events.7.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = DOC_general_events.7
+		DOC = {
+			add_to_faction = FPJ
+		}
+	}
+}
+
+
+add_namespace = DOC_CAER
+
+country_event = {
+	id = DOC_CAER.1
+	title = "Caer Gives Grim News of the Communal Rebels"
+	desc = "Today, some dignitaries from the Kindgom of Caer have approached us detailing the Communal Rebels in their West have begun to take control of more territory."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Trouble Is Brewing. We must prepare"
+		DOC = {
+			set_country_flag = trouble_in_caer
+		}
+	}
+	
+}
+country_event = {
+	id = DOC_CAER.2
+	title = "Caer Requests Additional Aid"
+	desc = "Today, some dignitaries from the Kindgom of Caer have approached us detailing the Communal Rebels in their West have begun to take control of more territory."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "We need to focus efforts on protecting our interests within Caer"
+		DOC = {
+			set_country_flag = prepare_caer
+		}
+	}
+}
+
+country_event = {
+	id = DOC_CAER.3
+	title = "Communal Rebels Meet with the Commune"
+	desc = "We have received reports that the Communal Rebels in Caer have met with State Officials from the Commune of Castor. This could spell potential danger if we wish to intervene against the rebels should a full-scale war begins on the Caer Continent."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Damn these Communalists!"
+		DOC = {
+			set_country_flag = commune_intervening
+		}
+	}
+}
+
+country_event = {
+	id = DOC_CAER.4
+	title = "Communal Rebels Have Overriden the Caer Kingdom"
+	desc = "The FAE have won the war!"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Damn these Communalists!"
+		DOC = {
+			white_peace = FAE
+		}
+		CAE = {
+			white_peace = FAE
+		}
+		FAE = {
+			transfer_state = 1220
+			transfer_state = 171
+			transfer_state = 1230
+			transfer_state = 1219
+			transfer_state = 1228
+			transfer_state = 1218
+			transfer_state = 174
+			transfer_state = 178
+			transfer_state = 181
+			transfer_state = 189
+		}
+	}
+}
+
+country_event = {
+	id = DOC_CAER.5
+	title = "Communal Rebels Have Overriden the Caer Kingdom"
+	desc = "The FAE have won the war!"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Damn these Communalists!"
+		DOC = {
+			add_to_faction = ROC
+		}
+	}
+}
+
+add_namespace = doc_queen 
+
+country_event = {
+	id = doc_queen.1
+	title = doc_queen.1.t
+	desc = doc_queen.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = doc_queen.1.a
+		DOC = {
+			set_country_flag = doc_mad_queen
+		}
+	}
+}
+
+

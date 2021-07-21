@@ -1,0 +1,27 @@
+state={
+	id=1208
+	name="STATE_1208"
+	provinces={
+		2250 3897 5106 7858 8932 9420 12450 
+	}
+	history={
+		owner = COC
+		victory_points = {
+			8932 15 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+		add_core_of = COC
+	}
+	resources = {
+		steel = 27
+		chromium = 15
+		tungsten = 31
+		aluminium = 17
+	}
+	manpower=3541778
+	state_category=town
+	buildings_max_level_factor=1.000
+}

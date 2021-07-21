@@ -1,0 +1,513 @@
+ideas = { 
+	country = {
+		FPJ_birthplace_of_democracy = {
+			picture = generic_democratic_drift_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				resistance_growth_on_our_occupied_states = 0.20
+				resistance_damage_to_garrison_on_our_occupied_states = 0.10
+			}
+		}
+		FPJ_tiny_military = {
+			picture = FRA_matignon_agreements
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				conscription_factor = -0.50
+				max_command_power_mult = -0.50
+				army_org_factor = -0.25
+				max_planning = -0.75
+			}
+		}
+		FPJ_increase_agriculture_output = {
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				monthly_population = 0.25
+				stability_factor = 0.10
+			}
+		}
+		FPJ_huge_research_center_of_the_world = {
+			picture = generic_research_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.075
+			}
+		}
+
+		FPJ_welfare_state = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				stability_weekly = 0.002
+				monthly_population = 0.15
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		FPJ_welfare_state_2 = { #healthcare for all adjustment
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				monthly_population = 0.50
+				consumer_goods_factor = 0.03
+				stability_weekly = 0.004
+			}
+		}
+
+		FPJ_labor_department = {
+			picture = generic_exploit_mines
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		FPJ_two_year_plan = {
+			picture = generic_build_infrastructure
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor  = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+
+		FPJ_two_year_plan_military_focus = {
+			picture = generic_artillery_manufacturer_2
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_speed_arms_factory_factor  = 0.15
+				production_speed_dockyard_factor = 0.15
+			}
+		}
+
+		FPJ_stick_to_ourselves = {
+			picture = isolation
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+
+		FPJ_looking_outwards = {
+			picture = generic_flexible_foreign_policy2
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				opinion_gain_monthly_factor = 0.15
+				send_volunteers_tension = -0.80
+				send_volunteer_size = 3
+			}
+		}
+
+		FPJ_expand_joen_legion_exp = {
+			picture = generic_infantry_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.15
+			}
+		}
+
+		FPJ_just_worldism_drift = {
+			picture = generic_morale_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				just_worldism_drift = 0.05
+			}
+		}
+
+		FPJ_a_gun_in_every_hand = {
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		FPJ_militia_style = {
+			picture = chi_army_corruption2
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				#supply_consumption_factor = -0.10
+				equipment_capture_factor = 0.10
+				conscription = 0.05
+			}
+		}
+
+		FPJ_central_command_style = {
+			picture = general_staff
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_org_factor = 0.10
+				army_morale_factor = 0.15
+				supply_consumption_factor = -0.10
+				#equipment_capture_factor = 0.05
+				#breakthrough_factor = 0.10
+				#conscription = 0.05
+			}
+		}
+
+		FPJ_central_command_style_2 = {
+			picture = general_staff
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_org_factor = 0.10
+				army_morale_factor = 0.20
+				supply_consumption_factor = -0.10
+				#equipment_capture_factor = 0.05
+			}
+		}
+
+		FPJ_partisans = {
+			picture = spr_political_violence
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.25
+				resistance_damage_to_garrison_on_our_occupied_states = 0.15
+			}
+		}
+
+		FPJ_expand_conscription_idea = {
+			picture = generic_reserve_divisions
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				conscription = 0.05
+			}
+		}
+
+		FPJ_all_for_freedom = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.15
+			}
+		}
+
+		FPJ_elite_army = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_org_factor = 0.10
+				army_morale_factor = 0.05
+				special_forces_training_time_factor = 1.50
+				special_forces_cap = 0.25
+				special_forces_attack_factor = 0.15
+				special_forces_defence_factor = 0.30
+				special_forces_min = 18
+			}
+		}
+		FPJ_expand_special_forces_program = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_org_factor = 0.10
+				army_morale_factor = 0.05
+				special_forces_training_time_factor = 1.50
+				special_forces_cap = 0.50
+				special_forces_attack_factor = 0.15
+				special_forces_defence_factor = 0.30
+				special_forces_min = 36
+			}
+		}
+
+		FPJ_recruitment_drive_idea = {
+			picture = generic_infantry_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 1500
+			}
+		}
+
+		FPJ_cheaper_navy = {
+			picture = generic_coastal_defense_ships
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			equipment_bonus = {
+
+				ship_hull_heavy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				ship_hull_carrier = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				
+				ship_hull_submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+
+		FPJ_far_reaching_navy = {
+			picture = generic_coastal_defense_ships
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				navy_max_range_factor = 0.15
+			}
+		}
+
+		FPJ_grand_fleet = {
+			picture = generic_coastal_defense_ships
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				naval_coordination = 0.15
+				screening_efficiency = 0.10
+			}
+		}
+
+		FPJ_raiding_fleet_idea = {
+			picture = generic_coastal_defense_ships
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				navy_visibility = -0.15
+				naval_retreat_speed = 0.10
+			}
+		}
+
+		FPJ_officer_better_training = {
+			picture = ast_volunteer_defence_corps
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_leader_start_level = 1
+			}
+		}
+
+	}
+}

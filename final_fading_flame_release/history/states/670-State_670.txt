@@ -1,0 +1,21 @@
+
+state={
+	id=670
+	name="STATE_670"
+	provinces={
+		537 1167 2003 2412 2667 3206 8589 8672 9105 9842 9975 12234 12299 12316 12427 12460 12498 12508 
+	}
+	history={
+		#owner = D52
+		buildings = {
+			infrastructure = 2
+			2412 = {
+				naval_base = 1
+			}
+		}
+		#add_core_of = D52
+	}
+	manpower=88712
+	buildings_max_level_factor=1.000
+	state_category=city
+}

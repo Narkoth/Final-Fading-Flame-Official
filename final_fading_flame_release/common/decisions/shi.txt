@@ -1,0 +1,482 @@
+shi_government_change = {
+
+	shi_transition_economy = {
+
+		icon = GFX_decision_icon_generic
+
+
+		available = {
+			has_idea = SHI_path_towards_control
+		}
+
+		visible = {
+			has_idea = SHI_path_towards_control
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		modifier = {
+			stability_factor = -0.15
+			monthly_population = -0.35
+		}
+
+		days_remove = 425
+
+		remove_effect = {
+			remove_ideas = SHI_path_towards_control
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	shi_improve_infastructure_plan = {
+
+		icon = GFX_decision_icon_generic
+
+
+		available = {
+			has_idea = SHI_path_towards_control
+			has_country_flag = shi_better_infrastructure
+		}
+
+		visible = {
+			has_idea = SHI_path_towards_control
+			has_country_flag = shi_better_infrastructure
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+
+		days_remove = 425
+
+		remove_effect = {
+			remove_ideas = SHI_underfunded_infrastructure
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	shi_build_public_university = {
+
+		icon = GFX_decision_icon_generic
+
+
+		available = {
+			has_idea = SHI_path_towards_control
+			has_country_flag = shi_better_infrastructure
+			NOT = {
+				has_idea = SHI_underfunded_infrastructure
+			}
+		}
+
+		visible = {
+			has_idea = SHI_path_towards_control
+			has_country_flag = shi_better_infrastructure
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		modifier = {
+			consumer_goods_factor = 0.03
+		}
+
+		days_remove = 180
+
+		remove_effect = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+}
+
+shi_food_imports = {
+	shi_improve1 = {
+
+		icon = generic_construction
+
+
+		available = {
+			has_idea = SHI_need_food_imports
+		}
+
+		visible = {
+			has_idea = SHI_need_food_imports
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+
+		days_remove = 180
+
+		remove_effect = {
+			add_to_variable = {
+				var = SHI_food_variable
+				value = 1
+			}
+			1313 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+	shi_improve2 = {
+
+		icon = generic_construction
+
+
+		available = {
+			has_idea = SHI_need_food_imports
+		}
+
+		visible = {
+			has_idea = SHI_need_food_imports
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+
+		days_remove = 180
+
+		remove_effect = {
+			add_to_variable = {
+				var = SHI_food_variable
+				value = 1
+			}
+			1315 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+	shi_improve3 = {
+
+		icon = generic_construction
+
+
+		available = {
+			has_idea = SHI_need_food_imports
+		}
+
+		visible = {
+			has_idea = SHI_need_food_imports
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+
+		days_remove = 180
+
+		remove_effect = {
+			add_to_variable = {
+				var = SHI_food_variable
+				value = 1
+			}
+			1316 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+	shi_improve4 = {
+
+		icon = generic_construction
+
+
+		available = {
+			has_idea = SHI_need_food_imports
+		}
+
+		visible = {
+			has_idea = SHI_need_food_imports
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+
+		days_remove = 180
+
+		remove_effect = {
+			add_to_variable = {
+				var = SHI_food_variable
+				value = 1
+			}
+			1314 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+	shi_improve5 = {
+
+		icon = generic_construction
+
+
+		available = {
+			has_idea = SHI_need_food_imports
+		}
+
+		visible = {
+			has_idea = SHI_need_food_imports
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+
+		days_remove = 180
+
+		remove_effect = {
+			add_to_variable = {
+				var = SHI_food_variable
+				value = 1
+			}
+			1311 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+	shi_improve6 = {
+
+		icon = generic_construction
+
+
+		available = {
+			has_idea = SHI_need_food_imports
+		}
+
+		visible = {
+			has_idea = SHI_need_food_imports
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+
+		days_remove = 180
+
+		remove_effect = {
+			add_to_variable = {
+				var = SHI_food_variable
+				value = 1
+			}
+			788 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	shi_food_exporter = {
+
+		icon = generic_factory
+
+
+		available = {
+			has_idea = SHI_need_food_imports
+			custom_trigger_tooltip = {
+				tooltip = SHI_become_food_exporter
+				check_variable = {
+					SHI_food_variable = 6
+				}
+			}
+		}
+
+		visible = {
+			has_idea = SHI_need_food_imports
+		}
+
+		fire_only_once = yes
+
+		cost = 125
+
+		days_remove = 180
+
+		remove_effect = {
+			788 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+			1311 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+			1314 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+			1316 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+			1315 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+			1313 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+			}
+			remove_ideas = SHI_need_food_imports
+			add_ideas = SHI_food_exporter_idea
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+}

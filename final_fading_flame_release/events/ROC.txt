@@ -1,0 +1,233 @@
+###########################
+# ROC GENERAL EVENTS
+###########################
+
+add_namespace = ROC_general_events
+
+
+
+# Aid Sent
+country_event = {
+	id = ROC_general_events.1
+	title = "Ronard Declared War on the Iron State" #Can also be set in localization
+	desc = ROC_general_events.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "They have gone to far, offer an alliance immediately"
+		ai_chance = { 
+			factor = 100
+		}
+		DOC = {
+			if = {
+				limit = {is_in_faction = yes}
+				add_to_faction = CIS
+			}
+			if = {
+				limit = {is_in_faction = no}
+				create_faction = "The Kingdom"
+				add_to_faction = CIS
+			}
+		}
+		CIS = {
+			add_ai_strategy = {
+				type = alliance
+				id = "DOC"
+				value = 200
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ROC_general_events.2
+	title = "Ronard Declared War on the Commune" #Can also be set in localization
+	desc = ROC_general_events.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "They have gone to far, offer an alliance immediately"
+		ai_chance = { 
+			factor = 100
+		}
+		DOC = {
+			if = {
+				limit = {is_in_faction = yes}
+				add_to_faction = COC
+			}
+			if = {
+				limit = {is_in_faction = no}
+				create_faction = "The Kingdom"
+				add_to_faction = COC
+			}
+		}
+		COC = {
+			add_ai_strategy = {
+				type = alliance
+				id = "DOC"
+				value = 200
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ROC_general_events.3
+	title = "Ronard Declared War on the Free People of Joen" #Can also be set in localization
+	desc = ROC_general_events.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "They have gone to far, offer an alliance immediately"
+		ai_chance = { 
+			factor = 100
+		}
+		DOC = {
+			if = {
+				limit = {is_in_faction = yes}
+				add_to_faction = FPJ
+			}
+			if = {
+				limit = {is_in_faction = no}
+				create_faction = "The Kingdom"
+				add_to_faction = FPJ
+			}
+		}
+		FPJ = {
+			add_ai_strategy = {
+				type = alliance
+				id = "DOC"
+				value = 200
+			}
+		}
+	}
+}
+#Shi contacts us to join in a temporary alliance
+country_event = {
+	id = ROC_general_events.4
+	title = ROC_general_events.4.t
+	desc = ROC_general_events.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = ROC_general_events.4.a
+		ai_chance = { 
+			factor = 100
+		}
+		if = {
+			limit = { ROC = { is_faction_leader = yes} }
+			ROC = {
+				add_to_faction = SHI
+			}
+		}
+		else = {
+			ROC = {
+				create_faction = "Castorian Commerce League"
+				add_to_faction = SHI
+			}
+		}
+	}
+}
+#CIS contacts us to join in a temporary alliance
+country_event = {
+	id = ROC_general_events.5
+	title = ROC_general_events.5.t
+	desc = ROC_general_events.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = ROC_general_events.5.a
+		ai_chance = { 
+			factor = 100
+		}
+		if = {
+			limit = { ROC = { is_faction_leader = yes} }
+			ROC = {
+				add_to_faction = CIS
+			}
+		}
+		else = {
+			ROC = {
+				create_faction = "Castorian Defense League"
+				add_to_faction = CIS
+			}
+		}
+	}
+}
+
+add_namespace = roc_cis_relations
+
+country_event = {
+	id = roc_cis_relations.1
+	title = roc_cis_relations.1.t
+	desc = roc_cis_relations.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = roc_cis_relations.1.a
+		ai_chance = { 
+			factor = 100
+		}
+		ROOT = {
+			add_opinion_modifier = { target = CIS modifier = large_increase }
+			set_country_flag = roc_love_cis
+		}
+		CIS = {
+			country_event = CIS_ronard_relations.1
+		}
+	}
+}
+
+add_namespace = roc_wal_relations
+
+# STATE VISIT FROM EASTERN Territories
+country_event = {
+	id = roc_wal_relations.1
+	title = roc_wal_relations.1.t
+	desc = roc_wal_relations.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = roc_wal_relations.1.a
+		ai_chance = { 
+			factor = 100
+		}
+		WAL = {
+			add_opinion_modifier = { target = ROC modifier = large_increase }
+		}
+		ROC = {
+			add_opinion_modifier = { target = WAL modifier = large_increase }
+		}
+	}
+}
+
+#Eastern Territories becoming our Puppet for Their Protection
+country_event = {
+	id = roc_wal_relations.2
+	title = roc_wal_relations.2.t
+	desc = roc_wal_relations.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = roc_wal_relations.2.a
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}

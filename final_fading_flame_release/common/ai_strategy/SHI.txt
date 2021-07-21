@@ -1,0 +1,14 @@
+SHI_build_army_damnit = {
+	enable = {
+		tag = SHI
+		SHI = {
+			has_war = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 100
+    }
+}

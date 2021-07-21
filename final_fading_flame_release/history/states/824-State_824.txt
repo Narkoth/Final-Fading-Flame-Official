@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=824
+	name="STATE_824"
+	provinces={
+		626 2364 2415 3034 3335 4230 4453 5782 7167 7496 8545 9133 13585 13680 13713 13783 
+	}
+	history={
+		#owner = ELS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ELS
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

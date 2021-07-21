@@ -1,0 +1,2049 @@
+
+focus_tree = {
+	id = fpj_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = FPJ
+			}
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 225 y = 1000 }
+
+	
+  
+
+	focus = {
+		id = fpj_our_industry
+		icon = GFX_focus_generic_industry_3
+		x = 5
+		y = 0
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = fpj_food_for_all
+		icon = GFX_goal_generic_consumer_goods
+		relative_position_id = fpj_our_industry
+		prerequisite = { focus = fpj_our_industry}
+		x = -2
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+            add_ideas =  FPJ_increase_agriculture_output
+		}
+	}
+
+	focus = {
+		id = fpj_expand_canning_in_1
+		icon = GFX_focus_generic_industry_1
+		relative_position_id = fpj_food_for_all
+		prerequisite = { focus = fpj_food_for_all}
+		x = -1
+		y = 1
+		cost = 4 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			1177 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = fpj_expand_canning_in_2
+		icon = GFX_focus_generic_industry_1
+		relative_position_id = fpj_food_for_all
+		prerequisite = { focus = fpj_food_for_all}
+		x = 1
+		y = 1
+		cost = 4 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			1178 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+		
+	}
+
+	focus = {
+		id = fpj_industrial_research
+		icon = GFX_goal_generic_production
+		relative_position_id = fpj_expand_canning_in_2
+		prerequisite = { focus = fpj_expand_canning_in_2}
+		prerequisite = { focus = fpj_expand_canning_in_1}
+		x = -1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}	
+	}
+
+	focus = {
+		id = fpj_expand_canning_in_3
+		icon = GFX_focus_generic_industry_2
+		relative_position_id = fpj_food_for_all
+		prerequisite = { focus = fpj_food_for_all}
+		x = 3
+		y = 1
+		cost = 4 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			1179 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = fpj_expand_canning_in_4
+		icon = GFX_focus_generic_industry_2
+		relative_position_id = fpj_food_for_all
+		prerequisite = { focus = fpj_food_for_all}
+		x = 5
+		y = 1
+		cost = 4 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			742 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_electronic_research
+		icon = GFX_goal_generic_radar
+		relative_position_id = fpj_expand_canning_in_4
+		prerequisite = { focus = fpj_expand_canning_in_3}
+		prerequisite = { focus = fpj_expand_canning_in_4}
+		x = -1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}	
+	}
+
+	focus = {
+		id = fpj_black_gold
+		icon = GFX_goal_generic_oil_refinery
+		relative_position_id = fpj_industrial_research
+		prerequisite = { focus = fpj_industrial_research}
+		prerequisite = { focus = fpj_electronic_research}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			set_technology = {
+				fuel_silos = 1
+				synth_oil_experiments = 1
+			}
+			add_tech_bonus = {
+				name = synth_11
+				bonus = 2
+				uses = 3
+				category = synth_resources
+			}
+			1178 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+		}	
+	}
+
+	focus = {
+		id = fpj_the_center_of_learning_in_world
+		icon = GFX_focus_research
+		relative_position_id = fpj_our_industry
+		prerequisite = { focus = fpj_our_industry}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+            add_ideas =  FPJ_huge_research_center_of_the_world
+		}
+	}
+	focus = {
+		id = fpj_construct_a_new_university
+		icon = GFX_focus_research2
+		relative_position_id = fpj_the_center_of_learning_in_world
+		prerequisite = { focus = fpj_the_center_of_learning_in_world}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+            add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = fpj_military_factory_1
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = fpj_our_industry
+		prerequisite = { focus = fpj_our_industry}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+            1179 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = fpj_military_factory_2
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = fpj_military_factory_1
+		prerequisite = { focus = fpj_military_factory_1}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+             1178 = {
+				 limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_shipping_industy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = fpj_military_factory_1
+		prerequisite = { focus = fpj_military_factory_1}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+            1177 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_birthplace_of_true_democracy
+		icon = GFX_goal_support_democracy
+		x = 18
+		y = 0
+		cost = 1 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = fpj_stay_internal_for_now
+		icon = GFX_goal_generic_defence
+		x = -5
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_birthplace_of_true_democracy}
+		relative_position_id = fpj_birthplace_of_true_democracy
+		mutually_exclusive = {focus = fpj_look_outwards_now}
+		ai_will_do = { # More likely for FPJ to take this rationally. Also, just_worldism path is better when more nations to interact with
+			factor = 4
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = fpj_focus_on_internal_development
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_stay_internal_for_now}
+		relative_position_id = fpj_stay_internal_for_now
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_stick_to_ourselves
+		}
+	}
+
+	focus = {
+		id = fpj_expand_mining
+		icon = GFX_goal_generic_construction2
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_focus_on_internal_development}
+		relative_position_id = fpj_focus_on_internal_development
+		available = {
+		}
+		completion_reward = {
+			1179 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_expand_precious_mining
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_expand_mining}
+		relative_position_id = fpj_expand_mining
+		available = {
+		}
+		completion_reward = {
+			1179 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_industrial_advancements
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_focus_on_internal_development}
+		relative_position_id = fpj_focus_on_internal_development
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 0.75
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_electronic_advacenments
+		icon = GFX_goal_generic_radar
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_industrial_advancements}
+		relative_position_id = fpj_industrial_advancements
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 0.75
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_finish_establishing_a_welfare_state
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_birthplace_of_true_democracy}
+		relative_position_id = fpj_birthplace_of_true_democracy
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_welfare_state
+		}
+	}
+
+	focus = {
+		id = fpj_establish_a_department_of_labor
+		icon = GFX_goal_generic_construction
+		x = -3
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_finish_establishing_a_welfare_state}
+		relative_position_id = fpj_finish_establishing_a_welfare_state
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_labor_department
+		}
+	}
+
+	focus = {
+		id = fpj_a_two_year_plan
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -2
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_finish_establishing_a_welfare_state}
+		relative_position_id = fpj_finish_establishing_a_welfare_state
+		mutually_exclusive = {focus = fpj_a_two_year_plan_military_focus}
+		available = {
+		}
+		completion_reward = {
+			add_timed_idea = { idea = FPJ_two_year_plan  days = 720 }
+		}
+	}
+
+	focus = {
+		id = fpj_more_civs
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_a_two_year_plan}
+		relative_position_id = fpj_a_two_year_plan
+		available = {
+			NOT = {
+				has_idea = FPJ_two_year_plan
+			}
+		}
+		completion_reward = {
+			1179 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			742 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1190 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_a_two_year_plan_military_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_finish_establishing_a_welfare_state}
+		relative_position_id = fpj_finish_establishing_a_welfare_state
+		mutually_exclusive = {focus = fpj_a_two_year_plan}
+		available = {
+		}
+		completion_reward = {
+			add_timed_idea = { idea = FPJ_two_year_plan_military_focus  days = 720 }
+		}
+	}
+
+	focus = {
+		id = fpj_more_arms
+		icon = GFX_goal_generic_build_tank
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_a_two_year_plan_military_focus}
+		relative_position_id = fpj_a_two_year_plan_military_focus
+		available = {
+			NOT = {
+				has_idea = FPJ_two_year_plan_military_focus
+			}
+		}
+		completion_reward = {
+			1178 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			1179 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			1177 = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_research_grants
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_finish_establishing_a_welfare_state}
+		relative_position_id = fpj_finish_establishing_a_welfare_state
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = fpj_establish_healthcare_for_all
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_finish_establishing_a_welfare_state}
+		relative_position_id = fpj_finish_establishing_a_welfare_state
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FPJ_welfare_state
+				add_idea = FPJ_welfare_state_2
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_look_outwards_now
+		icon = GFX_goal_generic_major_war
+		x = 5
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_birthplace_of_true_democracy}
+		relative_position_id = fpj_birthplace_of_true_democracy
+		mutually_exclusive = {focus = fpj_stay_internal_for_now}
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = just_worldism
+				popularity = 0.10
+			}
+			add_ideas = FPJ_just_worldism_drift
+			add_war_support = 0.10
+			add_stability = -0.20
+		}
+	}
+
+	focus = {
+		id = fpj_sending_aid_to_other_democracies
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_look_outwards_now}
+		relative_position_id = fpj_look_outwards_now
+		available = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			custom_effect_tooltip = fpj_sening_aid
+		}
+	}
+
+
+	focus = {
+		id = fpj_protecting_our_brothers_and_sisters
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_look_outwards_now}
+		relative_position_id = fpj_look_outwards_now
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_looking_outwards
+			add_popularity = {
+				ideology = just_worldism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_establish_an_international_volunteer_force
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_protecting_our_brothers_and_sisters}
+		relative_position_id = fpj_protecting_our_brothers_and_sisters
+		available = {
+			controls_state = 1177
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = just_worldism
+				popularity = 0.05
+			}
+			custom_effect_tooltip = fpj_international_force
+			hidden_effect = {
+				division_template = {
+					name = "International Peacekeeping Force"
+					division_names_group = BRA_INF_01 #GROUP FOR HAVING NAMES OF DIVISIONS - VERY IMPORTANT TO HAVE FOR IMMERSION
+
+					regiments = {
+						infantry = {x = 0 y = 0}
+						infantry = {x = 0 y = 1}
+						infantry = {x = 0 y = 2}
+						infantry = {x = 1 y = 0}
+						infantry = {x = 1 y = 1}
+						infantry = {x = 1 y = 2}
+						artillery = {x = 2 y = 0}
+						artillery = {x = 2 y = 1}
+					}
+					support = {
+						engineer = {x = 0 y = 0}
+ 					}
+					priority = 2 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+				}
+				every_owned_state = {
+					limit = {
+						is_capital = yes
+						is_fully_controlled_by = ROOT 
+					}
+					create_unit = {
+						division = "name = \"1st Peacekeeping Force\" division_template = \"International Peacekeeping Force\" start_experience_factor = 0.3"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2nd Peacekeeping Force\" division_template = \"International Peacekeeping Force\" start_experience_factor = 0.3"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2nd Peacekeeping Force\" division_template = \"International Peacekeeping Force\" start_experience_factor = 0.3"  
+						owner = ROOT
+					}
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = fpj_expand_joen_legion
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_establish_an_international_volunteer_force}
+		relative_position_id = fpj_establish_an_international_volunteer_force
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = just_worldism
+				popularity = 0.05
+			}
+			add_ideas = FPJ_expand_joen_legion_exp
+			1177 = {
+				limit = {
+					free_building_slots = {
+						building = recruitment_center
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = recruitment_center
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_world_on_fire
+		icon = GFX_goal_generic_attack_allies
+		x = -1
+		y = 6
+		cost = 1 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_look_outwards_now}
+		relative_position_id = fpj_look_outwards_now
+		available = {
+			has_global_flag = castor_in_flames
+			has_army_manpower = {size > 349999}
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_manpower = 175000
+			declare_war_on = { type = annex_everything    target = ROC }
+			declare_war_on = { type = annex_everything    target = DOC }
+		}
+	}
+
+	focus = {
+		id = fpj_join_the_kingdom
+		icon = GFX_goal_generic_major_alliance
+		x = -1
+		y = 5
+		cost = 1 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = fpj_focus_on_internal_development}
+		relative_position_id = fpj_focus_on_internal_development
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			has_global_flag = castor_in_flames
+		}
+		completion_reward = {
+			DOC = {
+				country_event = DOC_general_events.7
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_expand_military
+		icon = GFX_goal_generic_army_artillery
+		x = 34
+		y = 0
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			#date > 109.5.1
+			#has_completed_focus = fpj_military_factory_1
+		}
+		completion_reward = {
+			army_experience = 15
+			add_manpower = 15750
+		}
+	}
+
+	focus = {
+		id = fpj_fortify
+		icon = GFX_goal_generic_fortify_city
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_expand_military
+		prerequisite = {focus = fpj_expand_military}
+		available = {
+			NOT = {
+				country_exists = R01
+			}
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			1179 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1178
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 13056
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7901
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 13070
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10219
+					instant_build = yes
+				}
+			}
+			742 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1602
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8469
+					instant_build = yes
+				}
+			}
+			1178 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2246
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2900
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10273
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_equipment_research
+		icon = GFX_goal_generic_small_arms
+		x = -6
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_expand_military
+		prerequisite = {focus = fpj_expand_military}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_equipment_research_support
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_equipment_research
+		prerequisite = {focus = fpj_equipment_research}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_air_research_doctrine
+		icon = GFX_goal_generic_air_doctrine
+		x = 5
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_expand_military
+		prerequisite = {focus = fpj_expand_military}
+		available = {
+		}
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_air_research_fighter
+		icon = GFX_goal_generic_air_fighter
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_air_research_doctrine
+		prerequisite = {focus = fpj_air_research_doctrine}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_air_research_bomber
+		icon = GFX_goal_generic_air_bomber
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_air_research_doctrine
+		prerequisite = {focus = fpj_air_research_doctrine}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_recruitment_center
+		icon = GFX_goal_generic_military_sphere
+		x = 8
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_expand_military
+		prerequisite = {focus = fpj_expand_military}
+		available = {
+			just_worldism > 0.05
+		}
+		completion_reward = {
+			1177 = {
+				limit = {
+					free_building_slots = {
+						building = recruitment_center
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = recruitment_center
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_recruitment_center_2
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_recruitment_center
+		prerequisite = {focus = fpj_recruitment_center}
+		available = {
+			just_worldism > 0.10
+		}
+		completion_reward = {
+			1178 = {
+				limit = {
+					free_building_slots = {
+						building = recruitment_center
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = recruitment_center
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_recruitment_center_3
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_recruitment_center_2
+		prerequisite = {focus = fpj_recruitment_center_2}
+		available = {
+			just_worldism > 0.15
+		}
+		completion_reward = {
+			1179 = {
+				limit = {
+					free_building_slots = {
+						building = recruitment_center
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = recruitment_center
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_militia_forces
+		icon = GFX_focus_secret_rearmament
+		x = -4
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_expand_military
+		prerequisite = {focus = fpj_expand_military}
+		mutually_exclusive = {focus = fpj_elite_army}
+		available = {
+			has_tech = mass_assault
+		}
+		completion_reward = {
+			add_manpower = 75000
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = fpj_elite_army
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_expand_military
+		prerequisite = {focus = fpj_expand_military}
+		mutually_exclusive = {focus = fpj_militia_forces}
+		available = {
+			OR = {
+				has_tech = superior_firepower
+				has_tech = mobile_warfare
+				has_tech = grand_battle_plan
+			}
+		}
+		completion_reward = {
+			add_manpower = 15000
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = fpj_expand_military_force
+		icon = GFX_focus_generic_license_production
+		x = 2
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_militia_forces
+		prerequisite = {focus = fpj_militia_forces
+						focus = fpj_elite_army}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			remove_ideas = FPJ_tiny_military
+			add_stability = -0.10
+		}
+	}
+
+	focus = {
+		id = fpj_mass_mobilization_research
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_militia_forces
+		prerequisite = {focus = fpj_militia_forces}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = mass_mob
+				bonus = 1
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_gun_in_every_hand
+		icon = GFX_focus_focus_fra_maquis
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_mass_mobilization_research
+		prerequisite = {focus = fpj_mass_mobilization_research}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_a_gun_in_every_hand
+		}
+	}
+
+	focus = {
+		id = fpj_expand_conscription
+		icon = GFX_focus_generic_little_entente
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_mass_mobilization_research
+		prerequisite = {focus = fpj_mass_mobilization_research}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_expand_conscription_idea
+		}
+	}
+
+	focus = {
+		id = fpj_militia_fighting_style
+		icon = GFX_focus_prc_infiltration
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_gun_in_every_hand
+		prerequisite = {focus = fpj_gun_in_every_hand}
+		mutually_exclusive = {focus = fpj_central_command}
+		available = {
+			OR = {
+				has_tech = peoples_army
+				is_researching_technology = peoples_army
+			}
+		}
+		completion_reward = {
+			add_ideas = FPJ_militia_style
+		}
+	}
+
+	focus = {
+		id = fpj_central_command
+		icon = GFX_goal_generic_position_armies
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_gun_in_every_hand
+		prerequisite = {focus = fpj_gun_in_every_hand}
+		mutually_exclusive = {focus = fpj_militia_fighting_style}
+		available = {
+			OR = {
+				has_tech = large_front_operations
+				is_researching_technology = large_front_operations
+			}
+		}
+		completion_reward = {
+			add_ideas = FPJ_central_command_style
+		}
+	}
+
+	focus = {
+		id = fpj_partisans_establish
+		icon = GFX_goal_generic_secret_weapon
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_central_command
+		prerequisite = {focus = fpj_militia_fighting_style}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_partisans
+		}
+	}
+
+	focus = {
+		id = fpj_all_for_freedom_push
+		icon = GFX_focus_generic_support_the_left_right
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_militia_fighting_style
+		prerequisite = {focus = fpj_militia_fighting_style}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_all_for_freedom
+		}
+	}
+
+	focus = {
+		id = fpj_armor_research
+		icon = GFX_goal_generic_army_tanks
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_central_command
+		prerequisite = {focus = fpj_central_command}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_aircraft_research
+		icon = GFX_goal_generic_air_fighter2
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_central_command
+		prerequisite = {focus = fpj_central_command}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_political_officers
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_armor_research
+		prerequisite = {focus = fpj_armor_research
+						focus = fpj_aircraft_research}
+		available = {
+			has_government = just_worldism
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FPJ_central_command_style
+				add_idea = FPJ_central_command_style_2
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_research_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		x = 3
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_elite_army
+		prerequisite = {focus = fpj_elite_army}
+		available = {
+		}
+		completion_reward = {
+			country_event = FPJ.1
+		}
+	}
+
+	focus = {
+		id = fpj_establish_a_military_academy
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_elite_army
+		prerequisite = {focus = fpj_elite_army}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = fpj_armor_research_focus
+		icon = GFX_goal_generic_army_tanks
+		x = 1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_research_doctrine
+		prerequisite = {focus = fpj_research_doctrine}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_motorized_research
+		icon = GFX_goal_generic_army_motorized
+		x = 3
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_research_doctrine
+		prerequisite = {focus = fpj_research_doctrine}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 0.75
+				uses = 2
+				category = motorized_equipment
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_arty_research
+		icon = GFX_goal_generic_army_artillery
+		x = -1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_research_doctrine
+		prerequisite = {focus = fpj_research_doctrine}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_elite_training
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_establish_a_military_academy
+		prerequisite = {focus = fpj_establish_a_military_academy}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_elite_army
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.0
+				uses = 2
+				category = para_tech
+				category = marine_tech
+				category = mountaineers_tech
+			}
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_recruitment_drive
+		icon = GFX_focus_generic_manpower
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_elite_training
+		prerequisite = {focus = fpj_elite_training}
+		available = {
+		}
+		completion_reward = {
+			add_timed_idea = { idea = FPJ_recruitment_drive_idea  days = 1095 }
+		}
+	}
+
+	focus = {
+		id = fpj_officer_training
+		icon = GFX_focus_generic_military_academy
+		x = 4
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_elite_training
+		prerequisite = {focus = fpj_elite_training}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_officer_better_training
+		}
+	}
+
+	focus = {
+		id = fpj_establish_merc_presence
+		icon = GFX_goal_generic_small_arms
+		x = 6
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_elite_training
+		prerequisite = {focus = fpj_elite_training}
+		available = {
+		}
+		completion_reward = {
+			1177 = {
+				limit = {
+					free_building_slots = {
+						building = merc_guild
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = merc_guild
+						level = 1
+						instant_build = yes
+				}
+			}
+			1179 = {
+				limit = {
+					free_building_slots = {
+						building = merc_guild
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = merc_guild
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_expand_elite_forces
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_elite_training
+		prerequisite = {focus = fpj_elite_training}
+		available = {
+			has_army_manpower = {
+				size > 149999
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FPJ_elite_army
+				add_idea = FPJ_expand_special_forces_program
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 50
+		y = 0
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			#date > 109.5.1
+			#has_completed_focus = fpj_military_factory_1
+		}
+		completion_reward = {
+			navy_experience = 15
+		}
+	}
+
+	focus = {
+		id = fpj_expand_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_navy
+		prerequisite = {focus = fpj_navy}
+		available = {
+		}
+		completion_reward = {
+			1177 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_expand_dockyards2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_expand_dockyards
+		prerequisite = {focus = fpj_expand_dockyards}
+		available = {
+		}
+		completion_reward = {
+			1178 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_seek_out_foreign_naval_training
+		icon = GFX_focus_generic_military_mission
+		x = -4
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_navy
+		prerequisite = {focus = fpj_navy}
+		available = {
+		}
+		completion_reward = {
+			navy_experience = 35
+		}
+	}
+
+	focus = {
+		id = fpj_inspect_old_dominion_designs_left_behind
+		icon = GFX_goal_generic_navy_cruiser
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_seek_out_foreign_naval_training
+		prerequisite = {focus = fpj_seek_out_foreign_naval_training}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 0.5
+				uses = 2
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_improve_screen_ships
+		icon = GFX_focus_generic_destroyer
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_seek_out_foreign_naval_training
+		prerequisite = {focus = fpj_seek_out_foreign_naval_training}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_carrier_tech
+		icon = GFX_goal_generic_navy_carrier
+		x = -1
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_seek_out_foreign_naval_training
+		prerequisite = {focus = fpj_seek_out_foreign_naval_training}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_battleship_tech
+		icon = GFX_goal_generic_navy_battleship
+		x = 1
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_seek_out_foreign_naval_training
+		prerequisite = {focus = fpj_seek_out_foreign_naval_training}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_cruiser_tech
+		icon = GFX_focus_generic_cruiser2
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_seek_out_foreign_naval_training
+		prerequisite = {focus = fpj_seek_out_foreign_naval_training}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.0
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+
+
+	focus = {
+		id = fpj_cheaper_production
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_navy
+		prerequisite = {focus = fpj_navy}
+		mutually_exclusive = {focus = fpj_naval_projection}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_cheaper_navy
+		}
+	}
+
+	focus = {
+		id = fpj_expand_dockyards_more
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_cheaper_production
+		prerequisite = {focus = fpj_cheaper_production
+						focus = fpj_naval_projection}
+		available = {
+		}
+		completion_reward = {
+			1190 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = fpj_naval_projection
+		icon = GFX_focus_generic_navy_battleship2
+		x = 5
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_navy
+		prerequisite = {focus = fpj_navy}
+		mutually_exclusive = {focus = fpj_cheaper_production}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_far_reaching_navy
+		}
+	}
+
+	focus = {
+		id = fpj_raiding_fleet
+		icon = GFX_goal_generic_navy_submarine
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_naval_projection
+		prerequisite = {focus = fpj_naval_projection
+						focus = fpj_cheaper_production}
+		mutually_exclusive = {focus = fpj_dominate_the_seas}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_raiding_fleet_idea
+		}
+	}
+
+	focus = {
+		id = fpj_dominate_the_seas
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = fpj_cheaper_production
+		prerequisite = {focus = fpj_naval_projection
+						focus = fpj_cheaper_production}
+		mutually_exclusive = {focus = fpj_raiding_fleet}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FPJ_grand_fleet
+		}
+	}
+	
+}
+	

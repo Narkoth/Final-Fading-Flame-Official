@@ -1,0 +1,76 @@
+###########################
+# AMF Events
+###########################
+
+add_namespace = amf_general
+
+#The Meeting of the Elders
+country_event = {
+	id = amf_general.1
+	title = amf_general.1.t
+	desc = amf_general.1.d
+	picture = GFX_report_event_tribal_village
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = amf_general.1.a
+	}
+}
+
+#Sending Agents into AMF to Weaken Them
+country_event = {
+	id = amf_general.2
+	title = amf_general.2.t
+	desc = amf_general.2.d
+	picture = GFX_report_event_agent
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = amf_general.2.a
+		add_timed_idea = { idea = AMF_intel_on_AVO  days = 720 }
+	}
+}
+
+#Sponsoring Building Dockyards in the Ro Tribe
+country_event = {
+	id = amf_general.3
+	title = amf_general.3.t
+	desc = amf_general.3.d
+	picture = GFX_report_event_steamboat
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = amf_general.3.a
+		569 = {
+				add_building_construction = {
+					type = naval_base
+					province = 11919
+					level = 5
+					instant_build = yes
+				}
+		}
+		add_opinion_modifier = { target = D52 modifier = large_increase  }
+		D52 = { add_opinion_modifier = { target = AMF modifier = large_increase} }
+	}
+}
+
+#Bribe Ro Tribal Leaders
+country_event = {
+	id = amf_general.4
+	title = amf_general.4.t
+	desc = amf_general.4.d
+	#picture = GFX_report_event_steamboat
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = amf_general.4.a
+		D52 = {
+			add_timed_idea = {idea = tribal_leaders_bribed days = 425}
+		}
+	}
+}
+

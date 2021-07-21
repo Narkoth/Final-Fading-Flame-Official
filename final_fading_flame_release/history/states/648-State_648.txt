@@ -1,0 +1,24 @@
+
+state={
+	id=648
+	name="STATE_648"
+	provinces={
+		813 965 3068 3257 3734 5279 6916 9433 12155 12173 12184 12214 12349 12403 
+	}
+	history={
+		owner = WAL
+		add_core_of = WAL
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+			9433 = {
+				naval_base = 2
+			}
+		}
+		
+		add_core_of = D53
+	}
+	manpower=64112
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,36 @@
+ideas = {
+	country = {
+		trader_playstyle = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				political_power_factor = -1.00
+			}
+		}
+	}
+	country = {
+		trader_merc_hub = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 2500
+			}
+		}
+	}
+}

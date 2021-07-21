@@ -1,0 +1,724 @@
+spriteTypes = {	
+
+
+############################################################
+# NEW SPRITES
+############################################################
+
+	SpriteType = { 
+		name = "GFX_goal_DOC_carnegia"
+		texturefile = "gfx/interface/goals/focus_DOC_carnegia.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_DOC_columbia"
+		texturefile = "gfx/interface/goals/focus_DOC_columbia.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_CAE_joane"
+		texturefile = "gfx/interface/goals/focus_CAE_joane.dds"
+	}
+	SpriteType = { 
+		name = "GFX_new_bookmark"
+		texturefile = "gfx/interface/goals/trouble_on_horizion.dds"
+	}
+
+	###
+
+	SpriteType = { 
+		name = "GFX_goal_gen_1"
+		texturefile = "gfx/interface/goals/gen_1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_2"
+		texturefile = "gfx/interface/goals/gen_2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_3"
+		texturefile = "gfx/interface/goals/gen_3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_4"
+		texturefile = "gfx/interface/goals/gen_4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_5"
+		texturefile = "gfx/interface/goals/gen_5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_6"
+		texturefile = "gfx/interface/goals/gen_6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_7"
+		texturefile = "gfx/interface/goals/gen_7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_8"
+		texturefile = "gfx/interface/goals/gen_8.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_9"
+		texturefile = "gfx/interface/goals/gen_9.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_10"
+		texturefile = "gfx/interface/goals/gen_10.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_11"
+		texturefile = "gfx/interface/goals/gen_11.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_12"
+		texturefile = "gfx/interface/goals/gen_12.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_13"
+		texturefile = "gfx/interface/goals/gen_13.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_14"
+		texturefile = "gfx/interface/goals/gen_14.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_15"
+		texturefile = "gfx/interface/goals/gen_15.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_16"
+		texturefile = "gfx/interface/goals/gen_16.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_17"
+		texturefile = "gfx/interface/goals/gen_17.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_18"
+		texturefile = "gfx/interface/goals/gen_18.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_19"
+		texturefile = "gfx/interface/goals/gen_19.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_20"
+		texturefile = "gfx/interface/goals/gen_20.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_21"
+		texturefile = "gfx/interface/goals/gen_21.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_22"
+		texturefile = "gfx/interface/goals/gen_22.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_23"
+		texturefile = "gfx/interface/goals/gen_23.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_24"
+		texturefile = "gfx/interface/goals/gen_24.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_25"
+		texturefile = "gfx/interface/goals/gen_25.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_26"
+		texturefile = "gfx/interface/goals/gen_26.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_27"
+		texturefile = "gfx/interface/goals/gen_27.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_28"
+		texturefile = "gfx/interface/goals/gen_28.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_29"
+		texturefile = "gfx/interface/goals/gen_29.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_30"
+		texturefile = "gfx/interface/goals/gen_30.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_31"
+		texturefile = "gfx/interface/goals/gen_31.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_32"
+		texturefile = "gfx/interface/goals/gen_32.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_33"
+		texturefile = "gfx/interface/goals/gen_33.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_34"
+		texturefile = "gfx/interface/goals/gen_34.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_35"
+		texturefile = "gfx/interface/goals/gen_35.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_36"
+		texturefile = "gfx/interface/goals/gen_36.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_37"
+		texturefile = "gfx/interface/goals/gen_37.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_38"
+		texturefile = "gfx/interface/goals/gen_38.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_39"
+		texturefile = "gfx/interface/goals/gen_39.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_40"
+		texturefile = "gfx/interface/goals/gen_40.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_41"
+		texturefile = "gfx/interface/goals/gen_41.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_42"
+		texturefile = "gfx/interface/goals/gen_42.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_43"
+		texturefile = "gfx/interface/goals/gen_43.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_44"
+		texturefile = "gfx/interface/goals/gen_44.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_45"
+		texturefile = "gfx/interface/goals/gen_45.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_46"
+		texturefile = "gfx/interface/goals/gen_46.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_47"
+		texturefile = "gfx/interface/goals/gen_47.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_48"
+		texturefile = "gfx/interface/goals/gen_48.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_49"
+		texturefile = "gfx/interface/goals/gen_49.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_50"
+		texturefile = "gfx/interface/goals/gen_50.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_gen_51"
+		texturefile = "gfx/interface/goals/gen_51.dds"
+	}
+
+	###
+
+	SpriteType = { 
+		name = "GFX_goal_soldier_1"
+		texturefile = "gfx/interface/goals/soldier_1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_soldier_2"
+		texturefile = "gfx/interface/goals/soldier_2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_soldier_3"
+		texturefile = "gfx/interface/goals/soldier_3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_soldier_4"
+		texturefile = "gfx/interface/goals/soldier_4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_soldier_5"
+		texturefile = "gfx/interface/goals/soldier_5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_soldier_6"
+		texturefile = "gfx/interface/goals/soldier_6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_soldier_7"
+		texturefile = "gfx/interface/goals/soldier_7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_tank_1"
+		texturefile = "gfx/interface/goals/tank_1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_military_staff_1"
+		texturefile = "gfx/interface/goals/military_staff_1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_military_staff_2"
+		texturefile = "gfx/interface/goals/military_staff_2.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_airbase1"
+		texturefile = "gfx/interface/goals/airbase1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_airbase2"
+		texturefile = "gfx/interface/goals/airbase2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_building1"
+		texturefile = "gfx/interface/goals/building1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_consumer_goods1"
+		texturefile = "gfx/interface/goals/consumer_goods1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_consumer_goods2"
+		texturefile = "gfx/interface/goals/consumer_goods2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_consumer_goods3"
+		texturefile = "gfx/interface/goals/consumer_goods3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_consumer_goods4"
+		texturefile = "gfx/interface/goals/consumer_goods4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_consumer_goods5"
+		texturefile = "gfx/interface/goals/consumer_goods5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_consumer_goods6"
+		texturefile = "gfx/interface/goals/consumer_goods6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_consumer_goods7"
+		texturefile = "gfx/interface/goals/consumer_goods7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_consumer_goods8"
+		texturefile = "gfx/interface/goals/consumer_goods8.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_dock1"
+		texturefile = "gfx/interface/goals/dock1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_dock2"
+		texturefile = "gfx/interface/goals/dock2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_dock3"
+		texturefile = "gfx/interface/goals/dock3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_dock4"
+		texturefile = "gfx/interface/goals/dock4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_factory1"
+		texturefile = "gfx/interface/goals/factory1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_factory2"
+		texturefile = "gfx/interface/goals/factory2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_factory3"
+		texturefile = "gfx/interface/goals/factory3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_factory4"
+		texturefile = "gfx/interface/goals/factory4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_factory5"
+		texturefile = "gfx/interface/goals/factory5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_factory6"
+		texturefile = "gfx/interface/goals/factory6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_factory7"
+		texturefile = "gfx/interface/goals/factory7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_factory8"
+		texturefile = "gfx/interface/goals/factory8.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_factory9"
+		texturefile = "gfx/interface/goals/factory9.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_fort1"
+		texturefile = "gfx/interface/goals/fort1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_fort2"
+		texturefile = "gfx/interface/goals/fort2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_fort3"
+		texturefile = "gfx/interface/goals/fort3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_fort4"
+		texturefile = "gfx/interface/goals/fort4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_infra1"
+		texturefile = "gfx/interface/goals/infra1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_infra2"
+		texturefile = "gfx/interface/goals/infra2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_infra3"
+		texturefile = "gfx/interface/goals/infra3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_infra4"
+		texturefile = "gfx/interface/goals/infra4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_infra5"
+		texturefile = "gfx/interface/goals/infra5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_infra6"
+		texturefile = "gfx/interface/goals/infra6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory1"
+		texturefile = "gfx/interface/goals/mil_factory1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory2"
+		texturefile = "gfx/interface/goals/mil_factory2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory3"
+		texturefile = "gfx/interface/goals/mil_factory3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory4"
+		texturefile = "gfx/interface/goals/mil_factory4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory5"
+		texturefile = "gfx/interface/goals/mil_factory5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory6"
+		texturefile = "gfx/interface/goals/mil_factory6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory7"
+		texturefile = "gfx/interface/goals/mil_factory7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory8"
+		texturefile = "gfx/interface/goals/mil_factory8.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mine1"
+		texturefile = "gfx/interface/goals/mine1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mine2"
+		texturefile = "gfx/interface/goals/mine2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mine3"
+		texturefile = "gfx/interface/goals/mine3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mine4"
+		texturefile = "gfx/interface/goals/mine4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mine5"
+		texturefile = "gfx/interface/goals/mine5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mine6"
+		texturefile = "gfx/interface/goals/mine6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_arty"
+		texturefile = "gfx/interface/goals/r_arty.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_bomber1"
+		texturefile = "gfx/interface/goals/r_bomber1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_bomber2"
+		texturefile = "gfx/interface/goals/r_bomber2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_bomber3"
+		texturefile = "gfx/interface/goals/r_bomber3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_bomber4"
+		texturefile = "gfx/interface/goals/r_bomber4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_bomber5"
+		texturefile = "gfx/interface/goals/r_bomber5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_carrier1"
+		texturefile = "gfx/interface/goals/r_carrier1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_fighter1"
+		texturefile = "gfx/interface/goals/r_fighter1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_fighter2"
+		texturefile = "gfx/interface/goals/r_fighter2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_fighter3"
+		texturefile = "gfx/interface/goals/r_fighter3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_fighter4"
+		texturefile = "gfx/interface/goals/r_fighter4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_fighter5"
+		texturefile = "gfx/interface/goals/r_fighter5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_industry1"
+		texturefile = "gfx/interface/goals/r_industry1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_industry2"
+		texturefile = "gfx/interface/goals/r_industry2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_industry3"
+		texturefile = "gfx/interface/goals/r_industry3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry1"
+		texturefile = "gfx/interface/goals/r_infantry1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry2"
+		texturefile = "gfx/interface/goals/r_infantry2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry3"
+		texturefile = "gfx/interface/goals/r_infantry3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry4"
+		texturefile = "gfx/interface/goals/r_infantry4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry5"
+		texturefile = "gfx/interface/goals/r_infantry5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry6"
+		texturefile = "gfx/interface/goals/r_infantry6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry7"
+		texturefile = "gfx/interface/goals/r_infantry7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry8"
+		texturefile = "gfx/interface/goals/r_infantry8.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry9"
+		texturefile = "gfx/interface/goals/r_infantry9.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_infantry10"
+		texturefile = "gfx/interface/goals/r_infantry10.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_moto1"
+		texturefile = "gfx/interface/goals/r_moto1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_moto2"
+		texturefile = "gfx/interface/goals/r_moto2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_moto3"
+		texturefile = "gfx/interface/goals/r_moto3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_officer1"
+		texturefile = "gfx/interface/goals/r_officer1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_officer2"
+		texturefile = "gfx/interface/goals/r_officer2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research1"
+		texturefile = "gfx/interface/goals/r_research1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research2"
+		texturefile = "gfx/interface/goals/r_research2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_researchgroup1"
+		texturefile = "gfx/interface/goals/r_researchgroup1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_ship1"
+		texturefile = "gfx/interface/goals/r_ship1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_ship2"
+		texturefile = "gfx/interface/goals/r_ship2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_ship3"
+		texturefile = "gfx/interface/goals/r_ship3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_ship4"
+		texturefile = "gfx/interface/goals/r_ship4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_ship5"
+		texturefile = "gfx/interface/goals/r_ship5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_ship6"
+		texturefile = "gfx/interface/goals/r_ship6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_ship7"
+		texturefile = "gfx/interface/goals/r_ship7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_ship8"
+		texturefile = "gfx/interface/goals/r_ship8.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_tank1"
+		texturefile = "gfx/interface/goals/r_tank1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_tank2"
+		texturefile = "gfx/interface/goals/r_tank2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_tank3"
+		texturefile = "gfx/interface/goals/r_tank3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_radar1"
+		texturefile = "gfx/interface/goals/radar1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_soldier1"
+		texturefile = "gfx/interface/goals/soldier1.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_just_worldism1"
+		texturefile = "gfx/interface/goals/just_worldism1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory9"
+		texturefile = "gfx/interface/goals/mil_factory9.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory10"
+		texturefile = "gfx/interface/goals/mil_factory10.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory11"
+		texturefile = "gfx/interface/goals/mil_factory11.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory12"
+		texturefile = "gfx/interface/goals/mil_factory12.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory13"
+		texturefile = "gfx/interface/goals/mil_factory13.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_mil_factory14"
+		texturefile = "gfx/interface/goals/mil_factory14.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research3"
+		texturefile = "gfx/interface/goals/r_research3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research4"
+		texturefile = "gfx/interface/goals/r_research4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research5"
+		texturefile = "gfx/interface/goals/r_research5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research6"
+		texturefile = "gfx/interface/goals/r_research6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research7"
+		texturefile = "gfx/interface/goals/r_research7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research8"
+		texturefile = "gfx/interface/goals/r_research8.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research9"
+		texturefile = "gfx/interface/goals/r_research9.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research10"
+		texturefile = "gfx/interface/goals/r_research10.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research11"
+		texturefile = "gfx/interface/goals/r_research11.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research12"
+		texturefile = "gfx/interface/goals/r_research12.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_r_research13"
+		texturefile = "gfx/interface/goals/r_research13.dds"
+	}
+}

@@ -1,0 +1,38 @@
+state={
+	id=1190
+	name="STATE_1190"
+	provinces={
+		4217 6368 6500 12861 12862 12889 12913 12939 12952 
+	}
+	history={
+		owner = FPJ
+		victory_points = { 12889 5 }
+		buildings = {
+			infrastructure = 3
+			12861 = {
+				bunker = 2
+			}
+			12889 = {
+			        naval_base = 2
+				coastal_bunker = 1
+			}	
+			6500 = {
+				bunker = 2
+			}
+			12862 = {
+				bunker = 2
+			}
+			4217 = {
+				bunker = 2
+			}
+			12939 = {
+				bunker = 2
+			}
+
+		}
+		add_core_of = FPJ
+	}
+	manpower=1845111
+	state_category=city
+	buildings_max_level_factor=1.000
+}

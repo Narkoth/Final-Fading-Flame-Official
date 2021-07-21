@@ -1,0 +1,379 @@
+# Default AI for mod. We want all nations to annex territory, and then through events, we decide on puppets creation and whatnot.
+# Main Idea, is that all the "members" of a faction will be those who are puppets, except in certain circumstances. 
+#This also works, because this will be annex crazy, BUT IT WILL NOT take any state that another nation at the peace conference as a claim on
+#SO, when making wars with several nations, before the war begins, through foci, decisions, events, etc, we need to make sure that everyone has their claims
+#... set in stone before the peace conference
+#Of course, we can also have events/decsions happen after the fact, in which we can distribute land as it should be, because the "take_state" command
+#... doesn't care WHO it is taking the state from, only that it is going into the proper hands, as it should
+
+
+fascist_peace = {
+	enable = {
+		always = yes
+	}
+
+	annex_randomness = 0 #400
+	liberate_randomness = 0 #100
+	puppet_randomness = 0 #200
+	take_states_randomness = 0 #250
+	force_government_randomness = 0 #50
+	
+	# ROOT = Taker, FROM = Giver
+	annex = {
+		factor = 1000 #800	
+
+		#not annexing people just because their ass isn't connected to yours is plain stupid. wtf paradox.
+		#modifier = {
+		#	factor = 0
+		#	NOT = {
+		#		is_owner_neighbor_of = FROM
+		#	}
+		#	NOT = {
+		#		has_annex_war_goal = FROM
+		#	}
+		#}
+		
+		modifier = {
+			factor = 0
+			is_puppet = yes
+			FROM = {
+				any_owned_state = { 
+					NOT = {
+						OR = { 
+							is_claimed_by = ROOT
+							is_core_of = ROOT
+							#has_claimed_state_in_peace_conference = ROOT
+						}
+					}
+				}
+			}
+		}		
+	}
+
+	# ROOT = Taker, FROM = Liberated
+	liberate = {
+		factor = 0 #200 - disable for now
+		
+		modifier = {
+			factor = 0
+
+			NOT = {
+				ai_liberate_desire = {
+					target = FROM
+					value > 0
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					#Is NOT a major
+					NOT = { num_of_factories > 100 }
+				}
+				is_puppet = yes
+			}
+		}
+		#modifier = {
+		#	factor = 0 #0.5 - only liberate fascists!
+		#	NOT = {
+		#		FROM = {
+		#			has_government = fascism
+		#		}
+		#	}
+		#}
+	}
+
+	# ROOT = Taker, FROM = Giver
+	puppet = {
+		base = 0 
+	}
+		
+
+	# ROOT = Taker, FROM = Giver
+	puppet_all = {
+		base = 0 
+	}
+	
+	# ROOT = STATE, FROM = Taker, FROM.FROM = Giver
+	puppet_state = {
+		base = 0 
+	}
+	
+	# ROOT = Taker, FROM = State
+	take_states = {
+		factor = 600 #Up from 500 #200 - vanilla		
+		
+		#Below causes massive problems, because "smaller" nations will ALWAYS be puppets of some kind in this game, and puppets already don't take land that they themselves don't have a claim on.
+		#modifier = { #Only majors can take non-neighboring coastal territories for now to prevent weird results with 1.1
+		#	factor = 0
+		#	FROM = {
+		#		is_coastal = yes
+		#	}
+		#	NOT = { 
+		#		FROM = { 
+		#			OR = {
+		#				is_claimed_by = ROOT
+		#				is_core_of = ROOT
+		#			}
+		#		} 
+		#	}
+		#	NOT = {
+		#		FROM = {
+		#			any_neighbor_state = {
+		#				OR = {
+		#					owner = { tag = ROOT }
+		#					has_claimed_state_in_peace_conference = ROOT					
+		#				}
+		#			}
+		#		}
+		#	}
+		#	#Is NOT a major
+		#	NOT = { num_of_factories > 30 }			
+		#}
+		
+		# DO NOT TOUCH THIS!!!
+		modifier = { #Don't steal claims and cores from faction members unless we also have a right to that clay even if they are puppets [example, CAE taking back FAE land]
+			factor = 0
+			NOT = { 
+				FROM = { 
+					OR = {
+						is_claimed_by = ROOT
+						is_core_of = ROOT
+					}
+				} 
+			}
+			any_country = {
+				is_in_faction_with = ROOT
+				#NOT = { is_puppet_of = ROOT } 
+				FROM = {
+					OR = {
+						is_claimed_by = PREV
+						is_core_of = PREV
+					}
+				}
+			}
+		}
+
+		#modifier = {
+		#	factor = 0
+		#	is_subject = no # Puppets should clean up the crap mother country doesn't want
+		#	any_country = {
+		#		is_puppet_of = ROOT
+		#		FROM = {
+		#			state_and_terrain_strategic_value < 8
+		#			OR = {
+		#				num_owned_neighbour_states = {
+		#					count > 0
+		#					owner = PREV
+		#				}
+		#				num_claimed_peace_conference_neighbour_states = {
+		#					count > 0
+		#					owner = PREV
+		#				}
+		#			}
+		#		}
+		#	}
+		#}
+
+		modifier = {
+			factor = 20
+
+			FROM = {
+				OR = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+
+			capital_scope = {
+				distance_to = {
+					target = FROM
+					value < 100
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+
+			capital_scope = {
+				distance_to = {
+					target = FROM
+					value < 200
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+
+			capital_scope = {
+				distance_to = {
+					target = FROM
+					value < 300
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+
+			capital_scope = {
+				distance_to = {
+					target = FROM
+					value < 400
+				}
+			}
+		}
+
+
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					num_owned_neighbour_states = {
+						count > 1
+						owner = ROOT
+					}
+					num_claimed_peace_conference_neighbour_states = {
+						count > 1
+						owner = ROOT
+					}
+					#any_neighbor_state = {
+					#	AND = {
+					#		controller = {
+					#			tag = ROOT
+					#		}
+					#		owner = {
+					#			is_in_peace_conference = no
+					#			has_capitulated = yes
+					#		}
+					#	}					
+					#}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					num_owned_neighbour_states = {
+						count > 2
+						owner = ROOT
+					}
+					num_claimed_peace_conference_neighbour_states = {
+						count > 2
+						owner = ROOT
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					num_owned_neighbour_states = {
+						count > 3
+						owner = ROOT
+					}
+					num_claimed_peace_conference_neighbour_states = {
+						count > 3
+						owner = ROOT
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					num_owned_neighbour_states = {
+						count > 4
+						owner = ROOT
+					}
+					num_claimed_peace_conference_neighbour_states = {
+						count > 4
+						owner = ROOT
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					num_owned_neighbour_states = {
+						count > 5
+						owner = ROOT
+					}
+					num_claimed_peace_conference_neighbour_states = {
+						count > 5
+						owner = ROOT
+					}
+				}
+			}
+		}
+		modifier = { #Fascists will want to keep their spoils...
+			factor = 3
+			FROM = { controller = { tag = ROOT } }
+		}
+		#modifier = {
+		#	factor = 0		
+		#	NOT = { 
+		#		FROM = { 
+		#			OR = {
+		#				is_claimed_by = ROOT
+		#				is_core_of = ROOT
+		#			}
+		#		} 
+		#	}
+		#	NOT = {
+		#		FROM = {
+		#			any_neighbor_state = {
+		#				OR = {
+		#					owner = { tag = ROOT }
+		#					has_claimed_state_in_peace_conference = ROOT
+		#					#AND = {
+		#					#	controller = {
+		#					#		tag = ROOT
+		#					#	}
+		#					#	owner = {
+		#					#		is_in_peace_conference = no
+		#					#		has_capitulated = yes
+		#					#	}
+		#					#}					
+		#				}
+		#			}
+		#		}
+		#	}
+		#}
+
+
+		modifier = { #Only take claimed/core land if a puppet.
+			factor = 0
+			is_puppet = yes
+			FROM = {
+				NOT = {
+					OR = { 
+						is_claimed_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	# ROOT = Taker, FROM = Giver
+	force_government = {
+		factor = 0
+	}
+}

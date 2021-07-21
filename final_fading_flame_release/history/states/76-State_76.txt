@@ -1,0 +1,18 @@
+state={ state_category = enclave
+	id=76
+	name="Innenbout Island"
+	provinces={ 
+		16461 
+	}
+	history={
+		victory_points = { 16461 5 }
+		owner = DOC
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = DOC
+		add_claim_by = ROC
+	}
+	manpower=7821
+	buildings_max_level_factor=1.000
+}

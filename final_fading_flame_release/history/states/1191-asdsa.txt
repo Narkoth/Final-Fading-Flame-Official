@@ -1,0 +1,25 @@
+
+state={
+	id=1191
+	name="Peqronwei"
+
+	history={
+		owner = R01
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 3
+
+		}
+		add_core_of = R01
+		add_core_of = DOC
+		add_core_of = ROC
+	}
+
+	provinces={
+		1180 1348 1402 8538 12083 
+	}
+	manpower=879111
+	buildings_max_level_factor=1.000
+	state_category=city
+}

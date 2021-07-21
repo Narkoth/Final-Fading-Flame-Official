@@ -1,0 +1,20 @@
+﻿l_english:
+ROC_bad_company:0 "Hire the Bad Company Mercs and Assign them to the Captial for Further Orders"
+ROC_switch_to_final_mercs:0 "Modify the Mercenary Army National Spirit a Final Time. Visible Once You Expand Merc Army a First Time"
+ROC_DOC_may_intervene:0 "BE WARY. This may cause the DOC to intervene against us."
+
+roc_wal_relations.1.t:0 "State Visit from the Eastern Territories"
+roc_wal_relations.1.d:0 "We have just finished a meeting from state officials from the Eastern Territories. They have expressed their wishes to form a stronger bond between our two nations, so that we might prosper."
+roc_wal_relations.1.a:0 "Excellent!"
+
+roc_wal_relations.2.t:0 "Eastern Territories Desires Our Protection"
+roc_wal_relations.2.d:0 "After numerous meetings, the Eastern Territories has decided to come under our wing in exchange for their protection and our industrial aid for their economy. Of course, this also means that we can take advantage of their prospecting missions that have so far proven quite fruitful."
+roc_wal_relations.2.a:0 "Excellent!"
+
+ROC_general_events.4.t:0 "The Shi Wish to Join Our War Effort"
+ROC_general_events.4.d:0 "The Shi have contacted us and have expressed their interest in joining in a temporary alliance against the transgressions by the Dominion. They fear that if they are not contained, then the Dominion will seek to attack them in the future. The Shi want to bring stability to the region, and if that means fighitng a war now instead of fighting a larger war later on, they choose the former."
+ROC_general_events.4.a:0 "To Arms!"
+
+ROC_general_events.5.t:0 "The Iron State Wishes to Form an Alliance"
+ROC_general_events.5.d:0 "While some may say that a relationship between us is nearly impossible, the thing that keeps us and the Iron State together is our mutual hatred for the Dominion. The Dominion has done so much damage to the Iron State by supporting the corrupt government they sacrificed so much to overthrow. Now, that we are at war with the Dominion, they wish to join together and eliminate the Dominion threat once and for all."
+ROC_general_events.5.a:0 "To Arms!"

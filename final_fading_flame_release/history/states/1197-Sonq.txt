@@ -1,0 +1,25 @@
+state={
+	id=1197
+	name="STATE_1197"
+	provinces={
+		7537 7885 8854 9416 11814 11888 11889 11951 
+	}
+	history={
+		owner = WAL
+		add_core_of = WAL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 2
+			11814 = {
+				naval_base = 2
+			}
+		}
+		
+		add_core_of = D60
+	}
+	manpower=88754
+	state_category=city
+	buildings_max_level_factor=1.000
+}

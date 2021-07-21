@@ -1,0 +1,27 @@
+state={
+	id=1200
+	name="Lake Castor"
+	provinces={
+		2554 2994 5742 7520 8041 8219 10157 12455 12480 12485 12521 12552 
+	}
+	history={
+		owner = ROC
+		victory_points = { 
+			8219 15
+		}
+		victory_points = {12552 10 }
+		victory_points = {2994 5  }
+		victory_points = {12521 5 }
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 5
+			aluminium_foundry = 1
+
+		}
+		add_core_of = ROC
+		add_core_of = DOC
+	}
+	manpower=4749821
+	state_category = city
+	buildings_max_level_factor=1.000
+}

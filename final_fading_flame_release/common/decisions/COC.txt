@@ -1,0 +1,225 @@
+coc_aid_fae = {
+    coc_purchase_guns_for_fae = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+            caer_civil_war_ongoing_trigger = yes
+        }
+
+		visible = {
+		}
+
+		#cost = 100
+
+		days_remove = 50
+        days_re_enable = 100
+
+        modifier = {
+            political_power_factor = -0.15
+        }
+
+		remove_effect = {
+			FAE = {
+                country_event = fae_civil_war_help.1
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment_0
+                    amount = 2500
+                }
+            }
+		}
+
+		#AI should bee-line this like crazy, as this gives amazing xp that is definitely gonna be helpful in the long-run 
+		ai_will_do = {
+			factor = 1
+            modifier = { # shouldn't be spending pp when we should be using it for our own war effort
+                factor = 0
+                has_war = yes
+            }
+            modifier = { #Excess PP should be used for helping FAE
+                factor = 10
+                has_political_power > 175
+            }
+            modifier = { #FAE is in dire condition, should send aid at once
+                factor = 25
+                FAE = {
+                    surrender_progress > 0.2
+                }
+            }
+		}
+	}
+    coc_purchase_support_equipment_for_fae = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+            caer_civil_war_ongoing_trigger = yes
+        }
+
+		visible = {
+		}
+
+		#cost = 50
+
+		days_remove = 50
+        days_re_enable = 100
+
+        modifier = {
+            political_power_factor = -0.05
+        }
+
+		remove_effect = {
+			FAE = {
+                country_event = fae_civil_war_help.2
+                add_equipment_to_stockpile = {
+                    type = support_equipment
+                    amount = 100
+                }
+            }
+		}
+
+		#AI should bee-line this like crazy, as this gives amazing xp that is definitely gonna be helpful in the long-run 
+		ai_will_do = {
+			factor = 1
+            modifier = { # shouldn't be spending pp when we should be using it for our own war effort
+                factor = 0
+                has_war = yes
+            }
+            modifier = { #Excess PP should be used for helping FAE
+                factor = 10
+                has_political_power > 175
+            }
+            modifier = { #FAE is in dire condition, should send aid at once
+                factor = 25
+                FAE = {
+                    surrender_progress > 0.2
+                }
+            }
+		}
+	}
+    coc_purchase_arty_for_fae = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+            caer_civil_war_ongoing_trigger = yes
+        }
+
+		visible = {
+		}
+
+		#cost = 75
+
+		days_remove = 50
+        days_re_enable = 100
+
+        modifier = {
+            political_power_factor = -0.10
+        }
+
+		remove_effect = {
+			FAE = {
+                country_event = fae_civil_war_help.3
+                add_equipment_to_stockpile = {
+                    type = artillery_equipment
+                    amount = 175
+                }
+            }
+		}
+
+		#AI should bee-line this like crazy, as this gives amazing xp that is definitely gonna be helpful in the long-run 
+		ai_will_do = {
+			factor = 1
+            modifier = { # shouldn't be spending pp when we should be using it for our own war effort
+                factor = 0
+                has_war = yes
+            }
+            modifier = { #Excess PP should be used for helping FAE
+                factor = 10
+                has_political_power > 175
+            }
+            modifier = { #FAE is in dire condition, should send aid at once
+                factor = 25
+                FAE = {
+                    surrender_progress > 0.2
+                }
+            }
+		}
+	}
+
+    coc_send_heavy_armor = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+            caer_civil_war_ongoing_trigger = yes
+        }
+
+		visible = {
+		}
+
+		#cost = 75
+
+        days_remove = 50
+
+		fire_only_once = yes
+        
+
+        modifier = {
+            political_power_factor = -0.20
+        }
+
+		remove_effect = {
+			FAE = {
+                country_event = fae_civil_war_help.4
+                hidden_effect = {
+                    set_technology = {
+                        basic_heavy_tank = 1
+                        motorised_infantry = 1
+                    }
+				    division_template = {
+					    name = "Castorian Heavy Armor"		# Royal Marine Division
+					    division_names_group = BRA_INF_01 #GROUP FOR HAVING NAMES OF DIVISIONS - VERY IMPORTANT TO HAVE FOR IMMERSION
+
+					    regiments = {
+					    	heavy_armor = {x = 0 y = 0}
+					    	heavy_armor = {x = 0 y = 1}
+					    	heavy_armor = {x = 0 y = 2}
+					    	heavy_armor = {x = 0 y = 3}
+                            heavy_armor = {x = 0 y = 4}
+					    	motorized = {x = 1 y = 0}
+					    	motorized = {x = 1 y = 1}
+					    	motorized = {x = 1 y = 2}
+					    	motorized = {x = 1 y = 3}
+                            motorized = {x = 1 y = 4}
+					    }
+				    	support = {
+  	      			    	artillery = { x = 0 y = 0 }
+		 				    engineer =  {x = 0 y = 1}
+                            mot_recon = {x = 0 y = 2}
+ 					    }
+					    priority = 2 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+				    }
+				    every_owned_state = {
+				    	limit = {
+				    		is_capital = yes
+					    	is_fully_controlled_by = FAE 
+					    }
+					    create_unit = {
+					    	division = "name = \"1st International Heavy Armor Division\" division_template = \"Castorian Heavy Armor\" start_experience_factor = 0.5"  
+					    	owner = FAE
+				    	}
+					    create_unit = {
+					    	division = "name = \"2nd International Heavy Armor Division\" division_template = \"Castorian Heavy Armor\" start_experience_factor = 0.5"  
+					    	owner = FAE
+					    }
+				    }
+			    }
+            }
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+}

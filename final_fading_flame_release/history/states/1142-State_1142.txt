@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=1142
+	name="STATE_1142"
+	provinces={
+		1149 1727 2516 2977 4011 4195 4278 4520 5692 5914 7384 7413 15857 15881 15938 15976 15987 16020 16046 16121 16187 
+	}
+	history={
+		#owner = GZN
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = GZN
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

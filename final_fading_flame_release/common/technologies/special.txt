@@ -1,0 +1,39 @@
+technologies = {
+	
+	@90 = 0
+	@108 = 2
+	@110 = 4
+	@111 = 6
+	@112 = 8
+	@113 = 10
+	@114 = 12
+	@115 = 14
+	@116 = 16
+	@117 = 18
+	@118 = 20
+
+
+	special_tech1 = {
+
+		research_cost = 1
+
+		enable_subunits = {
+			amazonian
+		}
+
+		folder = {
+			name = special_folder
+			position = { x = 0 y = @90 }
+		}
+		
+		categories = {
+			special
+		}
+
+		allow = {
+			always = no
+		}
+
+	}
+
+}

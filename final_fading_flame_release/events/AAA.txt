@@ -1,0 +1,63 @@
+###########################
+# All AAA Events that Run the Game
+###########################
+
+add_namespace = aaa
+
+#The Dig
+news_event = {
+	id = aaa.1
+	title = aaa.1.t
+	desc = aaa.1.d
+	picture = GFX_news_event_the_dig
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aaa.1.a
+	}
+}
+
+#The Dig - Castorian Dominance 
+news_event = {
+	id = aaa.2
+	title = aaa.2.t
+	desc = aaa.2.d
+	picture = GFX_news_event_royal_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = {
+				tag = DOC
+			}
+		}
+		name = aaa.2.a
+	}
+	option = {
+		trigger = {
+			tag = DOC
+		}
+		name = aaa.2.b
+		add_war_support = 0.05
+	}
+}
+
+#The Mad Queen
+news_event = {
+	id = aaa.3
+	title = aaa.3.t
+	desc = aaa.3.d
+	picture = GFX_news_event_royal_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aaa.3.a
+		DOC = {
+			set_country_flag = doc_mad_queen
+			add_war_support = 0.15
+		}
+	}
+}

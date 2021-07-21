@@ -1,0 +1,517 @@
+
+focus_tree = {
+	id = amf_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = AMF
+			}
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = AMF_meeting_of_the_elders
+		icon = GFX_goal_generic_production2
+		x = 5
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            country_event = amf_general.1
+		}
+	}
+
+	focus = {
+		id = AMF_rally_the_people
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_meeting_of_the_elders}
+		relative_position_id = AMF_meeting_of_the_elders
+		available = {
+		}
+		completion_reward = {
+            add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = AMF_purchase_older_fighters
+		icon = GFX_goal_generic_production2
+		x = -2
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_meeting_of_the_elders}
+		relative_position_id = AMF_meeting_of_the_elders
+		available = {
+		}
+		completion_reward = {
+            add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 250
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_purchase_older_bombers
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_purchase_older_fighters}
+		relative_position_id = AMF_purchase_older_fighters
+		available = {
+		}
+		completion_reward = {
+            add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0
+				amount = 75
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_purchase_guns
+		icon = GFX_goal_generic_production2
+		x = -3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_meeting_of_the_elders}
+		relative_position_id = AMF_meeting_of_the_elders
+		available = {
+		}
+		completion_reward = {
+            add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 7500
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_purchase_artillery
+		icon = GFX_goal_generic_production2
+		x = -4
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_meeting_of_the_elders}
+		relative_position_id = AMF_meeting_of_the_elders
+		available = {
+		}
+		completion_reward = {
+            add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 500
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_support_equipment
+		icon = GFX_goal_generic_production2
+		x = -5
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_meeting_of_the_elders}
+		relative_position_id = AMF_meeting_of_the_elders
+		available = {
+		}
+		completion_reward = {
+            add_equipment_to_stockpile = {
+				type = support_equipment_1 
+				amount = 350
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_call_for_recruits
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_meeting_of_the_elders}
+		relative_position_id = AMF_meeting_of_the_elders
+		available = {
+		}
+		completion_reward = {
+            add_manpower = 75000
+		}
+	}
+
+	focus = {
+		id = AMF_research_new_weapon
+		icon = GFX_goal_generic_production2
+		x = -3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_prepare_for_war_with_avorian_federation}
+		relative_position_id = AMF_prepare_for_war_with_avorian_federation
+		available = {
+		}
+		completion_reward = {
+            add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_research_new_cannon
+		icon = GFX_goal_generic_production2
+		x = -5
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_prepare_for_war_with_avorian_federation}
+		relative_position_id = AMF_prepare_for_war_with_avorian_federation
+		available = {
+		}
+		completion_reward = {
+            add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_research_support_companies
+		icon = GFX_goal_generic_production2
+		x = -4
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_prepare_for_war_with_avorian_federation}
+		relative_position_id = AMF_prepare_for_war_with_avorian_federation
+		available = {
+		}
+		completion_reward = {
+            add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_rebuild_old_education_centers
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_meeting_of_the_elders}
+		relative_position_id = AMF_meeting_of_the_elders
+		ai_will_do = {
+			factor = 4000
+			#Want to bum rush to working on ending isolation so that decisions has time to work
+		}
+		available = {
+		}
+		completion_reward = {
+            add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = AMF_work_on_ending_isolation
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_rebuild_old_education_centers}
+		relative_position_id = AMF_rebuild_old_education_centers
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = AMF_isolation_tooltip
+            set_country_flag = AMF_isolation
+		}
+	}
+
+	focus = {
+		id = AMF_prepare_for_war_with_avorian_federation
+		icon = GFX_goal_generic_production2
+		x = 13
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		#prerequisite = {focus = AMF_rebuild_old_education_centers}
+		#relative_position_id = AMF_rebuild_old_education_centers
+		available = {
+			NOT = {has_idea = AMF_long_isolation}
+		}
+		completion_reward = {
+			add_war_support = 0.075
+		}
+	}
+
+	focus = {
+		id = AMF_establish_marine_forces
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_prepare_for_war_with_avorian_federation}
+		relative_position_id = AMF_prepare_for_war_with_avorian_federation
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 2
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_doctrinal_research
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_prepare_for_war_with_avorian_federation}
+		relative_position_id = AMF_prepare_for_war_with_avorian_federation
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.5
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_light_air_research
+		icon = GFX_goal_generic_production2
+		x = 3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_prepare_for_war_with_avorian_federation}
+		relative_position_id = AMF_prepare_for_war_with_avorian_federation
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.5
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.5
+				uses = 1
+				category = cas_bomber
+			}
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.5
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_ship_research
+		icon = GFX_goal_generic_production2
+		x = 5
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_prepare_for_war_with_avorian_federation}
+		relative_position_id = AMF_prepare_for_war_with_avorian_federation
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.5
+				uses = 1
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = AMF_send_agents_to_AVO
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_prepare_for_war_with_avorian_federation}
+		relative_position_id = AMF_prepare_for_war_with_avorian_federation
+		available = {
+		}
+		completion_reward = {
+			country_event = amf_general.2
+		}
+	}
+
+	focus = {
+		id = AMF_fight_AVO
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_send_agents_to_AVO}
+		relative_position_id = AMF_send_agents_to_AVO
+		available = {
+			has_army_manpower = {
+				size > 150000
+			}
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = AVO }
+		}
+	}
+
+	focus = {
+		id = AMF_enforce_compliance
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_fight_AVO}
+		relative_position_id = AMF_fight_AVO
+		available = {
+			NOT = {
+				country_exists = AVO
+			}
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = AVO
+				}
+				add_core_of = AMF
+			}
+			add_timed_idea = {idea = AMF_incorporating_former_enemy_territory days = 365}
+		}
+	}
+
+	focus = {
+		id = AMF_focus_on_eastern_castor
+		icon = GFX_goal_generic_production2
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_fight_AVO}
+		relative_position_id = AMF_fight_AVO
+		available = {
+			NOT = {
+				country_exists = AVO
+			}
+		}
+		completion_reward = {
+			country_event = amf_general.3
+			custom_effect_tooltip = amf_prepare_coup_on_ro_tooltip
+			set_country_flag = amf_prepare_ro_coup
+		}
+	}
+
+	focus = {
+		id = AMF_bribe_ro_tribal_leaders
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_focus_on_eastern_castor}
+		relative_position_id = AMF_focus_on_eastern_castor
+		available = {
+		}
+		completion_reward = {
+			country_event = amf_general.4
+			custom_effect_tooltip = amf_declare_war_ro
+			set_country_flag = amf_war_ro
+		}
+	}
+
+	focus = {
+		id = AMF_invade_other_tribes
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = AMF_bribe_ro_tribal_leaders}
+		relative_position_id = AMF_bribe_ro_tribal_leaders
+		available = {
+			has_war = no
+			AMR = {has_war = no}
+			NOT = {
+				country_exists = D52
+			}
+		}
+		completion_reward = {
+			AMR = {
+				declare_war_on = { type = annex_everything    target = D51 }
+				declare_war_on = { type = annex_everything    target = D53 }
+				declare_war_on = { type = annex_everything    target = D61 }
+			}
+		}
+	}
+
+
+	continuous_focus_position = {x = 75 y = 1000 }
+
+}
+	

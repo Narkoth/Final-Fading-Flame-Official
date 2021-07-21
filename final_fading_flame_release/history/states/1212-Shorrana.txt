@@ -1,0 +1,27 @@
+state={
+	id=1212
+	name="STATE_1212"
+	provinces={
+		902 1018 1843 3665 5189 10173 12242 12296 12308 12412 
+	}
+	history={
+		owner = ROC
+		victory_points = {
+			10173 10
+		}
+		victory_points = { 12308 10}
+		victory_points = { 1843  5}
+		buildings = {
+			infrastructure = 9
+			industrial_complex = 3
+			arms_factory = 1
+			steel_foundry = 2
+			chromium_extractor = 1
+		}
+		add_core_of = ROC
+		add_core_of = DOC
+	}
+	manpower=2451111
+	state_category = city
+	buildings_max_level_factor=1.000
+}

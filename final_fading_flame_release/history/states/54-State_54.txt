@@ -1,0 +1,30 @@
+state={ state_category = megalopolis
+	id=54
+	name="STATE_54"
+	provinces={
+		4362 5194 10722 10747 10748 10765 10807 
+	}
+	history={
+		#owner = AMF
+		victory_points = { 10765 50 }
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 6
+			arms_factory = 6
+			dockyard = 3
+			air_base = 4
+			5194 = {
+				naval_base = 10
+			}
+		}
+		#add_core_of = AMF
+	}
+	resources = {
+		steel = 27
+		chromium = 10
+		tungsten = 15
+		aluminium = 7
+	}
+	manpower=4257000
+	buildings_max_level_factor=5.000
+}

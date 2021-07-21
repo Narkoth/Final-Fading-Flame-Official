@@ -1,0 +1,25 @@
+state={
+	id=1202
+	name="STATE_1202"
+	provinces={
+		3170 6526 12226 12292 12342 
+	}
+	history={
+		owner = R01
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 4
+			arms_factory = 3
+			12226 = {
+				naval_base = 3
+			}
+
+		}
+		add_core_of = R01
+		add_core_of = DOC
+		add_core_of = ROC
+	}
+	manpower=6451222
+	state_category=city
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,127 @@
+ideas = { 
+	country = {
+		fae_push_for_victory = {
+			picture = generic_intel_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			targeted_modifier = {
+				tag = DOC
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.30
+			}
+			targeted_modifier = {
+				tag = CAE
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.30
+			}
+		}
+		FAE_defend_homeland = {
+			picture = generic_morale_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				conscription = 0.05
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				stability_factor = 0.25
+				war_support_factor = 0.25
+			}
+		}
+		FAE_economic_chaos = {
+			picture = usa_great_depression_2
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.75
+			}
+		}
+		FAE_USE_ANYTHING_AND_EVERYTHING = {
+			picture = ast_volunteer_defence_corps
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				equipment_capture_factor = 0.10
+				supply_consumption_factor = -0.05
+				production_lack_of_resource_penalty_factor = -0.50
+			}
+		}
+		FAE_REJECT_NOONE_IN_MILITARY = {
+			picture = generic_reserve_divisions
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				conscription = 0.05
+				conscription_factor = 0.15
+			}
+		}
+		FAE_QUANTITY_OVER_QUALITY = {
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+		}
+		FAE_MILITARY_PERSONEL_FROM_COC = {
+			picture = SOV_scientist_defect
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				max_planning_factor = 0.10
+				planning_speed = 0.10
+				training_time_factor = -0.15
+			}
+		}
+	}
+}

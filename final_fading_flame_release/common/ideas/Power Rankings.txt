@@ -1,0 +1,89 @@
+ideas = {
+	country = {
+		irrelevant_power = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.10
+				research_speed_factor = -0.15
+			}
+		}
+		minor_power = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.05
+				research_speed_factor = -0.10
+			}
+		}
+		regional_power = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = -0.05
+			}
+		}
+		secondary_power = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				political_power_factor = 0.10
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		great_power = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				political_power_factor = 0.15
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+	}
+}

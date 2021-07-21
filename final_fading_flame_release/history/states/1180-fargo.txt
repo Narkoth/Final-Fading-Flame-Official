@@ -1,0 +1,31 @@
+
+state={
+	id=1180
+	name="Far Eranwei"
+
+	history={
+		owner = COC
+		victory_points = {
+			9582 15 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+			9582 = {
+				naval_base = 4
+
+			}
+
+		}
+		add_core_of = COC
+
+	}
+
+	provinces={
+		1356 3158 3984 5596 8749 9582 12542 
+	}
+	manpower=3254111
+	buildings_max_level_factor=1.000
+	state_category=city
+}

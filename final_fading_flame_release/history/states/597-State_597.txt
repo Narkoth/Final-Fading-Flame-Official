@@ -1,0 +1,21 @@
+
+state={
+	id=597
+	name="STATE_597"
+	provinces={
+		2401 4370 4516 5488 6117 8175 11732 11766 11822 11848 
+	}
+	history={
+		#owner = D51
+		buildings = {
+			infrastructure = 2
+			11848 = {
+				naval_base = 1
+			}
+		}
+		#add_core_of = D51
+	}
+	manpower=56111
+	buildings_max_level_factor=1.000
+	state_category=city
+}

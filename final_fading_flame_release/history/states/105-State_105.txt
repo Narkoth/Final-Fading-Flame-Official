@@ -1,0 +1,30 @@
+state={ state_category = city
+	id=105
+	name="STATE_105"
+	provinces={
+		8435 10942 
+	}
+	history={
+		owner = TR1
+		victory_points = { 8435 5 }
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+			8435 = {
+				naval_base = 8
+			}
+		}
+		add_core_of = TR1
+	}
+	resources = {
+		steel = 500
+		chromium = 500
+		tungsten = 500
+		rubber = 500
+		aluminium = 500
+		oil = 500
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

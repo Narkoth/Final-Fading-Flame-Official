@@ -1,0 +1,65 @@
+﻿
+
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "Iron Fleet"			
+		naval_base = 11905
+		task_force = {
+			name = "Iron Fleet"
+			location = 11905
+			
+			ship = { name = "Iron Maiden" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = CIS } } }
+
+			ship = { name = "Meon" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = CIS} } }
+			ship = { name = "Exmoor" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = CIS} } }
+			ship = { name = "Vanessa" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = CIS} } }
+
+			ship = { name = "Holmes" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Kilcavan" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Chree" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Milne" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Laurel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Pitt" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Furious" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Hawke" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Goole" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Jama" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Bear" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Quentin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CIS } } }
+
+			ship = { name = "Hermione" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Patro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Pulham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Anaconda" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Clive" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Nymph" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "York" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Kilmore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Littleham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Comat" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Eve" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Adam" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Gorleston" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Derg" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Gier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Narva" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Bullri" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Hornby" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Crafty" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Sesame" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Vimiera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Holdi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CIS } } }
+
+			ship = { name = "Jeff" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Lorga" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Nork" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Forta" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Conflagration" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Surly" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Maria" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+		}								
+	}
+}
+

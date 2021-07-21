@@ -1,0 +1,13 @@
+state={ state_category = city
+	id=410
+	name="STATE_410"
+	history={
+		owner = AAA
+		add_core_of = AAA
+	}
+	provinces={
+		7004 8726 10413 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

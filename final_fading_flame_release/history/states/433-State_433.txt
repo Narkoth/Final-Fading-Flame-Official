@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=433
+	name="Rikka'm-Imar"
+	provinces={
+		1387 4949 6507 6725 7064 8986 9263 9798 10726 10740 10754 10768 
+	}
+	history={
+		#owner = CPK
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CPK
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=729
+	name="STATE_729"
+	provinces={
+		4279 6139 7772 12773 12883 
+	}
+	history={
+		#owner = FIS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = FIS
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

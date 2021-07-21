@@ -1,0 +1,299 @@
+﻿
+DOC_INF_01 = 
+{
+	name = "Infantry Division"
+
+	for_countries = { DOC }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { DOC_INF_01 }
+
+	fallback_name = "%d. Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Division" }
+		2 = { "%d. Division" }
+		3 = { "%d. Division" }
+		4 = { "%d. Division" }
+		5 = { "%d. Division" }
+		6 = { "%d. Division" }
+		7 = { "%d. Division" }
+		8 = { "%d. Division" }
+		9 = { "%d. Division" }
+		10 = { "%d. Division" }
+		11 = { "%d. Division" }
+		12 = { "%d. Division" }
+		13 = { "%d. Division" }
+		14 = { "%d. Division" }
+		15 = { "%d. Division" }
+		16 = { "%d. Division" }
+		17 = { "%d. Division" }
+		18 = { "%d. Division" }
+		19 = { "%d. Division" }
+		20 = { "%d. Division" }
+	}
+}
+
+DOC_CAV_01 = 
+{
+	name = "Cavalry Division"
+
+	for_countries = { DOC }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { DOC_INF_01 }
+
+	fallback_name = "%d. Cavalry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Cavalry Division" }
+		2 = { "%d. Cavalry Division" }
+		3 = { "%d. Cavalry Division" }
+		4 = { "%d. Cavalry Division" }
+		5 = { "%d. Cavalry Division" }
+		6 = { "%d. Cavalry Division" }
+		7 = { "%d. Cavalry Division" }
+		8 = { "%d. Cavalry Division" }
+		9 = { "%d. Cavalry Division" }
+		10 = { "%d. Cavalry Division" }
+	}
+}
+
+DOC_MOT_01 = 
+{
+	name = "Motorized Division"
+
+	for_countries = { DOC }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { DOC_INF_01 }
+
+	fallback_name = "%d. Motorized Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Motorized Division" }
+		2 = { "%d. Motorized Division" }
+		3 = { "%d. Motorized Division" }
+		4 = { "%d. Motorized Division" }
+		5 = { "%d. Motorized Division" }
+		6 = { "%d. Motorized Division" }
+		7 = { "%d. Motorized Division" }
+		8 = { "%d. Motorized Division" }
+		9 = { "%d. Motorized Division" }
+		10 = { "%d. Motorized Division" }
+	}
+}
+
+DOC_MEC_01 = 
+{
+	name = "Mechanized Division"
+
+	for_countries = { DOC }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { DOC_CAV_01 }
+
+	fallback_name = "%d. Mechanized Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Mechanized Division" }
+		2 = { "%d. Mechanized Division" }
+		3 = { "%d. Mechanized Division" }
+		4 = { "%d. Mechanized Division" }
+		5 = { "%d. Mechanized Division" }
+		6 = { "%d. Mechanized Division" }
+		7 = { "%d. Mechanized Division" }
+		8 = { "%d. Mechanized Division" }
+		9 = { "%d. Mechanized Division" }
+		10 = { "%d. Mechanized Division" }
+	}
+}
+
+DOC_ARM_01 = 
+{
+	name = "Armored Division"
+
+	for_countries = { DOC }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { DOC_INF_01 }
+
+	fallback_name = "%d. Armored Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Armored Division" }
+		2 = { "%d. Armored Division" }
+		3 = { "%d. Armored Division" }
+		4 = { "%d. Armored Division" }
+		5 = { "%d. Armored Division" }
+		6 = { "%d. Armored Division" }
+		7 = { "%d. Armored Division" }
+		8 = { "%d. Armored Division" }
+		9 = { "%d. Armored Division" }
+		10 = { "%d. Armored Division" }
+	}
+}
+
+DOC_PAR_01 = 
+{
+	name = "Paratrooper Division"
+
+	for_countries = { DOC }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { DOC_INF_01 }
+
+	fallback_name = "%d. Paratrooper Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Paratrooper Division" }
+		2 = { "%d. Paratrooper Division" }
+		3 = { "%d. Paratrooper Division" }
+		4 = { "%d. Paratrooper Division" }
+		5 = { "%d. Paratrooper Division" }
+		6 = { "%d. Paratrooper Division" }
+		7 = { "%d. Paratrooper Division" }
+		8 = { "%d. Paratrooper Division" }
+		9 = { "%d. Paratrooper Division" }
+		10 = { "%d. Paratrooper Division" }
+	}
+}
+
+DOC_MAR_01 = 
+{
+	name = "Marine Division"
+
+	for_countries = { DOC }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { DOC_INF_01 }
+
+	fallback_name = "%d. Marine Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Marine Division" }
+		2 = { "%d. Marine Division" }
+		3 = { "%d. Marine Division" }
+		4 = { "%d. Marine Division" }
+		5 = { "%d. Marine Division" }
+		6 = { "%d. Marine Division" }
+		7 = { "%d. Marine Division" }
+		8 = { "%d. Marine Division" }
+		9 = { "%d. Marine Division" }
+		10 = { "%d. Marine Division" }
+	}
+}
+
+DOC_MNT_01 = 
+{
+	name = "Mountain Division"
+
+	for_countries = { DOC }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { DOC_INF_01 }
+
+	fallback_name = "%d. Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Division" }
+		2 = { "%d. Division" }
+		3 = { "%d. Division" }
+		4 = { "%d. Division" }
+		5 = { "%d. Division" }
+		6 = { "%d. Division" }
+		7 = { "%d. Division" }
+		8 = { "%d. Division" }
+		9 = { "%d. Division" }
+		10 = { "%d. Division" }
+	}
+}
+
+DOC_GAR_01 = 
+{
+	name = "Garrison Division"
+
+	for_countries = { DOC }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { DOC_INF_01 }
+
+	fallback_name = "%d. Garrison"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Garrison" }
+		2 = { "%d. Garrison" }
+		3 = { "%d. Garrison" }
+		4 = { "%d. Garrison" }
+		5 = { "%d. Garrison" }
+		6 = { "%d. Garrison" }
+		7 = { "%d. Garrison" }
+		8 = { "%d. Garrison" }
+		9 = { "%d. Garrison" }
+		10 = { "%d. Garrison" }		
+	}
+}
+

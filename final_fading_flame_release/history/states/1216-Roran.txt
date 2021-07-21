@@ -1,0 +1,30 @@
+
+state={
+	id=1216
+	name="STATE_1216"
+
+	history={
+		owner = FAE
+		buildings = {
+			infrastructure = 3
+			13080 = {
+				naval_base = 2
+			}
+		}
+		add_claim_by = CAE
+		add_core_of = FAE
+
+	}
+
+	resources = {
+		rubber = 13
+		oil = 7
+	}
+
+	provinces={
+		13060 13080 
+	}
+	manpower=1421333
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

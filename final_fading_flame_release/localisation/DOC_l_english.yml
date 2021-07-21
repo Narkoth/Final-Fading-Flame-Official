@@ -1,0 +1,33 @@
+﻿l_english:
+DOC_royal_guards:0 "Summon Two Royal Marine Divisons in the Capital"
+CAE_militia_spawn:0 "Summon Five Militia Forces to Defend our Newly Found Freedom"
+DOC_decentralize:0 "Prior to our retreat from the mainland, Caer was an autonomous region within the Kingdom. We annexed it to properly fortify it against potential Ronard invasion, but this has come to pass. By giving them back some autonomy, we can further increase the stability of the realm, and the people's trust in our government."
+DOC_centralize:0 "If we are to liberate our homeland, we need to further centralize our control of this region, regardless of its prior history in our realm."
+ROC_fully_suppressed:0 "The active dissenters to our rule will finally be suppressed. \nRemove Dissenter National Spirit."
+ROC_indie_army:0 "The problem with mercs, is that they can be very unreliable, as they are only tied to us via their paycheck. Instead, we should create a traditional army, coming from the people in our control."
+ROC_merc_army:0 "We are a company that has superceded and become the state. Instead of conscripting the people we control, we should use our mass wealth to only hire the very best soldiers from the world. People may not like the idea of an entirely merc army, but they will adjust in time ... as they wouldn't have much of a choice."
+DOC_refugee_crisis_progress:0 "Make Progress on Respectfully Incorporating the Refugees into our Society"
+DOC_initial_refugee_crisis_aid:0 "Has Completed Initial Efforts at Mitigating Refugee Crisis"
+DOC_handling_refugee_crisis_decision_active:0 "Currently Making Efforts at Resolving the Crisis"
+DOC_unlock_dealing_with_refugee_crisis:0 "Unlock Decisions to Mitigate and Solve our Current Refugee Crisis"
+DOC_refugee_crisis_all_complete:0 "All Efforts Have Been Made to Resolve the Crisis"
+
+DOC_general_events.3.t:0 "The Iron State Seizes Nearby Islands"
+DOC_general_events.3.d:0 "In a suprise attack last night, the Iron State managed to take back their islands near their territory. Since we already embargo each-other, and war with them is not an option at the moment due to our situation, we can only scoff in their general direction ..."
+DOC_general_events.3.a:0 "Damn those Bastards!"
+
+DOC_general_events.4.t:0 "State Visit from the Eastern Territories"
+DOC_general_events.4.d:0 "We have just finished a meeting from state officials from the Eastern Territories. They have expressed their wishes to form a stronger bond between our two nations, so that we might prosper.\n\nThis can prove a useful advantage to curb the rise of Ronard's power in the future."
+DOC_general_events.4.a:0 "Excellent!"
+
+DOC_general_events.5.t:0 "Eastern Territories Becomes a Loyal Subject"
+DOC_general_events.5.d:0 "After numerous meetings, the Eastern Territories has decided to come under our wing in exchange for their protection and our industrial aid for their economy. Of course, this also means that we can take advantage of their prospecting missions that have so far proven quite fruitful.\n\nAt the same time, this gives us a beachead into mainland Castor, which can prove very useful if we ever wish to retake the Castorian throne from Ronard."
+DOC_general_events.5.a:0 "Excellent!"
+
+DOC_general_events.6.t:0 "The Shi Wish to Join Our Cause"
+DOC_general_events.6.d:0 "While the new Shi government doesn't completely agree with all of our ambitions and actions as of late, they do share a common hatred for corporatism much they same way we do. With our current war against Ronard being under way, they have decided to temporarily join our alliance against them, as they believe that removing Corporatism from the region can result in a more stable Castor."
+DOC_general_events.6.a:0 "To Arms!"
+
+DOC_general_events.7.t:0 "Free People of Joen Wish to Join the Kingdom"
+DOC_general_events.7.d:0 "Our old allies in Castor, the Utopianist Free People of Joen, have asked to formally join our alliance. They see Ronard as a massive threat to stability within the region, and wish to see Columbia restored on her rightful Castorian throne, as they believe that this is the only way that stability can come to the region."
+DOC_general_events.7.a:0 "Allies Once More!"

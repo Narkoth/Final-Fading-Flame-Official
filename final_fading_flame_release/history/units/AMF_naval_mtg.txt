@@ -1,0 +1,64 @@
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "1st Amazon Navy"			
+		naval_base = 5194
+		task_force = {
+			name = "1st Amazon Navy"
+			location = 5194
+
+			ship = { name = "Seahawk"  definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = AMF version_name = "Early Battleship"} } }
+
+			ship = { name = "Alonzo" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Defender" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Blean" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Weazle" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Colleen" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Uranie" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Musk" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Heavy Cruiser"} } }
+
+
+			ship = { name = "Paul" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Unicorn" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Cam" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Tetcott" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Unbroken" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Griffin" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Pert" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Nurton" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Leeds" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Rugby" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Minstrel" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Kilbane" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Weazel" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Seafire" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Fundy" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Omdurman" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Oxlip" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Keats" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = AMF version_name = "Basic Light Cruiser"} } }
+
+
+			ship = { name = "Opal" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Downley" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Ligaera" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Vega" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Hawke" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Burford" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Ouragan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Evans" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Heron" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Nesbitt" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Mulette" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Junon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Alisma" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+			ship = { name = "Melton" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AMF version_name = "Basic Destroyer"} } }
+
+			ship = { name = "Havant" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = AMF version_name = "Basic Submarine" } } }
+			ship = { name = "Mull" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = AMF version_name = "Basic Submarine" } } }
+			ship = { name = "Ister" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = AMF version_name = "Basic Submarine" } } }
+
+
+		}								
+	}
+}

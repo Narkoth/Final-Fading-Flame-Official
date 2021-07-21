@@ -1,0 +1,40 @@
+
+state={
+	id=1171
+	name="Western Caer"
+
+	provinces={
+		2547 8783 12987 13036 
+	}
+
+	history={
+		victory_points = { 12987 10 }
+		victory_points = { 13036 10 }
+		owner = FAE
+		buildings = {
+			air_base = 3
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+			12987 = {
+				naval_base = 3
+			}
+			13036 = {
+				naval_base = 3
+			}
+		}
+		add_claim_by = CAE
+		add_core_of = FAE
+
+	}
+
+	resources = {
+		rubber = 30
+		oil = 15
+	}
+
+	
+	manpower=2113111
+	buildings_max_level_factor=1.000
+	state_category=town
+}

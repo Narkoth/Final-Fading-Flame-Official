@@ -1,0 +1,33 @@
+
+state={
+	id=1181
+	name="Shorwei"
+
+	history={
+		owner = R01
+		victory_points = {
+			1758 30 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 3
+			dockyard = 4
+			1758 = {
+				naval_base = 8
+
+			}
+
+		}
+		add_core_of = R01
+		add_core_of = DOC
+		add_core_of = ROC
+	}
+
+	provinces={
+		1758 2322 7192 8067 8731 8750 12633 12686 12715 
+	}
+	manpower=3512333
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

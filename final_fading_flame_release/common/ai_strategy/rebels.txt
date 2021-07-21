@@ -1,0 +1,18 @@
+rebels_dealing_with_roc = {
+	enable = {
+        tag = R01
+		country_exists = ROC
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = ROC
+		}
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ROC"
+		value = 100
+	}
+}

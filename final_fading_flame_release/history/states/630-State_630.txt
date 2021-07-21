@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=630
+	name="Long Coast"
+	provinces={
+		629 3478 3985 12066 12161 12217 12283 12306 
+	}
+	history={
+		#owner = FIS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = FIS
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

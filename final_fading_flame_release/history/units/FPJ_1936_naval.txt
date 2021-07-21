@@ -1,0 +1,22 @@
+﻿
+
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "Coastal Protection Fleet"			
+		naval_base = 1060
+		task_force = {
+			name = "Coastal Protection Fleet"
+			location = 1060
+
+			ship = { name = "Melton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FPJ } } }
+			ship = { name = "Serapis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FPJ } } }
+			ship = { name = "Uredd" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FPJ } } }
+			ship = { name = "Vanoc" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FPJ } } }
+			ship = { name = "Morrow" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FPJ } } }
+
+		}								
+	}
+}
+

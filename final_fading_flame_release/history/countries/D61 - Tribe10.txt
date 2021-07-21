@@ -1,0 +1,45 @@
+capital = 1203
+
+oob = "D61"
+
+
+set_research_slots = 1
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+
+
+
+set_convoys = 120
+
+set_politics = {
+	ruling_party = cooperativism
+	last_election = "1934.7.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	cooperativism = 75
+	liberated_corporatism = 22
+	isolationism = 3
+}
+
+create_country_leader = {
+	name = "Chieftess of Lor"
+	desc = "POLITICS_COLUMBIA_DESC"
+	picture = "Portrait_L.dds"
+	expire = "8888.1.1"
+	ideology = cooperativism_type
+	traits = {
+		#
+	}
+}
+
+
+
+

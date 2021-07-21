@@ -1,0 +1,25 @@
+state={
+	id=1230
+	name="STATE_1231"
+	provinces={
+		4101 8944 
+	}
+	state_category = rural
+	history={
+		owner = CAE
+		buildings = {
+			infrastructure = 5
+			8944 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = CAE
+		add_claim_by = FAE
+	}
+	resources = {
+		steel = 6
+		aluminium = 4
+	}
+	manpower=245111
+	buildings_max_level_factor=1.000
+}

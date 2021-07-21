@@ -1,0 +1,23 @@
+state={ state_category = city
+	id=96
+	name="STATE_96"
+	provinces={
+		9034 16493
+	}
+	history={
+		#owner = AVO
+		victory_points = { 9034 10 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 1
+			air_base = 2
+			9034 = {
+				naval_base = 4
+			}
+		}
+		#add_core_of = AVO
+	}
+	manpower=251461
+	buildings_max_level_factor=1.000
+}

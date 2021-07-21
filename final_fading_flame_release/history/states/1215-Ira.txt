@@ -1,0 +1,25 @@
+state={
+	id=1215
+	name="STATE_1215"
+	provinces={
+		2791 4245 12583 
+	}
+	history={
+		owner = R01
+		victory_points = {
+			4245 15
+		}
+		buildings = {
+			infrastructure = 10
+			industrial_complex = 6
+			arms_factory = 4
+			air_base = 5
+		}
+		add_core_of = R01
+		add_core_of = DOC
+		add_core_of = ROC
+	}
+	manpower=4531222
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

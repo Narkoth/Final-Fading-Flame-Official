@@ -1,0 +1,30 @@
+
+state={
+	id=692
+	name="STATE_692"
+
+	history={
+		owner = ROC
+		victory_points = {
+			6964 15 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			dockyard = 6
+			12799 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = DOC
+		add_core_of = ROC
+
+	}
+
+	provinces={
+		984 2414 3419 4116 6964 12701 12789 12799 
+	}
+	manpower=4578000
+	buildings_max_level_factor=2.000
+	state_category=large_city
+}

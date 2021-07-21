@@ -1,0 +1,57 @@
+
+focus_tree = {
+	id = trader_focus_tree1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = TR1
+			}
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 75 y = 1000 }
+
+    focus = {
+		id = trader_planes
+		icon = GFX_goal_generic_production2
+		x = 9
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		available = {
+			has_political_power > 500
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = TR_plane_tooltip
+            add_political_power = -500
+		}
+	}
+
+    focus = {
+		id = trader_merc_brigades
+		icon = GFX_goal_generic_production2
+		relative_position_id = trader_planes
+		prerequisite = { focus = trader_planes}
+		x = -2
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_political_power > 500
+		}
+		completion_reward = {
+            custom_effect_tooltip = TR_merc_brigade_tooltip
+			add_political_power = -500
+		}
+	}
+
+}
+	

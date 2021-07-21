@@ -1,0 +1,29 @@
+
+state={
+	id=1217
+	name="STATE_1217"
+	provinces={
+		12992 
+	}
+	state_category = metropolis
+	history={
+		victory_points = { 12992 20 }
+		owner = FAE
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 2
+			12992 = {
+				bunker = 1
+				coastal_bunker = 1
+			}
+		}
+		add_claim_by = CAE
+		add_core_of = FAE
+	}
+	resources = {
+		rubber = 43
+		oil = 17
+	}
+	manpower=3421333
+}

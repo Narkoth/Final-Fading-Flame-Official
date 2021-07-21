@@ -1,0 +1,648 @@
+
+focus_tree = {
+	id = wal_focus_tree_final
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = WAL
+			}
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 750 y = 650 }
+
+    focus = {
+		id = wal_economy
+		icon = GFX_goal_generic_production
+		x = 2
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = light_Tank_tech
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+    focus = {
+		id = wal_expand_domestic_industries
+		icon = GFX_focus_generic_industry_1
+		relative_position_id = wal_economy
+		prerequisite = { focus = wal_economy}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+           1186 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+            1185 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = wal_expand_domestic_industries_2
+		icon = GFX_focus_generic_industry_2
+		relative_position_id = wal_expand_domestic_industries
+		prerequisite = { focus = wal_expand_domestic_industries}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+           1188 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+            656 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = wal_expand_military_production
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = wal_expand_domestic_industries_2
+		prerequisite = { focus = wal_expand_domestic_industries_2}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+           1192 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+            1197 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = wal_better_our_roads
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = wal_economy
+		prerequisite = { focus = wal_economy}
+		x = 0
+		y = 1
+		cost = 15 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+           every_owned_state = {
+               add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+           }
+		}
+	}
+
+    focus = {
+		id = wal_better_our_roads_2
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = wal_better_our_roads
+		prerequisite = { focus = wal_better_our_roads}
+        prerequisite = { focus = wal_expand_military_production}
+        prerequisite = { focus = wal_invite_prospectors}
+		x = 0
+		y = 3
+		cost = 15
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+           every_owned_state = {
+               add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+           }
+		}
+	}
+
+    
+
+    focus = {
+		id = wal_work_on_expanding_resource_production
+		icon = GFX_goal_generic_construction2
+		relative_position_id = wal_better_our_roads_2
+		prerequisite = { focus = wal_better_our_roads_2}
+		x = 0
+		y = 2
+		cost = 10 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+            set_country_flag = WAL_mining_time
+            custom_effect_tooltip = WAL_we_need_to_mine_tooltip
+		}
+	}
+
+    focus = {
+		id = wal_invite_foreign_investors
+		icon = GFX_focus_mex_privatisation
+		relative_position_id = wal_economy
+		prerequisite = { focus = wal_economy}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+            add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+    focus = {
+		id = wal_invite_prospectors
+		icon = GFX_focus_generic_steel
+		relative_position_id = wal_invite_foreign_investors
+		prerequisite = { focus = wal_invite_foreign_investors}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+            656 = {
+                add_resource = {
+                    type = steel
+                    amount = 12
+                }
+            }
+            1196 = {
+                 add_resource = {
+                    type = steel
+                    amount = 8
+                }
+            }
+            702 = {
+                add_resource = {
+                    type = steel
+                    amount = 10
+                }
+            }
+		}
+	}
+
+    focus = {
+		id = wal_improve_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 1
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_better_our_roads
+		prerequisite = { focus = wal_better_our_roads}
+
+		available = {
+            date > 110.5.1
+		}
+
+		completion_reward = {
+			every_owned_state = {
+               add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+           }
+		}
+	}
+
+    focus = {
+		id = wal_improve_infrastructure_2
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_improve_infrastructure
+		prerequisite = { focus = wal_improve_infrastructure}
+
+		available = {
+            date > 112.4.5
+		}
+
+		completion_reward = {
+			every_owned_state = {
+               add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+           }
+		}
+	}
+
+	focus = {
+		id = wal_our_army
+		icon = GFX_focus_generic_manpower
+		x = 8
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		available = {
+		}
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+    focus = {
+		id = wal_improve_our_hell
+		icon = GFX_focus_generic_industry_3
+		x = 1
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_work_on_expanding_resource_production
+		prerequisite = { focus = wal_work_on_expanding_resource_production}
+        prerequisite = { focus = wal_improve_infrastructure_2}
+
+		available = {
+            date > 113.2.1
+		}
+
+		completion_reward = {
+			swap_ideas = {
+                add_idea = WAL_mountain_hell_2
+                remove_idea = WAL_mountain_hell
+            }
+		}
+	}
+
+    
+
+    focus = {
+		id = wal_our_army_artillery_equipment
+		icon = GFX_goal_generic_army_artillery
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_our_army
+        prerequisite = {focus = wal_our_army}
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = light_Tank_tech
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+    
+    focus = {
+		id = wal_our_army_support_companies
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_our_army_artillery_equipment
+        prerequisite = {focus = wal_our_army_artillery_equipment}
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = light_Tank_tech
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+
+    focus = {
+		id = wal_our_army_new_gun
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_our_army_support_companies
+        prerequisite = {focus = wal_our_army_support_companies}
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = light_Tank_tech
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+
+    focus = {
+		id = wal_mountain_tech
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 3
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_our_army
+        prerequisite = {focus = wal_our_army}
+		available = {
+		}
+
+		completion_reward = {
+            #custom_effect_tooltip = wal_unlock_commando_tooltip
+			show_ideas_tooltip = jona_general	
+			add_tech_bonus = {
+				name = light_Tank_tech
+				bonus = 1.5
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+
+    focus = {
+		id = wal_scavenge_for_arms
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_our_army
+        prerequisite = {focus = wal_our_army}
+		available = {
+		}
+
+		completion_reward = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+                amount = 1500
+            }
+		}
+	}
+
+    focus = {
+		id = wal_increase_recruitment
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_scavenge_for_arms
+        prerequisite = {focus = wal_scavenge_for_arms}
+		available = {
+		}
+
+		completion_reward = {
+            add_ideas = WAL_volunteer_army
+		}
+	}
+
+    focus = {
+		id = wal_look_at_the_skys
+		icon = GFX_goal_generic_air_fighter
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_our_army
+        prerequisite = {focus = wal_our_army}
+		available = {
+		}
+
+		completion_reward = {
+            add_tech_bonus = {
+				name = light_Tank_tech
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+    focus = {
+		id = wal_power_of_air_in_mountains
+		icon = GFX_goal_generic_air_bomber
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_look_at_the_skys
+        prerequisite = {focus = wal_look_at_the_skys}
+		available = {
+		}
+
+		completion_reward = {
+            add_tech_bonus = {
+				name = light_Tank_tech
+				bonus = 1
+				uses = 2
+				category = air_equipment
+			}
+            add_ideas = WAL_transport_planes
+		}
+	}
+
+    focus = {
+		id = wal_political_sphere
+		icon = GFX_goal_generic_neutrality_focus
+		x = 14
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		available = {
+		}
+
+		completion_reward = {
+            add_political_power = 150
+		}
+	}
+
+    focus = {
+		id = wal_align_with_ronard
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_political_sphere
+        prerequisite = {focus = wal_political_sphere}
+        mutually_exclusive = {focus = wal_royalist_tendencies}
+		available = {
+            is_subject = no
+            country_exists = ROC
+            ROC = {
+                is_subject = no
+            }
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+            ROC = {
+                country_event = roc_wal_relations.1
+            }
+		}
+	}
+
+    focus = {
+		id = wal_ask_for_ronard_protection
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_align_with_ronard
+        prerequisite = {focus = wal_align_with_ronard}
+		available = {
+            is_subject = no
+            country_exists = ROC
+            ROC = {
+                is_subject = no
+            }
+		}
+
+		completion_reward = {
+            ROC = {
+                country_event = roc_wal_relations.2
+                puppet = WAL
+            }
+            add_offsite_building = { type = industrial_complex level = 5 }
+            add_offsite_building = { type = arms_factory level = 5 }
+		}
+	}
+
+    focus = {
+		id = wal_royalist_tendencies
+		icon = GFX_focus_generic_monarchy_2
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_political_sphere
+        prerequisite = {focus = wal_political_sphere}
+        mutually_exclusive = {focus = wal_align_with_ronard}
+		available = {
+            is_subject = no
+            country_exists = DOC
+            DOC = {
+                is_subject = no
+            }
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+            DOC = {
+                country_event = DOC_general_events.4
+            }
+		}
+	}
+
+    focus = {
+		id = wal_join_the_crown
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+        relative_position_id = wal_royalist_tendencies
+        prerequisite = {focus = wal_royalist_tendencies}
+		available = {
+            is_subject = no
+            country_exists = DOC
+            DOC = {
+                is_subject = no
+            }
+		}
+
+		completion_reward = {
+            DOC = {
+                country_event = DOC_general_events.5
+                puppet = WAL
+            }
+            add_popularity = {
+                ideology = monarchism
+                popularity = 0.40
+            }
+            set_politics = {
+				ruling_party = monarchism
+				elections_allowed = no
+			}
+            add_offsite_building = { type = industrial_complex level = 5 }
+            add_offsite_building = { type = arms_factory level = 5 }
+		}
+	}
+
+}
+	

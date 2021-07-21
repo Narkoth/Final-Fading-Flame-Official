@@ -1,0 +1,122 @@
+WAL_AND_ROC = { #ROC and WALL Close Relationship
+	enable = {
+		tag = WAL
+		country_exists = ROC
+	}
+	abort = {
+		OR = {
+			NOT = {
+				country_exists = ROC
+			}
+			NOT = {
+				WAL = {
+					is_subject_of = DOC
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = ROC
+		value = 50
+	}
+}
+
+WAL_unit_production = {
+	enable = {
+		tag = WAL
+	}
+
+	ai_strategy = { 
+		type = role_ratio
+		id = infantry
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 85
+	}
+	
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+
+	ai_strategy = { # shouldn't worry to much about armor early game
+		type = role_ratio
+		id = armor
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry 
+		value = -100
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = carrier
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 55
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 100
+	}
+	
+	ai_strategy = { # Winning air-war is crucial for DOC being able to fight effectively off of its territory
+		type = equipment_production_factor
+		id = fighter
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 45
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = 80
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 20
+	}
+
+}

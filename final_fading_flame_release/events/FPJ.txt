@@ -1,0 +1,65 @@
+
+add_namespace = FPJ
+
+country_event = {
+	id = FPJ.1
+	title = FPJ.1.t
+	desc = FPJ.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = FPJ.1.a
+        add_tech_bonus = {
+				name = mass_mob
+				bonus = 1
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+	}
+	option = {
+		name = FPJ.1.b
+        add_tech_bonus = {
+				name = mass_mob
+				bonus = 1
+				uses = 2
+				category = cat_superior_firepower
+			}
+	}
+	option = {
+		name = FPJ.1.c
+        add_tech_bonus = {
+				name = mass_mob
+				bonus = 1
+				uses = 2
+				category = cat_mobile_warfare
+			}
+	}
+}
+
+country_event = {
+	id = FPJ.2
+	title = FPJ.2.t
+	desc = FPJ.2.d
+
+	trigger = {
+		tag = FPJ
+		FPJ = {
+			AND = {
+				just_worldism > 0.6
+				is_puppet = no
+			}
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = FPJ.2.a
+        set_politics = {
+			ruling_party = just_worldism
+			elections_allowed = no
+		}
+	}
+}
+

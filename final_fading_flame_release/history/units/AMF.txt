@@ -1,0 +1,184 @@
+
+division_template = {
+	name = "Coastal Garrison"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer =  {x = 0 y = 0}
+	}
+}
+division_template = {
+	name = "Supplement Infantry"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer =  {x = 0 y = 0}
+		artillery = {x = 0 y = 1}
+	}
+}
+
+division_template = {
+	name = "Amazonian Warriors"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		amazonian = { x = 0 y = 0 }
+		amazonian = { x = 0 y = 1 }
+		amazonian = { x = 0 y = 2 }
+		amazonian = { x = 1 y = 0 }
+		amazonian = { x = 1 y = 1 }
+		amazonian = { x = 1 y = 2 }
+		amazonian = { x = 2 y = 0 }
+		amazonian = { x = 2 y = 1 }
+		amazonian = { x = 2 y = 2 }
+	}
+	support = {
+		engineer =  {x = 0 y = 0}
+		artillery = {x = 0 y = 1}
+	}
+}
+
+
+
+
+units = {
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 5194  # Perth
+		division_template = "Coastal Garrison"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 16302  # Perth
+		division_template = "Coastal Garrison"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1889  # Perth
+		division_template = "Coastal Garrison"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10876  # Perth
+		division_template = "Coastal Garrison"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 16492  # Perth
+		division_template = "Coastal Garrison"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10765  # Perth
+		division_template = "Supplement Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10765  # Perth
+		division_template = "Supplement Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10765  # Perth
+		division_template = "Amazonian Warriors"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10765  # Perth
+		division_template = "Amazonian Warriors"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10765  # Perth
+		division_template = "Amazonian Warriors"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	
+}
+
+air_wings = {
+	54 = { 
+		fighter_equipment_0 = {
+			owner = "AMF" 
+			amount = 72
+		}
+		tac_bomber_equipment_0 = {
+			owner = "AMF" 
+			amount = 37
+		}
+	}
+}
+
+

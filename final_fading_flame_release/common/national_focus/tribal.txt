@@ -1,0 +1,1006 @@
+﻿
+focus_tree = {
+	id = tribal_focus_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = D51
+				tag = D52
+				tag = D53
+				#tag = D54
+				tag = D55
+				tag = D56
+				tag = D57
+				tag = D58
+				tag = D59
+				tag = D60
+				tag = D61
+			}
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 3500 y = 100 }
+
+	focus = {
+		id = tribal_nation
+		icon = GFX_goal_generic_demand_territory
+		x = 10
+		y = 0
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			country_event = tribal_generic.1
+			country_event = tribal_generic.2
+		}
+	}
+
+	focus = {
+		id = tribal_new_generation_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_nation
+		prerequisite = {focus = tribal_nation}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			country_event = tribal_generic.3
+		}
+	}
+
+	focus = {
+		id = tribal_cooperative
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_nation
+		prerequisite = {focus = tribal_nation}
+		mutually_exclusive = {
+			focus = tribal_isolationist
+		}
+		available = {
+			has_government = cooperativism
+		}
+		x = 2
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = tribal_acquire_advanced_medicines
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_cooperative
+		prerequisite = {focus = tribal_cooperative}
+		x = 1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_ideas = tribal_advanced_medicines
+			add_stability = 0.075
+		}
+	}
+
+	focus = {
+		id = tribal_gain_investments
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_acquire_advanced_medicines
+		prerequisite = {focus = tribal_acquire_advanced_medicines}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	focus = {
+		id = tribal_isolationist
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_nation
+		prerequisite = {focus = tribal_nation}
+		mutually_exclusive = {
+			focus = tribal_cooperative
+		}
+		available = {
+			has_government = isolationism
+		}
+		x = -2
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = tribal_protecting_our_way_of_life
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_isolationist
+		prerequisite = {focus = tribal_isolationist}
+		x = -1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_ideas = tribal_defend_our_ways
+		}
+	}
+
+	focus = {
+		id = tribal_defense_at_all_costs
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_protecting_our_way_of_life
+		prerequisite = {focus = tribal_protecting_our_way_of_life}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_ideas = tribal_defend_homeland
+		}
+	}
+
+	focus = {
+		id = tribal_celebration_of_our_heritage
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_nation
+		prerequisite = {focus = tribal_isolationist focus = tribal_cooperative}
+		x = 0
+		y = 3
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = tribal_choosing_a_path
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_celebration_of_our_heritage
+		prerequisite = {focus = tribal_celebration_of_our_heritage}
+		x = 0
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			country_event = tribal_generic.5
+		}
+	}
+
+	
+	focus = {
+		id = tribal_theocracy_gov
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_choosing_a_path
+		prerequisite = {focus = tribal_choosing_a_path}
+		mutually_exclusive = {
+			focus = tribal_statist_gov
+			OR = tribal_monarchism_gov
+			OR = tribal_communal_gov
+			OR = tribal_centrism_gov
+			OR = tribal_utopianism_gov
+		}
+		x = -2
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			full_theocracy > 0.5
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = full_theocracy
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_statist_gov
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_choosing_a_path
+		prerequisite = {focus = tribal_choosing_a_path}
+		x = -4
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 4000
+		}
+		mutually_exclusive = {
+			focus = tribal_theocracy_gov
+			OR = tribal_monarchism_gov
+			OR = tribal_communal_gov
+			OR = tribal_centrism_gov
+			OR = tribal_utopianism_gov
+		}
+		available = {
+			statism > 0.5
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = statism
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_communal_gov
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_choosing_a_path
+		prerequisite = {focus = tribal_choosing_a_path}
+		x = 2
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 4000
+		}
+		mutually_exclusive = {
+			focus = tribal_statist_gov
+			OR = tribal_monarchism_gov
+			OR = tribal_theocracy_gov
+			OR = tribal_centrism_gov
+			OR = tribal_utopianism_gov
+		}
+		available = {
+			classical_communalism > 0.5
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = classical_communalism
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_monarchism_gov
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_choosing_a_path
+		prerequisite = {focus = tribal_choosing_a_path}
+		x = -6
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 4000
+		}
+		mutually_exclusive = {
+			focus = tribal_statist_gov
+			OR = tribal_theocracy_gov
+			OR = tribal_communal_gov
+			OR = tribal_centrism_gov
+			OR = tribal_utopianism_gov
+		}
+		available = {
+			monarchism > 0.5
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = monarchism
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_centrism_gov
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_choosing_a_path
+		prerequisite = {focus = tribal_choosing_a_path}
+		x = 4
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 4000
+		}
+		mutually_exclusive = {
+			focus = tribal_statist_gov
+			OR = tribal_monarchism_gov
+			OR = tribal_communal_gov
+			OR = tribal_theocracy_gov
+			OR = tribal_utopianism_gov
+		}
+		available = {
+			centrism > 0.5
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = centrism
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_utopianism_gov
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_choosing_a_path
+		prerequisite = {focus = tribal_choosing_a_path}
+		x = 6
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 4000
+		}
+		mutually_exclusive = {
+			focus = tribal_statist_gov
+			OR = tribal_monarchism_gov
+			OR = tribal_communal_gov
+			OR = tribal_centrism_gov
+			OR = tribal_theocracy_gov
+		}
+		available = {
+			utopianism > 0.5
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = utopianism
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_move_onto_a_new_age
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_choosing_a_path
+		prerequisite = {focus = tribal_theocracy_gov
+						focus = tribal_statist_gov
+						focus = tribal_monarchism_gov
+						focus = tribal_communal_gov
+						focus = tribal_centrism_gov
+						focus = tribal_utopianism_gov}
+		x = 0
+		y = 4
+		cost = 7
+		ai_will_do = {
+			factor = 160
+			modifier = {
+				factor = 0
+				NOT = { # Don't want AI to advance without grabbing the free research slot first
+					has_completed_focus = tribal_priests_as_scholars
+				}
+			}
+		}
+		available = {
+			is_tribal = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = tribal_keep_ourselves_but_industrialize
+			remove_ideas = tribal_industry
+			remove_ideas = tribal_no_professional_military
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_capital = yes
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = tribal_aggressive_population_effort
+			add_research_slot = 1 # Since Tribals will be so far behind in tech, giving them an additional tech slot is necessary
+			load_focus_tree = generic_tree
+		}
+	}
+
+	
+
+
+	focus = {
+		id = tribal_military
+		icon = GFX_goal_generic_construct_civ_factory
+		available = {
+			has_completed_focus = tribal_nation
+		}
+		x = 0
+		y = 0
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = tribal_purchase_military_equipment
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_military
+		prerequisite = {focus = tribal_military}
+		x = 1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_seek_military_assistance
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_military
+		prerequisite = {focus = tribal_military}
+		x = 3
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+
+	focus = {
+		id = tribal_call_for_warriors
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_military
+		prerequisite = {focus = tribal_military}
+		x = -1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_manpower = 25000
+		}
+	}
+
+	focus = {
+		id = tribal_any_weapon_counts
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_military
+		prerequisite = {focus = tribal_military}
+		x = 5
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_ideas = tribal_scan_battlegrounds
+		}
+	}
+
+	focus = {
+		id = tribal_scavenge_and_maintain
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_military
+		prerequisite = {focus = tribal_military}
+		x = -3
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_ideas = tribal_scavengers
+		}
+	}
+
+	focus = {
+		id = tribal_mobility_is_key
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_military
+		prerequisite = {focus = tribal_military}
+		x = -5
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			custom_effect_tooltip = tribal_cavalry_summons
+			hidden_effect = {
+				division_template = {
+					name = "Tribal Cavalry"
+					division_names_group = BRA_INF_01 #GROUP FOR HAVING NAMES OF DIVISIONS - VERY IMPORTANT TO HAVE FOR IMMERSION
+
+					regiments = {
+						cavalry = {x = 0 y = 0}
+						cavalry = {x = 0 y = 1}
+						cavalry = {x = 0 y = 2}
+						cavalry = {x = 1 y = 0}
+						cavalry = {x = 1 y = 1}
+						cavalry = {x = 1 y = 2}
+					}
+					support = {
+ 					}
+					priority = 2 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+				}
+				every_owned_state = {
+					limit = {
+						is_capital = yes
+						is_fully_controlled_by = ROOT 
+					}
+					create_unit = {
+						division = "name = \"1st Tribal Cavalry\" division_template = \"Tribal Cavalry\" start_experience_factor = 0.5"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2nd Tribal Cavalry\" division_template = \"Tribal Cavalry\" start_experience_factor = 0.5"  
+						owner = ROOT
+					}
+				}
+			}	
+		}
+	}
+
+	
+
+	focus = {
+		id = tribal_establish_a_warrior_class
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_call_for_warriors
+		prerequisite = {focus = tribal_call_for_warriors}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_ideas = tribal_warrior_class
+		}
+	}
+
+	focus = {
+		id = tribal_learn_from_cavalry
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_mobility_is_key
+		prerequisite = {focus = tribal_mobility_is_key}
+		prerequisite = {focus = tribal_establish_a_warrior_class}
+		x = 2
+		y = 3
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_ideas = tribal_cav_idea
+		}
+	}
+	
+	focus = {
+		id = tribal_arm_our_warriors
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_establish_a_warrior_class
+		prerequisite = {focus = tribal_establish_a_warrior_class}
+		prerequisite = {focus = tribal_seek_military_assistance OR = tribal_purchase_military_equipment}
+		x = 3
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			army_experience = 50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3500
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+	
+	focus = {
+		id = tribal_gods
+		icon = GFX_goal_generic_demand_territory
+		x = 20
+		y = 0
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		available = {
+			has_completed_focus = tribal_nation
+		}
+		completion_reward = {
+			country_event = tribal_generic.4
+		}
+	}
+
+	focus = {
+		id = tribal_improve_roads_for_pilgrimages
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_gods
+		prerequisite = {focus = tribal_gods}
+		x = -5
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_build_religious_orphanages
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_gods
+		prerequisite = {focus = tribal_gods}
+		x = 5
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 5000
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_god_of_fire_and_war
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_gods
+		prerequisite = {focus = tribal_gods}
+		x = -3
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		available = {
+			has_country_flag = tribal_chose_war_god
+		}
+		completion_reward = {
+			add_ideas = tribal_god_of_war
+		}
+	}
+
+	focus = {
+		id = tribal_god_of_fire_and_war
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_gods
+		prerequisite = {focus = tribal_gods}
+		x = -3
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		available = {
+			has_country_flag = tribal_chose_war_god
+		}
+		completion_reward = {
+			add_ideas = tribal_god_of_war
+		}
+	}
+
+	focus = {
+		id = tribal_summon_fanatics
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_god_of_fire_and_war
+		prerequisite = {focus = tribal_god_of_fire_and_war}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			custom_effect_tooltip = tribal_summon_war_fanatics
+			hidden_effect = {
+				division_template = {
+					name = "War Fanatics"
+					division_names_group = BRA_INF_01 #GROUP FOR HAVING NAMES OF DIVISIONS - VERY IMPORTANT TO HAVE FOR IMMERSION
+
+					regiments = {
+						cavalry = {x = 0 y = 0}
+						cavalry = {x = 0 y = 1}
+						cavalry = {x = 0 y = 2}
+						cavalry = {x = 0 y = 3}
+						cavalry = {x = 1 y = 0}
+						cavalry = {x = 1 y = 1}
+						cavalry = {x = 1 y = 2}
+						cavalry = {x = 1 y = 3}
+					}
+					support = {
+ 					}
+					priority = 2 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+				}
+				every_owned_state = {
+					limit = {
+						is_capital = yes
+						is_fully_controlled_by = ROOT 
+					}
+					create_unit = {
+						division = "name = \"1st War Fanatic\" division_template = \"War Fanatics\" start_experience_factor = 1.0"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2nd War Fanatic\" division_template = \"War Fanatics\" start_experience_factor = 1.0"  
+						owner = ROOT
+					}
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = tribal_always_ready
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_summon_fanatics
+		prerequisite = {focus = tribal_summon_fanatics}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {	
+			add_ideas = tribal_always_ready_for_war
+		}
+	}
+
+	focus = {
+		id = tribal_god_of_craftsman
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_gods
+		prerequisite = {focus = tribal_gods}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		available = {
+			has_country_flag = tribal_chose_production_god
+		}
+		completion_reward = {
+			add_ideas = tribal_god_of_craftsman
+		}
+	}
+
+	focus = {
+		id = tribal_build_a_new_factory
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_god_of_craftsman
+		prerequisite = {focus = tribal_god_of_craftsman}
+		x = -1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_capital = yes
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_build_an_arms_factory
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_god_of_craftsman
+		prerequisite = {focus = tribal_god_of_craftsman}
+		x = 1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_capital = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_insight_into_new_ways
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_god_of_craftsman
+		prerequisite = {focus = tribal_build_an_arms_factory
+						focus = tribal_build_a_new_factory}
+		x = 0
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_capital = yes
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_capital = yes
+					free_building_slots = {
+						building = steel_foundry
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steel_foundry
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_god_of_love
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_gods
+		prerequisite = {focus = tribal_gods}
+		x = 3
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		available = {
+			has_country_flag = tribal_chose_love_god
+		}
+		completion_reward = {
+			add_ideas = tribal_god_of_love
+		}
+	}
+
+	focus = {
+		id = tribal_children_of_love
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_god_of_love
+		prerequisite = {focus = tribal_god_of_love}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_capital = yes
+				}
+				add_manpower = 30000
+			}
+		}
+	}
+
+	focus = {
+		id = tribal_annual_love_festivals
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_children_of_love
+		prerequisite = {focus = tribal_children_of_love}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_ideas = tribal_love_festivals
+		}
+	}
+
+	focus = {
+		id = tribal_priests_as_scholars
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = tribal_insight_into_new_ways
+		prerequisite = {focus = tribal_insight_into_new_ways
+						focus = tribal_always_ready
+						focus = tribal_annual_love_festivals}
+		x = 0
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 160
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+}
+	

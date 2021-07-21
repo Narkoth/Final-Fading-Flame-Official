@@ -1,0 +1,41 @@
+﻿
+
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "Fleet Remnants"			
+		naval_base = 12679
+		task_force = {
+			name = "Fleet of Castor"
+			location = 12679
+			
+			ship = { name = "Narvik" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Blencathra" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Moresby" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Comet" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Harrow" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Grace" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Locust" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ROC } } }
+
+			ship = { name = "Wellington" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Vanneau" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Ranger" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Tamar" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Sterling" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Kilberry" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Aire" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Forfar" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Nymphe" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Destiny" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Ariel" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Pose" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Pincher" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Defia" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Sabine" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Haddock" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+			ship = { name = "Poole" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ROC } } }
+		}								
+	}
+}
+

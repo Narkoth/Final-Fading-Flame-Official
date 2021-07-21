@@ -1,0 +1,54 @@
+CIS_build_army_damnit = {
+	enable = {
+		tag = CIS
+		CIS = {
+			has_war = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 100
+    }
+}
+
+CIS_and_roc = {
+	enable = {
+		tag = CIS
+		country_exists = ROC
+		has_country_flag = cis_love_roc
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = ROC
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = ROC
+		value = 50
+	}
+}
+
+CIS_defend_roc = {
+	enable = {
+		tag = CIS
+		has_war = yes
+		is_in_faction_with = ROC
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = ROC
+		value = 75
+	}
+
+}
+
+
+

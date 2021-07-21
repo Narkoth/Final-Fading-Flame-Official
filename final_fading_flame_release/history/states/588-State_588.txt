@@ -1,0 +1,18 @@
+
+state={
+	id=588
+	name="STATE_588"
+	provinces={
+		268 795 1429 2050 3380 3447 6294 7831 11617 11650 11678 11846 
+	}
+	history={
+		#owner = D51
+		buildings = {
+			infrastructure = 2
+		}
+		#add_core_of = D51
+	}
+	manpower=65412
+	buildings_max_level_factor=1.000
+	state_category=city
+}

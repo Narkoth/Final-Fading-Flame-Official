@@ -1,0 +1,402 @@
+ideas = {
+	country = {
+		ROC_corporate_government = {
+			picture = generic_economic_increase
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				political_power_factor = -0.05
+				#consumer_goods_factor = 0.10 # gotta keep people sedated with merchadise and products to keep them distracted
+				conscription = 0.05
+				industrial_capacity_factory = 0.10
+				local_resources_factor = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		ROC_total_control_idea = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.075
+			}
+		}
+		ROC_prepare_for_war = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.10
+				conscription = 0.025
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		ROC_black_market = {
+			picture = generic_spy_coup
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
+		ROC_active_rebellion = {
+			picture = generic_army_problems
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.25 #your position in the company determines your rights as a citizen
+			}
+		}
+		ROC_active_rebellion_reduced1 = {
+			picture = generic_army_problems
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.15 #your position in the company determines your rights as a citizen
+			}
+		}
+		ROC_active_rebellion_reduced2 = {
+			picture = generic_army_problems
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.10 #your position in the company determines your rights as a citizen
+			}
+		}
+		ROC_active_rebellion_reduced3 = {
+			picture = generic_army_problems
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.05 #your position in the company determines your rights as a citizen
+			}
+		}
+		ROC_elite_merc1 = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 100
+				political_power_factor = -0.02
+			}
+		}
+		ROC_elite_merc2 = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 200
+				political_power_factor = -0.02
+			}
+		}
+		ROC_elite_merc3 = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 300
+				political_power_factor = -0.02
+			}
+		}
+		ROC_state_of_art_radar = {
+			picture = generic_electronics_concern_3
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				spotting_chance = 0.15
+			}
+		}
+		ROC_naval_base = {
+			picture = generic_sea_focused_navy
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				production_speed_naval_base_factor = 0.15
+				production_speed_dockyard_factor = 0.15
+			}
+		}
+		ROC_protect_convoy = {
+			picture = generic_coastal_defense_ships
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				convoy_escort_efficiency = 0.075
+			}
+		}
+		ROC_fight_enemy_subs = {
+			picture = generic_coastal_navy
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				navy_submarine_detection_factor = 0.05
+			}
+		}
+		ROC_armor = {
+			picture = generic_armor
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.10
+					breakthrough = 0.10
+					instant = yes
+				}
+			}
+		}
+		ROC_moto_idea = {
+			picture = FRA_motorized_focus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				motorized_attack_factor = 0.05
+				motorized_defence_factor = 0.05
+				mechanized_attack_factor = 0.05
+				mechanized_defence_factor = 0.05
+			}
+		}
+		ROC_merc_officers_idea = {
+			picture = generic_infantry_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				max_planning = 0.10
+			}
+		}
+		ROC_air_accidents = {
+			picture = air_support_focus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				air_accidents_factor = -0.15
+			}
+		}
+		ROC_air_merc_elite = {
+			picture = air_war_plans_division_focus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				air_ace_generation_chance_factor = 0.20
+			}
+		}
+		ROC_special_mercs= {
+			picture = generic_intel_bonus
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			cancel = {
+				is_subject = yes
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_leader_start_level = 1
+				special_forces_cap = 0.15
+			}
+		}
+	}
+}

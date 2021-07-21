@@ -1,0 +1,9 @@
+state={ state_category = city
+	id=757
+	name="STATE_757"
+	provinces={
+		1604 2226 2336 2372 2673 3092 4062 4492 4581 6626 8955 9836 12994 13019 13086 13088 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,23 @@
+state={
+	id=1311
+	name="STATE_1311"
+	provinces={
+		1564 7494 13265 13301 13321 
+	}
+	history={
+		#owner = SHI
+		victory_points = { 13265 20 }
+		buildings = {
+			infrastructure = 4
+			dockyard = 6
+			industrial_complex = 2
+			13265 = {
+				naval_base = 5
+			}
+		}
+		#add_core_of = SHI
+	}
+	manpower = 5712555
+	state_category = city
+	buildings_max_level_factor=1.000
+}

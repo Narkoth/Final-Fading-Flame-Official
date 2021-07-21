@@ -1,0 +1,30 @@
+﻿l_english:
+amf_general.1.t:0 "Annual Meeting of the Elders"
+amf_general.1.d:0 "Last night was the annual 'Meeting of the Elders', in which the highest ranking Amazonians meet together to discuss the focus of their people for the coming year. Our divine queen, Aella, presided over the meeting. In the end, Aella accepted the proposal that the Amazonian people begin to take a more aggressive stance in world.\n\nTheir reasoning, as that with the recent technological advancements and general peace in the world, several nations have risen to immense power. Such power could easily threaten the security of our realm. If we don't take our place into the world at large, then we shall surely become a doormat for others who do."
+amf_general.1.a:0 "As the Queen Commands"
+
+AMF_isolation_tooltip:0 "Unlock Decisions to Emerge from our Isolation and onto the World Stage"
+amf_isolation_change:0 "Ending our Isolation"
+amf_isolation_change_desc:0 "For many years, the Amazonians have limited their contact with the outside world. While still traveling to different nations and building many of the same things as they, we wanted to ensure the continuation of our culture, and our way of life. While we have been successful at this for many years, it has come to the attention of our elders of the increasing strength and bold international strategies of many rising powers.\n\nIt has since been decided by our queen, that if we are too endure in this time, then we too must become bold and end our isolation."
+amf_end_isolation:0 "End Isolation"
+amf_end_isolation_desc:0 "We must make efforts to prepare our industry as well as our people for re-entering the world stage once more, after limited contact for quite some time."
+amf_foreign_military_experience:0 "Send Officers Abroad"
+amf_foreign_military_experience_desc:0 "Our current military operational capabilties are not what they should be. Even worse, our techniques and understanding of committing modern warfare is even worse. If we are to become a power that can contest with those who would wish to dominate us, then we must send our best officers abroad; so that they may bring back whatever they can learn to better refine our own military."
+
+amf_general.2.t:0 "Agents in Avorian Federation"
+amf_general.2.d:0 "It is no suprise that our first target is the Avorian Federation. They are our closest neighbor, and are not exactly on good relations with us. To ensure a speedy victory against them, we have sent several agents to perform recon and bring back any useful information that can give us an advantage against them in the upcoming conflict.\n\nNot to our surprise, they were exceedingly successful."
+amf_general.2.a:0 "Excellent"
+
+amf_general.3.t:0 "Sponsor a Naval Port in the Ro Tribe"
+amf_general.3.d:0 "We have taken over the Avorian Federation. Our power has since grown, but if we want to continue growing in strength for our own preservation, then we must grasp at every oppurtunity that comes our way. One such thing has finally arrived.\n\nWe have had our sights on Castor for quite some time, as whoever controls it will most certainly dominate the region. At the same time, both Ronard and the Dominion could easily turn their sights on us and do some major damage in our current state.\n\nIf we sponsor building a naval base in the Ro tribe, we can eventually work our way into overthrowing their tribal government, and establish a foothold."
+amf_general.3.a:0 "Ok"
+
+amf_prepare_coup_on_ro_tooltip:0 "Unlock Decisions to Create a Local Castorian Government on our Islands Close to Castor, that will Swear Loyalty to us"
+
+amf_ro_couped:0 "We will overthrow the Ro Tribe and Install a Loyal Leader in their place."
+
+amf_declare_war_ro:0 "Unlock a Decision to Wage War on the Ro Tribe"
+
+amf_general.4.t:0 "Bribe Ro Tribal Leaders"
+amf_general.4.d:0 "In order to make our invasion of the Ro Tribe easier, we have already 'tricked' them into letting us establish a naval port in their eastern side of their country. Now, we have sent our diplomats to their leading tribal leaders and have successfully bought them off to help aid us in the coming war.\n\nIt is trully amazing how quickly people will succumb to your wishes when enough money is promised."
+amf_general.4.a:0 "The Power of Money"

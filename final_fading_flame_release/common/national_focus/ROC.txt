@@ -1,0 +1,1792 @@
+﻿#################################
+#  Ronard of Castor Focus Tree  #
+#################################
+
+
+
+
+#
+#	swap_ideas = {
+#		remove_idea =
+#		add_idea = 
+#	}
+#
+
+
+
+
+
+
+
+focus_tree = {
+	id = ROC_focus_tree
+	
+	country = {
+		factor = 0 
+		modifier = {
+			add = 10
+			#tag = ARG
+			tag = ROC
+		}
+	}
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 1000 y = 850 }
+
+	#Begin Tree#
+	focus = {
+		id = ROC_total_control
+		icon = GFX_goal_DOC_carnegia
+		x = 5
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			#is_subject = yes
+		}
+		completion_reward = {
+			add_political_power = 100
+			#Bound to eventually decleare war on DOC, might as well prepare now
+		}
+	}
+	focus = {
+		id = ROC_dealing_with_military_confusion
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = ROC_total_control
+		prerequisite = {focus = ROC_total_control}
+		x = -14
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}	
+	focus = {
+		id = ROC_navy
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = ROC_dealing_with_military_confusion
+		prerequisite = {focus = ROC_dealing_with_military_confusion}
+		x = 6
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+	focus = {
+		id = ROC_spotting_state_of_the_art
+		icon = GFX_goal_generic_radar
+		relative_position_id = ROC_navy
+		prerequisite = {focus = ROC_navy}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_tech = radio_detection 
+		}
+		completion_reward = {
+			add_ideas = ROC_state_of_art_radar
+		}
+	}
+	focus = {
+		id = ROC_defend_convoy
+		icon = GFX_focus_generic_destroyer
+		relative_position_id = ROC_navy
+		prerequisite = {focus = ROC_navy}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+	focus = {
+		id = ROC_naval_base_construction
+		icon = GFX_goal_generic_construction2
+		relative_position_id = ROC_navy
+		prerequisite = {focus = ROC_navy}
+		x = -1
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ROC_naval_base
+		}
+	}
+	focus = {
+		id = ROC_protect_our_shipping
+		icon = GFX_goal_generic_occupy_states_coastal
+		relative_position_id = ROC_navy
+		prerequisite = {focus = ROC_navy}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ROC_protect_convoy
+		}
+	}
+	focus = {
+		id = ROC_fight_enemy_subs
+		icon = GFX_goal_generic_navy_anti_submarine
+		relative_position_id = ROC_protect_our_shipping
+		prerequisite = {focus = ROC_protect_our_shipping}
+		prerequisite = {focus = ROC_naval_base_construction}
+		prerequisite = {focus = ROC_defend_convoy}
+		prerequisite = {focus = ROC_spotting_state_of_the_art}
+		x = 3
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ROC_fight_enemy_subs
+		}
+	}
+	focus = {
+		id = ROC_army
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = ROC_dealing_with_military_confusion
+		prerequisite = {focus = ROC_dealing_with_military_confusion}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = ROC_new_weapons
+		icon = GFX_goal_generic_small_arms
+		relative_position_id = ROC_army
+		prerequisite = {focus = ROC_army}
+		x = -4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = ROC_new_tech_support
+		icon = GFX_goal_generic_construction2
+		relative_position_id = ROC_new_weapons
+		prerequisite = {focus = ROC_new_weapons}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	focus = {
+		id = ROC_arty_research
+		icon = GFX_goal_generic_army_artillery
+		relative_position_id = ROC_new_tech_support
+		prerequisite = {focus = ROC_new_tech_support}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = ROC_army_research
+		icon = GFX_focus_generic_military_academy
+		relative_position_id = ROC_army
+		prerequisite = {focus = ROC_army}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = ROC_armor_focus
+		icon = GFX_focus_generic_tank_production
+		relative_position_id = ROC_army
+		prerequisite = {focus = ROC_army}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ROC_armor
+		}
+	}
+	focus = {
+		id = ROC_armor_research
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = ROC_armor_focus
+		prerequisite = {focus = ROC_armor_focus}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = ROC_moto_research
+		icon = GFX_goal_generic_army_motorized
+		relative_position_id = ROC_army
+		prerequisite = {focus = ROC_army}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	focus = {
+		id = ROC_moto
+		icon = GFX_goal_generic_army_motorized
+		relative_position_id = ROC_moto_research
+		prerequisite = {focus = ROC_moto_research}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ROC_moto_idea
+		}
+	}
+	focus = {
+		id = ROC_merc_officers
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = ROC_army_research
+		prerequisite = {focus = ROC_army_research}
+		prerequisite = {focus = ROC_moto_research}
+		prerequisite = {focus = ROC_armor_focus}
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ROC_merc_officers_idea
+		}
+	}
+	focus = {
+		id = ROC_airforce
+		icon = GFX_goal_generic_air_doctrine
+		relative_position_id = ROC_dealing_with_military_confusion
+		prerequisite = {focus = ROC_dealing_with_military_confusion}
+		x = -7
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			air_experience = 25
+		}
+	}
+	focus = {
+		id = ROC_airforce_learning
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = ROC_airforce
+		prerequisite = {focus = ROC_airforce}
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = ROC_merc_accidents
+		icon = GFX_goal_generic_air_fighter2
+		relative_position_id = ROC_airforce
+		prerequisite = {focus = ROC_airforce}
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ROC_air_accidents
+		}
+	}
+	focus = {
+		id = ROC_merc_elite_air
+		icon = GFX_goal_generic_CAS
+		relative_position_id = ROC_merc_accidents
+		prerequisite = {focus = ROC_merc_accidents}
+		prerequisite = {focus = ROC_airforce_learning}
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ROC_air_merc_elite
+		}
+	}
+	focus = {
+		id = ROC_elite_mercs
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_merc_elite_air
+		prerequisite = {focus = ROC_merc_elite_air}
+		prerequisite = {focus = ROC_merc_officers}
+		x = 2
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = ROC_special_mercs
+		}
+	}
+
+	############################################
+	#     MERC PROGRAM 
+	############################################
+
+	focus = {
+		id = ROC_expand_merc_forces_program
+		icon = GFX_focus_generic_manpower
+		relative_position_id = ROC_total_control
+		prerequisite = {focus = ROC_total_control}
+		x = 6
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 4000
+			modifier = { # Should worry about this one later on after doing some other foci
+				factor = 0
+				date < 111.5.5
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROC_elite_merc1
+				add_idea = ROC_elite_merc2
+				#HOI4 SEES THIS AS MERELY EDITING AN EXISITNG NATIONAL SPIRIT, BECAUSE BOTH IDEAS SHARE THE EXACT SAME LOCALIZATION!!!!
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_guild_1
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_expand_merc_forces_program
+		prerequisite = {focus = ROC_expand_merc_forces_program}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			1200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = merc_guild
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_guild_2
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_expand_merc_forces_program
+		prerequisite = {focus = ROC_expand_merc_forces_program}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			1213 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = merc_guild
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_guild_3
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_expand_merc_forces_program
+		prerequisite = {focus = ROC_expand_merc_forces_program}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			665 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = merc_guild
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_active_recruitment
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_expand_merc_forces_program
+		prerequisite = {focus = ROC_expand_merc_forces_program}
+		x = -1
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_manpower = 25000
+			#add_political_power = -50
+		}
+	}
+	focus = {
+		id = ROC_hire_bad_company
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_expand_merc_forces_program
+		prerequisite = {focus = ROC_expand_merc_forces_program}
+		x = 1
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			custom_effect_tooltip = ROC_bad_company #Custom Text
+			#add_political_power = -200
+			hidden_effect = {
+				division_template = {
+					name = "Bad Company"		# Elite Merc Forces
+					division_names_group = BRA_INF_01 #GROUP FOR HAVING NAMES OF DIVISIONS - VERY IMPORTANT TO HAVE FOR IMMERSION
+
+					regiments = {
+						infantry = {x = 0 y = 0}
+						infantry = {x = 0 y = 1}
+						infantry = {x = 0 y = 2}
+						infantry = {x = 1 y = 0}
+						infantry = {x = 1 y = 1}
+						infantry = {x = 1 y = 2}
+						infantry = {x = 2 y = 0}
+						infantry = {x = 2 y = 1}
+						infantry = {x = 2 y = 2}
+					}
+					support = {
+  	      				artillery = { x = 0 y = 0 }
+		 				engineer = {x = 0 y = 1}
+ 					}
+					priority = 2 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+				}
+				every_owned_state = {
+					limit = {
+						is_capital = yes
+						is_fully_controlled_by = ROOT 
+					}
+					create_unit = {
+						division = "name = \"Bad Company Alpha\" division_template = \"Bad Company\" start_experience_factor = 1.0"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Bad Company Beta\" division_template = \"Bad Company\" start_experience_factor = 1.0"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Bad Company Zeta\" division_template = \"Bad Company\" start_experience_factor = 1.0"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Bad Company Gamma\" division_template = \"Bad Company\" start_experience_factor = 1.0"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Bad Company Epsilon\" division_template = \"Bad Company\" start_experience_factor = 1.0"  
+						owner = ROOT
+					}
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = ROC_hire_from_the_western_provinces
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_expand_merc_forces_program
+		prerequisite = {focus = ROC_hire_bad_company}
+		prerequisite = {focus = ROC_active_recruitment}
+		x = 0
+		y = 3
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			AND = {
+				owns_state = 1181
+				owns_state = 1184
+				owns_state = 1202
+				owns_state = 645
+				owns_state = 1191
+			}
+		}
+		completion_reward = {
+				if = {
+					limit = {has_idea = ROC_elite_merc1}
+					custom_effect_tooltip = ROC_switch_to_final_mercs
+					#Display Nothing but a Tooltip, otherwise the game will freak out as we don't have merc2 yet techincally
+				}
+				if = {
+					limit = {has_idea = ROC_elite_merc2}
+					swap_ideas = {
+						remove_idea = ROC_elite_merc2
+						add_idea = ROC_elite_merc3
+					}
+				}
+		}
+	}
+
+	
+
+	focus = {
+		id = ROC_rebellion
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = ROC_total_control
+		prerequisite = {focus = ROC_total_control}
+		x = -4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_army_manpower = { size > 99999 }
+			#always = false
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			ROC = {
+				create_wargoal = { type = annex_everything target = R01 }
+			}
+		}
+	}
+	
+	focus = {
+		id = ROC_suppress_political
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = ROC_rebellion
+		prerequisite = {focus = ROC_rebellion}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			NOT = {
+				country_exists = R01
+			}
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			#add_political_power = -100
+			swap_ideas = {
+				remove_idea = ROC_active_rebellion
+				add_idea = ROC_active_rebellion_reduced1
+			}
+		}
+	}
+	focus = {
+		id = ROC_suppress_economic
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = ROC_suppress_political
+		prerequisite = {focus = ROC_suppress_political}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			#add_political_power = -100
+			swap_ideas = {
+				remove_idea = ROC_active_rebellion_reduced1
+				add_idea = ROC_active_rebellion_reduced2
+			}
+		}
+	}
+	focus = {
+		id = ROC_suppress_military
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = ROC_suppress_economic
+		prerequisite = {focus = ROC_suppress_economic}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			#add_political_power = -100
+			swap_ideas = {
+				remove_idea = ROC_active_rebellion_reduced2
+				add_idea = ROC_active_rebellion_reduced3
+			}
+		}
+	}
+	focus = {
+		id = ROC_suppress_complete
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = ROC_suppress_military
+		prerequisite = {focus = ROC_suppress_military}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			custom_effect_tooltip = ROC_fully_suppressed
+			#add_political_power = -100
+			hidden_effect = {
+				remove_ideas = ROC_active_rebellion_reduced3
+			}
+			add_ideas = ROC_total_control_idea
+			add_stability = 0.25
+		}
+	}
+
+	focus = {
+		id = ROC_increase_company_control
+		icon = GFX_focus_mex_privatisation
+		relative_position_id = ROC_total_control
+		prerequisite = {focus = ROC_total_control}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			######################################################
+			# BUY OUT OTHER COMPANIES AND """"""NATIONALIZE THEM"""""""""  BY INCORPORATING THEM INTO THE "STATE"
+			######################################################
+			665 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_build_dockyards
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = ROC_increase_company_control
+		prerequisite = {focus = ROC_increase_company_control}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			######################################################
+			# BUY OUT OTHER COMPANIES AND """"""NATIONALIZE THEM"""""""""  BY INCORPORATING THEM INTO THE "STATE"
+			######################################################
+			692 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			1189 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			1209 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_prepare_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = ROC_increase_company_control
+		prerequisite = {focus = ROC_increase_company_control}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#######################
+			# CONSTRUCT CIV FACTORIES
+			#######################
+			665 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			1200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			1189 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_prepare_industry2
+		icon = GFX_goal_generic_production
+		relative_position_id = ROC_prepare_industry
+		prerequisite = {focus = ROC_prepare_industry}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = ROC_build_airhangers_for_invasion_preperation
+		icon = GFX_goal_generic_construction
+		relative_position_id = ROC_prepare_industry2
+		prerequisite = {focus = ROC_prepare_industry2}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+				########################
+				# BUILD AIR BASES IN TRIBAL AND STATE OF CASTOR TERRITORY SO CAN FIGHT AIR WAR WITH DOC!!!!!!!!!!!!!!!!!!!!!!!
+				########################
+			1200 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			1189 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_prepare_infra1
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_build_dockyards
+		prerequisite = {focus = ROC_build_dockyards}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			########################
+			# CONSTRUCT INFRA
+			########################
+			665 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			692 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1200 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1189 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	} 
+	focus = {
+		id = ROC_prepare_docks
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = ROC_prepare_infra1
+		prerequisite = {focus = ROC_prepare_infra1}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			########################
+			# BUILD NAVAL BASES IN TRIBE TERRITORY, AND ALSO CORE THEM ? ----------- DIFFERENT FOCUS OR PART OF BRANCH OFF OF THIS STUFF THAT DEALS WITH WORKING WITH TRIBAL TERRITORIES??????????
+			#ALSO NEED TO BUILD MANY DOCKYARDS, AS NAVY WAS NEARLY WIPED OUT IN THE COUP!!!!!
+			########################
+			1209 = {
+				add_building_construction = {
+					type = naval_base
+					province = 12679
+					level = 5
+					instant_build = yes
+				}
+			}
+			692 = {
+				add_building_construction = {
+					type = naval_base
+					province = 12799
+					level = 5
+					instant_build = yes
+				}
+			}
+			1189 = {
+				add_building_construction = {
+					type = naval_base
+					province = 12815
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_prepare_military_industry1
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = ROC_increase_company_control
+		prerequisite = {focus = ROC_increase_company_control}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			########################
+			# CONSTRUCT MILITARY FACTORIES
+			########################
+			1200 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	} 
+	focus = {
+		id = ROC_prepare_military_industry2
+		icon = GFX_goal_generic_radar
+		relative_position_id = ROC_prepare_military_industry1
+		prerequisite = {focus = ROC_prepare_military_industry1}
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_elec1
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+		}
+	} 
+	focus = {
+		id = ROC_black_market_contacts
+		icon = GFX_goal_generic_intelligence_exchange
+		relative_position_id = ROC_prepare_docks
+		prerequisite = {focus = ROC_prepare_military_industry2 OR = ROC_prepare_docks OR = ROC_build_airhangers_for_invasion_preperation }
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_ideas = ROC_black_market
+		}
+	} 
+
+	focus = {
+		id = ROC_dubious_research
+		icon = GFX_focus_research
+		relative_position_id = ROC_black_market_contacts
+		prerequisite = {focus = ROC_black_market_contacts}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	###############################
+	# Resource Self Sufficiency
+	###############################
+
+	focus = {
+		id = ROC_resource_self_sufficiency
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = ROC_total_control
+		prerequisite = {focus = ROC_total_control}
+		x = 12
+		y = 1
+		cost = 2
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_steel_crisis
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_resource_self_sufficiency
+		prerequisite = {focus = ROC_resource_self_sufficiency}
+		x = -2
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1212 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steel_foundry
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	} 
+
+	focus = {
+		id = ROC_steel_1
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_steel_crisis
+		prerequisite = {focus = ROC_steel_crisis}
+		x = -1
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steel_foundry
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_steel_2
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_steel_1
+		prerequisite = {focus = ROC_steel_1}
+		x = 0
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			665 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steel_foundry
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_aluminium_crisis
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_resource_self_sufficiency
+		prerequisite = {focus = ROC_resource_self_sufficiency}
+		x = 0
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1212 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = aluminium_foundry
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_aluminium_1
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_aluminium_crisis
+		prerequisite = {focus = ROC_aluminium_crisis}
+		x = -1
+		y = 2
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = aluminium_foundry
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_aluminium_2
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_aluminium_crisis
+		prerequisite = {focus = ROC_aluminium_crisis}
+		x = 1
+		y = 2
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1213 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = aluminium_foundry
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_tungsten_crisis
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_resource_self_sufficiency
+		prerequisite = {focus = ROC_resource_self_sufficiency}
+		x = 2
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1212 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = tungsten_extractor 
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_tungsten_1
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_tungsten_crisis
+		prerequisite = {focus = ROC_tungsten_crisis}
+		x = 1
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = tungsten_extractor 
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_tungsten_2
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_tungsten_1
+		prerequisite = {focus = ROC_tungsten_1}
+		x = 0
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1213 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = tungsten_extractor 
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_chromium_crisis
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_steel_crisis
+		prerequisite = {focus = ROC_steel_crisis}
+		x = 0
+		y = 3
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1213 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = chromium_extractor  
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_chromium_1
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_chromium_crisis
+		prerequisite = {focus = ROC_chromium_crisis}
+		x = -1
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = chromium_extractor  
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_chromium_2
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_chromium_crisis
+		prerequisite = {focus = ROC_chromium_crisis}
+		x = 1
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1213 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = chromium_extractor  
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_oil_crisis
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_tungsten_crisis
+		prerequisite = {focus = ROC_tungsten_crisis}
+		x = 0
+		y = 3
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1213 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery   
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_oil_1
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_oil_crisis
+		prerequisite = {focus = ROC_oil_crisis}
+		x = -1
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery   
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROC_oil_2
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = ROC_oil_crisis
+		prerequisite = {focus = ROC_oil_crisis}
+		x = 1
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1213 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery   
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	###
+
+	focus = {
+		id = ROC_foreign_affairs
+		icon = GFX_goal_generic_army_doctrines
+		#relative_position_id = ROC_total_control
+		#prerequisite = {focus = ROC_total_control}
+		x = 25
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			NOT = {
+				country_exists = R01
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = ROC_prepare_for_war_with_doc
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_foreign_affairs
+		prerequisite = {focus = ROC_foreign_affairs}
+		x = 0
+		y = 4
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = { 
+			factor = 4000
+		}
+		available = {
+			DOC = {
+				has_country_flag = doc_mad_queen
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = ROC_prepare_for_war
+		}
+	}
+
+	focus = {
+		id = ROC_final_gambit
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_prepare_for_war_with_doc
+		prerequisite = {focus = ROC_prepare_for_war_with_doc}
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = { 
+			factor = 4000
+			modifier = { #AI should not be the first to strike. Let DOC do so and let ROC roll with the punches, also less hit to stability and war support
+				factor = 0
+				has_war = no
+			}
+		}
+		available = {
+			has_global_flag = castor_in_flames
+			has_army_manpower = { size > 499999 }
+			surrender_progress < 1.0
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything   target = DOC }
+			create_wargoal = { type = annex_everything   target = COC }
+			create_wargoal = { type = annex_everything   target = FPJ }
+		}
+	}
+
+	focus = {
+		id = ROC_dealings_with_cis
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_foreign_affairs
+		prerequisite = {focus = ROC_foreign_affairs}
+		x = -3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = { 
+			factor = 4
+		}
+		mutually_exclusive = {focus = ROC_take_resources_for_ourselves}
+		available = {
+		}
+		completion_reward = {
+			country_event = roc_cis_relations.1
+		}
+	}
+
+	focus = {
+		id = ROC_take_resources_for_ourselves
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_foreign_affairs
+		prerequisite = {focus = ROC_foreign_affairs}
+		x = 3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = { #Little less likely than attacking ROC directly, as that is a more drastic action
+			factor = 2
+		}
+		mutually_exclusive = {focus = ROC_dealings_with_cis}
+		available = {
+			NOT = {
+				is_in_faction_with = CIS
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = CIS modifier = large_decrease}
+			add_opinion_modifier = { target = CIS modifier = embargo}
+			CIS = {
+				add_opinion_modifier = { target = ROC modifier = large_decrease}
+				add_opinion_modifier = { target = ROC modifier = embargo}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_prepare_to_scale_mountains
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_take_resources_for_ourselves
+		prerequisite = {focus = ROC_take_resources_for_ourselves}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 500
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1.5
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_fortify_for_counter_attack
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_take_resources_for_ourselves
+		prerequisite = {focus = ROC_take_resources_for_ourselves}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 500
+		}
+		available = {
+			controls_state = 1202
+			controls_state = 1184
+			controls_state = 1191
+		}
+		completion_reward = {
+			1202 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3170
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 12292
+					instant_build = yes
+				}
+			}
+			1184 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 6957
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 12322
+					instant_build = yes
+				}
+			}
+			1191 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 8538
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 1180
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 1348
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 12083
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_beseige_iron_state
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_fortify_for_counter_attack
+		prerequisite = {focus = ROC_fortify_for_counter_attack OR = ROC_prepare_to_scale_mountains}
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 500
+			modifier = { # let's make sure we don't wage war too early
+				factor = 0
+				date < 110.5.2
+			}
+		}
+		available = {
+			has_army_manpower = {
+				size > 349999
+			}
+			OR = { # Either at peace, or at war but not in any danger in the homefront
+				has_war = no
+				surrender_progress < 1.0
+			}
+		}
+		completion_reward = {
+			declare_war_on = { type = annex_everything target = CIS }
+		}
+	}
+
+	focus = {
+		id = ROC_joint_training_program
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_dealings_with_cis
+		prerequisite = {focus = ROC_dealings_with_cis}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 500
+		}
+		completion_reward = {
+			army_experience = 50
+			air_experience = 25
+			navy_experience = 25
+			CIS = {
+				country_event = CIS_ronard_relations.2
+			}
+		}
+	}
+
+	focus = {
+		id = ROC_trading_program
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = ROC_dealings_with_cis
+		prerequisite = {focus = ROC_dealings_with_cis}
+		x = 1
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 500
+		}
+		completion_reward = {
+			665 = {
+				add_resource = {
+					type = oil 
+					amount = 18
+				}
+				add_resource = {
+					type = rubber
+					amount = 12
+				}
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+				add_resource = {
+					type = aluminium
+					amount = 16
+				}
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+			CIS = {
+				country_event = CIS_ronard_relations.3
+			}
+		}
+	}
+
+}
+
+
+ 	
+
+

@@ -1,0 +1,50 @@
+spriteTypes = {	
+
+	### categories
+	
+	spriteType = {
+		name = "GFX_communal_fighting"
+		texturefile = "gfx/interface/decisions/category_communal_fighting.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_farming"
+		texturefile = "gfx/interface/decisions/category_farming.dds"
+	}
+
+	spriteType = {
+		name = "GFX_shi_control"
+		texturefile = "gfx/interface/decisions/category_shi_control.dds"
+	}
+
+	spriteType = {
+		name = "GFX_political_actions"
+		texturefile = "gfx/interface/decisions/category_political_actions.dds"
+	}
+
+	spriteType = {
+		name = "GFX_category_merc"
+		texturefile = "gfx/interface/decisions/category_merc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_doc_refugee_crisis"
+		texturefile = "gfx/interface/decisions/category_doc_refugee_crisis.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_category_merc_icon"
+		texturefile = "gfx/interface/decisions/category_merc_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_category_puppet"
+		texturefile = "gfx/interface/decisions/category_puppet.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_icon_generic"
+		texturefile = "gfx/interface/decisions/decision_icon_generic.dds"
+	}
+	
+}

@@ -1,0 +1,182 @@
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "1st Naval Task Force"			
+		naval_base = 13484
+		task_force = {
+			name = "1st Naval Task Force"
+			location = 13484
+
+			ship = { name = "Ruby" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SHI version_name = "Basic Battleship"} } }
+			ship = { name = "Bramble" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SHI version_name = "Basic Battleship"} } }
+
+			ship = { name = "Dieppe" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "The Canterbury" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Imperieuse" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Downley" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Sylph" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Cambridge" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Eclipse" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "The Usk" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "The Coureur" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Peony" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Daisy" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Fennel" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Roedean" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Herald" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Nymph" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Maria" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Keats" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "The Dee" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Calendula" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Gloire" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Ling" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "The Fawn" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Magdalen" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Dover" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Usurper" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+			ship = { name = "Arras" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Heavy Cruiser"} } }
+
+
+			ship = { name = "Mischief" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Dragon" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Samphire" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Auricula" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "HadSHIk" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "The Netley" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Platypus" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Pollington" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Freya" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Gramont" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Roc" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Aubrietia" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Safety" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Portreath" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Boscawen" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Patrician" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Eagle" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "The Tiverton" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Bullrush" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Convulsion" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Minx" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "The Lawson" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Seraph" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Florida" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Brave" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "The Yarnton" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Appleby Castle" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Peterel" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Easton" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "The Bevington" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Blade" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "The Caldecot Castle" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Black Dog" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "The Tarn" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "The Duquesne" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "Bridlington" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+			ship = { name = "The Albrighton" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SHI version_name = "Basic Light Cruiser"} } }
+
+
+			ship = { name = "The Trinidad" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Plover" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Bowen" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Lark" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Gluckstadt" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Escort" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Fortune" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Peruvian" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Inverness" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Catherine" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Sportive" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Chignecto" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Pet" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Una" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Goodson" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Bilsthorpe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Puttenham" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Kilmelford" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Nerbudda" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Tobruk" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Orilla" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Yealmpton" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Blackwood" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Diana" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Gabbard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Starwort" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Clown" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Sesostris" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Solebay" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Cattistock" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Mondara" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Newark" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Porlock Bay" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Caprice" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Caerleon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Angelica" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Kilcavan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Windsor" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Galathee" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Balfour" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Uther" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Grey Fox" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Limbourne" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Myrtle" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Bermuda" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Turpin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Ambrose" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Spur" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Martial" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Khedive" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Lavender" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Sibyl" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Tralee" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Vesta" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Voltaire" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Foster" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Jasper" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Dainty" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Counterguard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Deux Amis" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Mont Blanc" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Amelia" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Alonzo" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Tantalus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Badsworth" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Ouragan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Quilliam" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Leith" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Archer" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "The Smilax" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Abercrombie" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Burton" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Porlock Bay" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Penang" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Howett" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+			ship = { name = "Jennet Pyrwin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SHI version_name = "Basic Destroyer"} } }
+
+			ship = { name = "Perlen" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Goodwood" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Ardent" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Gatineau" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Penn" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Atlas" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "The Hovingham" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Transylvania" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Violet" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "The Blonde" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Manica" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Emilien" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Lockeport" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Julius" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Minuet" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Maplin" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Gozo" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Sacrett" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Torrington" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Bream" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Kingston" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+			ship = { name = "Hart" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SHI version_name = "Basic Submarine" } } }
+		}								
+	}
+}

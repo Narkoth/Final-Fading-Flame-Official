@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=438
+	name="Tekk' Takhar"
+	provinces={
+		288 529 955 1195 1722 2156 3516 4925 4996 5213 5440 5924 6095 6263 6767 7014 8602 9024 10242 10725 10739 10753 10767 10798 10818 10819 10829 10905 10925 
+	}
+	history={
+		owner = ECD
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CPK
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

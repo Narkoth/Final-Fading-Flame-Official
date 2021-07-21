@@ -1,0 +1,22 @@
+
+state={
+	id=669
+	name="Northern Valeland"
+
+	history={
+		#owner = D61
+		buildings = {
+			infrastructure = 2
+
+		}
+		#add_core_of = D61
+
+	}
+
+	provinces={
+		4210 4401 7217 9499 9994 12330 12352 12416 12459 
+	}
+	manpower=84512
+	buildings_max_level_factor=1.000
+	state_category=city
+}

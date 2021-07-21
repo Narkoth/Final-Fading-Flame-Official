@@ -1,0 +1,12 @@
+state={ state_category = small_island
+	id=190
+	name="STATE_190"
+	provinces={
+		
+	}
+	history={
+		
+	}
+	manpower=2451
+	buildings_max_level_factor=1.000
+}

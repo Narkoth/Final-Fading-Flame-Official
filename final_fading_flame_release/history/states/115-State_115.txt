@@ -1,0 +1,23 @@
+state={ state_category = rural
+	id=115
+	name="STATE_115"
+	provinces={
+		16326 
+	}
+	history={
+		#owner = AVO
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 1
+			16326 = {
+				naval_base = 2
+			}
+		}
+		#add_core_of = AVO
+	}
+	resources = {
+	}
+	manpower=45162
+	buildings_max_level_factor=1.000
+}

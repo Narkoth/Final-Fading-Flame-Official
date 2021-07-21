@@ -1,0 +1,37 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	hates_corporatism = {
+		value = -100
+	}
+
+	positive_past_history = {
+		value = 110
+	}
+
+	close_ties = {
+		value = 210
+	}
+
+	cooperation = {
+		value = 50
+	}
+
+	rebel_scum = {
+		value = -200
+	}
+
+	intense_hatred = {
+		value = -200
+	}
+
+}

@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=415
+	name="Demling"
+	provinces={
+		1963 3161 4140 4275 5705 5933 7125 8800 9427 10571 10573 10576 10581 10582 10600 10601 
+	}
+	history={
+		#owner = DEM
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = DEM
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

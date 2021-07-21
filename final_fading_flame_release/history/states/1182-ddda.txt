@@ -1,0 +1,33 @@
+
+state={
+	id=1182
+	name="Irwei"
+	history={
+		owner = CIS
+		victory_points = { 11905 15 }
+		buildings = {
+			infrastructure = 10
+			industrial_complex = 2
+			arms_factory = 4
+			dockyard = 1
+			air_base = 5
+			11905 = {
+				naval_base = 10
+			}
+
+		}
+		add_core_of = CIS
+	}
+
+	resources = {
+		rubber = 17
+		oil = 80
+	}
+
+	provinces={
+		301 8366 9670 11825 11838 11894 11899 11905 
+	}
+	manpower=5784562
+	buildings_max_level_factor=3.000
+	state_category=megalopolis
+}

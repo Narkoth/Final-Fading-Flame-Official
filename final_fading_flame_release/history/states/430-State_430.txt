@@ -1,0 +1,22 @@
+
+state={
+	id=430
+	name="STATE_430"
+
+	history={
+		owner = ECD
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = ECD
+
+	}
+
+	provinces={
+		314 655 1244 2539 4527 5004 6721 8106 8710 9213 9710 10254 10728 10745 10749 10761 10764 10778 10795 10811 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

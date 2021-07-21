@@ -1,0 +1,18 @@
+state={
+	state_category = city
+	id=1264
+	name="STATE_1264"
+	provinces={
+		16537
+	}
+	history={
+		owner = KRH
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = KRH
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}
+ 

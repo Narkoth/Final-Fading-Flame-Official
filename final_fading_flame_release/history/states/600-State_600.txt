@@ -1,0 +1,25 @@
+
+state={
+	id=600
+	name="STATE_600"
+	provinces={
+		621 957 4350 5118 6418 6773 7998 9410 10117 11717 11757 11900 
+	}
+	history={
+		owner = WAL
+		add_core_of = WAL
+		victory_points = { 11900 15 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			4350 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = D60
+	}
+	manpower=68711
+	buildings_max_level_factor=1.000
+	state_category=city
+}

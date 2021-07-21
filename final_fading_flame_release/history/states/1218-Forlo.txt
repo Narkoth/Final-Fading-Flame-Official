@@ -1,0 +1,27 @@
+
+state={
+	id=1218
+	name="STATE_1218"
+	provinces={
+		1048 4513 9236 9939 
+	}
+	state_category = town
+	history={
+		victory_points = { 9939 30}
+		owner = CAE
+		buildings = {
+			air_base = 2
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 1
+			9939 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = CAE
+		add_claim_by = FAE
+	}
+	manpower=1452000
+	buildings_max_level_factor=1.000
+}

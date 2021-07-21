@@ -1,0 +1,44 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_doc"
+		modifier = diff_strong_ai_generic
+		countries = { DOC CAE}
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_fae"
+		modifier = diff_strong_ai_generic
+		countries = { FAE }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_fpj"
+		modifier = diff_strong_ai_generic
+		countries = { FPJ }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_roc"
+		modifier = diff_strong_ai_generic
+		countries = { ROC }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_cis"
+		modifier = diff_strong_ai_generic
+		countries = { CIS }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_wal"
+		modifier = diff_strong_ai_generic
+		countries = { WAL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_coc"
+		modifier = diff_strong_ai_generic
+		countries = { COC }
+		multiplier = 2.0
+	}
+}

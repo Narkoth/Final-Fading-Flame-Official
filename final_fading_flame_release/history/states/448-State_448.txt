@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=448
+	name="Ouitusea"
+	provinces={
+		1794 3377 4988 7072 8759 9212 9326 9503 9988 10063 10857 10918 10919 16546
+	}
+	history={
+		owner = ECD
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ECD
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

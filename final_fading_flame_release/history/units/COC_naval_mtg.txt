@@ -1,0 +1,34 @@
+
+
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "People's Navy"			
+		naval_base = 7411
+		task_force = {
+			name = "People's Navy"
+			location = 7411
+			
+			ship = { name = "Pegasus" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Fishguard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Yukon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Sartine" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Crozier" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Pandora" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Exchange" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Menace" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Hardy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Pigot" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Bulla" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Cressy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Gala" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+			ship = { name = "Gnat" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = COC version_name = "Basic Destroyer"} } }
+
+			ship = { name = "Orcadia" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = COC version_name = "Basic Submarine" } } }
+			ship = { name = "Irvine" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = COC version_name = "Basic Submarine" } } }
+			ship = { name = "Holstein" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = COC version_name = "Basic Submarine" } } }
+			ship = { name = "Cumber" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = COC version_name = "Basic Submarine" } } }
+		}								
+	}
+}

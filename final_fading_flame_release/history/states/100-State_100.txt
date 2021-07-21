@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=100
+	name="STATE_100"
+	provinces={ 16645 16646 16647 16648 16649 16650 16651 16652 16653 16655 16660
+		
+	}
+	history={
+		#owner = SLA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SLA
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

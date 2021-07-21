@@ -1,0 +1,20 @@
+state={
+	state_category = rural
+	id=1232
+	name="STATE_1232"
+	provinces={
+		16462 16463 
+	}
+	history={
+		owner = DOC
+		buildings = {
+			infrastructure = 3
+		}
+		set_demilitarized_zone = yes
+		add_claim_by = DOC
+		#add_claim_by = ROC
+		add_core_of = CIS
+	}
+	manpower=12517
+	buildings_max_level_factor=1.000
+}

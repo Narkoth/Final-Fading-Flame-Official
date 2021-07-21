@@ -1,0 +1,23 @@
+ROC_hire_mercs = {
+	icon = GFX_category_merc_icon
+	picture = GFX_category_merc
+	priority = 10
+	allowed = {
+		NOT = {
+		    OR = {
+			tag = TR1
+			tag = TR2
+			has_government = isolationism
+			has_government = cooperativism
+		     }
+		}
+	}
+	visible = {
+		NOT = {
+		    OR = {
+			tag = TR1
+			tag = TR2
+		     }
+		}
+	}
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=86
+	name="STATE_86"
+	provinces={
+		10867 10876 16492 
+	}
+	history={
+		#owner = AMF
+		victory_points = { 10867 10 }
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 4
+			dockyard = 1
+			air_base = 2
+			10876 = {
+				naval_base = 5
+			}
+		}
+		#add_core_of = AMF
+	}
+	resources = {
+		oil = 6
+	}
+	manpower=1542667
+	buildings_max_level_factor=1.000
+	state_category=city
+}

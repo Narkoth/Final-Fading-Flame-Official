@@ -1,0 +1,81 @@
+
+add_namespace = WAL
+
+country_event = {
+	id = WAL.1
+	title = "Our Military Situation"
+	desc = "Due to our low military industry, we should focus our forces on creating militia style units instead."
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Damn!"
+        WAL = {
+            add_ideas = WAL_no_military_industry 
+        }
+	}
+}
+
+country_event = {
+	id = WAL.2
+	title = "Influence from FPJ"
+	desc = "FPJ has sent us diplomats and scholars, and wishes an audience with you and the people of the Eastern Territories."
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Let them in!"
+		ai_chance = { 
+			factor = 100
+		}
+        WAL = {
+            add_ideas = WAL_utopianism_drift
+			set_country_flag = utopian_influence
+        }
+	}
+
+	option = {
+		name = "Get those hippie scum out of here!"
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = WAL.3
+	title = "Join the Utopia Alliance"
+	desc = "An invitation to join the Utopia Alliance"
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "yes"
+		ai_chance = { 
+			factor = 100
+		}
+       FPJ = {
+		   add_to_faction = WAL
+	   }
+	   WAL = {
+		   add_ai_strategy = {
+				type = alliance
+				id = "FPJ"
+				value = 200
+			}
+	   }
+	}
+
+	option = {
+		name = "NO"
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}

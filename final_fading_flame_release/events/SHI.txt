@@ -1,0 +1,64 @@
+###########################
+# All General SHI Events
+###########################
+
+add_namespace = shi_general
+
+#Introduction of Zing to Populace
+news_event = {
+	id = shi_general.1
+	title = shi_general.1.t
+	desc = shi_general.1.d
+	picture = GFX_news_event_smoking_zing
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shi_general.1.a
+		ROOT = {
+			add_ideas = SHI_zing
+		}
+	}
+}
+
+#Strata Visting DOC and CIS
+country_event = {
+	id = shi_general.2
+	title = shi_general.2.t
+	desc = shi_general.2.d
+	picture = GFX_report_event_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shi_general.2.a
+		ROOT = {
+			add_opinion_modifier = { target = DOC modifier = large_increase }
+			add_opinion_modifier = { target = CIS modifier = large_increase }
+		}
+		DOC = {
+			country_event = shi_general.3
+		}
+		CIS = {
+			country_event = shi_general.3
+		}
+	}
+}
+
+#Letting DOC and CIS know they were visted by strata
+country_event = {
+	id = shi_general.3
+	title = shi_general.3.t
+	desc = shi_general.3.d
+	picture = GFX_report_event_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shi_general.3.a
+		ROOT = {
+			add_opinion_modifier = { target = SHI modifier = large_increase }
+		}
+	}
+}
+

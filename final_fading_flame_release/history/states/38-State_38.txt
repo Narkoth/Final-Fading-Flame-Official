@@ -1,0 +1,22 @@
+state={ state_category = city
+	id=38
+	name="STATE_38"
+	provinces={
+		16286 16491
+	}
+	history={
+		#owner = AVO
+		victory_points = { 16491 5 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+			16286 = {
+				naval_base = 2
+			}
+		}
+		#add_core_of = AVO
+	}
+	manpower=178561
+	buildings_max_level_factor=1.000
+}

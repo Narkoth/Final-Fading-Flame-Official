@@ -1,0 +1,108 @@
+COC_build_army_damnit = {
+	enable = {
+		tag = COC
+		COC = {
+			has_war = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 100
+    }
+}
+
+COC_helping_FAE = {
+	enable = {
+		tag = COC
+		country_exists = FAE
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = FAE
+		}
+	}
+	
+   ai_strategy = {
+		type = befriend
+		id = FAE
+		value = 100
+	}
+
+}
+
+COC_send_volunteers_to_FAE = {
+	enable = {
+		tag = COC
+		country_exists = FAE
+		COC = {
+			has_completed_focus = coc_send_volunteers
+		}
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = FAE
+		}
+	}
+	
+   ai_strategy = {
+		type = send_volunteers_desire
+		id = FAE
+		value = 200
+	}
+
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = FAE
+		value = 1000
+	}
+
+}
+
+COC_stike_at_fae_enemies = {
+	enable = {
+		tag = COC
+		COC = {
+			is_in_faction_with = FAE
+		}
+		country_exists = CAE
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = CAE
+		}
+	}
+	
+   ai_strategy = {
+		type = invade
+		id = CAE
+		value = 15
+	}
+	ai_strategy = {
+		type = invade
+		id = DOC
+		value = 15
+	}
+	ai_strategy = {
+		type = conquer
+		id = CAE
+		value = 15
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = CAE
+		value = 15
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = DOC
+		value = 15
+	}
+
+}
+
+

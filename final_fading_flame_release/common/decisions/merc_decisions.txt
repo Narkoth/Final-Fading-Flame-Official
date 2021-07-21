@@ -1,0 +1,251 @@
+ROC_hire_mercs = {
+
+	hire_reinforcements = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_political_power > 100
+			TR1 = {
+				has_manpower > 15000
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = MERC_hire_young_tooltip
+			custom_effect_tooltip = MERC_hire_young_amount_tooltip
+			hidden_effect = {
+				ROOT = {
+					add_manpower = 15000
+				}
+				TR1 = {
+					add_manpower = -15000
+					add_political_power = 50
+				}
+			}
+		}
+
+		days_remove = 50
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_manpower < 100000
+			}
+		}
+	}
+
+	bonus_only_corporatist_nations_can_see_and_get = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_political_power > 100
+			TR1 = {
+				has_manpower > 15000
+			}
+		}
+
+		visible = {
+			has_government = corporatism
+		}
+
+		fire_only_once = no
+		cost = 100
+
+		complete_effect = {
+		}
+
+		days_remove = 50
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	buy_old_inf_weapons = {
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_political_power > 150
+			TR1 = {
+				has_equipment = {
+					infantry_equipment > 1499
+				}
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 150
+
+
+
+		###################################
+		# CHANGE THIS SO THAT TRADER SENDS EQUIPMENT, OLDEST FIRST SO NO GURANTEE
+		# ESSENTIALLY SAY IT LIKE YOU ARE ASKING FOR LEFTOVER EQUIPMENT FROM THEIR MERCS ...
+		#add idea of getting manpoerr from them where they have an idea which gives them weekly add_manpower
+		#some events indepenendt of nations with 2x the pp cost for getting SPECIFIC equipment, provided you have 
+		#...already researched said tech
+		##################################
+
+		complete_effect = {
+			custom_effect_tooltip = MERC_old_equipment_tooltip
+			custom_effect_tooltip = MERC_old_equipment_amount_tooltip
+			hidden_effect = {
+				TR1 = {
+					send_equipment = {
+						equipment = infantry_equipment_1
+						amount = 1500
+						target = FROM
+					}
+				}
+				TR1 = {
+					add_political_power = 50
+				}
+			}
+
+		}
+		days_remove = 70
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	purchase_fighters_round1 = { 
+
+		#you wanna bet on a guy fuckin' an alligator? money plane.
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_political_power > 150
+			TR1 = {
+				has_completed_focus = trader_planes
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 150
+
+		complete_effect = {
+			custom_effect_tooltip = MERC_old_fighters_tooltip
+			custom_effect_tooltip = MERC_old_fighters_amount_tooltip
+			hidden_effect = {
+				ROOT = {
+					add_equipment_to_stockpile = {
+        				type = fighter_equipment_0
+        				amount = 50
+					}
+				}
+				TR1 = {
+					add_political_power = 50
+				}
+			}
+		}
+
+		days_remove = 70
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	merc_brigs_1 = { 
+
+		icon = GFX_decision_icon_generic
+
+		available = {
+			has_political_power > 150
+			TR1 = {
+				has_completed_focus = trader_merc_brigades
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 150
+
+		complete_effect = {
+			custom_effect_tooltip = Merc_Hire_Brig
+			hidden_effect = {
+				ROOT = {
+					if = {
+						limit = {has_template = "Merc Brig"}
+	
+					every_owned_state = {
+						limit = {
+							is_capital = yes
+							is_fully_controlled_by = ROOT 
+						}
+						create_unit = {
+							division = "name = \"Merc Brigade\" division_template = \"Merc Brig\" start_experience_factor = 0.0"  
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"Merc Brigade\" division_template = \"Merc Brig\" start_experience_factor = 0.0"  
+							owner = ROOT
+						}
+					}
+					else = {
+						division_template = { 
+							name = "Merc Brig"
+							is_locked = yes #Don't want players editing this template, or else game will shat itself trying to spawn in divisions with this template
+							division_names_group = BRA_INF_01 #GROUP FOR HAVING NAMES OF DIVISIONS - VERY IMPORTANT TO HAVE FOR IMMERSION
+
+							regiments = {
+								infantry = {x = 0 y = 0}
+								infantry = {x = 0 y = 1}
+								infantry = {x = 1 y = 0}
+								infantry = {x = 1 y = 1}
+							}
+						priority = 0 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+					}
+						every_owned_state = {
+							limit = {
+								is_capital = yes
+								is_fully_controlled_by = ROOT 
+							}
+							create_unit = {
+								division = "name = \"Merc Brigade\" division_template = \"Merc Brig\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Merc Brigade\" division_template = \"Merc Brig\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+						} 
+					}
+					}
+				}
+			}
+		}
+
+		days_remove = 70
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

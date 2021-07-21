@@ -1,0 +1,18 @@
+
+state={
+	id=654
+	name="STATE_654"
+	provinces={
+		389 665 1481 4650 6237 6401 6717 7984 12196 12220 12227 12325 12350 12378 
+	}
+	history={
+		#owner = D53
+		buildings = {
+			infrastructure = 2
+		}
+		#add_core_of = D53
+	}
+	manpower=87541
+	buildings_max_level_factor=1.000
+	state_category=city
+}

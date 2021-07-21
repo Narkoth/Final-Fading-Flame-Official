@@ -1,0 +1,67 @@
+################ CAE
+#Strategic Natured AI Strategies
+CAE_HATE_FAE = {
+	enable = {
+		tag = CAE
+		country_exists = FAE
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = FAE
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = FAE
+		value = 200
+	}
+}
+CAE_SKEWER_FAE = {
+	enable = {
+		tag = CAE
+		country_exists = FAE
+		FAE = {
+			focus_progress = {
+				focus = FAE_prepare_for_combat
+				progress > 0.01
+			}
+		}
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = FAE
+		}
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = FAE
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = FAE
+		value = 200
+	}
+}
+CAE_LIKE_DOC = {
+	enable = {
+		tag = CAE
+		country_exists = DOC
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = DOC
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = DOC
+		value = 200
+	}
+}

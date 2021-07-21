@@ -1,0 +1,15 @@
+﻿l_english:
+gen.1.d:0 "We have just recently received military equipment to aid in our current struggle from [From.GetName]."
+gennews.1.d:0 "[From.GetName] has just announced their support for the Japanese invasion of China. There are reports that military aid was recently sent to the Japanese to aid in their efforts."
+gennews.2.d:0 "[From.GetName] has just announced their support for the Chinese against their Japanese invaders. Military supplies and aid were also reportedly sent."
+international_focus:0 "International Focus"
+international_focus_desc:0 "While some may disagree, it is foolish to still believe that there can be “peace in our time”. Lines are being drawn, and we must ensure we align ourselves with the right side of history, or else our nation will become a distant memory."
+democratic_aid:0 "Allies Aid Program"
+democratic_aid_desc:0 "How can we declare ourselves as a democratic nation while our democratic brothers and sisters are currently engaged in a struggle against our shared democratic values? We must send aid at once, lest they fall. "
+british_aid_program:0 "British Aid Program"
+british_aid_program_desc:0 "The English are under seige, we must send aid to assist them in their struggle."
+sov_aid_program:0 "Soviet Aid Program"
+sov_aid_program_desc:0 "While we many not entirely agree with what the Soviet Union stands for, they are currently engaged in a struggle against our common foe. If they fall, it would only make our enemies stronger."
+fra_aid_program:0 "French Aid Program"
+fra_aid_program_desc:0 "The French are fiercely fighting for their lives against their foes. They are in a most desperate need for assistance, something that we should provide as soon as possible, lest they too should fall."
+

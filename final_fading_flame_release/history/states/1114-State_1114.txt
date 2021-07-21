@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=1114
+	name="STATE_1114"
+	provinces={
+		4238 6945 10294 15775 
+	}
+	history={
+		#owner = SMS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SMS
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

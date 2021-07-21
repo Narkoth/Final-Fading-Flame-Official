@@ -1,0 +1,21 @@
+state={
+	id=1211
+	name="STATE_1211"
+	provinces={
+		3368 6639 8978 12343 12385 12446 12479 
+	}
+		history={
+		owner = R01
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		add_core_of = R01
+		add_core_of = DOC
+		add_core_of = ROC
+	}
+	manpower=2451222
+	state_category=town
+	buildings_max_level_factor=1.000
+}

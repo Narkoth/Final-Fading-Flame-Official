@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=928
+	name="STATE_928"
+	provinces={
+		340 870 1537 1685 1800 2391 2467 2549 2640 3075 3191 3390 3691 4313 5075 5296 6648 6742 7122 7570 7698 8127 9208 9814 10237 14240 14301 14355 14387 14424 14456 14462 14539 14567 14599 14731 
+	}
+	history={
+		#owner = FRN
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = FRN
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

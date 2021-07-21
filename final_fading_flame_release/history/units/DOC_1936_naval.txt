@@ -1,0 +1,121 @@
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "Revenge"			
+		naval_base = 12860
+		task_force = {
+			name = "Revenge"
+			location = 12860
+
+			ship = { name = "Seahawk" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Bull" definition = battleship equipment = { battleship_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Cobalt" definition = battleship equipment = { battleship_1 = { amount = 1 owner = DOC } } }
+
+			ship = { name = "Scorcher" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Condor" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Imaum" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Arun" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Earl" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = DOC } } }
+
+			ship = { name = "Sauce" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Lamport" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Bergamot" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Montford" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Fireball" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Burlington" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Orion" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Benalla" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Eurus" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Lotus" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Alonzo" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Defender" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Blean" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Weazle" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Colleen" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Uranie" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+			ship = { name = "Musk" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DOC} } }
+
+			ship = { name = "Cubitt" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Ace" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Cyclops" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Rockwood" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Syren" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Geyser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Cadiz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Cosby" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Gazelle" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Wizard" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Ness" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Janus" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Nugent" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Paul" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Unicorn" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Cam" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Tetcott" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Unbroken" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Griffin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Pert" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Nurton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Leeds" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Rugby" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Minstrel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Kilbane" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Weazel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Seafire" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Fundy" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Omdurman" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Oxlip" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Keats" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DOC } } }
+
+			ship = { name = "Swale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Arno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Jed" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Ashburton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Angel" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Vanity" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Finwhale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Hesper" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Spur" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Cambria" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Grille" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Nettle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Goree" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Hurst" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Ramisham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Ryde" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Wryneck" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Towey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Wolverine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Fox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Rattler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Findhorn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Upholder" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Lavana" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Zepa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Opal" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Downley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Ligaera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Vega" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Hawke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Burford" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Ouragan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Evans" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Heron" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Nesbitt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Mulette" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Junon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Alisma" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Melton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DOC } } }
+
+			ship = { name = "Havant" definition = submarine equipment = { submarine_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Mull" definition = submarine equipment = { submarine_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Ister" definition = submarine equipment = { submarine_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Russell" definition = submarine equipment = { submarine_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Wolf" definition = submarine equipment = { submarine_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Lion" definition = submarine equipment = { submarine_1 = { amount = 1 owner = DOC } } }
+			ship = { name = "Eagle" definition = submarine equipment = { submarine_1 = { amount = 1 owner = DOC } } }
+
+		}								
+	}
+}

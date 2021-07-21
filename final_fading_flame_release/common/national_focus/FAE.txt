@@ -1,0 +1,724 @@
+﻿#################################
+# FAE #
+#################################
+
+
+focus_tree = {
+	id = FAE_focus_tree
+	
+	country = {
+		factor = 0  
+		modifier = {
+			add = 10
+			tag = FAE
+		}
+	}
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 1250 y = 750 }
+	
+	focus = {
+		id = FAE_economic_crisis
+		icon = GFX_focus_rom_parties_end
+		x = 5
+		y = 0
+		cost = 1
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = FAE_repair_steel_foundry
+		icon = GFX_goal_generic_construction
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_economic_crisis}
+		relative_position_id = FAE_economic_crisis
+		available = {
+		}
+		completion_reward = {
+			1217 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steel_foundry
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_eastern_infra_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_repair_steel_foundry}
+		relative_position_id = FAE_repair_steel_foundry
+		available = {
+		}
+		completion_reward = {
+			1216 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1221 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_western_infra_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_repair_steel_foundry}
+		relative_position_id = FAE_repair_steel_foundry
+		available = {
+		}
+		completion_reward = {
+			1171 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1225 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1223 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_repair_military_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_economic_crisis}
+		relative_position_id = FAE_economic_crisis
+		available = {
+		}
+		completion_reward = {
+			1221 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_repair_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_economic_crisis}
+		relative_position_id = FAE_economic_crisis
+		available = {
+		}
+		completion_reward = {
+			1171 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_seek_international_aid
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 3
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_eastern_infra_plan}
+		prerequisite = {focus = FAE_western_infra_plan}
+		prerequisite = {focus = FAE_repair_dockyard}
+		prerequisite = {focus = FAE_repair_military_factory}
+		relative_position_id = FAE_economic_crisis
+		available = {
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_opinion_modifier = { target = COC modifier = large_increase  }
+			COC = {
+				add_opinion_modifier = { target = FAE modifier = large_increase  }
+			}
+			add_ideas = FAE_MILITARY_PERSONEL_FROM_COC
+		}
+	}
+
+	focus = {
+		id = FAE_reorganize_industry
+		icon = GFX_goal_generic_trade
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_seek_international_aid}
+		relative_position_id = FAE_seek_international_aid
+		available = {
+		}
+		ai_will_do = { # This is critical for AI to win Civil War
+			factor = 4000
+		}
+		completion_reward = {
+			remove_ideas = FAE_economic_chaos
+			1217 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			1171 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			1216 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_prepare_for_combat
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_seek_international_aid}
+		relative_position_id = FAE_seek_international_aid
+		ai_will_do = { #Make sure that AI doesn't suicide itself against enemy, but still give player flexibility
+			factor = 5
+			modifier = {
+				factor = 0
+				NOT = {
+					has_completed_focus = FAE_all_in_for_victory
+				}
+			}
+		}
+		available = {
+		}
+		completion_reward = {
+			declare_war_on = { type = annex_everything    target = CAE }
+		}
+	}
+
+	focus = {
+		id = FAE_declare_victory
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 4000
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_prepare_for_combat}
+		relative_position_id = FAE_prepare_for_combat
+		available = {
+			AND = {
+				OR = {
+					AND = {
+						has_war_with = CAE
+						CAE = {
+							has_capitulated = yes
+						}	
+					}
+					NOT = {
+						country_exists = CAE
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = fae_how_to_win_war
+					AND = {
+						1217 = {
+							is_controlled_by = FAE
+						}
+						1221 = {
+							is_controlled_by = FAE
+						}
+						1216 = {
+							is_controlled_by = FAE
+						}
+						1225 = {
+							is_controlled_by = FAE
+						}
+						1171 = {
+							is_controlled_by = FAE
+						}
+						1223 = {
+							is_controlled_by = FAE
+						}
+						1220 = {
+							is_controlled_by = FAE
+						}
+						171 = {
+							is_controlled_by = FAE
+						}
+						1230 = {	
+							is_controlled_by = FAE
+						}
+						1219 = {
+							is_controlled_by = FAE
+						}
+						1228 = {
+							is_controlled_by = FAE
+						}
+						1218 = {
+							is_controlled_by = FAE
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+			DOC = {
+				country_event = DOC_CAER.4
+			}
+			add_stability = 0.15
+			set_global_flag = fae_civil_war_victory
+		}
+	}
+
+	focus = {
+		id = FAE_centralize_west
+		icon = GFX_goal_generic_national_unity
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_declare_victory}
+		relative_position_id = FAE_declare_victory
+		available = {
+		}
+		completion_reward = {
+			1220 = {
+				add_core_of = FAE
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_centralize_middle
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_declare_victory}
+		relative_position_id = FAE_declare_victory
+		available = {
+		}
+		completion_reward = {
+			171 = {
+				add_core_of = FAE
+			}
+			1230 = {
+				add_core_of = FAE
+			}
+			1219 = {
+				add_core_of = FAE
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_centralize_east
+		icon = GFX_goal_generic_national_unity
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_declare_victory}
+		relative_position_id = FAE_declare_victory
+		available = {
+		}
+		completion_reward = {
+			1228 = {
+				add_core_of = FAE
+			}
+			1218 = {
+				add_core_of = FAE
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_centralize_islands
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_centralize_east}
+		prerequisite = {focus = FAE_centralize_middle}
+		prerequisite = {focus = FAE_centralize_west}
+		relative_position_id = FAE_centralize_middle
+		available = {
+		}
+		completion_reward = {
+			174 = {
+				add_core_of = FAE
+			}
+			181 = {
+				add_core_of = FAE
+			}
+			178 = {
+				add_core_of = FAE
+			}
+			189 = {
+				add_core_of = FAE
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_load_generic_tree
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_centralize_islands}
+		relative_position_id = FAE_centralize_islands
+		available = {
+		}
+		completion_reward = {
+			load_focus_tree = generic_tree
+		}
+	}
+
+	focus = {
+		id = FAE_MILITARY
+		icon = GFX_goal_generic_army_doctrines
+		x = 15
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = FAE_QUANTITY_OVER_QUALITY
+		icon = GFX_goal_generic_small_arms
+		relative_position_id = FAE_MILITARY
+		prerequisite = {focus = FAE_MILITARY}
+		x = -4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FAE_QUANTITY_OVER_QUALITY
+		}
+	}
+	focus = {
+		id = FAE_REJECT_NOONE
+		icon = GFX_focus_generic_little_entente
+		relative_position_id = FAE_MILITARY
+		prerequisite = {focus = FAE_MILITARY}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FAE_REJECT_NOONE_IN_MILITARY
+		}
+	}
+	focus = {
+		id = FAE_GATHER_OLD_GUNS
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = FAE_MILITARY
+		prerequisite = {focus = FAE_MILITARY}
+		x = 4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 4000
+			# very critical for FAE AI to have a fair chance of winning
+		}
+		available = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+        		type = infantry_equipment_0
+        		amount = 7500
+    		} 
+		}
+	}
+	focus = {
+		id = FAE_GATHER_SUPPORT_EQUIPMENT
+		icon = GFX_goal_generic_construction2
+		relative_position_id = FAE_GATHER_OLD_GUNS
+		prerequisite = {focus = FAE_GATHER_OLD_GUNS}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+        		type = support_equipment
+        		amount = 100
+    		} 
+		}
+	}
+	focus = {
+		id = FAE_GATHER_ARTY
+		icon = GFX_goal_generic_army_artillery
+		relative_position_id = FAE_GATHER_SUPPORT_EQUIPMENT
+		prerequisite = {focus = FAE_GATHER_SUPPORT_EQUIPMENT}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+        		type = artillery_equipment
+        		amount = 250
+    		} 
+		}
+	}
+	focus = {
+		id = FAE_NEW_WAY_OF_FIGHTING
+		icon = GFX_focus_secret_rearmament
+		relative_position_id = FAE_MILITARY
+		prerequisite = {focus = FAE_MILITARY}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = FAE_USE_ANYTHING_AND_EVERYTHING
+		}
+	}
+	focus = {
+		id = FAE_LEARN_NEW_TACTICS
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = FAE_MILITARY
+		prerequisite = {focus = FAE_MILITARY}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = mass_mob
+				bonus = 1
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+	focus = {
+		id = FAE_SPONSER_MILITARY_INNOVATORS
+		icon = GFX_focus_generic_military_academy
+		relative_position_id = FAE_LEARN_NEW_TACTICS
+		prerequisite = {focus = FAE_LEARN_NEW_TACTICS}
+		prerequisite = {focus = FAE_NEW_WAY_OF_FIGHTING}
+		x = -1
+		y = 1
+		cost = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = fae_swamp_master_general
+		icon = GFX_focus_chi_army_reform
+		relative_position_id = FAE_SPONSER_MILITARY_INNOVATORS
+		prerequisite = {focus = FAE_SPONSER_MILITARY_INNOVATORS}
+		prerequisite = {focus = FAE_REJECT_NOONE}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			create_corps_commander = {
+				name = "Viez"
+				portrait_path = "gfx/leaders/FAE/Portrait_Viez.dds"
+				traits = { trickster swamp_fox adaptable infantry_leader commando camouflage_expert}
+				skill = 3
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 3
+				logistics_skill = 3
+			}
+		}
+	}
+
+	focus = {
+		id = FAE_all_in_for_victory
+		icon = GFX_focus_generic_support_the_left_right
+		x = 3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = FAE_reorganize_industry}
+		prerequisite = {focus = fae_swamp_master_general}
+		relative_position_id = FAE_reorganize_industry
+		available = {
+		}
+		completion_reward = {
+			add_timed_idea = { idea = fae_push_for_victory  days = 720 }
+			1221 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 8322
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 13043
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 13032
+					instant_build = yes
+				}
+			}
+			1216 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 13060
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 13080
+					instant_build = yes
+				}
+			}
+			1171 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 13036
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 2547
+					instant_build = yes
+				}
+			}
+			1223 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 6152
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 7061
+					instant_build = yes
+				}
+			}
+			1217 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+}
+
+
+ 	
+
+

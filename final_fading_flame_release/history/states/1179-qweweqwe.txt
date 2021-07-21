@@ -1,0 +1,27 @@
+state={ state_category = city
+	id=1179
+	name="STATE_1179"
+	provinces={
+		1178 1243 5910 7901 9385 10219 12946 13056 13070 
+	}
+	history={
+		owner = FPJ
+		victory_points = { 1178 5 }
+		victory_points = { 12946 5 }
+		victory_points = { 5910 10 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = FPJ
+	}
+	resources = {
+		steel = 27
+		chromium = 5
+		tungsten = 10
+		aluminium = 7
+	}
+	manpower=3745111
+	buildings_max_level_factor=1.000
+}

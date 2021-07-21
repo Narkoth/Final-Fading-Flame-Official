@@ -1,0 +1,21 @@
+state={ state_category = city
+	id=1175
+	name="STATE_1175"
+	provinces={
+		2752 4969 7067 12747 12767 12794 12829 12859 
+	}
+	history={
+		owner = DOC
+		#victory_points = { 12860 15 }
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+		}
+		add_core_of = DOC
+		add_claim_by = ROC
+	}
+	manpower=2154333
+	buildings_max_level_factor=1.000
+}

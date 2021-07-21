@@ -1,0 +1,60 @@
+###########################
+# COC GENERAL EVENTS
+###########################
+
+add_namespace = COC_general
+
+
+
+# Aid Sent
+country_event = {
+	id = COC_general.1
+	title = "Leaving The Kingdom" #Can also be set in localization
+	desc = COC_general.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Bye-Bye!"
+		ai_chance = { 
+			factor = 100
+		}
+		COC = {
+			add_ai_strategy = {
+				type = alliance
+				id = "DOC"
+				value = 0
+			}
+			leave_faction = yes
+		}
+		#####################
+		# TODO - SEND EVENT TO DOC ABOUT COC LEAVING, AND GIVE DOC OPTIONS TO RESPOND
+		#####################
+	}
+}
+
+country_event = {
+	id = COC_general.2
+	title = "Visitors from Caer Free Commune"
+	desc = COC_general.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "We Welcome Our Communalist Brothers!"
+		ai_chance = { 
+			factor = 100
+		}
+		FAE = {
+				add_opinion_modifier = { target = COC modifier = cooperation }
+				country_event = FAE_MEET_COC.2
+		}
+		COC = {
+				add_opinion_modifier = { target = FAE modifier = cooperation }
+				set_country_flag = fae_seeks_help
+		}
+		
+	}
+}

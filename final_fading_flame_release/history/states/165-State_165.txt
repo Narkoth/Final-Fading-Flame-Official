@@ -1,0 +1,21 @@
+state={ state_category = tiny_island
+	id=165
+	name="STATE_165"
+	provinces={
+		16359 
+	}
+	history={
+		owner = DOC
+		#victory_points = { 12860 15 }
+		buildings = {
+			infrastructure = 2
+			16359 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = DOC
+		add_claim_by = ROC
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

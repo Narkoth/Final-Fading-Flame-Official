@@ -1,0 +1,27 @@
+
+state={
+	id=1185
+	name="STATE_1185"
+	provinces={
+		794 4158 5643 7222 8311 9129 12057 12060 12101 12144 12243 
+	}
+	history={
+		owner = WAL
+		victory_points = {
+			4158 15 
+		}
+		buildings = {
+			infrastructure = 4
+			8311 = {
+				naval_base = 4
+			}
+
+		}
+		add_core_of = WAL
+
+	}
+
+	manpower=87111
+	state_category=city
+	buildings_max_level_factor=1.000
+}

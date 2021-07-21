@@ -1,0 +1,204 @@
+###########################
+# ROC GENERAL EVENTS
+###########################
+
+add_namespace = FAE_REVOLUTION
+
+country_event = {
+	id = FAE_REVOLUTION.1
+	title = "Expansion in the North"
+	desc = FAE_REVOLUTION.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "And How the False King Falls"
+		ai_chance = { 
+			factor = 100
+		}
+		FAE = {
+			transfer_state = 1225
+		}
+	}
+}
+country_event = {
+	id = FAE_REVOLUTION.2
+	title = "Assault in the West"
+	desc = FAE_REVOLUTION.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Power to the People"
+		ai_chance = { 
+			factor = 100
+		}
+		FAE = {
+			transfer_state = 1223
+		}
+	}
+}
+country_event = {
+	id = FAE_REVOLUTION.3
+	title = "Liberate the South"
+	desc = FAE_REVOLUTION.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Liberation!"
+		ai_chance = { 
+			factor = 100
+		}
+		FAE = {
+			transfer_state = 1171
+		}
+	}
+}
+
+add_namespace = FAE_MEET_COC
+
+country_event = {
+	id = FAE_MEET_COC.1
+	title = "Meeting with Commune of Castor Leaders"
+	desc = "We have sent several of our dignitaries to establish closer relations with the Commune of Castor"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	#FAE_MEET_COC.1.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Let's Hope it Goes Well"
+		ai_chance = { 
+			factor = 100
+		}
+		COC = {
+			country_event = COC_general.2
+		}
+	}
+}
+
+country_event = {
+	id = FAE_MEET_COC.2
+	title = "Meeting with Commune of Castor Leaders"
+	desc = "The Meeting Went Very Well. We have grown incredibly closer."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	#FAE_MEET_COC.2.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Excellent!"
+		ai_chance = { 
+			factor = 100
+		}
+		DOC = {
+			country_event = DOC_CAER.3
+		}
+	}
+}
+
+add_namespace = FAE_HELP_FROM_COC
+
+country_event = {
+	id = FAE_HELP_FROM_COC.1
+	title = "Gurantee From Commune of Castor"
+	desc = "The Commune of Castor has further solidified their cooperation with us and our efforts to free Caer, that they have now guranteed us against possible direct Dominion intervention."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	#FAE_MEET_COC.1.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Our Revolution Grows Even Stronger!"
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = FAE_HELP_FROM_COC.2
+	title = "An Alliance"
+	desc = "The Commune of Castor, bent on ensuring a unified and free Caer, have asked us to join in an alliance, as it has become apparent that the Dominion will must surely intervene against us."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	#FAE_MEET_COC.2.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Together in Arms!"
+		ai_chance = { 
+			factor = 100
+		}
+		COC = {
+			add_to_faction = FAE 
+		}
+	}
+}
+
+add_namespace = fae_civil_war_help
+
+#COC Sends Guns
+country_event = {
+	id = fae_civil_war_help.1
+	title = fae_civil_war_help.1.t
+	desc = fae_civil_war_help.1.d
+	picture = GFX_report_event_steamboat
+	#FAE_MEET_COC.1.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = fae_civil_war_help.1.a
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+#COC Sends Support Equipment
+country_event = {
+	id = fae_civil_war_help.2
+	title = fae_civil_war_help.2.t
+	desc = fae_civil_war_help.2.d
+	picture = GFX_report_event_steamboat
+	#FAE_MEET_COC.1.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = fae_civil_war_help.2.a
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+#COC Sends Artillery
+country_event = {
+	id = fae_civil_war_help.3
+	title = fae_civil_war_help.3.t
+	desc = fae_civil_war_help.3.d
+	picture = GFX_report_event_steamboat
+	#FAE_MEET_COC.1.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = fae_civil_war_help.3.a
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+#COC Sends Heavy Armor Divisions
+country_event = {
+	id = fae_civil_war_help.4
+	title = fae_civil_war_help.4.t
+	desc = fae_civil_war_help.4.d
+	picture = GFX_report_event_heavy_armor
+	#FAE_MEET_COC.1.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = fae_civil_war_help.4.a
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}

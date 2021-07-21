@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=1133
+	name="STATE_1133"
+	provinces={
+		1211 1318 1598 2233 2645 4480 5417 6634 6896 8196 9653 15920 15966 15999 16030 16108 16127 16147 16199 
+	}
+	history={
+		#owner = SMS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SMS
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

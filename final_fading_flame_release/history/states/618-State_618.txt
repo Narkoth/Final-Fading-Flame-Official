@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=618
+	name="STATE_618"
+	provinces={
+		119 414 1471 1861 2094 6795 7845 8441 9900 11829 11939 11950 11992 12003 12019 12142 
+	}
+	history={
+		#owner = FIS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = FIS
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

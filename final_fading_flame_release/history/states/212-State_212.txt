@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=212
+	name="STATE_212"
+	provinces={
+		16388 
+	}
+	history={
+		#owner = CRA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CRA
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

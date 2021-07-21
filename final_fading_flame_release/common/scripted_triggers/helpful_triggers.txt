@@ -1,0 +1,128 @@
+### War in Caer has ended
+caer_civil_war_ended_trigger = {
+    custom_trigger_tooltip = {
+		tooltip = caer_civil_war_ended_tooltip
+		OR = {
+            NOT = {country_exists = CAE}
+            NOT = {country_exists = FAE}
+        }
+	}
+}
+
+### War in Caer is Ongoing
+caer_civil_war_ongoing_trigger = {
+    custom_trigger_tooltip = {
+		tooltip = caer_civil_war_goingon_tooltip
+		FAE = {
+            has_war_with = CAE
+            is_subject = no
+        }
+	}
+}
+
+
+### Since is_major is not helpful in our mod, created a new one that should prove to be useful
+### This is also helpful in establishing nations that have decent industrial base to get things working and running
+
+is_strong = { 
+    OR = {
+        num_of_factories > 40
+        tag = DOC
+        tag = ROC
+        tag = COC
+        tag = CIS
+    }
+}
+
+### Useful trigger for checking nations if they have a large amount of naval dockyards, which can be very helpful for ai strategies
+### Also helpful for some nations, that we WANT to be considered navally powerful that don't have many dockyards, like DOC which starts with a large navy
+### This is also EXTREMELY helpful in ai_will_do for technology as well, since we are going to have so many nations, writing GOOD generic code will help us SO MUCH in the long run
+
+has_large_naval_capability = {
+    OR = {
+        num_of_naval_factories > 20
+        tag = DOC
+    }
+}
+
+### Political Triggers that put ideologies in their "group" categories, making for much easier checking
+### Instead of having to check for a whole bunch of ideologies, simply do something like:
+### available = {
+###     is_tribal = no
+### }
+
+is_theocratic = {
+    OR = {
+        has_government = full_theocracy 
+        has_government = rationalist_theocracy
+    }
+}
+
+is_statist = {
+    OR = {
+        has_government = statism
+        has_government = totalitarianism 
+        has_government = nationalism 
+        has_government = governism 
+    }
+}
+
+is_corporatist = {
+    OR = {
+        has_government = unitary_corporatism 
+        has_government = corporate_feudalism 
+        has_government = liberated_corporatism 
+        has_government = partnerism 
+        has_government = guildism 
+    }
+}
+
+is_communalist = {
+    OR = {
+        has_government = unionism 
+        has_government = classical_communalism 
+        has_government = anarcho_marxism 
+    }
+}
+
+is_monarchist = {
+    OR = {
+        has_government = imperialism 
+        has_government = monarchism 
+        has_government = divine_right_monarchism 
+        has_government = constitutional_monarchism 
+    }
+}
+
+is_revanchist = { # While redundant, wanted to keep a coding constistency, as we may add different types of revanchism in the future
+    OR = {
+        has_government = revanchism 
+    }
+}
+
+is_centrist = {
+    OR = {
+        has_government = republicanism 
+        has_government = uniform_statism 
+        has_government = federalism  
+        has_government = centrism 
+    }
+}
+
+is_utopianist = {
+    OR = {
+        has_government = democratism 
+        has_government = libertarianism 
+        has_government = utopianism 
+        has_government = just_worldism 
+    }
+}
+
+is_tribal = {
+    OR = {
+        has_government = isolationism 
+        has_government = cooperativism 
+    }
+}
+
+###

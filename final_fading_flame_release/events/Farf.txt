@@ -1,0 +1,22 @@
+###########################
+# The Drug Farf
+###########################
+
+add_namespace = farf
+
+#Farf is beind distributed
+news_event = {
+	id = farf.1
+	title = farf.t
+	desc = farf.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	option = {
+		name = farf.1.a
+	}
+
+}

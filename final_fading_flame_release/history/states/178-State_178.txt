@@ -1,0 +1,21 @@
+state={ state_category = tiny_island
+	id=178
+	name="STATE_178"
+	provinces={
+		16367 
+	}
+	history={
+		owner = CAE
+		add_claim_by = FAE
+		#victory_points = { 12860 15 }
+		buildings = {
+			infrastructure = 3
+			16367 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CAE
+	}
+	manpower=1549
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,1935 @@
+﻿search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+
+	
+ 
+	
+	
+	FOCUS_FILTER_RESEARCH = 522
+
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+}
+
+
+
+
+
+focus_tree = {
+	id = MRSIR_GEN_overhaul_generic_focus_tree
+	
+	country = {
+		factor = 0
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 75 y = 2500 }
+
+	
+
+	
+	
+	
+	
+	focus = {
+		id = MRSIR_GEN_start_industry
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = MRSIR_investors
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = MRSIR_GEN_start_industry
+		prerequisite = {focus = MRSIR_GEN_start_industry}
+		x = 4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+
+	focus = {
+		id = MRSIR_investors2
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = MRSIR_investors
+		prerequisite = {focus = MRSIR_investors}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 3 }
+		}
+	}
+
+	focus = {
+		id = MRSIR_GEN_industrial_fac_1
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = MRSIR_GEN_start_industry
+		prerequisite = {focus = MRSIR_GEN_start_industry}
+		x = 0
+		y = 1
+		cost = 7
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_industrial_fac_2
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = MRSIR_GEN_industrial_fac_1
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = MRSIR_GEN_industrial_fac_1}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_industrial_fac_3
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = MRSIR_GEN_industrial_fac_2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = MRSIR_GEN_industrial_fac_2}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_infra_1
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = MRSIR_GEN_start_industry
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = MRSIR_GEN_start_industry}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = MRSIR_GEN_INFRA
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 2
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_infra_2
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = MRSIR_GEN_infra_1
+		x = 0
+		y = 1
+		cost = 7
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = MRSIR_GEN_infra_1}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = MRSIR_GEN_INFRA
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 2
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_infra_3
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = MRSIR_GEN_infra_2
+		x = 0
+		y = 1
+		cost = 7
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = MRSIR_GEN_infra_2}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = MRSIR_GEN_mil_1
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = MRSIR_GEN_start_industry
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = MRSIR_GEN_start_industry}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_mil_2
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = MRSIR_GEN_mil_1
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = MRSIR_GEN_mil_1}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_mil_3
+		icon = GFX_goal_generic_build_tank
+		relative_position_id = MRSIR_GEN_mil_2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = MRSIR_GEN_mil_2}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_economic_boom_focus
+		icon = GFX_focus_spa_the_spanish_miracle
+		relative_position_id = MRSIR_GEN_industrial_fac_3
+		x = 0
+		y = 2
+		cost = 20
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = { focus = MRSIR_GEN_industrial_fac_3 }
+		prerequisite = { focus = MRSIR_GEN_infra_3}
+		prerequisite = { focus = MRSIR_GEN_mil_3}
+		prerequisite = { focus = MRSIR_GEN_elec_research_2}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_economic_boom11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_indus_research
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = MRSIR_GEN_start_industry
+		x = 6
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = { focus = MRSIR_GEN_start_industry }
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_2
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_indus_research2
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = MRSIR_GEN_indus_research
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = { focus = MRSIR_GEN_indus_research }
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_3
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_indus_research3
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = MRSIR_GEN_indus_research2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = { focus = MRSIR_GEN_indus_research2 }
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_3
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_elec_research_1
+		icon = GFX_goal_generic_radar
+		relative_position_id = MRSIR_GEN_indus_research2
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = { focus = MRSIR_GEN_indus_research2}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_elec1
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_elec_research_2
+		icon = GFX_goal_generic_radar
+		relative_position_id = MRSIR_GEN_indus_research3
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = { focus = MRSIR_GEN_indus_research3}
+		prerequisite = { focus = MRSIR_GEN_elec_research_1}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_elec2
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_extra_research_slot1
+		icon = GFX_focus_research
+		relative_position_id = MRSIR_GEN_elec_research_2
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = { focus = MRSIR_GEN_elec_research_2}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_nav_dockyard1
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = MRSIR_GEN_start_industry
+		x = -4
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = MRSIR_GEN_start_industry}
+		available = {
+			any_owned_state = {
+    			is_coastal = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_nav_dockyard2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = MRSIR_GEN_nav_dockyard1
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = MRSIR_GEN_nav_dockyard1}
+		available = {
+			any_owned_state = {
+    			is_coastal = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_synth_oil1
+		icon = GFX_focus_generic_rubber
+		relative_position_id = MRSIR_GEN_economic_boom_focus
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = MRSIR_GEN_economic_boom_focus}
+		prerequisite = {focus = MRSIR_GEN_extra_research_slot1}
+		available = {
+		}
+		completion_reward = {
+			set_technology = {
+				fuel_silos = 1
+				synth_oil_experiments = 1
+			}
+			add_tech_bonus = {
+				name = synth_11
+				bonus = 2
+				uses = 3
+				category = synth_resources
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_final_tech_slot
+		icon = GFX_focus_research
+		relative_position_id = MRSIR_GEN_synth_oil1
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = {focus = MRSIR_GEN_synth_oil1}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_military_focus11
+		icon = GFX_focus_generic_military_mission
+		x = 26
+		y = 0
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			army_experience = 10
+			air_experience = 10
+			navy_experience = 10
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_army_focus_11
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = MRSIR_GEN_military_focus11
+		prerequisite = { focus = MRSIR_GEN_military_focus11}
+		x = -6
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_airforce_focus11
+		icon = GFX_goal_generic_air_doctrine
+		relative_position_id = MRSIR_GEN_military_focus11
+		prerequisite = { focus = MRSIR_GEN_military_focus11}
+		x = 9
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			air_experience = 15
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_airforce_reform11
+		icon = GFX_focus_generic_military_academy
+		relative_position_id = MRSIR_GEN_airforce_focus11
+		prerequisite = { focus = MRSIR_GEN_airforce_focus11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_fighter_reform11
+		icon = GFX_goal_generic_air_fighter
+		relative_position_id = MRSIR_GEN_airforce_reform11
+		prerequisite = { focus = MRSIR_GEN_airforce_reform11}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_closeair_reform11
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = MRSIR_GEN_airforce_reform11
+		prerequisite = { focus = MRSIR_GEN_airforce_reform11}
+		mutually_exclusive = { focus = MRSIR_GEN_tactical_reform11}
+		mutually_exclusive = { focus = MRSIR_GEN_strategic_reform11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_tactical_reform11
+		icon = GFX_focus_usa_escort_fighters
+		relative_position_id = MRSIR_GEN_airforce_reform11
+		prerequisite = { focus = MRSIR_GEN_airforce_reform11}
+		mutually_exclusive = {focus = MRSIR_GEN_closeair_reform11}
+		mutually_exclusive = {focus = MRSIR_GEN_strategic_reform11}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_strategic_reform11
+		icon = GFX_goal_generic_air_bomber
+		relative_position_id = MRSIR_GEN_airforce_reform11
+		prerequisite = { focus = MRSIR_GEN_airforce_reform11}
+		mutually_exclusive = {focus = MRSIR_GEN_closeair_reform11}
+		mutually_exclusive = {focus = MRSIR_GEN_tactical_reform11}
+		x = 4
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_more_air_bases111
+		icon = GFX_goal_generic_air_production
+		relative_position_id = MRSIR_GEN_closeair_reform11
+		prerequisite = { focus = MRSIR_GEN_closeair_reform11 OR = MRSIR_GEN_tactical_reform11 OR = MRSIR_GEN_strategic_reform11}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_air_base_focus_idea
+		}
+	}
+
+	focus = {
+		id = MRSIR_GEN_further_air_reform111
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = MRSIR_GEN_more_air_bases111
+		prerequisite = { focus = MRSIR_GEN_more_air_bases111}
+		prerequisite = { focus = MRSIR_GEN_fighter_reform11}
+		x = -3
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = MRSIR_GEN_army_equipment_11
+		icon = GFX_goal_generic_small_arms
+		relative_position_id = MRSIR_GEN_army_focus_11
+		prerequisite = { focus = MRSIR_GEN_army_focus_11}
+		x = -6
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_equipment11
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_army_equipment_12
+		icon = GFX_goal_generic_construction2
+		relative_position_id = MRSIR_GEN_army_equipment_11
+		prerequisite = { focus = MRSIR_GEN_army_equipment_11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com1
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_army_equipment_13
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = MRSIR_GEN_army_equipment_12
+		prerequisite = { focus = MRSIR_GEN_army_equipment_12}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = arty_tech11
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_army_equipment_14
+		icon = GFX_goal_generic_construction2
+		relative_position_id = MRSIR_GEN_army_equipment_12
+		prerequisite = { focus = MRSIR_GEN_army_equipment_12}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = MRSIR_GEN_infantry_army_focus12
+		icon = GFX_focus_secret_rearmament
+		relative_position_id = MRSIR_GEN_army_focus_11
+		prerequisite = { focus = MRSIR_GEN_army_focus_11}
+		mutually_exclusive = { focus = MRSIR_GEN_infantry_army_focus13}
+		mutually_exclusive = { focus = MRSIR_GEN_infantry_army_focus14}
+		mutually_exclusive = { focus = MRSIR_GEN_combined_arms_focus12}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_tech = mass_assault
+		}
+		completion_reward = {
+			#TOTAL MOBILIZATION -> WHATEVER WE CAN GET NOT PICKY ON EQUIPMENT ---> MASS ASSAULT DOCTRINE
+			add_ideas = MRSIR_GEN_cheaper_weapons
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_mass_mob
+		icon = GFX_focus_prc_infiltration
+		relative_position_id = MRSIR_GEN_infantry_army_focus12
+		prerequisite = { focus = MRSIR_GEN_infantry_army_focus12}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = mass_mob
+				bonus = 1
+				uses = 3
+				category = cat_mass_assault
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_gathering_weapons_from_battlefield
+		icon = GFX_focus_focus_fra_maquis
+		relative_position_id = MRSIR_GEN_mass_mob
+		prerequisite = { focus = MRSIR_GEN_mass_mob}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			#TOTAL MOBILIZATION -> WHATEVER WE CAN GET NOT PICKY ON EQUIPMENT ---> MASS ASSAULT DOCTRINE
+			add_ideas = MRSIR_GEN_scavengers_idea
+			#to do fix this
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_morale_boost11
+		icon = GFX_focus_generic_support_the_left_right
+		relative_position_id = MRSIR_GEN_gathering_weapons_from_battlefield
+		prerequisite = { focus = MRSIR_GEN_gathering_weapons_from_battlefield}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_morale_booster_idea
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_mass_conscription_focus11
+		icon = GFX_focus_generic_manpower
+		relative_position_id = MRSIR_GEN_mass_mob
+		prerequisite = { focus = MRSIR_GEN_mass_mob}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_mass_conscription_idea11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_infantry_army_focus13
+		icon = GFX_goal_generic_army_artillery
+		relative_position_id = MRSIR_GEN_infantry_army_focus12
+		prerequisite = { focus = MRSIR_GEN_army_focus_11}
+		mutually_exclusive = { focus = MRSIR_GEN_infantry_army_focus12}
+		mutually_exclusive = { focus = MRSIR_GEN_infantry_army_focus14}
+		mutually_exclusive = { focus = MRSIR_GEN_combined_arms_focus12}
+		x = 8
+		y = 0
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_tech = superior_firepower
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_shiny_weapons
+		}
+	}
+
+	focus = {
+		id = MRSIR_GEN_superior_research_boost11
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = MRSIR_GEN_infantry_army_focus13
+		prerequisite = { focus = MRSIR_GEN_infantry_army_focus13}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = mass_mob
+				bonus = 1
+				uses = 3
+				category = cat_superior_firepower
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_anti_air124
+		icon = GFX_focus_generic_air_defense
+		relative_position_id = MRSIR_GEN_superior_research_boost11
+		prerequisite = { focus = MRSIR_GEN_superior_research_boost11}
+		x = -2
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_anti_air_idea11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_support_comp_research_boost11
+		icon = GFX_goal_generic_construction2
+		relative_position_id = MRSIR_GEN_superior_research_boost11
+		prerequisite = { focus = MRSIR_GEN_superior_research_boost11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 5
+				category = support_tech
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_better_logistics_for_army11
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = MRSIR_GEN_support_comp_research_boost11
+		prerequisite = { focus = MRSIR_GEN_support_comp_research_boost11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_improved_logistics11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_slight_armor_integration
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = MRSIR_GEN_better_logistics_for_army11
+		prerequisite = { focus = MRSIR_GEN_better_logistics_for_army11 OR = MRSIR_GEN_organize_a_defence OR = MRSIR_GEN_morale_boost11}
+		x = -4
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_light_armor_slight_integration
+			add_tech_bonus = {
+				name = light_Tank_tech
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_infantry_army_focus14
+		icon = GFX_goal_generic_more_territorial_claims
+		relative_position_id = MRSIR_GEN_infantry_army_focus12
+		prerequisite = { focus = MRSIR_GEN_army_focus_11}
+		mutually_exclusive = { focus = MRSIR_GEN_infantry_army_focus12}
+		mutually_exclusive = { focus = MRSIR_GEN_infantry_army_focus13}
+		mutually_exclusive = { focus = MRSIR_GEN_combined_arms_focus12}
+		x = 4
+		y = 0
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_tech = trench_warfare
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_better_recon11
+			#NEED TO HAVE INFO OF ENEMY TO BETTER PLAN FOR THEM!!!!!!!!!!!
+			#
+			#
+			#
+			#
+			#
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_give_basic_doctrine_boost
+		icon = GFX_focus_research
+		relative_position_id = MRSIR_GEN_infantry_army_focus14
+		prerequisite = { focus = MRSIR_GEN_infantry_army_focus14}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = any_doctrine
+				bonus = 1
+				uses = 3
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_reorganize_army
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = MRSIR_GEN_give_basic_doctrine_boost
+		prerequisite = { focus = MRSIR_GEN_give_basic_doctrine_boost}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_organized_army11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_organize_a_defence
+		icon = GFX_goal_generic_defence
+		relative_position_id = MRSIR_GEN_reorganize_army
+		prerequisite = { focus = MRSIR_GEN_reorganize_army}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_organized_defence11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_planning_board_fo
+		icon = GFX_goal_generic_position_armies
+		relative_position_id = MRSIR_GEN_reorganize_army
+		prerequisite = { focus = MRSIR_GEN_reorganize_army}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_planning_board_idea11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_combined_arms_focus12
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = MRSIR_GEN_army_focus_11
+		prerequisite = { focus = MRSIR_GEN_army_focus_11}
+		mutually_exclusive = { focus = MRSIR_GEN_infantry_army_focus12}
+		mutually_exclusive = { focus = MRSIR_GEN_infantry_army_focus13}
+		mutually_exclusive = { focus = MRSIR_GEN_infantry_army_focus14}
+		x = 9
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_tech = mobile_warfare
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_combined_arms_focus
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_combined_arms_focus11
+		icon = GFX_focus_generic_military_academy
+		relative_position_id = MRSIR_GEN_combined_arms_focus12
+		prerequisite = { focus = MRSIR_GEN_combined_arms_focus12}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			#add_ideas = MRSIR_GEN_combined_arms_focus
+			add_tech_bonus = {
+				name = any_doctrine
+				bonus = 1
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	focus = {
+		id = MRSIR_GEN_develope_new_technologies
+		icon = GFX_focus_generic_army_tanks2
+		relative_position_id = MRSIR_GEN_combined_arms_focus12
+		prerequisite = { focus = MRSIR_GEN_combined_arms_focus12}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = any_armor
+				bonus = 1
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_comp_bonus_for_combined_armor
+		icon = GFX_goal_generic_radar
+		relative_position_id = MRSIR_GEN_combined_arms_focus11
+		prerequisite = { focus = MRSIR_GEN_combined_arms_focus11 }
+		prerequisite = { focus = MRSIR_GEN_develope_new_technologies}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				technology = tech_signal_company
+			}
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				technology = tech_signal_company2
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_speed_is_king
+		icon = GFX_goal_generic_army_motorized
+		relative_position_id = MRSIR_GEN_comp_bonus_for_combined_armor
+		prerequisite = { focus = MRSIR_GEN_comp_bonus_for_combined_armor }
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_speed_idea13
+		}
+	}
+
+	focus = {
+		id = MRSIR_GEN_special_forces_oh_yeah
+		icon = GFX_goal_generic_special_forces
+		relative_position_id = MRSIR_GEN_slight_armor_integration
+		prerequisite = { focus = MRSIR_GEN_speed_is_king OR = MRSIR_GEN_slight_armor_integration}
+		x = 5
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_special_forces11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_navy_focus_11
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = MRSIR_GEN_military_focus11
+		prerequisite = { focus = MRSIR_GEN_military_focus11}
+		x = 17
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			navy_experience = 15
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_marine_focus_11
+		icon = GFX_goal_generic_amphibious_assault
+		relative_position_id = MRSIR_GEN_navy_focus_11
+		prerequisite = { focus = MRSIR_GEN_navy_focus_11}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_screen_ships
+		icon= GFX_focus_generic_destroyer
+		relative_position_id = MRSIR_GEN_navy_focus_11
+		prerequisite = { focus = MRSIR_GEN_navy_focus_11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_cruiser_tech11
+		icon = GFX_focus_generic_cruiser2
+		relative_position_id = MRSIR_GEN_navy_focus_11
+		prerequisite = { focus = MRSIR_GEN_navy_focus_11}
+		mutually_exclusive = {focus = MRSIR_GEN_heavy_tech11}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = ca_tech
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_heavy_tech11
+		icon = GFX_focus_generic_navy_battleship2
+		relative_position_id = MRSIR_GEN_navy_focus_11
+		prerequisite = { focus = MRSIR_GEN_navy_focus_11}
+		mutually_exclusive = {focus = MRSIR_GEN_cruiser_tech11}
+		x = 4
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_shheavy_tech11
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = MRSIR_GEN_heavy_tech11
+		prerequisite = { focus = MRSIR_GEN_heavy_tech11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = shbb_tech
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_carrier_tech111
+		icon = GFX_goal_generic_navy_carrier
+		relative_position_id = MRSIR_GEN_screen_ships
+		prerequisite = { focus = MRSIR_GEN_screen_ships}
+		prerequisite = { focus = MRSIR_GEN_cruiser_tech11}
+		x = 1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_naval_doctrine_help11
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = MRSIR_GEN_screen_ships
+		prerequisite = { focus = MRSIR_GEN_screen_ships}
+		x = -1
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_dockyard_help11
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = MRSIR_GEN_naval_doctrine_help11
+		prerequisite = { focus = MRSIR_GEN_naval_doctrine_help11}
+		prerequisite = { focus = MRSIR_GEN_carrier_tech111 OR = MRSIR_GEN_shheavy_tech11}
+		x = 3
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_dockyard_help_idea11
+		}
+	}	
+	focus = {
+		id = MRSIR_GEN_at_war11
+		icon = GFX_goal_generic_major_war
+		x = 6
+		y = 8
+		cost = 7 
+		ai_will_do = {
+			factor = 4000
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_prepare_for_mobilization11
+		icon = GFX_goal_generic_production2
+		relative_position_id = MRSIR_GEN_at_war11
+		prerequisite = { focus = MRSIR_GEN_at_war11}
+		x = 0
+		y = 2
+		cost = 7 
+		ai_will_do = {
+			factor = 4000
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_war = yes 
+			has_war_support > 0.15
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_prepare_to_mobilize_idea111
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_moblize_economy_11
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = MRSIR_GEN_prepare_for_mobilization11
+		prerequisite = { focus = MRSIR_GEN_prepare_for_mobilization11}
+		x = -1
+		y = 1
+		cost = 7 
+		ai_will_do = {
+			factor = 4000
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_war = yes 
+			has_war_support > 0.25
+		}
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure > 2
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_total_mobilization11
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = MRSIR_GEN_moblize_economy_11
+		prerequisite = { focus = MRSIR_GEN_moblize_economy_11}
+		prerequisite = { focus = MRSIR_GEN_begin_some_conscription11}
+		x = 1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_war = yes 
+			has_war_support > 0.50
+		}
+			completion_reward = {
+				#Core Game 
+				add_manpower = 15000
+				add_ideas = war_economy
+		}
+	}
+
+	focus = {
+		id = MRSIR_GEN_loosing_war11
+		icon = GFX_focus_CZE_german_puppet
+		relative_position_id = MRSIR_GEN_total_mobilization11
+		prerequisite = { focus = MRSIR_GEN_total_mobilization11 OR = MRSIR_GEN_strategize_defense_11 OR = MRSIR_GEN_logistical_focus11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_war = yes 
+			surrender_progress > 0.10
+		}
+			completion_reward = {
+				add_ideas = MRSIR_GEN_additional_recruitment111
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_desperation_focus111
+		icon = GFX_focus_secret_rearmament
+		relative_position_id = MRSIR_GEN_loosing_war11
+		prerequisite = { focus = MRSIR_GEN_loosing_war11}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_war = yes 
+			surrender_progress > 0.20
+		}
+			completion_reward = {
+				remove_ideas = MRSIR_GEN_additional_recruitment111
+				add_ideas = MRSIR_GEN_desperation_idea111
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_desperation_economy_focus111
+		icon = GFX_goal_generic_construction2
+		relative_position_id = MRSIR_GEN_loosing_war11
+		prerequisite = { focus = MRSIR_GEN_loosing_war11}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_war = yes 
+			surrender_progress > 0.20
+		}
+			completion_reward = {
+				add_ideas = MRSIR_GEN_desperation_idea_economy111
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_last_stand11
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		relative_position_id = MRSIR_GEN_loosing_war11
+		prerequisite = { focus = MRSIR_GEN_loosing_war11}
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_war = yes 
+			surrender_progress > 0.25
+		}
+			completion_reward = {
+				add_ideas = MRSIR_GEN_last_stand_idea111
+		}
+	}
+
+	focus = {
+		id = MRSIR_GEN_begin_some_conscription11
+		icon = GFX_focus_generic_manpower
+		relative_position_id = MRSIR_GEN_prepare_for_mobilization11
+		prerequisite = { focus = MRSIR_GEN_prepare_for_mobilization11}
+		x = 1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_war = yes 
+			has_war_support > 0.25
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_begin_conscription11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_offensive_focus11
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		relative_position_id = MRSIR_GEN_at_war11
+		prerequisite = { focus = MRSIR_GEN_at_war11}
+		mutually_exclusive = { focus = MRSIR_GEN_defensive_focus11}
+		x = 4
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.025
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_defensive_focus11
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = MRSIR_GEN_at_war11
+		prerequisite = { focus = MRSIR_GEN_at_war11}
+		mutually_exclusive = { focus = MRSIR_GEN_offensive_focus11}
+		x = -4
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.025
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_build_more_forts11
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = MRSIR_GEN_defensive_focus11
+		prerequisite = { focus = MRSIR_GEN_defensive_focus11}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_build_more_forts_idea11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_build_more_aa11
+		icon = GFX_focus_generic_air_defense
+		relative_position_id = MRSIR_GEN_defensive_focus11
+		prerequisite = { focus = MRSIR_GEN_defensive_focus11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_build_more_forts_aaidea11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_focus_on_defence_teaching_11
+		relative_position_id = MRSIR_GEN_defensive_focus11
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = MRSIR_GEN_defensive_focus11}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_focus_defence_teaching11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_strategize_defense_11
+		icon = GFX_goal_generic_position_armies
+		relative_position_id = MRSIR_GEN_build_more_aa11
+		prerequisite = { focus = MRSIR_GEN_build_more_forts11 OR = MRSIR_GEN_build_more_aa11 OR = MRSIR_GEN_focus_on_defence_teaching_11}
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_focus_on_defenceidea11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_focus_on_teaching_attack
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = MRSIR_GEN_offensive_focus11
+		prerequisite = { focus = MRSIR_GEN_offensive_focus11}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_emphasize_attack11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_hire_non_core_troops
+		icon = GFX_focus_generic_little_entente
+		relative_position_id = MRSIR_GEN_offensive_focus11
+		prerequisite = { focus = MRSIR_GEN_offensive_focus11}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_hire_non_coreidea11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_naval_invasion_focus11
+		icon = GFX_goal_generic_amphibious_assault
+		relative_position_id = MRSIR_GEN_offensive_focus11
+		prerequisite = { focus = MRSIR_GEN_offensive_focus11}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_marines_fighting_afar11
+		}
+	}
+	focus = {
+		id = MRSIR_GEN_logistical_focus11
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = MRSIR_GEN_hire_non_core_troops
+		prerequisite = { focus = MRSIR_GEN_hire_non_core_troops OR = MRSIR_GEN_naval_invasion_focus11 OR = MRSIR_GEN_focus_on_teaching_attack}
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = MRSIR_GEN_logistical_idea11
+		}
+	}
+
+}
+
+ 	
+
+

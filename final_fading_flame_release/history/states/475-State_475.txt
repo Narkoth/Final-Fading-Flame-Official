@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=475
+	name="Chapchak-Imar"
+	provinces={
+		294 731 958 1653 1760 1841 2485 2855 2967 3138 4236 4896 6372 6485 6954 7181 7670 7846 8355 8662 8789 9460 9707 10941 10972 11013 11026 11048 11062 11110 11111 11130 11133 11150 11157 
+	}
+	history={
+		#owner = CPK
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CPK
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=829
+	name="STATE_829"
+	provinces={
+		1350 5412 6934 7910 8563 9277 
+	}
+	history={
+		#owner = OPP
+		buildings = {
+			infrastructure = 2
+		}
+		#add_core_of = OPP
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,10 @@
+
+strategic_region={
+	id=40
+	name="STRATEGICREGION_40"
+	provinces={
+		17020 17090 
+	}
+	weather={
+	}
+}

@@ -1,0 +1,29 @@
+### Names generation for aces ###
+# Surnames can be male/female dependent or general. Fe. in Polish some surnames has different endings depending on the gender.
+# Names and Surnames are randomly picked and will sometimes repeat, but will never repeat in combinations for example there will never be generated another "John Smith".
+# Assigning the callsign is random - may be assigned or not. If we use the callsign, it will never be assigned to anyone again. Callsigns are not obligatory to script.
+# Picking up a gender is random, and is influenced by the amount of names scripted.
+
+default = {
+	male = {
+		names = { Henrico Luan Divan Roux Almarie Aba Susara Nelia Steviena Nanika Marlice Iphale Thesippe Adouybe Psellaodia 
+				  Yydia Aerie Durlan Iarfaren Marlevaur Iarleth Jok Llis Dhot Skusmag Sneirlel Mirorr Errasmus Holmes
+				  Reks Maggard Seifer Wendell Zell Fane Vexacion Arlin Finch Trik Ike Avanth Vayne Stone Cloven Marth
+				  Shayde Vesh Everit Jude Noire Adaranth Omen Carmine Seskel Kane Zell Soren Talon 
+				}
+	}
+	female = {
+		names = { Agla Puriel Pamyel Rachiel Mumiah Sachael Hayliel Sophia Rehael Kakabel Ahiah Sariel Tabbris
+				  Felsea Fellyn Saraela Gost Arst Tholna Sidra Sanra Sannd Sveja Mirifa Skurkja Thoma Vadis 
+				  Ardr Thrulna Frita Hiva Hlodra
+				}
+	}
+	surnames = { "" } # This is intentially left empty, as will always pick the empty string option.
+					  # This is because having last surnames for randomly generated characters can get very messey,
+					  # especially when characters start sharing the same last name 
+					  # Last names should be reserved for more "important" folk
+	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" "Demon" 
+				  "The Oaf" "Bad" "Feather" "Queen of the Sky"
+				}
+}
+ 

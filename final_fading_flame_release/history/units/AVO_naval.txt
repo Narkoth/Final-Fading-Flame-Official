@@ -1,0 +1,57 @@
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "1st Navy"			
+		naval_base = 2121
+		task_force = {
+			name = "1st Navy"
+			location = 2121
+
+
+			ship = { name = "Musk" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AVO} } }
+			ship = { name = "Shor" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AVO} } }
+			ship = { name = "Amor" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AVO} } }
+			ship = { name = "Loren" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AVO} } }
+
+			ship = { name = "Unicorn" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Cam" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Tetcott" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Unbroken" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Griffin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Pert" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Nurton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Leeds" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Rugby" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Minstrel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Kilbane" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Weazel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Seafire" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Fundy" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Omdurman" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Oxlip" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Keats" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AVO } } }
+
+
+			ship = { name = "Hawke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Burford" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Ouragan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Evans" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Heron" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Nesbitt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Mulette" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Junon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Alisma" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Melton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AVO } } }
+
+			ship = { name = "Havant" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Mull" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Ister" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Russell" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Wolf" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Lion" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AVO } } }
+			ship = { name = "Eagle" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AVO } } }
+
+		}								
+	}
+}

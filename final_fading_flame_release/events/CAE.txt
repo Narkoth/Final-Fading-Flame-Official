@@ -1,0 +1,74 @@
+###########################
+# CAE GENERAL EVENTS
+###########################
+
+add_namespace = CAE_WESTERN_TROUBLES
+
+country_event = {
+	id = CAE_WESTERN_TROUBLES.1
+	title = "Lost Territory"
+	desc = "Today, Communal Rebels Have Inflitrated and Took Possession of One of Our States in the West. Local police tried to stop them, but to no avail."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Damn Rebel Scum!"
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = CAE_WESTERN_TROUBLES.2
+	title = "Lost Additional Territory"
+	desc = "Today, Communal Rebels Have Inflitrated and Took Possession of One of Our States in the West. Local police tried to stop them, but to no avail."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Damn Them!"
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = CAE_WESTERN_TROUBLES.3
+	title = "Lost More Territory"
+	desc = "Today, Communal Rebels Have Inflitrated and Took Possession of one of the last western states we still held onto."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Damn Them!"
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+add_namespace = CAE_ALLIANCE_DOC
+
+
+country_event = {
+	id = CAE_ALLIANCE_DOC.1
+	title = "Officially Joining the Kingdom"
+	desc = "We have received a direct and formal invitation to the Dominion's Kingdom Alliance. This will prove crucial to our survival, as the Commune moves against us by siding with the Communal Rebels."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "We are stronger together!"
+		ai_chance = { 
+			factor = 100
+		}
+		DOC = {
+			add_to_faction = CAE
+		}
+	}
+}

@@ -1,0 +1,62 @@
+﻿l_english:
+general.1.t:0 "Naval Warfare"
+general.1.d:0 "DON'T USE MAN THE GUNS WITH THIS MOD. IT IS NOT SUPPORTED. The naval module system is a huge pain to mod with if you aren't a navy fetish kinda-guy, and is general broken as all hell, as people only need to build subs and your fine. \n\nWe are going to extend our naval researches in this mod, as well as add techs that increase each ship type's attributes as we see fit."
+general.1.a:0 "Understandable. Have a nice day."
+
+roc_cis_relations.1.t:0 "Send Aid to the Iron State"
+roc_cis_relations.1.d:0 "The Iron State was recently ravaged by a terrible civil war. For years a decadent utopianist government had been ruling over the land in the north. However, after the wind of nationalism got ground, civil war was inevitable. The end result was a bloody civil war, in which the Iron State eventually emerged victorious.\n\nHowever, the toll of that war is immense. It doesn't help that the Dominion and the Free People of Joen aided their enemies during the war, and now refuse to help them economically recover. However, this presents us with an opportunity. If we draw closer to the Iron State and aid them in their recovery, we would have access to their incredibly rich resource filled lands; something we are sorely lacking, and their naval expertise.\n\nWe should send some diplomats as soon as possible, so that we may further our relations with them."
+roc_cis_relations.1.a:0 "An Excellent Opportunity"
+
+CIS_ronard_relations.1.t:0 "Diplomatic Arrival from Ronard"
+CIS_ronard_relations.1.d:0 "Rather surprisingly, we have been visited by diplomats from Ronard. They tell us that they are remorseful of the damage that the civil war has caused our great nation, and are willing to offer a helping-hand. In return, they wish to strengthen the bond between our nations, as we share a common foe, the Dominion and the Free People of Joen, who aided our enemies during the civil war.\n\nWhile some want to stay completely independent of any foreign power, our nation is crumbling around us. Without any aid, we will surely fall. At the same time, we are at risk of the bastard Dominion and Joen invading us once more."
+CIS_ronard_relations.1.a:0 "United Under a Common Foe"
+
+CIS_ronard_relations.2.t:0 "Mixed Training Program"
+CIS_ronard_relations.2.d:0 "We just conducted several wargame exercises with our good friend Ronard. We have gained much knowledge through this endeavor, and have such strengthend our bond between us."
+CIS_ronard_relations.2.a:0 "Splendid"
+
+CIS_ronard_relations.3.t:0 "Trading Program"
+CIS_ronard_relations.3.d:0 "We have just signed a trade agreement with Ronard that gurantees them access to a portion of our resources, in exchange for their aid in continuing to help grow our economy after the civil war. Such a thing will surely help us recover in record time."
+CIS_ronard_relations.3.a:0 "Excellent"
+
+CIS_ronard_relations.4.t:0 "Alliance Offer"
+CIS_ronard_relations.4.d:0 "Ronard has expressed interest in us joining a coalition with them to help thrwat any potential attack against the either of us. With the Dominion growing in power and showcasing their plans for intervention on mainland Castor, this alliance may be the only thing that will keep either of us alive."
+CIS_ronard_relations.4.a:0 "Together in Arms!"
+
+aaa.1.t:0 "Archaeological Discovery"
+aaa.1.d:0 "An archaeological dig has just uncovered something trully earth-shattering today. A tablet was recovered that detailed a historical account nearly 1,000 years ago, in which the Imperial Family and the Castorian Royal Family worked side-by-side in dominating large portions of our planet.\n\nThis discovery is trully groundbreaking, as it was beleived that the Castorian Dynasty only began some 250 years ago; most certainly not 1,000.\n\nHow this shapes the relationship between the two dynasties is unknown, but could be probable cause for a strengthening of a bond between them."
+aaa.1.a:0 "Fascinating!"
+
+aaa.2.t:0 "Further Archaeological Findings"
+aaa.2.d:0 "After some additional digging, it was found that not only did the Castorian and Imperial Royal Familys share positive realtions with each-other, but that the Castorian family's domain was quite large. In fact, it encompassed the entirety of Castor, including the colonial territory they now reside in.\n\nThis is a massive discovery, as it was previously believed that the Castorian Royal Family only had rightful claims to the central portion of Castor, not the entire region.\n\nHow this shapes relations between the Castorian nations has yet to be decided, but this does give the Castorian Family an interesting option, should they choose to pursue it."
+aaa.2.a:0 "This Could End Badly"
+aaa.2.b:0 "All Hail the Royal Family!"
+
+aaa.3.t:0 "The Mad Queen"
+aaa.3.d:0 "Our Queen Columbia has spent many hours in her private chambers meeting with key military staff ever since the discoveries of the archaeological dig. In an announcement made over the radio to her loyal subjects, she has announced her new commitment to return Royal Castorian rule over the false states that currently reside in Castor.\n\nMany are rejoiceful at this, as many were exiled and taken from their homes when Ronard came to power. However, others are concerned as to the toll such a war would cost; now calling her majesty 'The Mad Queen'."
+aaa.3.a:0 "To Arms!"
+
+shi_general.1.t:0 "Introduction and Legalization of Zing"
+shi_general.1.d:0 "While some might say that our people's protesting of their current conditions is because of our underfunded education system, civilian infrastructure, and lack of accountability on corporations within our nation; we have different findings.\n\nAfter two years of R&D, we have created a new form of recreation. We call this consumer pleasure drug 'Zing' and will soon be introducing it to the masses. While it may 'potentially' cause harmful defects, our people will be too happy, and distracted, to notice a difference."
+shi_general.1.a:0 "Sketchy, but Cost-effective"
+
+shi_general.2.t:0 "Secret Visits to the Dominion and Iron State"
+shi_general.2.d:0 "Under secrecy, Strata visited with the officals of both the Iron State and the Dominion last week. Her goal was to establish friendly relations with the more authoritative governments in the region, prior to her potentially overthrowing the corrupt current government of the SHI.\n\nThe talks seemed to have went well, and both the Iron State and the Dominion express interest in furthering their relationship with Strata.\n\nHowever, it should be noted that the Dominion and the Iron State are not on good grounds with each other, so no joint partnership with the both of them will be possible."
+shi_general.2.a:0 "Good"
+
+shi_general.3.t:0 "Visit by Strata of the Shi"
+shi_general.3.d:0 "Last week we received an unexpected guest, Strata from the Shi Republic. Strata explained her plans for overthrowing the government and instituting a more authoritative form of government, effectively allowing them control over the corporations that once held their lives under complete control.\n\nShe wanted to visit us to ensure that we can have friendly relations once this coup occurs. Of course, another authoritative government in the region can most certainly help us in the long-run, so we decided to continue our friendly relations, should the coup occur."
+shi_general.3.a:0 "Good"
+
+
+caer_events.1.t:0 "Castor in Flames"
+caer_events.1.d:0 "The Dominion in Castor has just made their intentions very clear. They are preparing a formal decleration of war against Ronard of Castor; in order to take back the throne and to restore her former family's glory and power.\n\nThis will most certainly send the entire area into chaos of which has not been seen in many generations.\n\nMay our Gods protect us."
+caer_events.1.a:0 "Looks Like War in Our Time"
+
+general.2.t:0 "Important Notice"
+general.2.d:0 "Due to the sheer complexity of making a complete overhaul mod, especially one with an entirely new map, things take quite some time to get working properly. One such thing is the ability to save, which is currently very unstable at the moment. As a result, we caution players to anticpate not saving a game in this mod, as it probably wouldn't load back into it correctly. At the same time, we HIGHLY suggest against doing multiplayer at this time, due to its rather buggy nature at the moment.\n\nAn upside to this, however, is that the game should run rather quickly at the moment, due to the low number of nations currently present in the game.\n\nWe are sorry for the inconveniences this may cause, and we are hoping that in the next version, that we can make the saving feature much more reliable."
+general.2.a:0 "Enjoy the Mod!"
+
+general.3.t:0 "Mod Version"
+general.3.d:0 "Thanks for downloading our mod! This mod is the love-child between Narkoth and BirdX. We started work on this mod during the Covid-19 pandemic in mid-2020 based on a Civilization 4 Caveman to Cosmos game. Many months and many lines of code later, we present to you a demo of 'The Final Fading Flame'!\n\nPlease note that this is a VERY EARLY demo of our mod, so expect some unstability. Of course, many things are also subject to change, due to how early a version of our mod this is. At the same time, many things are not fully converted into working seamlessly with our new world that we have created in our mod; but this will change overtime.\n\nIf you would like to become involved in this grand scheme to make a true total-conversion mod for Hoi4, please head to the mod's steam store page and consider joining our Discord group. Regardless of your experience with modding/scripting/gfx work, we will be more than happy to have you join our team! There's alot we are still unsure of in our mod, and if you want to help shape the lore/gameplay of our mod, then considering joining our team!\n\nThanks again for downloading the mod, and we hope you have an enjoyable experience!"
+general.3.a:0 "Awesome!"

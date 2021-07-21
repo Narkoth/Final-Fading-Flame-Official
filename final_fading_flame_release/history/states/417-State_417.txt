@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=417
+	name="STATE_417"
+	provinces={
+		59 762 2187 2321 2929 3212 3968 5384 5501 5780 5918 5920 5970 6836 6949 7536 7763 8010 8162 8172 8192 8752 9221 9359 9694 10195 10575 10585 10594 10595 10598 10599 10616 10618 10637 10645 10648 10649 
+	}
+	history={
+		#owner = DEM
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = DEM
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

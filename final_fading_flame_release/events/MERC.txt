@@ -1,0 +1,25 @@
+###########################
+# Swiss Be Alive and Well
+###########################
+
+add_namespace = MERC_events
+
+country_event = {
+	id = MERC_events.1
+	title = "New Weapon Order" #Can also be set in localization
+	desc = MERC_events.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Gimme that sweet, sweet gold baby!"
+        ROOT = {
+				add_equipment_to_stockpile = {
+					type = bolt_action_1
+					amount = -1500
+				}
+                add_political_power = 150
+		}
+	}
+}

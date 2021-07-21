@@ -1,0 +1,27 @@
+state={
+	id=1201
+	name="STATE_1201"
+	provinces={
+		2256 3746 10131 12008 12053 
+	}
+	history={
+		owner = CIS
+		victory_points = { 2256 15 }
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 2
+			arms_factory = 3
+
+		}
+		add_core_of = CIS
+	}
+	resources = {
+		steel = 251
+		chromium = 37
+		tungsten = 81
+		aluminium = 54
+	}
+	manpower=4547898
+	state_category=metropolis
+	buildings_max_level_factor=2.000
+}

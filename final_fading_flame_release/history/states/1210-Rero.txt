@@ -1,0 +1,30 @@
+
+state={
+	id=1210
+	name="STATE_1210"
+
+	history={
+		owner = R01
+		victory_points = {935 5}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			dockyard = 3
+			935 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = R01
+		add_core_of = DOC
+		add_core_of = ROC
+	}
+
+	provinces={
+		776 935 3219 6860 7768 12617 12673 12716 
+	}
+	manpower=3541662
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

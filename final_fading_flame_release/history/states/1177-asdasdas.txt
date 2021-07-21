@@ -1,0 +1,26 @@
+state={ state_category = metropolis
+	id=1177
+	name="STATE_1177"
+	provinces={
+		1060 3704 4796 5521 9966 13121 13146 13241 
+	}
+	history={
+		owner = FPJ
+		victory_points = { 1060 15 }
+		buildings = {
+			air_base = 3
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 3
+			dockyard = 2
+			1060 = {
+				naval_base = 5
+				coastal_bunker = 2
+			}
+
+		}
+		add_core_of = FPJ
+	}
+	manpower=6461532
+	buildings_max_level_factor=1.000
+}

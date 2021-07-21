@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=1073
+	name="STATE_1073"
+	provinces={
+		805 1718 1998 3611 4359 4392 4558 4790 5024 8493 8675 8697 15326 15350 15418 15445 15480 15589 
+	}
+	history={
+		#owner = AKS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = AKS
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

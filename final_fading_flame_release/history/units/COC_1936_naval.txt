@@ -1,0 +1,34 @@
+
+
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "People's Navy"			
+		naval_base = 7411
+		task_force = {
+			name = "People's Navy"
+			location = 7411
+			
+			ship = { name = "Pegasus" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Fishguard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Yukon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Sartine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Crozier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Pandora" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Exchange" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Menace" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Hardy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Pigot" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Bulla" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Cressy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Gala" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+			ship = { name = "Gnat" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = COC } } }
+
+			ship = { name = "Orcadia" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Irvine" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Holstein" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+			ship = { name = "Cumber" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CIS } } }
+		}								
+	}
+}

@@ -1,0 +1,22 @@
+state={ state_category = city
+	id=613
+	name="STATE_613"
+	provinces={
+		1751 1943 3081 3552 6214 7017 7425 8385 8633 9119 9631 12004 12021 12062 
+	}
+	history={
+		#owner = D53
+		victory_points = { 1751 15 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			3081 = {
+				naval_base = 1
+			}
+		}
+		#add_core_of = D53
+	}
+	manpower=145111
+	buildings_max_level_factor=1.000
+}

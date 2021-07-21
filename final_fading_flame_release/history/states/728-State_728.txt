@@ -1,0 +1,25 @@
+
+state={ state_category = city
+	id=728
+	name="STATE_728"
+	provinces={
+		763 1770 2491 5127 5779 8837 9047 12795 12865 12888 12900 12916 
+	}
+	history={
+		owner = DOC
+		#victory_points = { 12860 15 }
+		buildings = {
+			air_base = 2
+			infrastructure = 6
+			industrial_complex = 3
+			dockyard = 2
+			763 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = DOC
+		add_claim_by = ROC
+	}
+	manpower=872564
+	buildings_max_level_factor=1.000
+}

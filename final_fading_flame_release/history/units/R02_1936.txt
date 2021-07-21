@@ -1,0 +1,106 @@
+division_template = {
+	name = "Rebel Infantry"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = {x = 0 y = 0}
+	}
+}
+division_template = {
+	name = "Rebel Militia"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+
+
+
+units = {
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6639  # Perth
+		division_template = "Rebel Infantry"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+    division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6639  # Perth
+		division_template = "Rebel Infantry"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+    division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6639  # Perth
+		division_template = "Rebel Infantry"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+    division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6639  # Perth
+		division_template = "Rebel Militia"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+    division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6639  # Perth
+		division_template = "Rebel Militia"
+		start_experience_factor = -1
+		start_equipment_factor = 0.3
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "R02"
+		}
+		requested_factories = 2
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "R02"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+}

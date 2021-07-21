@@ -1,0 +1,1018 @@
+#Ideologies stuff. Please don't change without talking to either Narkoth or Walter First
+
+ideologies = {
+
+	######################
+	#Theocracies
+	######################
+	full_theocracy = {
+		types = {
+			full_theocracy_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_THEOCRACY_1"
+			"FACTION_NAME_THEOCRACY_2"
+			"FACTION_NAME_THEOCRACY_3"
+			"FACTION_NAME_THEOCRACY_4"
+			"FACTION_NAME_THEOCRACY_5"
+			"FACTION_NAME_THEOCRACY_6"
+		}
+		color = { 255 255 255 } #a white color = holy
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	rationalist_theocracy = {
+		types = {
+			rationalist_theocracy_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_THEOCRACY_1"
+			"FACTION_NAME_THEOCRACY_2"
+			"FACTION_NAME_THEOCRACY_3"
+			"FACTION_NAME_THEOCRACY_4"
+			"FACTION_NAME_THEOCRACY_5"
+			"FACTION_NAME_THEOCRACY_6"
+		}
+		color = { 168 168 168 } #a greyer color, going more rational
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	##################################
+	#Statists
+	##################################
+	statism = {
+		types = {
+			statism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_STATISM_1"
+			"FACTION_NAME_STATISM_2"
+			"FACTION_NAME_STATISM_3"
+			"FACTION_NAME_STATISM_4"
+			"FACTION_NAME_STATISM_5"
+			"FACTION_NAME_STATISM_6"
+		}
+		color = { 163 94 58 } #a dark brown
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	totalitarianism = {
+		types = {
+			totalitarianism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_STATISM_1"
+			"FACTION_NAME_STATISM_2"
+			"FACTION_NAME_STATISM_3"
+			"FACTION_NAME_STATISM_4"
+			"FACTION_NAME_STATISM_5"
+			"FACTION_NAME_STATISM_6"
+		}
+		color = { 104 60 30 } #a darker brown
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	nationalism = {
+		types = {
+			nationalism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_STATISM_1"
+			"FACTION_NAME_STATISM_2"
+			"FACTION_NAME_STATISM_3"
+			"FACTION_NAME_STATISM_4"
+			"FACTION_NAME_STATISM_5"
+			"FACTION_NAME_STATISM_6"
+		}
+		color = { 73 42 21 } #an even darker brown
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	governism = {
+		types = {
+			governism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_STATISM_1"
+			"FACTION_NAME_STATISM_2"
+			"FACTION_NAME_STATISM_3"
+			"FACTION_NAME_STATISM_4"
+			"FACTION_NAME_STATISM_5"
+			"FACTION_NAME_STATISM_6"
+		}
+		color = { 198 114 57 } #the brightest brown
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	###############################
+	#Corporatists ... show me the green, baby!
+	###############################
+	unitary_corporatism = {
+		types = {
+			unitary_corporatism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_CORPORATISM_1"
+			"FACTION_NAME_CORPORATISM_2"
+			"FACTION_NAME_CORPORATISM_3"
+			"FACTION_NAME_CORPORATISM_4"
+			"FACTION_NAME_CORPORATISM_5"
+			"FACTION_NAME_CORPORATISM_6"
+		}
+		color = { 0 135 13 } #dark green
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	corporate_feudalism = {
+		types = {
+			corporate_feudalism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_CORPORATISM_1"
+			"FACTION_NAME_CORPORATISM_2"
+			"FACTION_NAME_CORPORATISM_3"
+			"FACTION_NAME_CORPORATISM_4"
+			"FACTION_NAME_CORPORATISM_5"
+			"FACTION_NAME_CORPORATISM_6"
+		}
+		color = { 104 135 27 } #olive green
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	liberated_corporatism = {
+		types = {
+			liberated_corporatism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_CORPORATISM_1"
+			"FACTION_NAME_CORPORATISM_2"
+			"FACTION_NAME_CORPORATISM_3"
+			"FACTION_NAME_CORPORATISM_4"
+			"FACTION_NAME_CORPORATISM_5"
+			"FACTION_NAME_CORPORATISM_6"
+		}
+		color = { 158 175 43 } #olive green, but more yellowish
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	partnerism = {
+		types = {
+			partnerism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_CORPORATISM_1"
+			"FACTION_NAME_CORPORATISM_2"
+			"FACTION_NAME_CORPORATISM_3"
+			"FACTION_NAME_CORPORATISM_4"
+			"FACTION_NAME_CORPORATISM_5"
+			"FACTION_NAME_CORPORATISM_6"
+		}
+		color = { 175 63 22 } #orange-redish
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	guildism = {
+		types = {
+			guildism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_CORPORATISM_1"
+			"FACTION_NAME_CORPORATISM_2"
+			"FACTION_NAME_CORPORATISM_3"
+			"FACTION_NAME_CORPORATISM_4"
+			"FACTION_NAME_CORPORATISM_5"
+			"FACTION_NAME_CORPORATISM_6"
+		}
+		color = { 124 175 134 } #light blue-yellow
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	##############################
+	#Communalism
+	##############################
+	unionism = {
+		types = {
+			unionism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNALISM_1"
+			"FACTION_NAME_COMMUNALISM_2"
+			"FACTION_NAME_COMMUNALISM_3"
+			"FACTION_NAME_COMMUNALISM_4"
+			"FACTION_NAME_COMMUNALISM_5"
+			"FACTION_NAME_COMMUNALISM_6"
+		}
+		color = { 211 67 67 } #a bright red
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	classical_communalism = {
+		types = {
+			classical_communalism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNALISM_1"
+			"FACTION_NAME_COMMUNALISM_2"
+			"FACTION_NAME_COMMUNALISM_3"
+			"FACTION_NAME_COMMUNALISM_4"
+			"FACTION_NAME_COMMUNALISM_5"
+			"FACTION_NAME_COMMUNALISM_6"
+		}
+		color = { 211 46 31 } #a darker yet still bright red
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	anarcho_marxism = {
+		types = {
+			anarcho_marxism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNALISM_1"
+			"FACTION_NAME_COMMUNALISM_2"
+			"FACTION_NAME_COMMUNALISM_3"
+			"FACTION_NAME_COMMUNALISM_4"
+			"FACTION_NAME_COMMUNALISM_5"
+			"FACTION_NAME_COMMUNALISM_6"
+		}
+		color = { 143 14 0 } #darkest red
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	###############################
+	#Monarchism
+	###############################
+	imperialism = {
+		types = {
+			imperialism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_MONARCHISM_1"
+			"FACTION_NAME_MONARCHISM_2"
+			"FACTION_NAME_MONARCHISM_3"
+			"FACTION_NAME_MONARCHISM_4"
+			"FACTION_NAME_MONARCHISM_5"
+			"FACTION_NAME_MONARCHISM_6"
+		}
+		color = { 80 0 142 } #deep purple
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	monarchism = {
+		types = {
+			monarchism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_MONARCHISM_1"
+			"FACTION_NAME_MONARCHISM_2"
+			"FACTION_NAME_MONARCHISM_3"
+			"FACTION_NAME_MONARCHISM_4"
+			"FACTION_NAME_MONARCHISM_5"
+			"FACTION_NAME_MONARCHISM_6"
+		}
+		color = { 100 65 142 } #lighter purple
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	divine_right_monarchism = {
+		types = {
+			divine_right_monarchism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_MONARCHISM_1"
+			"FACTION_NAME_MONARCHISM_2"
+			"FACTION_NAME_MONARCHISM_3"
+			"FACTION_NAME_MONARCHISM_4"
+			"FACTION_NAME_MONARCHISM_5"
+			"FACTION_NAME_MONARCHISM_6"
+		}
+		color = { 131 109 142 } #an even lighter purple - drawing closer to white = theocracy influence
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	constitutional_monarchism = {
+		types = {
+			constitutional_monarchism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_MONARCHISM_1"
+			"FACTION_NAME_MONARCHISM_2"
+			"FACTION_NAME_MONARCHISM_3"
+			"FACTION_NAME_MONARCHISM_4"
+			"FACTION_NAME_MONARCHISM_5"
+			"FACTION_NAME_MONARCHISM_6"
+		}
+		color = { 136 65 142 } #an even lighter purple - drawing closer to white = theocracy influence
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	####################
+	#Revanchism
+	####################
+	
+	revanchism = {
+		types = {
+			revanchism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_REVANCHISM_1"
+			"FACTION_NAME_REVANCHISM_2"
+			"FACTION_NAME_REVANCHISM_3"
+			"FACTION_NAME_REVANCHISM_4"
+			"FACTION_NAME_REVANCHISM_5"
+			"FACTION_NAME_REVANCHISM_6"
+		}
+		color = { 0 0 0 } #a pure black
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	########################
+	#Centrism
+	########################
+	
+	republicanism = {
+		types = {
+			republicanism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_CENTRISM_1"
+			"FACTION_NAME_CENTRISM_2"
+			"FACTION_NAME_CENTRISM_3"
+			"FACTION_NAME_CENTRISM_4"
+			"FACTION_NAME_CENTRISM_5"
+			"FACTION_NAME_CENTRISM_6"
+		}
+		color = { 5 250 255 } #a very light blue
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	uniform_statism = {
+		types = {
+			uniform_statism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_CENTRISM_1"
+			"FACTION_NAME_CENTRISM_2"
+			"FACTION_NAME_CENTRISM_3"
+			"FACTION_NAME_CENTRISM_4"
+			"FACTION_NAME_CENTRISM_5"
+			"FACTION_NAME_CENTRISM_6"
+		}
+		color = { 7 130 123 } #a darker light blue - moving towards authoritarian
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	federalism = {
+		types = {
+			federalism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_CENTRISM_1"
+			"FACTION_NAME_CENTRISM_2"
+			"FACTION_NAME_CENTRISM_3"
+			"FACTION_NAME_CENTRISM_4"
+			"FACTION_NAME_CENTRISM_5"
+			"FACTION_NAME_CENTRISM_6"
+		}
+		color = { 51 121 234 } #a more intense blue, headed towards utopianist
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	centrism = {
+		types = {
+			centrism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_CENTRISM_1"
+			"FACTION_NAME_CENTRISM_2"
+			"FACTION_NAME_CENTRISM_3"
+			"FACTION_NAME_CENTRISM_4"
+			"FACTION_NAME_CENTRISM_5"
+			"FACTION_NAME_CENTRISM_6"
+		}
+		color = { 171 194 234 } #a very light, gray~ish blue
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	##############################
+	#Utopianism
+	##############################
+	
+	democratism = {
+		types = {
+			democratism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_UTOPIANISM_1"
+			"FACTION_NAME_UTOPIANISM_2"
+			"FACTION_NAME_UTOPIANISM_3"
+			"FACTION_NAME_UTOPIANISM_4"
+			"FACTION_NAME_UTOPIANISM_5"
+			"FACTION_NAME_UTOPIANISM_6"
+		}
+		color = { 0 82 234 } #an intense blue
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	libertarianism = {
+		types = {
+			libertarianism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_UTOPIANISM_1"
+			"FACTION_NAME_UTOPIANISM_2"
+			"FACTION_NAME_UTOPIANISM_3"
+			"FACTION_NAME_UTOPIANISM_4"
+			"FACTION_NAME_UTOPIANISM_5"
+			"FACTION_NAME_UTOPIANISM_6"
+		}
+		color = { 0 11 165 } #an intense and dark blue
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	utopianism = {
+		types = {
+			utopianism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_UTOPIANISM_1"
+			"FACTION_NAME_UTOPIANISM_2"
+			"FACTION_NAME_UTOPIANISM_3"
+			"FACTION_NAME_UTOPIANISM_4"
+			"FACTION_NAME_UTOPIANISM_5"
+			"FACTION_NAME_UTOPIANISM_6"
+		}
+		color = { 0 17 255 } #an intense blue
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	just_worldism = {
+		types = {
+			just_worldism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_UTOPIANISM_1"
+			"FACTION_NAME_UTOPIANISM_2"
+			"FACTION_NAME_UTOPIANISM_3"
+			"FACTION_NAME_UTOPIANISM_4"
+			"FACTION_NAME_UTOPIANISM_5"
+			"FACTION_NAME_UTOPIANISM_6"
+		}
+		color = { 25 0 119 } #an intense blue
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	#############################
+	#Tribal
+	#############################
+	
+	isolationism = {
+		types = {
+			isolationism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_UTOPIANISM_1"
+			"FACTION_NAME_UTOPIANISM_2"
+			"FACTION_NAME_UTOPIANISM_3"
+			"FACTION_NAME_UTOPIANISM_4"
+			"FACTION_NAME_UTOPIANISM_5"
+			"FACTION_NAME_UTOPIANISM_6"
+		}
+		color = { 255 193 112 } #a nice lighter orange
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+	cooperativism = {
+		types = {
+			cooperativism_type = {} #generic type, don't need more
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_UTOPIANISM_1"
+			"FACTION_NAME_UTOPIANISM_2"
+			"FACTION_NAME_UTOPIANISM_3"
+			"FACTION_NAME_UTOPIANISM_4"
+			"FACTION_NAME_UTOPIANISM_5"
+			"FACTION_NAME_UTOPIANISM_6"
+		}
+		color = { 255 170 0 } #a nice orange
+		#We want people to puppet based on events, not the weird peace
+		#conference situation where border-gore almost always ensues.
+		#Have them annex everything, then we handle with events later.
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+		}
+		ai_neutral = yes #ai_neutral works best for us now
+	}
+	
+}

@@ -1,0 +1,1312 @@
+
+focus_tree = {
+	id = coc_focus_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = COC
+			}
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 1750 y = 900 }
+
+    focus = {
+		id = coc_the_western_commune
+		icon = GFX_focus_generic_soviet_politics
+		x = 5
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+            add_political_power = 50
+		}
+	}
+    focus = {
+		id = coc_reopen_canning_faciltities
+		icon = GFX_focus_generic_industry_1
+		x = 0
+		y = 1
+		cost = 4
+        relative_position_id = coc_the_western_commune
+		prerequisite = {focus = coc_the_western_commune}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+		}
+		completion_reward = {
+            1206 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_reopen_canning_faciltities2
+		icon = GFX_focus_generic_industry_1
+		x = -1
+		y = 1
+		cost = 4
+        relative_position_id = coc_reopen_canning_faciltities
+		prerequisite = {focus = coc_reopen_canning_faciltities}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+            1207 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_reopen_canning_faciltities3
+		icon = GFX_focus_generic_industry_1
+		x = 1
+		y = 1
+		cost = 4
+        relative_position_id = coc_reopen_canning_faciltities
+		prerequisite = {focus = coc_reopen_canning_faciltities}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+            1180 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_reduce_1
+		icon = GFX_focus_generic_industry_2
+		x = 0
+		y = 2
+		cost = 4
+        relative_position_id = coc_reopen_canning_faciltities
+		prerequisite = {focus = coc_reopen_canning_faciltities2}
+		prerequisite = {focus = coc_reopen_canning_faciltities3}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+            swap_ideas = {
+				remove_idea = coc_food_shortages
+				add_idea = coc_food_shortages2
+			}
+		}
+	}
+	focus = {
+		id = coc_processing_facilities
+		icon = GFX_focus_generic_industry_1
+		x = -3
+		y = 1
+		cost = 4
+        relative_position_id = coc_reduce_1
+		prerequisite = {focus = coc_reduce_1}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+            614 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_processing_facilities2
+		icon = GFX_focus_generic_industry_1
+		x = -1
+		y = 1
+		cost = 4
+        relative_position_id = coc_reduce_1
+		prerequisite = {focus = coc_reduce_1}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+            1180 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_increase_efficency
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 1
+		cost = 4
+        relative_position_id = coc_reduce_1
+		prerequisite = {focus = coc_reduce_1}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+            add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = coc_increase_efficency2
+		icon = GFX_goal_generic_production2
+		x = 3
+		y = 1
+		cost = 4
+        relative_position_id = coc_reduce_1
+		prerequisite = {focus = coc_reduce_1}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+            add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = coc_reduce_2
+		icon = GFX_focus_generic_industry_2
+		x = 0
+		y = 2
+		cost = 7
+        relative_position_id = coc_reduce_1
+		prerequisite = {focus = coc_processing_facilities}
+		prerequisite = {focus = coc_processing_facilities2}
+		prerequisite = {focus = coc_increase_efficency}
+		prerequisite = {focus = coc_increase_efficency2}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+            if = {
+				limit = { has_idea = coc_food_shortages2}
+				swap_ideas = {
+					remove_idea = coc_food_shortages2
+					add_idea = coc_food_shortages3
+				}
+			}
+			else = {
+				custom_effect_tooltip = COC_reduce_food_problem
+			}
+		}
+	}
+	focus = {
+		id = coc_improve_infra
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -2
+		y = 1
+		cost = 4
+        relative_position_id = coc_reduce_2
+		prerequisite = {focus = coc_reduce_2}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			1206 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_improve_infra2
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		cost = 4
+        relative_position_id = coc_reduce_2
+		prerequisite = {focus = coc_reduce_2}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			1180 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_improve_infra3
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 1
+		cost = 4
+        relative_position_id = coc_reduce_2
+		prerequisite = {focus = coc_reduce_2}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			614 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_food_all_good
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		cost = 1
+        relative_position_id = coc_reduce_2
+		prerequisite = {focus = coc_improve_infra}
+		prerequisite = {focus = coc_improve_infra2}
+		prerequisite = {focus = coc_improve_infra3}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = coc_food_shortages3}
+				swap_ideas = {
+					remove_idea = coc_food_shortages3
+					add_idea = coc_food_shortages4
+				}
+				set_country_flag = food_problem_gone
+			}
+			else = {
+				custom_effect_tooltip = COC_food_totally_improved
+			}
+		}
+	}
+	focus = {
+		id = coc_naval_output
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -4
+		y = 2
+		cost = 7
+        relative_position_id = coc_the_western_commune
+		prerequisite = {focus = coc_the_western_commune}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			#has_country_flag = food_problem_gone
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = food_problem_gone
+				}
+			}
+		}
+		completion_reward = {
+			614 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_naval_output2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -1
+		y = 1
+		cost = 7
+        relative_position_id = coc_naval_output
+		prerequisite = {focus = coc_naval_output}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1180 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_naval_output3
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 1
+		y = 1
+		cost = 7
+        relative_position_id = coc_naval_output
+		prerequisite = {focus = coc_naval_output}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1183 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_electronic_research
+		icon = GFX_goal_generic_radar
+		x = -2
+		y = 1
+		cost = 7
+        relative_position_id = coc_the_western_commune
+		prerequisite = {focus = coc_the_western_commune}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			#has_country_flag = food_problem_gone
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = food_problem_gone
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = coc_synth_research
+		icon = GFX_goal_generic_oil_refinery
+		x = 2
+		y = 1
+		cost = 7
+        relative_position_id = coc_the_western_commune
+		prerequisite = {focus = coc_the_western_commune}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			#has_country_flag = food_problem_gone
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = food_problem_gone
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+	focus = {
+		id = coc_military_output
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 2
+		cost = 7
+        relative_position_id = coc_the_western_commune
+		prerequisite = {focus = coc_the_western_commune}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			#has_country_flag = food_problem_gone
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = food_problem_gone
+				}
+			}
+		}
+		completion_reward = {
+			614 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_military_output2
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 1
+		cost = 7
+        relative_position_id = coc_military_output
+		prerequisite = {focus = coc_military_output}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			700 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = coc_military_output3
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		cost = 7
+        relative_position_id = coc_military_output
+		prerequisite = {focus = coc_military_output}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1206 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	###################################################
+	# MILITARY BRANCH
+	###################################################
+	focus = {
+		id = coc_our_military
+		icon = GFX_goal_generic_army_doctrines
+		x = 18
+		y = 0
+		cost = 1
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			#date > 108.8.1
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				date > 108.8.1
+			}
+		}
+		completion_reward = {
+            army_experience = 10
+			air_experience = 10
+			navy_experience = 10
+		}
+	}
+	focus = {
+		id = coc_heavy_armor
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_our_military
+		prerequisite = {focus = coc_our_military}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.5
+				uses = 1
+				category = armor
+			}
+			add_ideas = coc_heavy_armor_idea
+		}
+	}
+	focus = {
+		id = coc_peoples_army
+		icon = GFX_goal_generic_army_doctrines
+		x = -4
+		y = 1
+		cost = 7
+		relative_position_id = coc_our_military
+		prerequisite = {focus = coc_our_military}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            army_experience = 25
+		}
+	}
+	focus = {
+		id = coc_a_new_weapon
+		icon = GFX_goal_generic_small_arms
+		x = -2
+		y = 1
+		cost = 7
+		relative_position_id = coc_peoples_army
+		prerequisite = {focus = coc_peoples_army}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = coc_a_new_support
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_peoples_army
+		prerequisite = {focus = coc_peoples_army}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	focus = {
+		id = coc_a_weapon_in_every_hand
+		icon = GFX_focus_focus_fra_maquis
+		x = 1
+		y = 1
+		cost = 7
+		relative_position_id = coc_a_new_weapon
+		prerequisite = {focus = coc_a_new_weapon}
+		prerequisite = {focus = coc_a_new_support}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            add_ideas = coc_weapons_for_all
+		}
+	}
+	focus = {
+		id = coc_a_artillery
+		icon = GFX_goal_generic_army_artillery
+		x = 2
+		y = 1
+		cost = 7
+		relative_position_id = coc_peoples_army
+		prerequisite = {focus = coc_peoples_army}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = coc_a_artillery_more
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_a_artillery
+		prerequisite = {focus = coc_a_artillery}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            add_ideas = coc_arty_to_bombard
+		}
+	}
+	focus = {
+		id = coc_our_doctrines
+		icon = GFX_focus_generic_military_academy
+		x = 4
+		y = 1
+		cost = 7
+		relative_position_id = coc_peoples_army
+		prerequisite = {focus = coc_peoples_army}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+           add_tech_bonus = {
+				name = mass_mob
+				bonus = 1
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+	focus = {
+		id = coc_a_military_college
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_our_doctrines
+		prerequisite = {focus = coc_our_doctrines}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+           add_research_slot = 1
+		}
+	}
+	focus = {
+		id = coc_call_for_able_bodied
+		icon = GFX_focus_generic_manpower
+		x = 1
+		y = 1
+		cost = 7
+		relative_position_id = coc_a_weapon_in_every_hand
+		prerequisite = {focus = coc_a_weapon_in_every_hand}
+		prerequisite = {focus = coc_a_artillery_more}
+		prerequisite = {focus = coc_a_military_college}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+           add_ideas = coc_call_for_people
+		}
+	}
+	focus = {
+		id = coc_call_for_able_bodied_at_war
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_call_for_able_bodied
+		prerequisite = {focus = coc_call_for_able_bodied}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+           add_ideas = coc_call_for_people_at_war
+		}
+	}
+	focus = {
+		id = coc_equip_our_officers_with_what_they_need
+		icon = GFX_focus_generic_military_mission
+		x = 4
+		y = 1
+		cost = 7
+		relative_position_id = coc_a_weapon_in_every_hand
+		prerequisite = {focus = coc_a_weapon_in_every_hand}
+		prerequisite = {focus = coc_a_artillery_more}
+		prerequisite = {focus = coc_a_military_college}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+           add_ideas = coc_educated_officers
+		}
+	}
+	focus = {
+		id = coc_peoples_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 3
+		y = 1
+		cost = 7
+		relative_position_id = coc_our_military
+		prerequisite = {focus = coc_our_military}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            navy_experience = 25
+		}
+	}
+	focus = {
+		id = coc_increase_output
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -1
+		y = 1
+		cost = 7
+		relative_position_id = coc_peoples_navy
+		prerequisite = {focus = coc_peoples_navy}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            add_ideas = coc_increase_naval_output
+		}
+	}
+	focus = {
+		id = coc_peoples_marines
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 2
+		cost = 7
+		relative_position_id = coc_increase_output
+		prerequisite = {focus = coc_increase_output}
+		prerequisite = {focus = coc_naval_school}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+	focus = {
+		id = coc_screen_research
+		icon = GFX_focus_generic_destroyer
+		x = 1
+		y = 1
+		cost = 7
+		relative_position_id = coc_peoples_navy
+		prerequisite = {focus = coc_peoples_navy}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = coc_cruiser
+		icon = GFX_focus_generic_cruiser2
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_screen_research
+		prerequisite = {focus = coc_screen_research}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				category = ca_tech
+			}
+		}
+	}
+	focus = {
+		id = coc_naval_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 3
+		y = 1
+		cost = 7
+		relative_position_id = coc_peoples_navy
+		prerequisite = {focus = coc_peoples_navy}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = coc_naval_school
+		icon = GFX_goal_generic_navy_cruiser
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_naval_doctrine
+		prerequisite = {focus = coc_naval_doctrine}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = coc_naval_officers
+		}
+	}
+	focus = {
+		id = coc_peoples_airforce
+		icon = GFX_goal_generic_air_doctrine
+		x = 8
+		y = 1
+		cost = 7
+		relative_position_id = coc_our_military
+		prerequisite = {focus = coc_our_military}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            air_experience = 25
+		}
+	}
+	focus = {
+		id = coc_aquire_fighters
+		icon = GFX_goal_generic_air_fighter
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_peoples_airforce
+		prerequisite = {focus = coc_peoples_airforce}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+            add_equipment_to_stockpile = {
+        		type = fighter_equipment_0
+        		amount = 75
+			}
+		}
+	}
+	focus = {
+		id = coc_air_reform
+		icon = GFX_goal_generic_air_doctrine
+		x = 2
+		y = 1
+		cost = 7
+		relative_position_id = coc_peoples_airforce
+		prerequisite = {focus = coc_peoples_airforce}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = coc_aquire_additional_experience
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_air_reform
+		prerequisite = {focus = coc_air_reform}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+	focus = {
+		id = coc_fighter_research
+		icon = GFX_goal_generic_air_fighter2
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_aquire_fighters
+		prerequisite = {focus = coc_aquire_fighters}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	focus = {
+		id = coc_close_air_support
+		icon = GFX_goal_generic_occupy_start_war
+		x = 2
+		y = 1
+		cost = 7
+		relative_position_id = coc_fighter_research
+		prerequisite = {focus = coc_fighter_research}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = coc_tactical_bombers
+		icon = GFX_goal_generic_air_bomber
+		x = 4
+		y = 1
+		cost = 7
+		relative_position_id = coc_fighter_research
+		prerequisite = {focus = coc_fighter_research}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = coc_hire_an_ace
+		icon = GFX_goal_generic_CAS
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = coc_fighter_research
+		prerequisite = {focus = coc_fighter_research}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ace = {
+				name = "Jonna"
+				surname = "Farga"
+				callsign = "Matron of the Air"
+				type = fighter_genius
+				is_female = yes
+			}
+		}
+	}
+
+#############
+# War in Caer
+#############
+
+	focus = {
+		id = coc_foreign_affairs
+		icon = GFX_goal_generic_military_sphere
+		x = 11
+		y = 6
+		cost = 2
+		#relative_position_id = coc_fighter_research
+		#prerequisite = {focus = coc_fighter_research}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			DATE > 109.5.1
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = coc_prepare_for_war
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 1
+		cost = 2
+		relative_position_id = coc_foreign_affairs
+		prerequisite = {focus = coc_foreign_affairs}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_global_flag = castor_in_flames
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_ideas = coc_preparing_for_war
+		}
+	}
+
+	focus = {
+		id = coc_war_in_caer
+		icon = GFX_goal_generic_major_war
+		x = -2
+		y = 1
+		cost = 2
+		relative_position_id = coc_foreign_affairs
+		prerequisite = {focus = coc_foreign_affairs}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			caer_civil_war_ongoing_trigger = yes
+		}
+		completion_reward = {
+            add_manpower = -25000
+			add_opinion_modifier = { target = FAE modifier = large_increase  }
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 5000
+				target = FAE
+			}
+			send_equipment = {
+				equipment = support_equipment
+				amount = 500
+				target = FAE
+			}
+			send_equipment = {
+				equipment = artillery_equipment
+				amount = 250
+				target = FAE
+			}
+			FAE = {
+				add_manpower = 25000
+				add_opinion_modifier = { target = COC modifier = large_increase  }
+			}
+
+			custom_effect_tooltip = COC_caer_aid_decisions_tooltip
+			set_country_flag = COC_aid_caer_decision
+		}
+	}
+
+	focus = {
+		id = coc_send_volunteers
+		icon = GFX_focus_generic_little_entente
+		x = -2
+		y = 2
+		cost = 2
+		ai_will_do = {
+			factor = 4000
+		}
+		relative_position_id = coc_war_in_caer
+		prerequisite = {focus = coc_war_in_caer}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = coc_increase_volunteers
+		}
+	}
+
+	focus = {
+		id = coc_observations_from_the_war
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		cost = 2
+		ai_will_do = {
+			factor = 4000
+		}
+		relative_position_id = coc_war_in_caer
+		prerequisite = {focus = coc_war_in_caer}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = coc_observation_mission
+			    bonus = 1.5
+			    uses = 1
+			    category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = coc_observation_mission
+			    bonus = 1.5
+			    uses = 1
+			    category = air_doctrine
+			}
+			army_experience = 25
+			air_experience = 25
+		}
+	}
+
+	focus = {
+		id = coc_send_industrial_aid
+		icon = GFX_goal_generic_production2
+		x = 2
+		y = 2
+		cost = 2
+		ai_will_do = {
+			factor = 4000
+		}
+		relative_position_id = coc_war_in_caer
+		prerequisite = {focus = coc_war_in_caer}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			FAE = {
+				add_offsite_building = { type = arms_factory level = 3 }
+				add_offsite_building = { type = industrial_complex level = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = coc_create_an_international_alliance
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 3
+		cost = 2
+		ai_will_do = {
+			factor = 4000
+		}
+		relative_position_id = coc_war_in_caer
+		prerequisite = {focus = coc_observations_from_the_war}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			caer_civil_war_ended_trigger = yes
+			country_exists = FAE
+		}
+		completion_reward = {
+			create_faction = "International Alliance"
+			add_to_faction = FAE
+		}
+	}
+
+	focus = {
+		id = coc_war_in_castor
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 1
+		cost = 7
+		relative_position_id = coc_foreign_affairs
+		prerequisite = {focus = coc_foreign_affairs}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			surrender_progress < 1.0
+			has_global_flag = castor_in_flames
+			has_army_manpower = { size > 499999 }
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			create_wargoal = { type = annex_everything   target = ROC }
+			create_wargoal = { type = annex_everything   target = DOC }
+			create_wargoal = { type = annex_everything   target = CIS }
+			create_wargoal = { type = annex_everything   target = FPJ }
+		}
+	}
+
+}
+	

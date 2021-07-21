@@ -1,0 +1,52 @@
+# options for map_icon_category:
+# For land units: infantry,armored,other
+# For sea units: ship,transport,uboat
+
+sub_units = {
+
+	amazonian = {
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 5025
+		ai_priority = 5025
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_amazonian
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 40
+		max_organisation = 80
+		default_morale = 0.6
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 180
+		suppression = 2.0
+		weight = 0.5
+		
+		supply_consumption = 0.09
+
+		can_be_parachuted = yes
+	
+		need = {
+			infantry_equipment = 100
+			support_equipment = 30
+		}
+	}
+
+}

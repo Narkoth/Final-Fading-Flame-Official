@@ -1,0 +1,397 @@
+﻿division_template = {
+	name = "Infantry Mercenary Division"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = {x = 0 y = 0}
+		artillery = {x = 0 y = 1}
+	}
+}
+division_template = {
+	name = "Infantry Mercenary Garrison"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	support = {
+		artillery = {x = 0 y = 0}
+	}
+}
+division_template = {
+	name = "Cheap Mercenary Group"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Mercenary Division"
+
+	division_names_group = ROC_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Armoured Mercenary Division"
+
+	division_names_group = ROC_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		engineer   = {x = 0 y = 0}
+		artillery  = {x = 0 y = 1}
+		mot_recon = {x = 0 y = 2}
+	}
+}
+
+division_template = {
+	name = "Merc Marines"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = ROC_INF_02
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = {x = 0 y = 0}
+		engineer =  {x = 0 y = 1}
+	}
+}
+
+air_wings = {
+	665 = { 
+		fighter_equipment_0 = {
+			owner = "ROC" 
+			amount = 250
+		}
+		tac_bomber_equipment_0 = {
+			owner = "ROC" 
+			amount = 95
+		}
+	}
+}
+
+units = {
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12679 # Perth
+		division_template = "Infantry Mercenary Division"
+		start_experience_factor = 1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 10197 # Perth
+		division_template = "Infantry Mercenary Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 9551 # Perth
+		division_template = "Infantry Mercenary Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10212 # Perth
+		division_template = "Infantry Mercenary Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1314 # Perth
+		division_template = "Infantry Mercenary Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 3635 # Perth
+		division_template = "Infantry Mercenary Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 12337 # Perth
+		division_template = "Infantry Mercenary Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 6231 # Perth
+		division_template = "Infantry Mercenary Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 9753 # Perth
+		division_template = "Infantry Mercenary Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7498 # Perth
+		division_template = "Armoured Mercenary Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 2994 # Perth
+		division_template = "Armoured Mercenary Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12705 # Perth
+		division_template = "Cavalry Mercenary Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 8219 # Perth
+		division_template = "Cavalry Mercenary Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6964 # Perth
+		division_template = "Cavalry Mercenary Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+
+
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12822 # Perth
+		division_template = "Cheap Mercenary Group"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12810 # Perth
+		division_template = "Cheap Mercenary Group"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 12815 # Perth
+		division_template = "Cheap Mercenary Group"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 12799 # Perth
+		division_template = "Cheap Mercenary Group"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 12638 # Perth
+		division_template = "Cheap Mercenary Group"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 12308 # Perth
+		division_template = "Cheap Mercenary Group"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 12799 # Perth
+		division_template = "Merc Marines"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+}
+
+air_wings = {
+
+	665 = { 
+		fighter_equipment_1 = { 
+			owner = "ROC" 
+			amount = 150 
+		}					
+	}
+
+	665 = {
+		CAS_equipment_1 =  {
+			owner = "ROC" 
+			amount = 50
+		}
+	}
+}
+
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ROC"
+		}
+		requested_factories = 2
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ROC" 
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_1
+			creator = "ROC" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_1  
+			creator = "ROC" 
+		}
+		requested_factories = 3
+		progress = 0.4
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "ROC" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+}

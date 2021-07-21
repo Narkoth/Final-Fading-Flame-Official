@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=318
+	name="STATE_318"
+	provinces={
+		16446 
+	}
+	history={
+		#owner = MEC
+		buildings = {
+			infrastructure = 2
+		}
+		#add_core_of = MEC
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

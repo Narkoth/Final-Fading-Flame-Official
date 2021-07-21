@@ -1,0 +1,24 @@
+
+state={
+	id=790
+	name="STATE_790"
+	provinces={
+		2127 3145 3967 8111 8507 13293 13357 
+	}
+	history={
+		#owner = SHI
+		victory_points = { 13293 20 }
+		buildings = {
+			infrastructure = 5
+			dockyard = 4
+			industrial_complex = 3
+			13293 = {
+				naval_base = 7
+			}
+		}
+		#add_core_of = SHI
+	}
+	manpower=5161881
+	buildings_max_level_factor=1.000
+	state_category=city
+}

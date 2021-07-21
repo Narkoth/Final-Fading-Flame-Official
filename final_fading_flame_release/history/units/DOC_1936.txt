@@ -1,0 +1,318 @@
+division_template = {
+	name = "Royal Infantry"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = DOC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+	support = {
+		artillery = {x = 0 y = 0}
+		recon     = {x = 0 y = 1}
+	}
+}
+
+division_template = {
+	name = "Exiled Marines"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = DOC_MAR_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+	}
+	support = {
+		artillery = {x = 0 y = 0}
+		engineer =  {x = 0 y = 1}
+	}
+}
+
+division_template = {
+	name = "Royal Militia"	# Divisions were reserves assigned to various military districts
+
+	division_names_group = DOC_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Royal Armor Division"
+
+	division_names_group = DOC_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+	}
+	support = {
+		engineer =  {x = 0 y = 0}
+		artillery = {x = 0 y = 1}
+	}
+}
+
+
+
+
+units = {
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12860  # Perth
+		division_template = "Royal Armor Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12860  # Perth
+		division_template = "Royal Armor Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 12860  # Perth
+		division_template = "Royal Armor Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12860  # Perth
+		division_template = "Exiled Marines"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12809  # Perth
+		division_template = "Royal Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3522  # Perth
+		division_template = "Royal Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	#
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 2426  # Perth
+		division_template = "Royal Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 2463  # Perth
+		division_template = "Royal Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 12966  # Perth
+		division_template = "Royal Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	#
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 7410  # Perth
+		division_template = "Royal Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 13075  # Perth
+		division_template = "Royal Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	#
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 13050  # Perth
+		division_template = "Royal Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13155  # Perth
+		division_template = "Royal Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 13076  # Perth
+		division_template = "Royal Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 763  # Perth
+		division_template = "Royal Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+
+
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 13213  # Perth
+		division_template = "Royal Militia"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 13253  # Perth
+		division_template = "Royal Militia"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 12483  # Perth
+		division_template = "Royal Militia"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 1206  # Perth
+		division_template = "Royal Militia"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 16353  # Perth
+		division_template = "Royal Militia"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+	}
+}
+
+air_wings = {
+	1176 = { 
+		fighter_equipment_0 = {
+			owner = "DOC" 
+			amount = 120
+		}
+		tac_bomber_equipment_0 = {
+			owner = "DOC" 
+			amount = 48
+		}
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "DOC"
+		}
+		requested_factories = 2
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "DOC"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+}

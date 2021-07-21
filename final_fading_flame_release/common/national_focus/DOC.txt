@@ -1,0 +1,1524 @@
+﻿#################################
+# Dominion of Castor Focus Tree #
+#################################
+
+
+focus_tree = {
+	id = DOC_focus_tree
+	
+	country = {
+		factor = 0 
+		modifier = {
+			add = 10
+			#tag = BRA
+			tag = DOC
+		}
+	}
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 400 y = 850 }
+
+	#Begin Tree#
+	#focus = {
+	#	id = DOC_the_oppressor
+	#	icon = GFX_goal_DOC_carnegia
+	#	x = 20
+	#	y = 0
+	#	cost = 1
+	#	search_filters = {FOCUS_FILTER_POLITICAL}
+	#	available = {
+	#	}
+	#	completion_reward = {
+	#		add_political_power = 15
+	#	}
+	#}
+
+	###################				  
+	# Columbia Branch #
+	###################                 
+
+	focus = {
+		id = DOC_columbia
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 4
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_ideas = DOC_our_queen
+		}
+	}
+	focus = {
+		id = DOC_military_reform
+		icon = GFX_goal_generic_army_doctrines
+		x = -10
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 10
+			air_experience = 10
+			navy_experience = 10
+		}
+	}
+	###########################
+	# Columbia Section
+	###########################
+	focus = {
+		id = DOC_rally_the_royal_guards
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = DOC_columbia
+		prerequisite = {focus = DOC_columbia}
+		x = -3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOC_royal_guards #Custom Text
+			hidden_effect = {
+				division_template = {
+					name = "Royal Marines"		# Royal Marine Division
+					division_names_group = DOC_MAR_01 #GROUP FOR HAVING NAMES OF DIVISIONS - VERY IMPORTANT TO HAVE FOR IMMERSION
+
+					regiments = {
+						marine = {x = 0 y = 0}
+						marine = {x = 0 y = 1}
+						marine = {x = 0 y = 2}
+						marine = {x = 0 y = 3}
+						marine = {x = 1 y = 0}
+						marine = {x = 1 y = 1}
+						marine = {x = 1 y = 2}
+						marine = {x = 1 y = 3}
+					}
+					support = {
+  	      				artillery = { x = 0 y = 0 }
+		 				 engineer = {x = 0 y = 1}
+ 					}
+					priority = 2 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+				}
+				every_owned_state = {
+					limit = {
+						is_capital = yes
+						is_fully_controlled_by = ROOT 
+					}
+					create_unit = {
+						division = "name = \"1st Royal Marine Division\" division_template = \"Royal Marines\" start_experience_factor = 1.0"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2nd Royal Marine Division\" division_template = \"Royal Marines\" start_experience_factor = 1.0"  
+						owner = ROOT
+					}
+				}
+			}	
+		}
+	}
+	focus = {
+		id = DOC_royal_guards_special
+		icon = GFX_focus_generic_military_academy
+		relative_position_id = DOC_rally_the_royal_guards
+		prerequisite = {focus = DOC_rally_the_royal_guards}
+		mutually_exclusive = {focus = DOC_royal_guards_expand}
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOC_royal_guard_special_only
+		}
+	}
+	focus = {
+		id = DOC_royal_guards_expand
+		icon = GFX_focus_generic_little_entente
+		relative_position_id = DOC_rally_the_royal_guards
+		prerequisite = {focus = DOC_rally_the_royal_guards}
+		mutually_exclusive = {focus = DOC_royal_guards_special}
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOC_royal_guard_expansion
+		}
+	}
+	focus = {
+		id = DOC_solidify_position
+		icon = GFX_focus_generic_support_the_left_right
+		relative_position_id = DOC_columbia
+		prerequisite = {focus = DOC_columbia}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			###################################
+			#Increase party populatrity
+			###################################
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = DOC_public_propoganda
+		icon = GFX_focus_generic_monarchy_2
+		relative_position_id = DOC_solidify_position
+		prerequisite = {focus = DOC_solidify_position}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			###################################
+			#Increase party populatrity
+			###################################
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = DOC_arrest_pacifists
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = DOC_public_propoganda
+		prerequisite = {focus = DOC_public_propoganda}
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+	focus = {
+		id = DOC_utilize_monarchy_money
+		icon = GFX_focus_mex_privatisation
+		relative_position_id = DOC_columbia
+		prerequisite = {focus = DOC_columbia}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+
+			1176 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+
+	focus = {
+		id = DOC_further_injection_of_money
+		icon = GFX_goal_generic_construction
+		relative_position_id = DOC_utilize_monarchy_money
+		prerequisite = {focus = DOC_utilize_monarchy_money}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			date > 109.4.1
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			remove_ideas = DOC_exiled_economy
+			730 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DOC_fund_a_university
+		icon = GFX_focus_research
+		relative_position_id = DOC_further_injection_of_money
+		prerequisite = {focus = DOC_further_injection_of_money}
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = DOC_handling_refugee_crisis
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = DOC_columbia
+		prerequisite = {focus = DOC_columbia}
+		x = 4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}
+		completion_reward = {
+			#unlock handling refugee crisis
+			custom_effect_tooltip = DOC_unlock_dealing_with_refugee_crisis
+			set_country_flag = DOC_unlock_refugee_crisis_decisions
+		}
+	}
+
+	focus = {
+		id = DOC_reestablish_sovereignty
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = DOC_public_propoganda
+		prerequisite = {focus = DOC_public_propoganda}
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			remove_ideaS = DOC_loosing_legitamacy
+		}
+	}
+
+	##############################
+	# MILITARY REFORM SECTION
+	##############################
+
+	focus = {
+		id = DOC_army_reform
+		icon = GFX_goal_rhineland
+		relative_position_id = DOC_military_reform
+		prerequisite = {focus = DOC_military_reform}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = DOC_ask_for_volunteers
+		icon = GFX_focus_generic_manpower
+		relative_position_id = DOC_army_reform
+		prerequisite = {focus = DOC_army_reform}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_manpower = 152000
+		}
+	}
+
+	focus = {
+		id = DOC_fortify_our_territory
+		icon = GFX_goal_generic_defence
+		relative_position_id = DOC_army_reform
+		prerequisite = {focus = DOC_army_reform}
+		mutually_exclusive = {focus = DOC_emphasis_on_invasion_wouldnt_be_here_long}
+		x = -4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOC_defensive_fortifications
+		}
+	}
+	focus = {
+		id = DOC_emphasis_on_invasion_wouldnt_be_here_long
+		icon = GFX_goal_generic_amphibious_assault
+		relative_position_id = DOC_army_reform
+		prerequisite = {focus = DOC_army_reform}
+		mutually_exclusive = {focus = DOC_fortify_our_territory}
+		x = -6
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOC_naval_invasion_emphasis
+		}
+	}
+	#focus = {
+	#	id = DOC_her_majestys_cavalry
+	#	icon = GFX_goal_generic_cavalry
+	#	relative_position_id = DOC_army_reform
+	#	prerequisite = {focus = DOC_army_reform}
+	#	x = -8
+	#	y = 1
+	#	cost = 7
+	#	search_filters = {FOCUS_FILTER_POLITICAL}
+	#	available = {
+	#	}
+	#	completion_reward = {
+	#		add_ideas = DOC_royal_cavalry
+	#	}
+	#}
+	focus = {
+		id = DOC_new_form_of_cavalry
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = DOC_infantry_equipment_research
+		prerequisite = {focus = DOC_infantry_equipment_research OR = DOC_research_support_companies}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = light_Tank_tech
+				bonus = 3
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	
+
+	focus = {
+		id = DOC_check_old_stockpiles
+		icon = GFX_goal_generic_small_arms
+		relative_position_id = DOC_ask_for_volunteers
+		prerequisite = {focus = DOC_ask_for_volunteers}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2500
+			}
+		}
+	}
+
+	focus = {
+		id = DOC_research_new_army_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = DOC_army_reform
+		prerequisite = {focus = DOC_army_reform}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = any_doctrine
+				bonus = 3
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DOC_research_support_companies
+		icon = GFX_goal_generic_construction2
+		relative_position_id = DOC_army_reform
+		prerequisite = {focus = DOC_army_reform}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com1
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DOC_infantry_equipment_research
+		icon = GFX_focus_chi_army_reform
+		relative_position_id = DOC_research_new_army_doctrine
+		prerequisite = {focus = DOC_research_new_army_doctrine}
+		prerequisite = {focus = DOC_research_support_companies}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com1
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DOC_navy_reform
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = DOC_military_reform
+		prerequisite = {focus = DOC_military_reform}
+		x = 6
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+	focus = {
+		id = DOC_ship_building
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = DOC_navy_reform
+		prerequisite = {focus = DOC_navy_reform}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#########################################
+			# ADD NAVAL DOCKYARDS
+			#########################################
+			1176 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOC_proud_naval_tradition
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = DOC_navy_reform
+		prerequisite = {focus = DOC_navy_reform}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOC_navy_tradition
+		}
+	}
+	focus = {
+		id = DOC_naval_research
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = DOC_navy_reform
+		prerequisite = {focus = DOC_navy_reform}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com1
+				bonus = 1
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DOC_convoy_building
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = DOC_ship_building
+		prerequisite = {focus = DOC_ship_building}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#########################################
+			# ADD NAVAL DOCKYARDS
+			#########################################
+			add_ideas = DOC_convoy_craze
+		}
+		
+	}
+	focus = {
+		id = DOC_ship_research
+		icon = GFX_goal_generic_navy_carrier
+		relative_position_id = DOC_convoy_building
+		prerequisite = {focus = DOC_convoy_building}
+		prerequisite = {focus = DOC_naval_research}
+		x = 3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1.5
+				uses = 3
+				category = naval_equipment
+			}
+		}
+	}
+	focus = {
+		id = DOC_air_reform
+		icon = GFX_goal_generic_air_doctrine
+		relative_position_id = DOC_military_reform
+		prerequisite = {focus = DOC_military_reform}
+		x = -10
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			air_experience = 25
+		}
+	}
+	focus = {
+		id = DOC_air_reform2
+		icon = GFX_goal_generic_air_fighter2
+		relative_position_id = DOC_air_reform
+		prerequisite = {focus = DOC_air_reform}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DOC_fighter_research
+		icon = GFX_goal_generic_air_fighter
+		relative_position_id = DOC_air_reform
+		prerequisite = { focus = DOC_air_reform}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	focus = {
+		id = DOC_close_air_support
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = DOC_air_reform
+		prerequisite = { focus = DOC_air_reform}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = DOC_quality_focus
+		icon = GFX_goal_generic_air_bomber
+		relative_position_id = DOC_air_reform
+		prerequisite = { focus = DOC_air_reform}
+		mutually_exclusive = {focus = DOC_quantity_focus}
+		x = -1
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOC_quality_fighter
+		}
+	}
+	focus = {
+		id = DOC_quantity_focus
+		icon = GFX_goal_generic_production2
+		relative_position_id = DOC_air_reform
+		mutually_exclusive = {focus = DOC_quality_focus}
+		prerequisite = { focus = DOC_air_reform}
+		x = 1
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOC_quantity_fighter
+		}
+	}
+	focus = {
+		id = DOC_ultimate_sacrifice
+		icon = GFX_goal_generic_CAS
+		relative_position_id = DOC_quality_focus
+		prerequisite = { focus = DOC_quality_focus OR = DOC_quantity_focus}
+		x = 1
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_country_flag = doc_mad_queen
+		}
+		completion_reward = {
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
+		}
+	}
+
+	#############################
+	# PREPARE FOR INVASION BRANCH 
+	#############################
+
+	focus = {
+		id = DOC_prepare_for_war
+		icon = GFX_goal_generic_army_artillery
+		x = -5
+		y = 5
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			#has_country_flag = trouble_in_caer
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = DOC_defensive_measures
+		icon = GFX_goal_generic_defence
+		relative_position_id = DOC_prepare_for_war
+		prerequisite = {focus = DOC_prepare_for_war}
+		x = -3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = DOC_build_radar
+		icon = GFX_goal_generic_radar
+		relative_position_id = DOC_defensive_measures
+		prerequisite = {focus = DOC_defensive_measures}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#############
+			# BUILD RADAR			
+			#############
+			1176 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+			737 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOC_build_aa
+		icon = GFX_focus_generic_air_defense
+		relative_position_id = DOC_defensive_measures
+		prerequisite = {focus = DOC_defensive_measures}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			############
+			# BUILD AA
+			############
+			1176 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			730 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			737 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOC_build_forts1
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = DOC_defensive_measures
+		prerequisite = {focus = DOC_defensive_measures}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			############
+			# BUILD FORTS
+			############
+			728 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 763
+					instant_build = yes
+				}
+			}
+			1174 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 13076
+					instant_build = yes
+				}
+			}
+			737 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 13155
+					instant_build = yes
+				}
+			}
+			1172 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 13050
+					instant_build = yes
+				}
+			}
+			730 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 3522
+					instant_build = yes
+				}
+			}
+			1176 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 12860
+					instant_build = yes
+				}
+			}
+			716 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 12809
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOC_build_forts2
+		icon = GFX_focus_generic_coastal_fort
+		relative_position_id = DOC_build_forts1
+		prerequisite = {focus = DOC_build_forts1}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#####################
+			# BUILD COASTAL FORTS
+			#####################
+			162 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 11640
+					instant_build = yes
+				}
+			}
+			153 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 1206
+					instant_build = yes
+				}
+			}
+			152 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 16355
+					instant_build = yes
+				}
+			}
+			155 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 16353
+					instant_build = yes
+				}
+			}
+			143 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 16353
+					instant_build = yes
+				}
+			}
+			128 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 11321
+					instant_build = yes
+				}
+			}
+			126 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 16334
+					instant_build = yes
+				}
+			}
+			156 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 4681
+					instant_build = yes
+				}
+			}
+			159 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 12363
+					instant_build = yes
+				}
+			}
+			161 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 16357
+					instant_build = yes
+				}
+			}
+			175 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 4458
+					instant_build = yes
+				}
+			}
+			195 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 13213
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOC_lock_down_capital
+		icon = GFX_goal_generic_fortify_city
+		relative_position_id = DOC_build_forts2
+		prerequisite = {focus = DOC_build_forts2}
+		prerequisite = {focus = DOC_build_aa}
+		prerequisite = {focus = DOC_build_radar}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#####################
+			# BUILD FORTS IN CAPTIAL
+			#####################
+			1176 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12860
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2188
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6724
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2576
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4758
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8885
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12893
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOC_prepare_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = DOC_prepare_for_war
+		prerequisite = {focus = DOC_prepare_for_war}
+		x = 4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#######################
+			# CONSTRUCT CIV FACTORIES
+			#######################
+			730 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1176 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOC_deals_with_factories
+		icon = GFX_goal_generic_intelligence_exchange
+		relative_position_id = DOC_prepare_industry
+		prerequisite = {focus = DOC_prepare_industry}
+		x = -4
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#####################
+			# CIV TO MIL EXCHANGE RATE INCREASE 
+			#####################
+			add_ideas = DOC_deal_with_factories
+		}
+	}  
+	focus = {
+		id = DOC_prepare_infra1
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = DOC_prepare_industry
+		prerequisite = {focus = DOC_prepare_industry}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			########################
+			# CONSTRUCT INFRA
+			########################
+			164 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1175 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	} 
+	focus = {
+		id = DOC_prepare_infra2
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = DOC_prepare_infra1
+		prerequisite = {focus = DOC_prepare_infra1}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			########################
+			# CONSTRUCT INFRA
+			########################
+			1176 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			730 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			728 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			728 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1173 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1174 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOC_prepare_military_industry1
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = DOC_prepare_industry
+		prerequisite = {focus = DOC_prepare_industry}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			########################
+			# CONSTRUCT MILITARY FACTORIES
+			########################
+			1175 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	} 
+	focus = {
+		id = DOC_prepare_military_industry2
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = DOC_prepare_military_industry1
+		prerequisite = {focus = DOC_prepare_military_industry1}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			########################
+			# CONSTRUCT MILITARY FACTORIES
+			########################
+			1172 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	} 
+	focus = {
+		id = DOC_prepare_docks
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = DOC_prepare_infra1
+		prerequisite = {focus = DOC_prepare_infra1}
+		prerequisite = {focus = DOC_prepare_military_industry1}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			########################
+			# CONSTRUCT NAVAL BASE
+			########################
+			1176 = {
+				add_building_construction = {
+					type = naval_base
+					province = 12860
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOC_start_conscription
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = DOC_prepare_industry
+		prerequisite = {focus = DOC_prepare_industry}
+		x = 4
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			########################
+			# CHANGE CONSCRIPTION LAW
+			########################
+			add_manpower = 150000
+		}
+	}
+	focus = {
+		id = DOC_rally_the_nation
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = DOC_prepare_docks
+		prerequisite = {focus = DOC_prepare_infra2}
+		prerequisite = {focus = DOC_prepare_military_industry2}
+		prerequisite = {focus = DOC_start_conscription}
+		prerequisite = {focus = DOC_deals_with_factories}
+		prerequisite = {focus = DOC_prepare_docks}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = DOC_mass_conscription
+		icon = GFX_focus_generic_manpower
+		relative_position_id = DOC_rally_the_nation
+		prerequisite = {focus = DOC_rally_the_nation}
+		prerequisite = {focus = DOC_lock_down_capital}
+		x = -4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			######################################################
+			# CREATE ANNEXEATION WAR GOAL + DECLEARE WAR ON Ronard
+			######################################################
+			add_ideas = DOC_mass_conscription
+			add_stability = -0.05
+			#CIS = {
+			#	country_event = DOC_general_events.1
+			#}
+			#COC = {
+			#	country_event = DOC_general_events.1
+			#}
+			#FPJ = {
+			#	country_event = DOC_general_events.1
+			#}
+		}
+	}
+
+	focus = {
+		id = DOC_the_mad_queen
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = DOC_further_injection_of_money}
+		prerequisite = {focus = DOC_reestablish_sovereignty}
+		prerequisite = {focus = DOC_arrest_pacifists}
+		relative_position_id = DOC_further_injection_of_money
+		available = {
+			NOT = {
+				has_idea = DOC_exiled_refugees
+			}
+			#OR = {
+			#	has_global_flag = fae_civil_war_victory
+			#	has_global_flag = cae_civil_war_victory
+			#}
+			has_country_flag = doc_mad_queen
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			every_country = {
+				news_event = caer_events.1
+			}
+		}
+	}
+
+	focus = {
+		id = DOC_rally_for_revenge
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = DOC_the_mad_queen}
+		relative_position_id = DOC_the_mad_queen
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_ideas = DOC_spirit_of_revenge
+		}
+	}
+
+	focus = {
+		id = DOC_attack_Ronard
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		relative_position_id = DOC_the_mad_queen
+		prerequisite = {focus = DOC_the_mad_queen}
+		prerequisite = {focus = DOC_rally_for_revenge}
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_army_manpower = {
+				size > 499999
+			}
+			date > 111.5.6
+			has_war = no
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything   target = ROC }
+		}
+	}
+
+	
+	##################################
+	# AFTER RECLAIMING HOMELAND
+	##################################
+
+	#focus = {
+	#	id = DOC_home_sweet_home
+	#	icon = GFX_goal_generic_territory_or_war
+	#	x = 0
+	#	y = 2
+	#	cost = 7
+	#	search_filters = {FOCUS_FILTER_POLITICAL}
+	#	#prerequisite = {focus = DOC_take_back_homeland}
+	#	relative_position_id = DOC_take_back_homeland
+	#	available = {
+	#		always = no
+	#	#TAG_EXISTS OR SOMETHING = RONARD ALL UNDER A NOT PRHASE
+	#	}
+	#	completion_reward = {
+	#		######################################################
+	#		# UNDER CONSTRUCTION - STUFF TO DO ONCE TAKE BACK HOMELAND AFTER WAR
+	#		######################################################
+	#	}
+	#}
+
+
+}
+
+
+ 	
+
+

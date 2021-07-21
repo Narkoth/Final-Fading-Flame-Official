@@ -1,0 +1,15 @@
+#Encourage tribal ai's to keep building armies, as their manpower will always be low regardless
+tribal_build_army_damnit = {
+	enable = {
+		ROOT = {
+            has_war = no
+        }
+        is_tribal = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 100
+    }
+}

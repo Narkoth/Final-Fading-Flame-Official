@@ -1,0 +1,122 @@
+###########################
+# COC GENERAL EVENTS
+###########################
+
+add_namespace = CIS_islands
+
+
+
+# Aid Sent
+country_event = {
+	id = CIS_islands.1
+	title = CIS_islands.1.t
+	desc = CIS_islands.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = CIS_islands.1.a
+		ai_chance = { 
+			factor = 100
+		}
+		CIS = {
+			transfer_state = 1232
+			transfer_state = 153
+			transfer_state = 152
+			transfer_state = 155
+		}
+		1232 = { set_demilitarized_zone = no }
+		153 =  { set_demilitarized_zone = no }
+		152 =  { set_demilitarized_zone = no }	
+		155 =  { set_demilitarized_zone = no }
+	}
+}
+
+add_namespace = CIS_ronard_relations
+
+#Meeting with Ronard Diplomats to Sign Non-non_aggression_pact in wake of CIS seizing islands from DOC
+country_event = {
+	id = CIS_ronard_relations.1
+	title = CIS_ronard_relations.1.t
+	desc = CIS_ronard_relations.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = CIS_ronard_relations.1.a
+		ai_chance = { 
+			factor = 100
+		}
+		ROOT = {
+			add_opinion_modifier = { target = ROC modifier = large_increase }
+			set_country_flag = cis_love_roc
+			diplomatic_relation = { 
+				country = ROC 
+				relation = non_aggression_pact 
+			}
+			add_ideas = cis_assistance_from_roc
+		}
+	}
+}
+
+#Training Program with ROC
+country_event = {
+	id = CIS_ronard_relations.2
+	title = CIS_ronard_relations.2.t
+	desc = CIS_ronard_relations.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = CIS_ronard_relations.2.a
+		ai_chance = { 
+			factor = 100
+		}
+		army_experience = 50
+		air_experience = 25
+		navy_experience = 25
+	}
+}
+
+#Trading Program with ROC
+country_event = {
+	id = CIS_ronard_relations.3
+	title = CIS_ronard_relations.3.t
+	desc = CIS_ronard_relations.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = CIS_ronard_relations.3.a
+		ai_chance = { 
+			factor = 100
+		}
+		ROOT = {
+			add_ideas = cis_trading_program
+		}
+	}
+}
+
+#Alliance Offer
+country_event = {
+	id = CIS_ronard_relations.4
+	title = CIS_ronard_relations.4.t
+	desc = CIS_ronard_relations.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = CIS_ronard_relations.4.a
+		ai_chance = { 
+			factor = 100
+		}
+		ROC = {
+			add_to_faction = ROOT
+		}
+	}
+}

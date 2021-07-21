@@ -1,0 +1,21 @@
+state={
+	id=1192
+	name="Qurqumsk"
+	provinces={
+		2756 4669 4906 4927 6317 8591 8604 9700 12514 12553 12670 
+	}
+	history={
+		owner = WAL
+		add_core_of = WAL
+		victory_points = { 4669 15 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = D57
+	}
+	manpower=213211
+	state_category=city
+	buildings_max_level_factor=1.000
+}

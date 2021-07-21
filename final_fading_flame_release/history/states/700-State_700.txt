@@ -1,0 +1,32 @@
+
+state={
+	id=700
+	name="STATE_700"
+
+	history={
+		owner = COC
+		victory_points = {
+			7411 30 
+		}
+		buildings = {
+			air_base = 5
+			infrastructure = 6
+			industrial_complex = 2
+			dockyard = 5
+			arms_factory = 1
+			7411 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = COC
+	}
+
+	provinces={
+		1776 5159 7325 7411 9369 12531 12539 12587 12672 
+	}
+	manpower=7756213
+	buildings_max_level_factor=3.000
+	state_category=megalopolis
+}

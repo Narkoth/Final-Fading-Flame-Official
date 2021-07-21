@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=507
+	name="STATE_507"
+	provinces={
+		368 1164 2335 2693 3039 3290 3296 6177 6346 6575 6578 6940 7252 7332 7874 9452 11183 11194 11206 11219 11314 11338 11432 
+	}
+	history={
+		#owner = FUT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = FUT
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

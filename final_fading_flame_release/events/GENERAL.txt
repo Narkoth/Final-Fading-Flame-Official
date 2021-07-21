@@ -1,0 +1,364 @@
+
+add_namespace = general
+
+#Old Event Telling Players Man the Guns was Not Supported, However, it now is
+country_event = {
+	id = general.1
+	title = general.1.t
+	desc = general.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = general.1.a
+	}
+}
+#Event at game start that informs all players that saving is currently not supported with our mod. Game should run pretty fast though as an upside for now
+country_event = {
+	id = general.2
+	title = general.2.t
+	desc = general.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = general.2.a
+	}
+}
+#Event at start specifying the current state of the mod, and wishing the player to have a fun time
+country_event = {
+	id = general.3
+	title = general.3.t
+	desc = general.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = general.3.a
+	}
+}
+#Event explaining background knowledge of Castor
+country_event = {
+	id = general.4
+	title = general.4.t
+	desc = general.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = general.4.a
+	}
+}
+
+add_namespace = lore
+
+#### Lore Events for Each Nation on Startup
+
+country_event = {
+	id = lore.1
+	title = lore.1.t
+	desc = lore.1.d
+
+	trigger = {
+		always = no
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = lore.1.a
+	}
+}
+
+country_event = {
+	id = lore.2
+	title = lore.2.t
+	desc = lore.2.d
+
+	trigger = {
+		always = no
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = lore.2.a
+	}
+}
+
+country_event = {
+	id = lore.3
+	title = lore.3.t
+	desc = lore.3.d
+
+	trigger = {
+		always = no
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = lore.3.a
+	}
+}
+
+country_event = {
+	id = lore.4
+	title = lore.4.t
+	desc = lore.4.d
+
+	trigger = {
+		always = no
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = lore.4.a
+	}
+}
+
+country_event = {
+	id = lore.5
+	title = lore.5.t
+	desc = lore.5.d
+
+	trigger = {
+		always = no
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = lore.5.a
+	}
+}
+
+country_event = {
+	id = lore.6
+	title = lore.6.t
+	desc = lore.6.d
+
+	trigger = {
+		always = no
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = lore.6.a
+	}
+}
+
+country_event = {
+	id = lore.7
+	title = lore.7.t
+	desc = lore.7.d
+
+	trigger = {
+		always = no
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = lore.7.a
+	}
+}
+
+country_event = {
+	id = lore.8
+	title = lore.8.t
+	desc = lore.8.d
+
+	trigger = {
+		always = no
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = lore.8.a
+	}
+}
+
+country_event = {
+	id = lore.9
+	title = lore.9.t
+	desc = lore.9.d
+
+	trigger = {
+		always = no
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = lore.9.a
+	}
+}
+
+add_namespace = power
+
+#Great Power Fact > 250 Factories Army Manpower > 3.500.000
+country_event = {
+	id = power.1
+	title = power.1.t
+	desc = power.1.d
+
+	trigger = {
+		always = no
+		num_of_factories > 250
+		NOT = {
+			has_idea = great_power
+		}
+	}
+
+	option = {
+		name = power.1.a
+		add_ideas = great_power
+		remove_ideas = secondary_power
+		remove_ideas = regional_power
+		remove_ideas = minor_power
+		remove_ideas = irrelevant_power
+	}
+}
+
+#Secondary Power > 100 Factories Army Manpower > 1.000.000
+country_event = {
+	id = power.2
+	title = power.2.t
+	desc = power.2.d
+
+	trigger = {
+		always = no
+		num_of_factories > 100
+		NOT = {
+			num_of_factories > 250
+		}
+		NOT = {
+			has_idea = secondary_power
+		}
+	}
+
+	option = {
+		name = power.2.a
+		add_ideas = secondary_power
+		remove_ideas = great_power
+		remove_ideas = regional_power
+		remove_ideas = minor_power
+		remove_ideas = irrelevant_power
+	}
+}
+
+#Regional Power > 50 Factories Manpower > 500.000
+country_event = {
+	id = power.3
+	title = power.3.t
+	desc = power.3.d
+
+	trigger = {
+		always = no
+		num_of_factories > 50
+		NOT = {
+			num_of_factories > 100
+		}
+		NOT = {
+			has_idea = regional_power
+		}
+	}
+
+	option = {
+		name = power.3.a
+		add_ideas = regional_power
+		remove_ideas = secondary_power
+		remove_ideas =  great_power
+		remove_ideas = minor_power
+		remove_ideas = irrelevant_power
+	}
+}
+#Minor Power > 25 Factories > 150.000
+country_event = {
+	id = power.4
+	title = power.4.t
+	desc = power.4.d
+
+	trigger = {
+		always = no
+		num_of_factories > 25
+		NOT = {
+			num_of_factories > 50
+		}
+		NOT = {
+			has_idea = minor_power
+		}
+	}
+
+	option = {
+		name = power.4.a
+		add_ideas =  minor_power
+		remove_ideas = secondary_power
+		remove_ideas = regional_power
+		remove_ideas = great_power
+		remove_ideas = irrelevant_power
+	}
+}
+#Irrelevant Power < 25 Factories 
+country_event = {
+	id = power.5
+	title = power.5.t
+	desc = power.5.d
+
+	trigger = {
+		always = no
+		num_of_factories < 26
+		NOT = {
+			has_idea = irrelevant_power
+		}
+	}
+
+	option = {
+		name = power.5.a
+		add_ideas = irrelevant_power
+		remove_ideas = secondary_power
+		remove_ideas = regional_power
+		remove_ideas = minor_power
+		remove_ideas = great_power
+	}
+}

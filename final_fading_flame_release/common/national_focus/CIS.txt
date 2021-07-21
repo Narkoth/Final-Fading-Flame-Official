@@ -1,0 +1,1030 @@
+﻿search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+
+	
+ 
+	
+	
+	FOCUS_FILTER_RESEARCH = 522
+
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+}
+
+
+
+
+
+focus_tree = {
+	id = CIS_tree
+	
+	country = {
+		factor = 0 
+		modifier = {
+			add = 10
+			tag = CIS
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 350 y = 750 }
+
+	focus = {
+		id = cis_invade_nearby_islands
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 0
+		cost = 1 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			country_event = CIS_islands.1
+			DOC = {
+				country_event = DOC_general_events.3
+			}
+		}
+	}
+
+	focus = {
+		id = cis_iron_chariots
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = cis_invade_nearby_islands
+		prerequisite = { focus = cis_invade_nearby_islands}
+		available = {
+			#has_stability > 0.4
+		}
+		completion_reward = {
+			add_ideas = cis_iron_chariots_idea
+			army_experience = 25
+		}
+	}
+	
+	focus = {
+		id = cis_masters_of_the_tank
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = cis_iron_chariots
+		prerequisite = { focus = cis_iron_chariots}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			#add_ideas = MRSIR_GEN_combined_arms_focus
+			add_tech_bonus = {
+				name = any_doctrine
+				bonus = 1
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = cis_new_chariots
+		icon = GFX_focus_generic_army_tanks2
+		relative_position_id = cis_iron_chariots
+		prerequisite = { focus = cis_iron_chariots}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = any_armor
+				bonus = 1
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = cis_signal
+		icon = GFX_goal_generic_radar
+		relative_position_id = cis_iron_chariots
+		prerequisite = { focus = cis_iron_chariots}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				technology = tech_signal_company
+			}
+			add_tech_bonus = {
+				name = support_com2
+				bonus = 1
+				uses = 1
+				technology = tech_signal_company2
+			}
+		}
+	}
+	focus = {
+		id = cis_moto
+		icon = GFX_goal_generic_army_motorized
+		relative_position_id = cis_new_chariots
+		prerequisite = { focus = cis_new_chariots}
+		prerequisite = { focus = cis_masters_of_the_tank}
+		prerequisite = { focus = cis_signal}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = cis_moto_idea
+		}
+	}
+
+	focus = {
+		id = cis_naval_history
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = cis_invade_nearby_islands
+		prerequisite = { focus = cis_invade_nearby_islands}
+		x = 5
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			#has_stability > 0.4
+		}
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = cis_rebuild_our_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = cis_naval_history
+		prerequisite = { focus = cis_naval_history}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			1182 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = cis_rebuild_our_dockyards2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = cis_rebuild_our_dockyards
+		prerequisite = { focus = cis_rebuild_our_dockyards}
+		x = 1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			1182 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = cis_rebuild_our_ports
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = cis_naval_history
+		prerequisite = { focus = cis_naval_history}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			1182 = {
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					province = 11899
+					instant_build = yes
+				}
+			}
+			1201 = {
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					province = 12053
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = cis_invest_in_ship_research
+		icon = GFX_goal_generic_navy_cruiser
+		relative_position_id = cis_rebuild_our_ports
+		prerequisite = { focus = cis_rebuild_our_ports}
+		x = -1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = research_help
+				bonus = 1.0
+				uses = 5
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = cis_invest_in_naval_academy
+		icon = GFX_focus_research
+		relative_position_id = cis_naval_doctrine_research
+		prerequisite = { focus = cis_rebuild_our_dockyards2 OR = cis_invest_in_ship_research}
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = cis_naval_doctrine_research
+		icon = GFX_focus_generic_military_academy
+		relative_position_id = cis_naval_history
+		prerequisite = { focus = cis_naval_history}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = any_doctrine
+				bonus = 1
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = cis_air_path
+		icon = GFX_goal_generic_air_doctrine
+		relative_position_id = cis_invade_nearby_islands
+		prerequisite = { focus = cis_invade_nearby_islands}
+		x = -5
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			#has_stability > 0.4
+		}
+		completion_reward = {
+			air_experience = 25
+		}
+	}
+
+	focus = {
+		id = cis_air_doctrine
+		icon = GFX_focus_generic_military_academy
+		relative_position_id = cis_air_path
+		prerequisite = { focus = cis_air_path}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = cis_help_our_armor
+		icon = GFX_goal_generic_CAS
+		relative_position_id = cis_air_path
+		prerequisite = { focus = cis_air_path}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = cis_fighter
+		icon = GFX_goal_generic_air_fighter
+		relative_position_id = cis_air_path
+		prerequisite = { focus = cis_air_path}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airhelp1
+				bonus = 1
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = cis_expand_airbases
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = cis_help_our_armor
+		prerequisite = { focus = cis_help_our_armor}
+		x = 1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			1178 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = cis_increase_air_production
+		icon = GFX_goal_generic_air_production
+		relative_position_id = cis_help_our_armor
+		prerequisite = { focus = cis_fighter}
+		x = 3
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = cis_air_production
+		}
+	}
+
+	focus = {
+		id = cis_our_ace
+		icon = GFX_goal_generic_air_fighter2
+		relative_position_id = cis_increase_air_production
+		prerequisite = { focus = cis_increase_air_production OR = cis_expand_airbases}
+		x = -1
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ace = {
+				name = "Johne"
+				surname = "Alertone"
+				callsign = "The Dashing"
+				type = fighter_genius
+				is_female = no
+			}
+		}
+	}
+
+
+
+	focus = {
+		id = cis_look_inwards
+		icon = GFX_goal_generic_propaganda
+		x = 14
+		y = 0
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_completed_focus = cis_invade_nearby_islands
+			date > 109.8.5
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = cis_organize_youth
+		icon = GFX_focus_generic_manpower
+		relative_position_id = cis_look_inwards
+		prerequisite = {focus = cis_look_inwards}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_ideas = cis_organized_youth
+		}
+	}
+
+	focus = {
+		id = cis_equality_under_the_state
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = cis_look_inwards
+		prerequisite = {focus = cis_look_inwards}
+		x = -2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_ideas = cis_for_the_state
+		}
+	}
+
+	focus = {
+		id = cis_a_new_generation_of_warriors
+		icon = GFX_focus_generic_little_entente
+		relative_position_id = cis_equality_under_the_state
+		prerequisite = {focus = cis_equality_under_the_state}
+		prerequisite = {focus = cis_organize_youth}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}
+		completion_reward = {
+			add_manpower = 150000
+		}
+	}
+
+	focus = {
+		id = cis_careful_monitoring
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = cis_look_inwards
+		prerequisite = {focus = cis_look_inwards}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_ideas = cis_monitoring
+		}
+	}
+
+	focus = {
+		id = cis_instil_a_sense_of_national_pride
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = cis_careful_monitoring
+		prerequisite = {focus = cis_careful_monitoring}
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = cis_national_pride
+		}
+	}
+
+	focus = {
+		id = cis_reject_outside_influence
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = cis_careful_monitoring
+		prerequisite = {focus = cis_careful_monitoring}
+		prerequisite = {focus = cis_organize_youth}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_ideas = cis_rejection_of_others
+		}
+	}
+
+	focus = {
+		id = cis_reorganize_political_positions
+		icon = GFX_focus_generic_self_management
+		relative_position_id = cis_equality_under_the_state
+		prerequisite = {focus = cis_equality_under_the_state}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+
+		}
+		completion_reward = {
+			add_political_power = 250
+		}
+	}
+
+	focus = {
+		id = cis_live_for_yourself_and_the_state
+		icon = GFX_goal_generic_wolf_pack
+		relative_position_id = cis_organize_youth
+		prerequisite = {focus = cis_a_new_generation_of_warriors}
+		prerequisite = {focus = cis_reject_outside_influence}
+		x = 0
+		y = 2
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			remove_ideas = cis_recovering_from_recent_civil_war
+		}
+	}
+
+	focus = {
+		id = cis_new_university
+		icon = GFX_focus_research
+		relative_position_id = cis_live_for_yourself_and_the_state
+		prerequisite = {focus = cis_live_for_yourself_and_the_state}
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	
+
+	focus = {
+		id = cis_industry
+		icon = GFX_goal_generic_production
+		x = 23
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			has_completed_focus = cis_invade_nearby_islands
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = industry
+			}	
+		}
+	}
+
+	focus = {
+		id = cis_expand_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 1
+		cost = 7
+		relative_position_id = cis_industry
+		prerequisite = {focus = cis_industry}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			1182 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = cis_expand_navy2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = cis_expand_navy
+		prerequisite = {focus = cis_expand_navy}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			1201 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = cis_expand_navy3
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = cis_expand_navy2
+		prerequisite = {focus = cis_expand_navy2}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			667 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = cis_standardize_ship_construction
+		icon = GFX_goal_generic_build_navy
+		x = -1
+		y = 1
+		cost = 7
+		relative_position_id = cis_expand_navy3
+		prerequisite = {focus = cis_expand_navy3}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = cis_standardize_ship_construction_idea
+		}
+	}
+	focus = {
+		id = cis_standardize_screens
+		icon = GFX_goal_generic_build_navy
+		x = 1
+		y = 1
+		cost = 7
+		relative_position_id = cis_expand_navy3
+		prerequisite = {focus = cis_expand_navy3}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = cis_cheaper_screens
+		}
+	}
+
+	focus = {
+		id = cis_industrial_research
+		icon = GFX_goal_generic_construction2
+		x = -2
+		y = 1
+		cost = 7
+		relative_position_id = cis_industry
+		prerequisite = {focus = cis_industry}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = cis_electronic_research
+		icon = GFX_goal_generic_radar
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = cis_industrial_research
+		prerequisite = {focus = cis_industrial_research}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = cis_build_fact1
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = cis_industry
+		prerequisite = {focus = cis_industry}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			factor = 4000
+		}
+
+		completion_reward = {
+			667 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = cis_build_fact2
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = cis_build_fact1
+		prerequisite = {focus = cis_build_fact1}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+			1201 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = cis_build_fact3
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = cis_build_fact2
+		prerequisite = {focus = cis_build_fact2}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+			1182 = {
+				add_extra_state_shared_building_slots = 9
+				add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = cis_research_more_effective_factory_management
+		icon = GFX_goal_generic_build_tank
+		x = -2
+		y = 1
+		cost = 7
+		relative_position_id = cis_build_fact3
+		prerequisite = {focus = cis_build_fact3}
+		prerequisite = {focus = cis_electronic_research}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = cis_castor_in_flames
+		icon = GFX_focus_generic_support_the_left_right
+		x = 9
+		y = 4
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		#relative_position_id = cis_invade_nearby_islands
+		#prerequisite = { focus = cis_invade_nearby_islands}
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			has_global_flag = castor_in_flames
+		}
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = cis_prepare_for_total_war
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = cis_castor_in_flames
+		prerequisite = { focus = cis_castor_in_flames}
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = cis_total_war
+		}
+	}
+
+	focus = {
+		id = cis_ronard_alliance
+		icon = GFX_goal_generic_alliance
+		x = 2
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = cis_prepare_for_total_war
+		prerequisite = { focus = cis_prepare_for_total_war}
+		mutually_exclusive = {focus = cis_attack_ronard}
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+		}
+		completion_reward = {
+			ROC = {
+				country_event = ROC_general_events.5
+			}
+		}
+	}
+	focus = {
+		id = cis_attack_ronard
+		icon = GFX_goal_generic_major_war
+		x = 4
+		y = 1
+		cost = 7 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = cis_prepare_for_total_war
+		mutually_exclusive = {focus = cis_ronard_alliance}
+		prerequisite = { focus = cis_prepare_for_total_war}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				ROC = {
+					has_completed_focus = ROC_dealings_with_cis
+				}
+			}
+		}
+		available = {
+			surrender_progress < 1.0
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything   target = ROC }
+		}
+	}
+
+	focus = {
+		id = cis_attack_d
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 1
+		cost = 4 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = cis_prepare_for_total_war
+		prerequisite = { focus = cis_prepare_for_total_war}
+		available = {
+			surrender_progress < 1.0
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything   target = DOC }
+		}
+	}
+
+	focus = {
+		id = cis_attack_commune
+		icon = GFX_goal_generic_major_war
+		x = -2
+		y = 1
+		cost = 4 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = cis_prepare_for_total_war
+		prerequisite = { focus = cis_prepare_for_total_war}
+		available = {
+			surrender_progress < 1.0
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything   target = COC }
+		}
+	}
+
+	focus = {
+		id = cis_attack_fpj
+		icon = GFX_goal_generic_major_war
+		x = -4
+		y = 1
+		cost = 4 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = cis_prepare_for_total_war
+		prerequisite = { focus = cis_prepare_for_total_war}
+		available = {
+			surrender_progress < 1.0
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything   target = FPJ }
+		}
+	}
+
+}
+
+ 	
+
+

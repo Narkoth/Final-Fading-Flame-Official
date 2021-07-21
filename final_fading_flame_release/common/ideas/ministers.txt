@@ -1,0 +1,290 @@
+ideas = {
+	political_advisor = {
+		
+		minister_101 = {
+			allowed = {
+			}
+			available = {
+
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			picture = minister_101
+			traits = { economic_organizer }
+		}
+
+		minister_102 = {
+			allowed = {
+			}
+			available = {
+
+			}
+			ai_will_do = {
+				factor = 25
+			}
+			picture = minister_102
+			traits = { political_dancer }
+		}
+
+		minister_103 = {
+			allowed = {
+			}
+			available = {
+
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			picture = minister_103
+			traits = { war_profiteer }
+		}
+		minister_104 = {
+			allowed = {
+			}
+			available = {
+
+			}
+			ai_will_do = {
+				factor = 5
+			}
+			picture = minister_104
+			traits = { lieutenant_of_industry }
+		}
+	}
+
+	theorist = {
+		military_theorist_all = {
+			allowed = {
+			}
+			available = {
+
+			}
+			ai_will_do = {
+				factor = 500 # this is NOT an offer the AI should miss
+			}
+			picture = minister_103
+			traits = { military_advancer }
+		}
+	}
+
+	army_chief = {
+
+		army_chief_1 = {
+			traits = { army_chief_organizational_2 }		
+			picture = minister_101	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		army_chief_2  = {
+			traits = { army_chief_drill_2 }
+			picture = minister_102
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		army_chief_3 = {
+			traits = { army_chief_offensive_2 }
+			picture = minister_103
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		army_chief_4 = {
+			traits = { army_chief_maneuver_2 }
+			picture = minister_104
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		army_chief_5 = {
+			traits = { army_chief_defensive_2 }
+			picture = minister_101
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+	air_chief = {
+		
+		air_chief_1 = {		
+			traits = { air_chief_ground_support_2 }
+			picture = minister_101
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		
+		air_chief_2 = {			
+			traits = { air_chief_all_weather_2 }
+			picture = minister_102
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		
+		air_chief_3 = {		
+			traits = { air_chief_reform_2 }
+			picture = minister_103
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+
+		navy_chief_1 = {
+			traits = { navy_chief_maneuver_2 }
+			picture = minister_101
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		navy_chief_2 = {
+			traits = { navy_chief_decisive_battle_1 }
+			picture = minister_102
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		navy_chief_3 = {
+			traits = { navy_chief_naval_aviation_2 }
+			picture = minister_103
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		navy_chief_4 = {			
+			traits = { navy_chief_commerce_raiding_3 }
+			picture = minister_104
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+	}
+
+	high_command = {
+		### Generic Military Leaders Anyone Can Select
+
+		high_command_1 = {
+			ledger = army
+			traits = { army_infantry_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		high_command_2 = {
+			ledger = army
+			traits = { army_armored_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		high_command_3 = {
+			ledger = army
+			traits = { army_regrouping_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		high_command_4 = {
+			ledger = army
+			traits = { army_logistics_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		high_command_5 = {
+			ledger = air
+			traits = { air_close_air_support_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		high_command_6 = {
+			ledger = air
+			traits = { air_bomber_interception_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		high_command_7 = {
+			ledger = air
+			traits = { air_airborne_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		high_command_8 = {
+			ledger = navy
+			traits = { navy_naval_air_defense_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		high_command_9 = {
+			ledger = navy
+			traits = { navy_fleet_logistics_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		 
+		high_command_10 = {
+			ledger = navy
+			traits = { navy_anti_submarine_1 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		high_command_11 = {
+			ledger = navy
+			traits = { navy_screen_2 }
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+		
+		high_command_12 = {
+			ledger = navy
+			traits = { navy_submarine_2 }
+			ai_will_do = {
+				factor = 1.0
+			}
+		}	
+
+		### WAL
+		jona_general = {
+			ledger = army
+			allowed = {
+				original_tag = WAL
+			}
+			available = {
+				has_completed_focus = wal_mountain_tech
+			}
+			traits = { army_commando_2 }
+			picture = minister_102
+			ai_will_do = {
+				factor = 15
+			}
+		}
+	}
+}

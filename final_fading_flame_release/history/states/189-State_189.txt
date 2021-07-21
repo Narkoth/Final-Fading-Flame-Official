@@ -1,0 +1,21 @@
+state={ state_category = rural
+	id=189
+	name="STATE_189"
+	provinces={
+		16376 
+	}
+	history={
+		owner = CAE
+		add_claim_by = FAE
+		#victory_points = { 12860 15 }
+		buildings = {
+			infrastructure = 3
+			16376 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = CAE
+	}
+	manpower=13652
+	buildings_max_level_factor=1.000
+}

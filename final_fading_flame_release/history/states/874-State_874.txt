@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=874
+	name="STATE_874"
+	provinces={
+		228 355 3387 6126 7033 7309 8137 8912 9099 13903 13961 13995 14037 14058 14093 14121 14164 14167 14180 14247 14283 
+	}
+	history={
+		#owner = OPP
+		buildings = {
+			infrastructure = 2
+		}
+		#add_core_of = OPP
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

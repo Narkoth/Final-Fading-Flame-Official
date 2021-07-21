@@ -1,0 +1,25 @@
+state={ state_category = metropolis
+	id=1176
+	name="STATE_1176"
+	provinces={
+		2188 2576 4758 6724 8885 12860 12893 
+	}
+	history={
+		owner = DOC
+		victory_points = { 12860 30 }
+		buildings = {
+			air_base = 2
+			infrastructure = 8
+			industrial_complex = 2
+			arms_factory = 5
+			dockyard = 2
+			12860 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = DOC
+		add_claim_by = ROC
+	}
+	manpower=7894112
+	buildings_max_level_factor=5.000
+}

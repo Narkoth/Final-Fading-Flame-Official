@@ -1,0 +1,17 @@
+state={
+	id=1195
+	name="STATE_1195"
+	provinces={
+		1654 1699 7615 8549 9409 11610 
+	}
+	history={
+		#owner = D51
+		buildings = {
+			infrastructure = 2
+		}
+		#add_core_of = D51
+	}
+	manpower=63213
+	state_category=city
+	buildings_max_level_factor=1.000
+}

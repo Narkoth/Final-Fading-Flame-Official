@@ -1,0 +1,132 @@
+ideas = {
+	country = {
+		AMF_our_divine_queen = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.10
+				drift_defence_factor = 1.00
+			}
+		}
+		AMF_incorporating_former_enemy_territory = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.10
+				stability_factor = -0.15
+			}
+		}
+		AMF_warrior_people = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				army_org_factor = 0.10
+				experience_gain_army = 0.10
+				special_forces_cap = 0.5
+				training_time_factor = 0.25
+				conscription = 0.05
+			}
+		}
+		AMF_both_tribal_and_civilized_cultures = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				monthly_population = 0.25
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = -0.075
+				industrial_capacity_dockyard = -0.075
+				research_speed_factor = -0.05
+			}
+		}
+		AMF_long_isolation = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				war_support_factor = -0.50
+			}
+			research_bonus = {
+				land_doctrine = -0.75
+				naval_doctrine = -0.75
+				air_doctrine = -0.75
+			}
+		}
+
+		AMF_intel_on_AVO = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			targeted_modifier = {
+				tag = AVO
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+
+		
+		AMF_compliance = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				compliance_gain = 0.25
+			}
+		}
+	}
+}

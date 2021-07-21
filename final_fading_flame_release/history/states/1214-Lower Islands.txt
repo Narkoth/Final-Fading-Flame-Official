@@ -1,0 +1,34 @@
+
+state={
+	id=1214
+	name="STATE_1214"
+
+	history={
+		owner = DOC
+		victory_points = {
+			13142 5 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+			16378 = {
+				naval_base = 3
+
+			}
+			13253 = {
+				naval_base = 3
+
+			}
+		}
+		add_core_of = DOC
+		add_claim_by = ROC
+
+	}
+
+	provinces={
+		8620 13142 13253 16374 16378 16379 16381 16382 16383 16385 
+	}
+	manpower=23511
+	buildings_max_level_factor=1.000
+	state_category=small_island
+}

@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=927
+	name="STATE_927"
+	provinces={
+		3050 5258 5571 5600 6792 7359 7484 8094 8113 8953 14263 14394 14443 14530 
+	}
+	history={
+		#owner = KCH
+		buildings = {
+			infrastructure = 2
+		}
+		#add_core_of = KCH
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

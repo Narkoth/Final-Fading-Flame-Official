@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=441
+	name="Emiraseki"
+	provinces={
+		819 1004 1163 2093 3521 4015 4032 6567 8488 8798 9158 9425 10757 10773 10776 10789 10808 10817 10826 10840 10846 10849 10862 10916 
+	}
+	history={
+		owner = ECD
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ECD
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

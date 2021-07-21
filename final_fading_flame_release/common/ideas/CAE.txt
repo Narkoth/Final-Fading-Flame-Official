@@ -1,0 +1,54 @@
+ideas = {
+	country = {
+		CAE_ranchers = {
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				monthly_population = 0.25
+				min_export = 0.15
+			}
+		}
+		CAE_guards_of_caer = {
+			picture = generic_reserve_divisions
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				conscription = 0.015
+			}
+		}
+		CAE_RECOVERING_FROM_DOC_SUPPORTED_COUP = {
+			picture = usa_great_depression_2
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = -0.30
+                stability_factor = -0.45
+				war_support_factor = -0.50
+				production_speed_buildings_factor = -0.50
+            }
+		}
+	}
+}

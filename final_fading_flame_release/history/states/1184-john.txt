@@ -1,0 +1,25 @@
+
+state={
+	id=1184
+	name="Eranwei"
+
+	history={
+		owner = R01
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 5
+
+		}
+		add_core_of = R01
+		add_core_of = DOC
+		add_core_of = ROC
+	}	
+
+	provinces={
+		649 6957 7577 12322 12465 12484 12495 
+	}
+	manpower=3451333
+	buildings_max_level_factor=1.000
+	state_category=city
+}

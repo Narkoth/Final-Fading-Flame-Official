@@ -1,0 +1,24 @@
+
+state={
+	id=171
+	name="Eastern Caer"
+
+
+	provinces={
+		7121 13037 
+	}
+	state_category = city
+	history={
+		victory_points = { 7121 5 }
+		owner = CAE
+		buildings = {
+			air_base = 2
+			infrastructure = 5
+			industrial_complex = 2
+		}
+		add_core_of = CAE
+		add_claim_by = FAE
+	}
+	manpower=1145222
+	buildings_max_level_factor=1.000
+}

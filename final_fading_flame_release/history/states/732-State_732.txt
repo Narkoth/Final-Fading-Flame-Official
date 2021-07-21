@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=732
+	name="Itootpohn"
+	provinces={
+		149 338 780 1392 1679 2722 3003 3040 3347 3700 4174 4826 6011 6165 6763 7098 7370 7477 7607 7732 8518 8607 8937 12917 12936 12979 13024 13029 13059 13069 13077 13082 13084 13117 13122 
+	}
+	history={
+		owner = ECD
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ECD
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

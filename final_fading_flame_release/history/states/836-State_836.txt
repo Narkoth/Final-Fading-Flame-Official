@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=836
+	name="STATE_836"
+	provinces={
+		1254 1543 4144 4748 5576 8348 13690 13718 13720 13808 
+	}
+	history={
+		#owner = KGA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = KGA
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

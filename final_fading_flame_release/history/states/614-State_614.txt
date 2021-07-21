@@ -1,0 +1,29 @@
+
+state={
+	id=614
+	name="STATE_614"
+
+	history={
+		owner = COC
+		victory_points = {
+			1256 15 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 1
+			1256 = {
+				naval_base = 4
+			}
+
+		}
+		add_core_of = COC
+	}
+
+	provinces={
+		1256 1512 12340 12358 12390 
+	}
+	manpower=4879456
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=642
+	name="Aucteraden"
+	provinces={
+		196 501 2351 2746 3493 4125 4772 5056 6202 6499 6864 7099 7420 7474 7499 7801 9162 12094 12118 12137 12182 12229 12300 12314 12381 12444 
+	}
+	history={
+		#owner = AUC
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = AUC
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

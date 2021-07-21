@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=865
+	name="STATE_865"
+	provinces={
+		404 427 754 1723 2137 3152 4155 5035 5088 5166 5225 5419 7158 7962 7964 8069 8439 8533 9517 13796 13920 13922 13968 13969 14046 14047 14090 14102 14130 14157 
+	}
+	history={
+		#owner = JAC
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = JAC
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

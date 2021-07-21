@@ -1,0 +1,684 @@
+﻿search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+
+	
+ 
+	
+	
+	FOCUS_FILTER_RESEARCH = 522
+
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+}
+
+
+
+
+
+focus_tree = {
+	id = SHO_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SHO
+		}
+	}
+	
+	#default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {x = 75 y = 2500 }
+
+	focus = {
+		id = SHO_our_shipping_industry
+		icon = GFX_goal_generic_construction
+		x = 20
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 1
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = SHO_invest_in_mercs
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SHO_our_shipping_industry
+		prerequisite = {focus = SHO_our_shipping_industry}
+		x = -4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			OR = {
+				threat > 0.10
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			1215 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = merc_guild
+					level = 1
+					instant_build = yes
+				}
+			}
+			1181 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = merc_guild
+					level = 1
+					instant_build = yes
+				}
+			}
+			1210 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = merc_guild
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHO_hire_more_security
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SHO_our_shipping_industry
+		prerequisite = {focus = SHO_our_shipping_industry}
+		x = 4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			OR = {
+				threat > 0.10
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			1215 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = recruitment_center
+					level = 1
+					instant_build = yes
+				}
+			}
+			1181 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = recruitment_center
+					level = 1
+					instant_build = yes
+				}
+			}
+			1210 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = recruitment_center
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHO_attract_talent
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = SHO_our_shipping_industry
+		prerequisite = {focus = SHO_our_shipping_industry}
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1181 = {
+				add_manpower = 52000
+			}
+			1210 = {
+				add_manpower = 43560
+			}
+			1215 = {
+				add_manpower = 12510
+			}
+			add_tech_bonus = {
+				name = Generic_industrial_1
+				bonus = 1
+				uses = 2
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = SHO_expand_synthetic_oil
+		icon = GFX_focus_generic_rubber
+		relative_position_id = SHO_attract_talent
+		prerequisite = {focus = SHO_attract_talent}
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1215 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHO_expand_precious_metals
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = SHO_attract_talent
+		prerequisite = {focus = SHO_attract_talent}
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1215 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = steel_foundry
+					level = 2
+					instant_build = yes
+				}
+			}
+			1215 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = chromium_extractor
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHO_aquire_additional_tooling_1
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = SHO_our_shipping_industry
+		prerequisite = {focus = SHO_our_shipping_industry}
+		x = -9
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	focus = {
+		id = SHO_expand_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = SHO_aquire_additional_tooling_1
+		prerequisite = {focus = SHO_aquire_additional_tooling_1}
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1181 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SHO_expand_dockyards_2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = SHO_aquire_additional_tooling_1
+		prerequisite = {focus = SHO_aquire_additional_tooling_1}
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			1210 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_destroyers
+		icon = GFX_focus_generic_destroyer
+		relative_position_id = SHO_expand_dockyards
+		prerequisite = {focus = SHO_expand_dockyards}
+		prerequisite = {focus = SHO_expand_dockyards_2}
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_tech = basic_ship_hull_light
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_destroyers_aa_variant
+		icon = GFX_focus_generic_destroyer
+		relative_position_id = SHO_unlock_level_2_destroyers
+		prerequisite = {focus = SHO_unlock_level_2_destroyers}
+		x = -1
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_destroyers_asw_variant
+		icon = GFX_focus_generic_destroyer
+		relative_position_id = SHO_unlock_level_2_destroyers
+		prerequisite = {focus = SHO_unlock_level_2_destroyers}
+		x = 1
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_destroyers_screening_variant
+		icon = GFX_focus_generic_destroyer
+		relative_position_id = SHO_unlock_level_2_destroyers
+		prerequisite = {focus = SHO_unlock_level_2_destroyers}
+		x = -3
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_light_cruisers
+		icon = GFX_focus_generic_cruiser2
+		relative_position_id = SHO_expand_dockyards
+		prerequisite = {focus = SHO_expand_dockyards}
+		prerequisite = {focus = SHO_expand_dockyards_2}
+		x = 6
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_tech = basic_ship_hull_cruiser
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_light_aa_cruisers
+		icon = GFX_focus_generic_cruiser2
+		relative_position_id = SHO_unlock_level_2_light_cruisers
+		prerequisite = {focus = SHO_unlock_level_2_light_cruisers}
+		x = -2
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_tech = basic_ship_hull_cruiser
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_light_asw_cruisers
+		icon = GFX_focus_generic_cruiser2
+		relative_position_id = SHO_unlock_level_2_light_cruisers
+		prerequisite = {focus = SHO_unlock_level_2_light_cruisers}
+		x = 2
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_tech = basic_ship_hull_cruiser
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_heavy_cruisers
+		icon = GFX_focus_generic_cruiser2
+		relative_position_id = SHO_expand_dockyards
+		prerequisite = {focus = SHO_expand_dockyards}
+		prerequisite = {focus = SHO_expand_dockyards_2}
+		x = 12
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_tech = basic_ship_hull_cruiser
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_aa_heavy_cruisers
+		icon = GFX_focus_generic_cruiser2
+		relative_position_id = SHO_unlock_level_2_heavy_cruisers
+		prerequisite = {focus = SHO_unlock_level_2_heavy_cruisers}
+		x = -2
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_tech = basic_ship_hull_cruiser
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_convoy_defense_heavy_cruisers
+		icon = GFX_focus_generic_cruiser2
+		relative_position_id = SHO_unlock_level_2_heavy_cruisers
+		prerequisite = {focus = SHO_unlock_level_2_heavy_cruisers}
+		x = 2
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_tech = basic_ship_hull_cruiser
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+	focus = {
+		id = SHO_unlock_level_2_damage_oriented_heavy_cruisers
+		icon = GFX_focus_generic_cruiser2
+		relative_position_id = SHO_unlock_level_2_heavy_cruisers
+		prerequisite = {focus = SHO_unlock_level_2_heavy_cruisers}
+		x = 0
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_tech = basic_ship_hull_cruiser
+		}
+		completion_reward = {
+			#TODO ADD THIS EFFECT 
+			custom_effect_tooltip = SHO_unlock_destroyers_2
+		}
+	}
+
+	focus = {
+		id = SHO_aquire_additional_tooling_2
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = SHO_unlock_level_2_light_cruisers
+		prerequisite = {focus = SHO_unlock_level_2_destroyers}
+		prerequisite = {focus = SHO_unlock_level_2_light_cruisers}
+		prerequisite = {focus = SHO_unlock_level_2_heavy_cruisers}
+		x = 0
+		y = 4
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	focus = {
+		id = SHO_building_a_land_fortress
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = SHO_our_shipping_industry
+		prerequisite = {focus = SHO_our_shipping_industry}
+		x = 7
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			OR = {
+				threat > 0.15
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			1181 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7192
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8750
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7768
+					instant_build = yes
+				}
+			}
+			1210 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 776
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3219
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12716
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SHO_defend_our_coasts
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = SHO_our_shipping_industry
+		prerequisite = {focus = SHO_our_shipping_industry}
+		x = 9
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			OR = {
+				threat > 0.15
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			1181 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1758
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1758
+					instant_build = yes
+				}
+			}
+			1210 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 935
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 935
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SHO_further_develope_defenses
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = SHO_building_a_land_fortress
+		prerequisite = {focus = SHO_building_a_land_fortress}
+		prerequisite = {focus = SHO_defend_our_coasts}
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			OR = {
+				threat > 0.25
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			1181 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7192
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8750
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7768
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1758
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1758
+					instant_build = yes
+				}
+			}
+			1210 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 776
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3219
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12716
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 935
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 935
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+ 	
+
+

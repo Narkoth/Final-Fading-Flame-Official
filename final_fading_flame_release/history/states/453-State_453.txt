@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=453
+	name="STATE_453"
+	provinces={
+		415 3054 4054 5442 7333 10914 10926 10939 10958 10979 10989 11003 11005 
+	}
+	history={
+		#owner = CPK
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CPK
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

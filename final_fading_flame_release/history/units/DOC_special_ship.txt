@@ -1,0 +1,16 @@
+﻿
+
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "Roar"			
+		naval_base = 12860
+		task_force = {
+			name = "Roar"
+			location = 12860
+			ship = { name = "Destiny" definition = battleship equipment = { battleship_1 = { amount = 1 owner = DOC } } }
+		}								
+	}
+}
+

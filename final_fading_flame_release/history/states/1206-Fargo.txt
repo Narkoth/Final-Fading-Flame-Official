@@ -1,0 +1,23 @@
+state={
+	id=1206
+	name="STATE_1206"
+	provinces={
+		3306 3409 4892 12134 12208 12218 
+	}
+	history={
+		owner = COC
+		victory_points = {
+			3409 15 
+		}
+		buildings = {
+			air_base = 8
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 1
+		}
+		add_core_of = COC
+	}
+	manpower=4541222
+	state_category=city
+	buildings_max_level_factor=1.000
+}

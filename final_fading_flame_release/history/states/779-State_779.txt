@@ -1,0 +1,16 @@
+state={ state_category = city
+	id=779
+	name="STATE_779"
+	provinces={
+		14 552 1187 1972 6218 6472 6932 8420 13194 13206 13224 13233 13244 
+	}
+	history={
+		#owner = ERS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ERS
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+}

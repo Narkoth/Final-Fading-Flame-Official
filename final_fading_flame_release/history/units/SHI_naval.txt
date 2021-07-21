@@ -1,0 +1,197 @@
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "1st Naval Task Force"			
+		naval_base = 13484
+		task_force = {
+			name = "1st Naval Task Force"
+			location = 13484
+
+			ship = { name = "Ruby" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Bramble" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SHI } } }
+
+			ship = { name = "Flora" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Grenado" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Braak" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Ceanothus" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Grafton" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Mars" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Iskra" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Glorioso" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Upton" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Canning" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Sandown" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Coreopsis" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Prompte" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Constant Warwick" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = SHI } } }
+
+			ship = { name = "Dieppe" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "The Canterbury" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Imperieuse" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Downley" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Sylph" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Cambridge" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Eclipse" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "The Usk" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "The Coureur" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Peony" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Daisy" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Fennel" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Roedean" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Herald" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Nymph" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Maria" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Keats" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "The Dee" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Calendula" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Gloire" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Ling" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "The Fawn" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Magdalen" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Dover" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Usurper" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+			ship = { name = "Arras" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SHI} } }
+
+
+			ship = { name = "Mischief" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Dragon" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Samphire" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Auricula" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Haddock" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Netley" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Platypus" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Pollington" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Freya" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Gramont" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Roc" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Aubrietia" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Safety" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Portreath" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Boscawen" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Patrician" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Eagle" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Tiverton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Bullrush" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Convulsion" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Minx" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Lawson" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Seraph" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Florida" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Brave" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Yarnton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Appleby Castle" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Peterel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Easton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Bevington" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Blade" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Caldecot Castle" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Black Dog" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Tarn" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Duquesne" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Bridlington" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Albrighton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SHI } } }
+
+
+			ship = { name = "The Trinidad" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Plover" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Bowen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Lark" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Gluckstadt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Escort" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Fortune" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Peruvian" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Inverness" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Catherine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Sportive" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Chignecto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Pet" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Una" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Goodson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Bilsthorpe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Puttenham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Kilmelford" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Nerbudda" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Tobruk" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Orilla" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Yealmpton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Blackwood" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Diana" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Gabbard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Starwort" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Clown" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Sesostris" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Solebay" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Cattistock" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Mondara" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Newark" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Porlock Bay" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Caprice" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Caerleon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Angelica" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Kilcavan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Windsor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Galathee" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Balfour" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Uther" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Grey Fox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Limbourne" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Myrtle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Bermuda" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Turpin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Ambrose" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Spur" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Martial" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Khedive" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Lavender" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Sibyl" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Tralee" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Vesta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Voltaire" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Foster" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Jasper" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Dainty" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Counterguard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Deux Amis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Mont Blanc" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Amelia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Alonzo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Tantalus" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Badsworth" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Ouragan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Quilliam" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Leith" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Archer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Smilax" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Abercrombie" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Burton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Porlock Bay" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Penang" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Howett" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Jennet Pyrwin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SHI } } }
+
+			ship = { name = "Perlen" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Goodwood" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Ardent" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Gatineau" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Penn" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Atlas" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Hovingham" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Transylvania" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Violet" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "The Blonde" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Manica" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Emilien" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Lockeport" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Julius" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Minuet" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Maplin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Gozo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Sacrett" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Torrington" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Bream" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Kingston" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+			ship = { name = "Hart" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SHI } } }
+		}								
+	}
+}

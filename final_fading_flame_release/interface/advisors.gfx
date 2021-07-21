@@ -1,0 +1,47 @@
+spriteTypes = {	
+
+
+	spriteType = { 
+     name = "GFX_unit_amazonian_icon_medium"				
+     textureFile = "gfx/interface/counters/divisions_large/unit_amazonian_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+     noOfFrames = 2
+   }
+
+   spriteType = { 
+     name = "GFX_unit_amazonian_icon_medium_white"						
+     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_amazonian_icon.dds" 
+     noOfFrames = 2
+   }
+
+   spriteType = {
+     name = "GFX_unit_amazonian_icon_small"
+     texturefile = "gfx/texticons/unit_amazonian_icon_small.dds"
+     legacy_lazy_load = no
+     noOfFrames = 2		
+   }		
+
+
+	spriteType = {
+		name = "GFX_special_folder_tab"
+		textureFile = "gfx/interface/techtree/techtree_infantry_tab.dds"
+		noOfFrames = 2        
+	}
+
+	spriteType = {
+		name = "GFX_idea_minister_101"
+		texturefile = "gfx/interface/advisors/minister_101.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_minister_102"
+		texturefile = "gfx/interface/advisors/minister_102.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_minister_103"
+		texturefile = "gfx/interface/advisors/minister_103.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_minister_104"
+		texturefile = "gfx/interface/advisors/minister_104.dds"
+	}
+
+}

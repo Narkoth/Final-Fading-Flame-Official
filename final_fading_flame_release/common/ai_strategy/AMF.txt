@@ -1,0 +1,82 @@
+amf_air_is_important = {
+	enable = {
+		tag = AMF
+		is_puppet = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		air_factory_balance
+		value = 20
+	}
+}
+
+amf_think_avo_weak = {
+	enable = {
+		tag = AMF
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = AVO
+		}
+	}
+	
+	ai_strategy = {
+		type = consider_weak
+		id = "AVO"
+		value = 75
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "AVO"
+		value = 50
+	}
+
+}
+
+amf_help_avo_out = {
+	enable = {
+		tag = AMF
+		country_exists = AMR
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = AMR
+		}
+	}
+	
+	#Make sure that AMR has necessary support to help against partisans as they expand
+	ai_strategy = {
+		type = support
+		id = "AMR"
+		value = 25
+	}
+
+}
+
+amf_prepare_war_with_avo = {
+	enable = {
+		tag = AMF
+		AMF = {
+			has_completed_focus = AMF_prepare_for_war_with_avorian_federation
+		}
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = AVO
+		}
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = "AVO"
+		value = 250
+	}
+
+}
+
+

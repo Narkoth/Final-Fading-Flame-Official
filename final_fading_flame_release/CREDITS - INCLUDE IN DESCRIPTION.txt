@@ -1,0 +1,52 @@
+Making an overhaul mod is daunting, and for some elements, other mods were used to help speed up the development process.
+Such mods are the following:
+
+===========
+Code from Following Mods:
+
+MrBlazzar:
+	50 Construction Slots: https://steamcommunity.com/sharedfiles/filedetails/?id=902284355&searchtext=50
+
+============
+Image Credit [Please note, that some artists may also do NSFW. We searched while in SFW mode, so exercise caution]:
+
+Puppet Decisions Main Image [Currently a Set of Buildings]:
+	設楽のら  	- Pixiv
+Political Actions Girl with Megaphone:
+	とりにとろ  	- Pixiv
+The Dig Event Image:
+	波島想太 	- Pixiv
+Royal Hall:
+	andreasrocha 	- Deviantart
+Zing Drug with Man Smoking Event Image:
+	サカイヨナ         - Pixiv
+SHI Government Change Decision Image:
+	ヘイズ            - Pixiv
+Handshake with Blue Background:
+	хÑц↗弃•蝶♣к      - Pixiv
+Shi Food Import Decisions Image:
+	Rayu             - Pixiv
+"Akri" Tribal Woman Image for AMF Meeting of the Elders:
+	Jose 		 - Pixiv
+Agent Image:
+	レーパン           - Pixiv
+Steamboat in Water - Painted:
+	塩芋_こしょう       - Pixiv
+Leader Trait Window - Tank and Soldiers with Bunker Nearby:
+	yoyokkun         - Pixiv
+Admiral Trait Window - Kantai Collection + Military_Staff_1 Focus Icon + Military_Staff_2 Focus Icon:
+	HimeYamato       - Pixiv
+Soldier_1 Focus Icon + Soldier_2 Focus Icon:
+	TheZombie	 - Pixiv
+Soldier_3 Focus Icon + Soldier_4 Focus Icon + Soldier_5 Focus Icon:
+	Yumi             - Pixiv
+Soldier_6 Focus Icon:
+	PzKpfwl          - Pixiv
+Tank_1 Focus Icon:
+	Palmsam          - Pixiv
+Soldier_7 Focus Icon:
+	Yarsk            - Pixiv
+Heavy Armor Report Image:
+	少将             - Pixiv
+Communal Fighting Decision Category Image:
+	Leivonen         - Pixiv
