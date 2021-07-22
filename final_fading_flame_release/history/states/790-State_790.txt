@@ -6,7 +6,7 @@ state={
 		2127 3145 3967 8111 8507 13293 13357 
 	}
 	history={
-		#owner = SHI
+		owner = SHI
 		victory_points = { 13293 20 }
 		buildings = {
 			infrastructure = 5
@@ -16,7 +16,7 @@ state={
 				naval_base = 7
 			}
 		}
-		#add_core_of = SHI
+		add_core_of = SHI
 	}
 	manpower=5161881
 	buildings_max_level_factor=1.000

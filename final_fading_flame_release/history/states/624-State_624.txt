@@ -5,7 +5,7 @@ state={ state_category = city
 		630 907 2147 5014 7753 12088 12145 
 	}
 	history={
-		#owner = FIS
+		owner = FIS
 		buildings = {
 			infrastructure = 2
 		}

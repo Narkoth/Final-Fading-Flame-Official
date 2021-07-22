@@ -6,11 +6,11 @@ state={
 		60 1880 3699 4094 7109 9302 10088 12329 12384 12404 12431 12501 12505 12532 
 	}
 	history={
-		#owner = D53
+		owner = D53
 		buildings = {
 			infrastructure = 2
 		}
-		#add_core_of = D53
+		add_core_of = D53
 	}
 	manpower=78114
 	buildings_max_level_factor=1.000

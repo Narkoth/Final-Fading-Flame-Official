@@ -5,7 +5,7 @@ state={ state_category = city
 		16289 
 	}
 	history={
-		#owner = AVO
+		owner = AVO
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
@@ -16,7 +16,7 @@ state={ state_category = city
 				naval_base = 3
 			}
 		}
-		#add_core_of = AVO
+		add_core_of = AVO
 	}
 	manpower=291871
 	buildings_max_level_factor=1.000

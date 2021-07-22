@@ -5,7 +5,7 @@ state={ state_category = city
 		626 2364 2415 3034 3335 4230 4453 5782 7167 7496 8545 9133 13585 13680 13713 13783 
 	}
 	history={
-		#owner = ELS
+		owner = ELS
 		buildings = {
 			infrastructure = 2
 		}

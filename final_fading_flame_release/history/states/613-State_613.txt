@@ -5,7 +5,7 @@ state={ state_category = city
 		1751 1943 3081 3552 6214 7017 7425 8385 8633 9119 9631 12004 12021 12062 
 	}
 	history={
-		#owner = D53
+		owner = D53
 		victory_points = { 1751 15 }
 		buildings = {
 			infrastructure = 3
@@ -15,7 +15,7 @@ state={ state_category = city
 				naval_base = 1
 			}
 		}
-		#add_core_of = D53
+		add_core_of = D53
 	}
 	manpower=145111
 	buildings_max_level_factor=1.000

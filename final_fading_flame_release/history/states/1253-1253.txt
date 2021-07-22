@@ -6,11 +6,11 @@ state={
 		16619 16620 16621 16599 16600 16598 16597
 	}
 	history={
-		#owner = MEC
+		owner = MEC
 		buildings = {
 			infrastructure = 2
 		}
-		#add_core_of = MEC
+		add_core_of = MEC
 	}
 	manpower=1000
 	buildings_max_level_factor=1.000

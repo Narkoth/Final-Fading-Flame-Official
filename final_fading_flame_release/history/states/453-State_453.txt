@@ -5,7 +5,7 @@ state={ state_category = city
 		415 3054 4054 5442 7333 10914 10926 10939 10958 10979 10989 11003 11005 
 	}
 	history={
-		#owner = CPK
+		owner = CPK
 		buildings = {
 			infrastructure = 2
 		}

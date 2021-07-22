@@ -5,7 +5,7 @@ state={ state_category = city
 		1963 3161 4140 4275 5705 5933 7125 8800 9427 10571 10573 10576 10581 10582 10600 10601 
 	}
 	history={
-		#owner = DEM
+		owner = DEM
 		buildings = {
 			infrastructure = 2
 		}

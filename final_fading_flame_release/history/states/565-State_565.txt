@@ -6,13 +6,13 @@ state={
 		1278 1404 2574 3261 3501 5525 6085 8667 11673 11698 11782 
 	}
 	history={
-		#owner = D52
+		owner = D52
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 2
 			arms_factory = 2
 		}
-		#add_core_of = D52
+		add_core_of = D52
 	}
 	manpower=248777
 	buildings_max_level_factor=1.000

@@ -5,7 +5,7 @@ state={ state_category = city
 		3827 5664 7205 15967 16047 16070 16134 16167 16188 
 	}
 	history={
-		#owner = SMS
+		owner = SMS
 		buildings = {
 			infrastructure = 2
 		}

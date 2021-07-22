@@ -5,7 +5,7 @@ state={ state_category = city
 		1149 1727 2516 2977 4011 4195 4278 4520 5692 5914 7384 7413 15857 15881 15938 15976 15987 16020 16046 16121 16187 
 	}
 	history={
-		#owner = GZN
+		owner = GZN
 		buildings = {
 			infrastructure = 2
 		}

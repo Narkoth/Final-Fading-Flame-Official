@@ -5,11 +5,11 @@ state={ state_category = city
 		783 1725 2092 2239 4318 4562 5045 13980 13990 14013 
 	}
 	history={
-		#owner = KCH
+		owner = KCH
 		buildings = {
 			infrastructure = 2
 		}
-		#add_core_of = KCH
+		add_core_of = KCH
 	}
 	manpower=1000
 	buildings_max_level_factor=1.000

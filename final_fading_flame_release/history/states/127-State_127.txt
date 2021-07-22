@@ -5,7 +5,7 @@ state={ state_category = city
 		3940 3970 5076 7224 7770 7863 8297 11303 11374 11387 11417 
 	}
 	history={
-		#owner = D51
+		owner = D51
 		victory_points = {
 			7224 15 
 		}
@@ -14,7 +14,7 @@ state={ state_category = city
 			industrial_complex = 1
 			arms_factory = 1
 		}
-		#add_core_of = D51
+		add_core_of = D51
 	}
 	manpower=215444
 	buildings_max_level_factor=1.000

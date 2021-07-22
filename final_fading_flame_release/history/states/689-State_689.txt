@@ -5,14 +5,14 @@ state={ state_category = city
 		2165 6975 7473 9504 12497 12540 12563 12613 12623 12634 
 	}
 	history={
-		#owner = D52
+		owner = D52
 		buildings = {
 			infrastructure = 2
 			2165 = {
 				naval_base = 1
 			}	
 		}
-		#add_core_of = D52
+		add_core_of = D52
 	}
 	manpower=87551
 	buildings_max_level_factor=1.000

@@ -5,7 +5,7 @@ state={
 		2190 12482 
 	}
 	history={
-		#owner = D61
+		owner = D61
 		victory_points = { 2190 15 }
 		buildings = {
 			infrastructure = 2
@@ -13,7 +13,7 @@ state={
 			arms_factory = 2
 
 		}
-		#add_core_of = D61
+		add_core_of = D61
 
 	}
 	manpower=568123

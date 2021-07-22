@@ -6,7 +6,7 @@ state={
 		1291 3227 6901 8211 8629 9488 11479 11518 11548 11575 
 	}
 	history={
-		#owner = D51
+		owner = D51
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -15,7 +15,7 @@ state={
 				naval_base = 1
 			}
 		}
-		#add_core_of = D51
+		add_core_of = D51
 	}
 	manpower=151000
 	buildings_max_level_factor=1.000

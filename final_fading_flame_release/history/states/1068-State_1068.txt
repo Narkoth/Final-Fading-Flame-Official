@@ -5,7 +5,7 @@ state={ state_category = city
 		33 73 1069 1940 2059 2146 3872 4338 4517 4956 5044 5698 5974 6997 8761 9075 9907 9993 15328 15454 15459 15478 15505 15580 15652 15658 15711 15715 15756 
 	}
 	history={
-		#owner = FRN
+		owner = FRN
 		buildings = {
 			infrastructure = 2
 		}

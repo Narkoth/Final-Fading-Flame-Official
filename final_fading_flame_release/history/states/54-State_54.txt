@@ -5,7 +5,7 @@ state={ state_category = megalopolis
 		4362 5194 10722 10747 10748 10765 10807 
 	}
 	history={
-		#owner = AMF
+		owner = AMF
 		victory_points = { 10765 50 }
 		buildings = {
 			infrastructure = 8
@@ -17,7 +17,7 @@ state={ state_category = megalopolis
 				naval_base = 10
 			}
 		}
-		#add_core_of = AMF
+		add_core_of = AMF
 	}
 	resources = {
 		steel = 27

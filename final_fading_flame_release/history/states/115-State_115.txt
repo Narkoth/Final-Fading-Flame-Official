@@ -5,7 +5,7 @@ state={ state_category = rural
 		16326 
 	}
 	history={
-		#owner = AVO
+		owner = AVO
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -14,7 +14,7 @@ state={ state_category = rural
 				naval_base = 2
 			}
 		}
-		#add_core_of = AVO
+		add_core_of = AVO
 	}
 	resources = {
 	}

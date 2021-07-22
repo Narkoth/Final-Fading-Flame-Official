@@ -5,12 +5,12 @@ state={
 		5792 8156 9541 12417 12489 12510 12543 12554 
 	}
 	history={
-		#owner = D61
+		owner = D61
 		buildings = {
 			infrastructure = 2
 
 		}
-		#add_core_of = D61
+		add_core_of = D61
 
 	}
 	manpower=69451

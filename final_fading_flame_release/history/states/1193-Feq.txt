@@ -5,11 +5,11 @@ state={
 		91 1199 2492 5111 6057 6313 9130 10285 12022 12047 12091 12190 
 	}
 	history={
-		#owner = D52
+		owner = D52
 		buildings = {
 			infrastructure = 2
 		}
-		#add_core_of = D52
+		add_core_of = D52
 	}
 	manpower=113221
 	state_category=city

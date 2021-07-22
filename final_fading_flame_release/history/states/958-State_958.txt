@@ -5,7 +5,7 @@ state={ state_category = city
 		2240 14550 
 	}
 	history={
-		#owner = FRN
+		owner = FRN
 		buildings = {
 			infrastructure = 2
 		}

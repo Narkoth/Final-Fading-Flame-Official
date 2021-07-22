@@ -5,7 +5,7 @@ state={ state_category = tiny_island
 		12363 
 	}
 	history={
-		#owner = DOC
+		owner = DOC
 		#victory_points = { 12860 15 }
 		buildings = {
 			infrastructure = 3
@@ -14,7 +14,7 @@ state={ state_category = tiny_island
 			}
 		}
 		
-		#add_core_of = DOC
+		add_core_of = DOC
 		#add_claim_by = ROC
 	}
 	manpower=1000
