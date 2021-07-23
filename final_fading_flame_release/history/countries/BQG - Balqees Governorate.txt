@@ -37,14 +37,14 @@ set_technology = {
 set_convoys = 120
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = statism
 	last_election = "1934.7.17"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	neutrality = 100
+	statism = 100
 }
 
 create_country_leader = {

@@ -1,4 +1,4 @@
-#Ideologies stuff. Please don't change without talking to either Narkoth or Walter First
+#Ideologies stuff. Please don't change without talking to either Narkoth or BirdX First
 
 ideologies = {
 
