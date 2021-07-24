@@ -4,6 +4,13 @@ state={ state_category = city
 	provinces={
 		425 917 1335 2292 5463 5672 6541 7635 7699 8199 8398 15684 15830 15894 15947 15986 
 	}
+	history={
+		owner = HDS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = HDS
+	}
 	manpower=1000
 	buildings_max_level_factor=1.000
 }

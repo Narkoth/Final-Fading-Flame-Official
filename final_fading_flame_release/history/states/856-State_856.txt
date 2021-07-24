@@ -4,6 +4,13 @@ state={ state_category = city
 	provinces={
 		123 267 846 851 1176 1236 1874 2652 3786 4413 4806 5578 5617 5754 7212 7358 7521 8379 8553 13686 13803 13806 13845 13866 13891 13921 13930 13984 14034 14041 14073 14083 
 	}
+	history={
+		owner = KGA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = KGA
+	}
 	manpower=1000
 	buildings_max_level_factor=1.000
 }

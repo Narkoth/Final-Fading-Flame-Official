@@ -1,4 +1,4 @@
-capital = 1106
+capital = 846
 
 #oob = "D53_1936"
 
@@ -13,7 +13,7 @@ set_technology = {
 	tech_recon = 1
 	gwtank = 1
 	#light_arty = 1
-	interwar_antiair = 1
+	aa = 1
 	early_fighter = 1
 	fuel_silos = 1
 	#medium_arty = 1
@@ -34,26 +34,27 @@ set_technology = {
 }
 
 
-
 set_convoys = 120
 
 set_politics = {
-	ruling_party = partnerism
+	ruling_party = utopianism
 	last_election = "1934.7.17"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	partnerism = 100
+	corporate_feudalism = 60
+	utopianism = 30
+	just_worldism = 10
 }
 
 create_country_leader = {
-	name = "The Partners"
+	name = "Kelłidoga_Leader"
 	desc = "POLITICS_COLUMBIA_DESC"
 	picture = "Portrait_L.dds"
 	expire = "8888.1.1"
-	ideology = despotism
+	ideology = utopianism_type
 	traits = {
 		#
 	}

@@ -240,3 +240,11 @@ AUC = {
 	color = rgb { 207 255 213 }
 	color_ui = rgb { 207 255 213 }
 }
+KLG = {
+	color = rgb { 0 255 97 }
+	color_ui = rgb { 0 255 97 }
+}
+HDS = {
+	color = rgb { 101 255 0 }
+	color_ui = rgb { 101 255 0 }
+}

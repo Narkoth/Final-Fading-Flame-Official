@@ -39,14 +39,17 @@ set_technology = {
 set_convoys = 120
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = constitutional_monarchism
 	last_election = "1934.7.17"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	neutrality = 100
+	constitutional_monarchism = 53
+	unionism = 26
+	anarco_marxism = 11
+	liberated_corporatism = 10
 }
 
 create_country_leader = {

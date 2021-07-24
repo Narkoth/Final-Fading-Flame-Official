@@ -1,4 +1,4 @@
-capital = 1106
+capital = 1143
 
 #oob = "D53_1936"
 
@@ -34,22 +34,23 @@ set_technology = {
 }
 
 
-
 set_convoys = 120
 
 set_politics = {
-	ruling_party = partnerism
+	ruling_party = liberated_corporatism
 	last_election = "1934.7.17"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	partnerism = 100
+	liberated_corporatism = 90
+	revanchism = 5
+	corporate_feudalism = 5
 }
 
 create_country_leader = {
-	name = "The Partners"
+	name = "Governor Ameris"
 	desc = "POLITICS_COLUMBIA_DESC"
 	picture = "Portrait_L.dds"
 	expire = "8888.1.1"

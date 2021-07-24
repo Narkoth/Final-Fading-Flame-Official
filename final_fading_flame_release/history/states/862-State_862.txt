@@ -4,6 +4,13 @@ state={ state_category = city
 	provinces={
 		2267 5340 5343 6077 7276 8304 13841 13911 14031 
 	}
+	history={
+		owner = KLG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = KLG
+	}
 	manpower=1000
 	buildings_max_level_factor=1.000
 }
