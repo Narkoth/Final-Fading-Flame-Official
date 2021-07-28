@@ -1,0 +1,12 @@
+Key for terrain features in Terrain_Plan.pdn:
+
+Black = urban
+Grey = mountains
+Brown = hills
+Tan = plains
+Light Green = forest
+Dark Green = marsh
+Yellow = desert
+Jungle = ----
+
+Dotted means a mixture of the dot colours plus plains where appropriate
