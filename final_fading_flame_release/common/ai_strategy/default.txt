@@ -262,9 +262,9 @@ always_some_garrison = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
+	ai_strategy = {	# number may seem high, but returns decent results as a generic garrison order
 		type = garrison
-		value = 50
+		value = 75
 	}
 }
 

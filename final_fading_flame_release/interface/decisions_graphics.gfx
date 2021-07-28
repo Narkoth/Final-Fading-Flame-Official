@@ -3,6 +3,11 @@ spriteTypes = {
 	### categories
 	
 	spriteType = {
+		name = "GFX_tribal_effort"
+		texturefile = "gfx/interface/decisions/category_tribal_effort.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_communal_fighting"
 		texturefile = "gfx/interface/decisions/category_communal_fighting.dds"
 	}

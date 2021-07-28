@@ -61,18 +61,9 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				monthly_population = 0.50
-
-				research_speed_factor = -0.75
-				production_factory_max_efficiency_factor = -0.80
-				production_speed_buildings_factor = -0.80
-
-				###Military Effects
-
-				#army_org_factor = -0.35
-				#max_command_power = -25
-				#max_planning = -0.50
-				#army_morale_factor = -0.35
+				monthly_population = 1.50
+				research_speed_factor = -0.20
+				production_speed_buildings_factor = -0.35
 			}
 		}
 
@@ -125,8 +116,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				cavalry_attack_factor = 0.15
-				cavalry_defence_factor = 0.15
+				recon_factor = 0.01
 			}
 		}
 		tribal_scavengers = {
@@ -241,7 +231,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				monthly_population = 0.30
+				monthly_population = 0.75
 			}
 		}
 
@@ -296,6 +286,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.10
 				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.075
 			}
 		}
 
@@ -330,7 +321,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				monthly_population = 0.25
+				monthly_population = 1.00
 				opinion_gain_monthly_factor = 0.15
 			}
 		}
@@ -350,6 +341,43 @@ ideas = {
 			modifier = {
 				mobilization_speed = 0.15
 				training_time_factor = -0.25
+				land_reinforce_rate = 0.10
+				army_org_regain = 0.05
+			}
+		}
+
+		tribal_population_decision = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				monthly_population = 2.50
+			}
+		}
+
+		tribal_mobilize_decision = {
+			picture = idea_chi_war_of_resistance
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				conscription = 0.05
+				conscription_factor = 0.25
 			}
 		}
 

@@ -1,21 +1,85 @@
 tribal_generic_decisions = {
 
+    tribal_call_for_militia = {
+
+		icon = GFX_decision_icon_generic
+
+		cost = 0
+
+		fire_only_once = yes
+
+        complete_effect = {
+			custom_effect_tooltip = tribal_militia
+			hidden_effect = {
+				ROOT = {
+						division_template = { 
+							name = "Tribal Militia"
+
+							regiments = {
+								infantry = {x = 0 y = 0}
+								infantry = {x = 0 y = 1}
+								infantry = {x = 0 y = 2}
+							}
+						priority = 1 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+					    }
+						every_owned_state = {
+							limit = {
+								is_capital = yes
+								is_fully_controlled_by = ROOT 
+							}
+							create_unit = {
+								division = "name = \"Tribal Militia\" division_template = \"Tribal Militia\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Tribal Militia\" division_template = \"Tribal Militia\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+                            create_unit = {
+								division = "name = \"Tribal Militia\" division_template = \"Tribal Militia\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+                            create_unit = {
+								division = "name = \"Tribal Militia\" division_template = \"Tribal Militia\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+                            create_unit = {
+								division = "name = \"Tribal Militia\" division_template = \"Tribal Militia\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+						} 
+					}
+				}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
 	tribal_population_boom = {
 
 		icon = GFX_decision_icon_generic
 
-		cost = 25
+		cost = 50
 
-		days_remove = 180
-        days_re_enable = 275
+		days_remove = 90
+        days_re_enable = 90
 
         modifier = {
             monthly_population = 1.75
-            political_power_factor = -0.08
         }
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+            modifier = { # since they picked goddess of love, they should put more emphasis on increasing population
+                factor = 2
+                has_completed_focus = tribal_god_of_love 
+            }
+            modifier = { # should focus on war more than love
+                factor = 0
+                has_completed_focus = tribal_god_of_fire_and_war
+            }
 		}
 	}
 
@@ -29,37 +93,24 @@ tribal_generic_decisions = {
             has_war_support > 0.3
         }
 
-		days_remove = 180
-        days_re_enable = 275
+		days_remove = 90
+        days_re_enable = 90
 
         modifier = {
-            weekly_manpower = 100
+            weekly_manpower = 1500
+            war_support_weekly = 0.002
         }
 
 		ai_will_do = {
-			factor = 5
-		}
-	}
-
-    tribal_warrior_call = {
-
-		icon = GFX_decision_icon_generic
-
-		cost = 75
-
-        available = {
-            has_war_support > 0.3
-        }
-
-		days_remove = 180
-        days_re_enable = 275
-
-        modifier = {
-            weekly_manpower = 100
-        }
-
-		ai_will_do = {
-			factor = 5
+			factor = 1
+            modifier = { # more people to fight our wars
+                factor = 3
+                has_completed_focus = tribal_god_of_fire_and_war
+            }
+            modifier = { # need people for the war effort
+                factor = 3
+                has_war = yes
+            }
 		}
 	}
 
@@ -73,8 +124,8 @@ tribal_generic_decisions = {
 
         }
 
-		days_remove = 180
-        days_re_enable = 275
+		days_remove = 90
+        days_re_enable = 90
 
         modifier = {
             industrial_capacity_factory = 0.05
@@ -82,7 +133,117 @@ tribal_generic_decisions = {
         }
 
 		ai_will_do = {
+			factor = 1
+            modifier = { # nation is more industry focused, so persue this more
+                factor = 3
+                has_completed_focus = tribal_god_of_craftsman
+            }
+            modifier = { # at peace, so can focus more on industry safely
+                add = 1
+                has_war = no
+            }
+		}
+	}
+
+    tribal_wise_shaman_meeting = {
+
+		icon = GFX_decision_icon_generic
+
+		cost = 100
+
+        available = {
+
+        }
+
+		days_remove = 90
+        days_re_enable = 90
+
+        modifier = {
+            research_speed_factor = 0.05
+            stability_weekly = 0.002
+            political_power_factor = 0.15
+        }
+
+		ai_will_do = {
+			factor = 1
+            modifier = { # at peace, so can focus a bit more on research
+                add = 1
+                has_war = no
+            }
+            modifier = { # game has progressed abit, should research more to ensure we don't fall behind in tech too badly
+                add = 1
+                date > 110.5.1
+            }
+		}
+	}
+
+    tribal_encourage_large_familys = {
+
+		icon = GFX_decision_icon_generic
+
+		cost = 275
+
+        available = {
+
+        }
+
+		fire_only_once = yes
+
+        complete_effect = {
+            add_ideas = tribal_population_decision
+        }
+
+		ai_will_do = {
 			factor = 5
+            modifier = { # too early in game to worry about this yet
+                factor = 0
+                date < 110.3.1
+            }
+            modifier = { # if at war, then abandon this for now
+                factor = 0
+                has_war = yes
+            }
+            modifier = { # when you're here, your family
+                add = 2
+                has_completed_focus = tribal_annual_love_festivals
+            }
+		}
+	}
+
+    tribal_encourage_defending_our_way_of_life = {
+
+		icon = GFX_decision_icon_generic
+
+		cost = 350
+
+        available = {
+
+        }
+
+		fire_only_once = yes
+
+        complete_effect = {
+            add_ideas = tribal_mobilize_decision
+        }
+
+		ai_will_do = {
+			factor = 2
+            modifier = { # much too early to focus on something so costly up front
+                factor = 0
+                date < 110.1.1
+            }
+            modifier = { # more people to fight our ways permanently
+                factor = 3
+                has_completed_focus = tribal_god_of_fire_and_war
+            }
+            modifier = { # we are at war, need more troops
+                factor = 5
+                has_war = yes
+            }
+            modifier = { # not a bad idea to start work on this at this date
+                add = 1
+                date > 111.1.1
+            }
 		}
 	}
 

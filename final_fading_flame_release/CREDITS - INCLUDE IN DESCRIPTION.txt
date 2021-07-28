@@ -50,3 +50,5 @@ Heavy Armor Report Image:
 	少将             - Pixiv
 Communal Fighting Decision Category Image:
 	Leivonen         - Pixiv
+Tribal Efforts Decision Category Image:
+	polaritia        - Pixiv
