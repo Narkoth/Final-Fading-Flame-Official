@@ -39,6 +39,11 @@ focus_tree = {
 		completion_reward = {
 			country_event = tribal_generic.1
 			country_event = tribal_generic.2
+			##################################
+			# Below gives access to tribal generic decisions that will last with them even after converting to another ideology.
+			# These give them an edge they need to be fun and competitive against their neighbors.
+			# With careful planning, these decisions can be very helpful for them
+			set_country_flag = was_once_a_tribal
 		}
 	}
 

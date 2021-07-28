@@ -1,0 +1,89 @@
+tribal_generic_decisions = {
+
+	tribal_population_boom = {
+
+		icon = GFX_decision_icon_generic
+
+		cost = 25
+
+		days_remove = 180
+        days_re_enable = 275
+
+        modifier = {
+            monthly_population = 1.75
+            political_power_factor = -0.08
+        }
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+    tribal_warrior_call = {
+
+		icon = GFX_decision_icon_generic
+
+		cost = 75
+
+        available = {
+            has_war_support > 0.3
+        }
+
+		days_remove = 180
+        days_re_enable = 275
+
+        modifier = {
+            weekly_manpower = 100
+        }
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+    tribal_warrior_call = {
+
+		icon = GFX_decision_icon_generic
+
+		cost = 75
+
+        available = {
+            has_war_support > 0.3
+        }
+
+		days_remove = 180
+        days_re_enable = 275
+
+        modifier = {
+            weekly_manpower = 100
+        }
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+    tribal_group_effort = {
+
+		icon = GFX_decision_icon_generic
+
+		cost = 100
+
+        available = {
+
+        }
+
+		days_remove = 180
+        days_re_enable = 275
+
+        modifier = {
+            industrial_capacity_factory = 0.05
+            production_speed_buildings_factor = 0.075
+        }
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+}

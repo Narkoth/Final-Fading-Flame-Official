@@ -13,6 +13,7 @@ country_event = {
 		name = tribal_generic.1.a
 		ROOT = {
             add_ideas = tribal_industry
+	   
         }
 	}	
 }

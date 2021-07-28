@@ -12,6 +12,15 @@ propaganda_efforts = {
 	}
 }
 
+tribal_generic_decisions = {
+	icon = generic_propaganda
+	priority = 100
+	#picture = 
+	visible = {
+		has_country_flag = was_once_a_tribal
+	}
+}
+
 wal_mines = {
 	icon = generic_prospect_for_resources
 	priority = 500
