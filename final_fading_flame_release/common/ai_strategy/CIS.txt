@@ -13,6 +13,18 @@ CIS_build_army_damnit = {
     }
 }
 
+cis_extra_garrison = {
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {	# iron state is a small country, that can be easily navally invaded on many different sides and capitulate easily
+		type = garrison
+		value = 50
+	}
+}
+
 CIS_and_roc = {
 	enable = {
 		tag = CIS
@@ -48,6 +60,77 @@ CIS_defend_roc = {
 		value = 75
 	}
 
+}
+
+CIS_armored_production = {
+	enable = {
+		date > 110.1.1
+		original_tag = CIS
+		ai_wants_divisions > 24 #Decreasing the amount of tanks the AI wants
+	}
+	abort = {
+		ai_wants_divisions < 25 #Decreasing the amount of tanks the AI wants
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 10
+	}
+}
+
+CIS_highered_armored_production = {
+	enable = {
+		original_tag = CIS
+		num_of_military_factories > 35
+	}
+	abort = {
+		num_of_military_factories < 30
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 15
+	}
+}
+
+CIS_super_boost_light_for_med_armor = {
+	
+	enable = {
+		original_tag = CIS
+		has_tech = basic_medium_tank
+		NOT = { has_template_ai_majority_unit = medium_armor }
+	}
+
+	abort = {	
+		has_template_ai_majority_unit = medium_armor
+	}
+
+	# lets do changes more often during this period too
+	ai_strategy = {
+		type = template_xp_reserve 
+		value = -125
+	}
+
+	# this is gateway
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 150
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 200
+	}
 }
 
 

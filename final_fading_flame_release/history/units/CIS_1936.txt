@@ -27,26 +27,6 @@ division_template = {
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
-		motorized = { x = 0 y = 2 }
-		motorized = { x = 0 y = 3 }
-		motorized = { x = 1 y = 0 }
-		motorized = { x = 1 y = 1 }
-		motorized = { x = 1 y = 2 }
-	}
-	support = {
-		engineer = {x = 0 y = 0}
-		artillery = {x = 0 y = 1}
-	}
-}
-
-division_template = {
-	name = "Heavy Iron Division"	# Divisions were reserves assigned to various military districts
-
-	division_names_group = ROC_INF_01
-
-	regiments = {
-		heavy_armor = { x = 0 y = 0 }
-		heavy_armor = { x = 0 y = 1 }
 		light_armor = { x = 0 y = 2 }
 		motorized = { x = 0 y = 3 }
 		motorized = { x = 1 y = 0 }
@@ -58,6 +38,7 @@ division_template = {
 		artillery = {x = 0 y = 1}
 	}
 }
+
 
 division_template = {
 	name = "Iron Militia"	# Divisions were reserves assigned to various military districts
@@ -222,16 +203,6 @@ units = {
 		}
 		location = 11905 # Perth
 		division_template = "Iron Division"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division= {	
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 11905 # Perth
-		division_template = "Heavy Iron Division"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}

@@ -727,10 +727,6 @@ technologies = {
 			modifier = {
 				factor = 2
 				is_strong = yes
-				not = {
-					tag = JAP
-					num_of_military_factories < 50
-				}
 				date > "110.1.1"
 			}
 			modifier = {
@@ -755,6 +751,7 @@ technologies = {
 					tag = ROC
 					tag = COC
 					tag = AMF
+					tag = CIS
 				}
 			}
 		}
