@@ -7,6 +7,6 @@ Tan = plains
 Light Green = forest
 Dark Green = marsh
 Yellow = desert
-Jungle = ----
+Jungle = murk green
 
 Dotted means a mixture of the dot colours plus plains where appropriate
