@@ -1,3 +1,27 @@
+
+### A generic tooltip for when any nation should think about using militia
+should_utilize_militia = {
+    OR = {
+        AND = { # If a nation is involved in a war and has a terrible to half-decent industry
+            has_war = yes
+            num_of_military_factories < 16
+        }
+        AND = { # Currently in a war and starting to lose important victory points/territory
+            has_war = yes
+            surrender_progress > 0.3
+        }
+        AND = { # While at peace, industry is too terrible to warrant building regular infantry reliably
+            has_war = no
+            num_of_military_factories < 10
+        }
+        is_tribal = yes # Tribals will always have a hard time using normal infantry reliably, due to their weaker industrial base
+        has_tech = mass_assault # This is, by definition, what doctrine makes sense using militia in
+        OR = { # Put specific tags that should use militia anyways here
+            tag = R01
+        }
+    }
+}
+
 ### War in Caer has ended
 caer_civil_war_ended_trigger = {
     custom_trigger_tooltip = {

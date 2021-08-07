@@ -13,15 +13,19 @@ division_template = {
 	}
 }
 division_template = {
-	name = "People's Militia"	# Divisions were reserves assigned to various military districts
+	name = "Communal Militia"	# Divisions were reserves assigned to various military districts
 
 	division_names_group = ROC_INF_01
 
 	regiments = {
-		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-		cavalry = { x = 0 y = 3 }
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		militia = { x = 1 y = 3 }
 	}
 }
 division_template = {
@@ -248,13 +252,117 @@ units = {
 		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}
+
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "CommunalMilitia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "Communal Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "Communal Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "Communal Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "Communal Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "Communal Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "Communal Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "Communal Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "Communal Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7411  # Perth
+		division_template = "Communal Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+
+
 	division= {	
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 1
 		}
 		location = 8155  # Perth
-		division_template = "People's Militia"
+		division_template = "Communal Militia"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}
@@ -264,7 +372,7 @@ units = {
 			name_order = 1
 		}
 		location = 8155  # Perth
-		division_template = "People's Militia"
+		division_template = "Communal Militia"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}
@@ -274,7 +382,7 @@ units = {
 			name_order = 1
 		}
 		location = 8155  # Perth
-		division_template = "People's Militia"
+		division_template = "Communal Militia"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}
@@ -284,7 +392,7 @@ units = {
 			name_order = 1
 		}
 		location = 8155  # Perth
-		division_template = "People's Militia"
+		division_template = "Communal Militia"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}
@@ -294,7 +402,7 @@ units = {
 			name_order = 1
 		}
 		location = 7  # Perth
-		division_template = "People's Militia"
+		division_template = "Communal Militia"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}
@@ -304,7 +412,7 @@ units = {
 			name_order = 1
 		}
 		location = 7  # Perth
-		division_template = "People's Militia"
+		division_template = "Communal Militia"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
 	}

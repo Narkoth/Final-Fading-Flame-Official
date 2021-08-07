@@ -135,10 +135,7 @@
 
 default_unit_production = {
 	enable = {
-		#always = yes # Not sure why always = yes here, because we clearly don't want majors using default production ai ...
-		NOT = { original_tag = ROC } 
-		NOT = { original_tag = DOC }
-		NOT = { original_tag = WAL }
+		always = yes
 	}
 	
 	ai_strategy = {
@@ -163,19 +160,25 @@ default_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = marines
-		value = 5
+		value = 3
+	}
+
+	ai_strategy = { # Should by default not be interested in using militia
+		type = role_ratio
+		id = militia
+		value = 0
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 10
+		value = 5
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 73
+		value = 80
 	}
 	
 	#Air unit factors
@@ -251,6 +254,42 @@ default_unit_production = {
 		type = equipment_production_factor
 		id = artillery
 		value = 25
+	}
+}
+
+#Generic increase militia military production and usage
+increase_militia_production = {
+	enable = {
+		should_utilize_militia = yes
+		is_tribal = no # have a seperate ai_strategy for them
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = role_ratio
+		id = militia
+		value = 15
+	}
+
+}
+
+#Tribal's main military should mostly consist of militias, as they are far easier to build and mantain then standard infantry
+tribal_militia = {
+	enable = {
+		is_tribal = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = role_ratio
+		id = militia
+		value = 80
+	}
+
+	ai_strategy = {  # Cavalry works really nicely as tribals, as it will be your fastest units you can muster for quite some time
+		type = role_ratio
+		id = cavalry
+		value = 20
 	}
 }
 

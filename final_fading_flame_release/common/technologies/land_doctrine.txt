@@ -2680,6 +2680,10 @@ technologies = {
 		land_reinforce_rate = 0.02
 		minimum_training_level = -0.1		
 
+		militia = {
+			max_organisation = 10
+		}
+
 		doctrine = yes	
 		research_cost = 2.25
 		
@@ -3232,6 +3236,11 @@ technologies = {
 		
 		enable_tactic = tactic_human_wave_tactics
 		
+		militia = {
+			soft_attack = 0.15
+			hard_attack = 0.10
+			breakthrough = 0.10
+		}
 		
 		path = {
 			leads_to_tech = human_infantry_offensive

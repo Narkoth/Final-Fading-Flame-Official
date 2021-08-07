@@ -18,7 +18,7 @@ amazonian_generic = {
 
 	match_to_count = 0.10
 	
-	infantry_default = {
+	amazonian_infantry_default = {
 	
 		upgrade_prio = {
 			factor = 2
@@ -131,7 +131,7 @@ amazonian_big_generic = {
 
 	match_to_count = 0.10
 	
-	infantry_default = {
+	amazonian_large_infantry = {
 	
 		upgrade_prio = {
 			factor = 20

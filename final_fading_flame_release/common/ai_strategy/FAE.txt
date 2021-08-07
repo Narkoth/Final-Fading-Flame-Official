@@ -1,3 +1,22 @@
+#Should heavily focus on making a militia army, until the civil war is over
+fae_militia_army = {
+	enable = {
+		tag = FAE
+		country_exists = CAE
+	}
+	abort = {
+		NOT = { 
+			country_exists = CAE
+		}
+	}
+
+	ai_strategy = { 
+		type = role_ratio
+		id = militia
+		value = 80
+	}
+
+}
 
 #Strategic Natured AI Strategies
 FAE_HATE_CAE = {

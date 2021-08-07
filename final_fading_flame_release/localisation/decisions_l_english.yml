@@ -14,6 +14,9 @@ send_convoys_desc:0 "We have a large excess amount of convoys wasting away at ou
 send_volunteers:0 "Send Volunteers"
 send_volunteers_desc:0 "There are some within our nation who see favorable career prospects joining our overlord's military voluntarily. Let us sponser them, so that they can bring glory and honor to our humble nation.\n\n§RThis will NOT subtract from our overall army manpower, as making the AI understand it shouldn't send every living soul it has is not easy. So it will instead cost Political Power instead.§!"
 
+form_a_militia:0 "Form a Militia Division"
+form_militia_division_tooltip:0 "Gain a Militia Division Template"
+
 political_actions_desc:0 "In order to ensure our country operates smoothly during these times, we must occasionally run temporary programs to keep our nation stable and prosperous."
 research_investment:0 "Research Investment"
 research_investment_desc:0 "Allocate additional funding to boost our research teams' potential for a period of time."

@@ -482,6 +482,49 @@ political_actions = {
 			}
 		}
 	}
+
+	form_a_militia = {
+
+		icon = generic_military
+
+		available = {
+			is_tribal = no
+		}
+
+		visible = {
+			always = yes
+		}
+
+
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = form_militia_division_tooltip
+			hidden_effect = {
+				ROOT = {
+					division_template = { 
+						name = "General Militia Division"
+						regiments = {
+							militia = {x = 0 y = 0}
+							militia = {x = 0 y = 1}
+							militia = {x = 0 y = 2}
+							militia = {x = 0 y = 3}
+							militia = {x = 1 y = 0}
+							militia = {x = 1 y = 1}
+							militia = {x = 1 y = 2}
+							militia = {x = 1 y = 3}
+						}
+					priority = 0 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
 }
 
 

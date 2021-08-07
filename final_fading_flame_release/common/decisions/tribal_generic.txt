@@ -16,9 +16,9 @@ tribal_generic_decisions = {
 							name = "Tribal Militia"
 
 							regiments = {
-								infantry = {x = 0 y = 0}
-								infantry = {x = 0 y = 1}
-								infantry = {x = 0 y = 2}
+								militia = {x = 0 y = 0}
+								militia = {x = 0 y = 1}
+								militia = {x = 0 y = 2}
 							}
 						priority = 1 #priority of reinforcement 0 = reserves 1 = normal 2 = high
 					    }
