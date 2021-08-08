@@ -12,13 +12,196 @@ focus_tree = {
 	}
 
 	focus = {
-		id = shi_continue_the_path
+		id = shi_a_union
 		icon = GFX_goal_DOC_carnegia
-		x = 0
+		x = -1
 		y = 0
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		mutually_exclusive = {focus = shi_rise_of_strata}
+		mutually_exclusive = {focus = shi_rise_of_strata
+							  focus = shi_continue_the_path}
+		ai_will_do = { # A Shi Union is also an interesting path that should occur abit more often
+			factor = 5
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = shi_unionism_idea
+			set_country_flag = shi_selected_political_path
+			add_popularity = {
+				ideology = unionism 
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = shi_reborn
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = shi_a_union}
+		relative_position_id = shi_a_union
+		available = {
+			unionism > 0.35
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = unionism
+				elections_allowed = no
+			}
+			add_timed_idea = { idea = shi_economic_restructuring  days = 730 }
+			remove_ideas = SHI_oligarchy_government
+		}
+
+		ai_will_do = { # transition as soon as possible
+			factor = 4000
+		}
+	}
+
+	focus = {
+		id = shi_military_union
+		icon = GFX_goal_DOC_carnegia
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = shi_reborn}
+		relative_position_id = shi_reborn
+		available = {
+		}
+		completion_reward = {
+			add_ideas = shi_popular_army
+		}
+
+		ai_will_do = { # transition as soon as possible
+			factor = 4000
+		}
+	}
+
+	focus = {
+		id = shi_union_establishment
+		icon = GFX_goal_DOC_carnegia
+		x = -3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = shi_reborn}
+		relative_position_id = shi_reborn
+		available = {
+			NOT = {
+				has_idea = shi_economic_restructuring
+			}
+		}
+		completion_reward = {
+			add_ideas = shi_union_management
+		}
+
+		ai_will_do = { # transition as soon as possible
+			factor = 4000
+		}
+	}
+
+	focus = {
+		id = shi_builders_union
+		icon = GFX_goal_DOC_carnegia
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = shi_reborn}
+		relative_position_id = shi_reborn
+		available = {
+			NOT = {
+				has_idea = shi_economic_restructuring
+			}
+		}
+		completion_reward = {
+			add_ideas = shi_builders
+		}
+
+		ai_will_do = { # transition as soon as possible
+			factor = 4000
+		}
+	}
+
+	focus = {
+		id = shi_infra_for_all
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = shi_builders_union}
+		relative_position_id = shi_builders_union
+		available = {
+		}
+		completion_reward = {
+			remove_ideas = SHI_underfunded_infrastructure
+			add_timed_idea = {idea = shi_infra_work_on days = 435}
+			add_political_power = -200
+		}
+
+		ai_will_do = { # transition as soon as possible
+			factor = 4000
+		}
+	}
+
+	focus = {
+		id = shi_university_union
+		icon = GFX_goal_DOC_carnegia
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = shi_infra_for_all}
+		relative_position_id = shi_infra_for_all
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = shi_union_education
+		}
+
+		ai_will_do = { # transition as soon as possible
+			factor = 4000
+		}
+	}
+
+	focus = {
+		id = shi_guranteed_rights
+		icon = GFX_goal_DOC_carnegia
+		x = -1
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = shi_builders_union}
+		prerequisite = {focus = shi_union_establishment}
+		relative_position_id = shi_builders_union
+		available = {
+		}
+		completion_reward = {
+			add_ideas = shi_guranteed_rights_idea
+		}
+
+		ai_will_do = { # transition as soon as possible
+			factor = 4000
+		}
+	}
+
+	
+
+	focus = {
+		id = shi_continue_the_path
+		icon = GFX_goal_DOC_carnegia
+		x = 5
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		mutually_exclusive = {focus = shi_rise_of_strata
+							  focus = shi_a_union}
 		ai_will_do = { # Should be more rare, as SHI going into uproar is rather interesting
 			factor = 2
 		}
@@ -26,6 +209,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 50
+			set_country_flag = shi_selected_political_path
 		}
 	}
 
@@ -172,11 +356,12 @@ focus_tree = {
 	focus = {
 		id = shi_rise_of_strata
 		icon = GFX_goal_DOC_carnegia
-		x = 7
+		x = 12
 		y = 0
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		mutually_exclusive = {focus = shi_continue_the_path}
+		mutually_exclusive = {focus = shi_continue_the_path
+							  focus = shi_a_union}
 		ai_will_do = {
 			factor = 4
 		}
@@ -184,6 +369,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = SHI_rise_of_strata_idea
+			set_country_flag = shi_selected_political_path
 		}
 	}
 
@@ -324,12 +510,13 @@ focus_tree = {
 	focus = {
 		id = shi_land_forces
 		icon = GFX_goal_DOC_carnegia
-		x = 13
+		x = -9
 		y = 0
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		#mutually_exclusive = {focus = shi_rise_of_strata}
 		available = {
+			has_country_flag = shi_selected_political_path
 		}
 		ai_will_do = {
 			factor = 50
@@ -653,6 +840,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		#mutually_exclusive = {focus = shi_rise_of_strata}
 		available = {
+			has_country_flag = shi_selected_political_path
 		}
 		completion_reward = {
 			air_experience = 25
@@ -1061,6 +1249,7 @@ focus_tree = {
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		available = {
+			has_country_flag = shi_selected_political_path
 		}
 		ai_will_do = {
 			factor = 4000 
