@@ -175,15 +175,15 @@ add_ideas = {
 set_convoys = 120
 
 set_politics = {
-	ruling_party = corporate_feudalism
+	ruling_party = partnerism 
 	last_election = "1934.7.17"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	corporate_feudalism = 70
-	democratism = 10
+	partnerism = 70
+	unionism = 10
 	totalitarianism = 20
 }
 
@@ -192,7 +192,7 @@ create_country_leader = {
 	desc = "POLITICS_COLUMBIA_DESC"
 	picture = "Portrait_Ellijah.dds"
 	expire = "8888.1.1"
-	ideology = corporate_feudalism_type
+	ideology = partnerism_type
 	traits = {
 		#
 	}

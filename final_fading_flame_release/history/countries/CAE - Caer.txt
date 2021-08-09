@@ -202,7 +202,7 @@ add_opinion_modifier = { target = COC modifier = embargo }
 add_opinion_modifier = { target = COC modifier = intense_hatred }
 
 add_ideas = {
-	#CAE_SUPPORTED_BY_DOC
+	cae_unwilling_populace
 	CAE_RECOVERING_FROM_DOC_SUPPORTED_COUP
 }
 

@@ -11,7 +11,7 @@ state={
 			infrastructure = 4
 		}
 		add_core_of = CAE
-		add_core_of = FAE
+		add_claim_by = FAE
 	}
 	manpower=112000
 	buildings_max_level_factor=1.000

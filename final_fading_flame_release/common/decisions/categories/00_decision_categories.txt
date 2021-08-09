@@ -51,6 +51,19 @@ coc_aid_fae = {
 	} 
 }
 
+shi_aid_fae = {
+	icon = generic_propaganda
+	priority = 500
+	picture = GFX_communal_fighting
+	visible = {
+		tag = SHI
+		SHI = {
+			has_government = unionism
+		}
+		caer_civil_war_ongoing_trigger = yes
+	}
+}
+
 amf_influence_world = {
 	icon = generic_proaganda
 	priority = 500

@@ -1437,6 +1437,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 4000
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
 		}
 		completion_reward = {
 			add_war_support = 0.15

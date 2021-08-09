@@ -804,6 +804,10 @@ cis_national_pride:0 "National Pride"
 cis_standardize_ship_construction_idea:0 "Standardized Ship Construction"
 cis_cheaper_screens:0 "Standardized Light Hull Production"
 
+shi_form_militia_tooltip:0 "Formalize a Militia Force for the Defense of the Nation" 
+fae_form_militia_tooltip:0 "Rally the People for the Liberation of our Country"
+
 general.4.t:0 "Castor Lore"
 general.4.d:0 "For many years, mainland Castor was ruled by the Dominion under Queen Columbia's parents. However, their power weakened and the states of Commune of Castor, Iron State, and Free People of Joen splintered away. Instead of being hostile however, they joined together to encourage free-trade and movement between them, as none of them wished for war.\n\nMany decades later, however, and Commune of Castor became one of the first Communalist governments; and was shuned by the rest as a result. The Iron State soon fought a bloody civil war against its Utopinaist government and instituted a Nationalist one in its place. Even the Dominion faced change, as the Ronard Corporation lead by Carnegia couped the government and sent the Dominion into exile.\n\nNow is a very uneasy time, as it appears that a civil war might renew once more in Caer, as the Commune there wishes to liberate its Eastern half from Dominion control. War is approaching Castor, and the only question is, are you ready?"
 general.4.a:0 "Ok"
+

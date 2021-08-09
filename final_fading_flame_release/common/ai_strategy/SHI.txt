@@ -12,3 +12,29 @@ SHI_build_army_damnit = {
         value = 100
     }
 }
+
+SHI_aid_fae = {
+	enable = {
+		tag = SHI
+		has_idea = shi_volunteer_fae
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "FAE"
+		value = 5000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "FAE"
+		value = 5000
+	}
+
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = "FAE"
+		value = 5000
+	}
+}

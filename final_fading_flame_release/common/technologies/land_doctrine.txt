@@ -2872,6 +2872,10 @@ technologies = {
 				not = { ai_air_doctrine_tier_2_trigger = yes }
 				factor = 0.75
 			}
+			modifier = {
+				factor = 0
+				tag = FAE
+			}
 		}
 		
 		ai_research_weights = {
@@ -3238,8 +3242,10 @@ technologies = {
 		
 		militia = {
 			soft_attack = 0.15
-			hard_attack = 0.10
-			breakthrough = 0.10
+			hard_attack = 0.20
+			breakthrough = 0.15
+			defense = 0.10
+			max_organisation = 12
 		}
 		
 		path = {
@@ -3282,6 +3288,12 @@ technologies = {
 					tag = COC
 				}
 				factor = 0
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					tag = FAE
+				}
 			}
 			modifier = {
 				factor = 0.6

@@ -58,3 +58,46 @@ country_event = {
 		
 	}
 }
+
+add_namespace = coc_shi
+
+country_event = {
+	id = coc_shi.1
+	title = coc_shi.1.t
+	desc = coc_shi.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = coc_shi.1.a
+		ai_chance = { 
+			factor = 100
+		}
+		COC = {
+			add_ai_strategy = {
+				type = alliance
+				id = SHI
+				value = 100
+			}
+		}
+		SHI = {
+			add_ai_strategy = {
+				type = alliance
+				id = COC
+				value = 100
+			}
+		}
+		COC = {
+			if = {
+				limit = {is_in_faction = yes}
+				add_to_faction = SHI
+			}
+			if = {
+				limit = {is_in_faction = no}
+				create_faction = "International Alliance"
+				add_to_faction = SHI
+			}
+		}
+	}
+}

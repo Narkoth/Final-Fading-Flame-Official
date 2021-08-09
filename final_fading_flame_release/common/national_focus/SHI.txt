@@ -20,9 +20,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		mutually_exclusive = {focus = shi_rise_of_strata
 							  focus = shi_continue_the_path}
-		ai_will_do = { # A Shi Union is also an interesting path that should occur abit more often
-			factor = 5
-		}
+
 		available = {
 		}
 		completion_reward = {
@@ -77,6 +75,140 @@ focus_tree = {
 		}
 
 		ai_will_do = { # transition as soon as possible
+			factor = 4000
+		}
+	}
+
+	focus = {
+		id = shi_form_militia_focus
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = shi_military_union}
+		relative_position_id = shi_military_union
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = shi_form_militia_tooltip
+			hidden_effect = {
+				ROOT = {
+						division_template = { 
+							name = "Militia Defense Force"
+
+							regiments = {
+								militia = {x = 0 y = 0}
+								militia = {x = 0 y = 1}
+								militia = {x = 0 y = 2}
+								militia = {x = 0 y = 3}
+								militia = {x = 0 y = 4}
+								militia = {x = 1 y = 0}
+								militia = {x = 1 y = 1}
+								militia = {x = 1 y = 2}
+								militia = {x = 1 y = 3}
+								militia = {x = 1 y = 4}
+							}
+						priority = 0 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+					    }
+						every_owned_state = {
+							limit = {
+								is_capital = yes
+								is_fully_controlled_by = ROOT 
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+							create_unit = {
+								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
+								owner = ROOT
+							}
+						} 
+					}
+				}
+		}
+
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	focus = {
+		id = shi_join_the_commune
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 3
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {focus = shi_form_militia_focus}
+		prerequisite = {focus = shi_guranteed_rights}
+		relative_position_id = shi_form_militia_focus
+		available = {
+			country_exists = COC
+			COC = {
+				is_subject = no
+			}
+		}
+		completion_reward = {
+			COC = {
+				country_event = coc_shi.1
+			}
+		}
+
+		ai_will_do = {
 			factor = 4000
 		}
 	}
@@ -202,9 +334,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		mutually_exclusive = {focus = shi_rise_of_strata
 							  focus = shi_a_union}
-		ai_will_do = { # Should be more rare, as SHI going into uproar is rather interesting
-			factor = 2
-		}
+
 		available = {
 		}
 		completion_reward = {
@@ -362,9 +492,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		mutually_exclusive = {focus = shi_continue_the_path
 							  focus = shi_a_union}
-		ai_will_do = {
-			factor = 4
-		}
+
 		available = {
 		}
 		completion_reward = {
@@ -536,8 +664,12 @@ focus_tree = {
 		prerequisite = {focus = shi_land_forces}
 		relative_position_id = shi_land_forces
 		available = {
-			has_government = corporate_feudalism
-			has_completed_focus = shi_continue_the_path
+			NOT = {
+				OR = {
+					has_completed_focus = shi_a_union
+					has_completed_focus = shi_rise_of_strata
+				}
+			}
 		}
 		completion_reward = {
 			1310 = {
@@ -780,6 +912,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_timed_idea = { idea = SHI_build_military_industry  days = 420 }
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_idea = shi_economic_restructuring
+			}
 		}
 	}
 
@@ -1278,6 +1417,13 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = { idea = SHI_build_infra  days = 720 }
 		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_idea = shi_economic_restructuring
+			}
+		}
 	}
 
 	focus = {
@@ -1386,6 +1532,13 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = { idea = SHI_civ_construction_speed  days = 365 }
 		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_idea = shi_economic_restructuring
+			}
+		}
 	}
 
 	focus = {
@@ -1399,6 +1552,12 @@ focus_tree = {
 		prerequisite = {focus = shi_civ_investment}
 		relative_position_id = shi_create_electronics_factories
 		available = {
+			NOT = {
+				OR = {
+					has_completed_focus = shi_a_union
+					has_completed_focus = shi_rise_of_strata
+				}
+			}
 		}
 		completion_reward = {
 			add_offsite_building = { type = industrial_complex level = 2 }

@@ -1277,8 +1277,15 @@ focus_tree = {
 			country_exists = FAE
 		}
 		completion_reward = {
-			create_faction = "International Alliance"
-			add_to_faction = FAE
+			if = {
+				limit = {is_in_faction = yes}
+				add_to_faction = FAE
+			}
+			if = {
+				limit = {is_in_faction = no}
+				create_faction = "International Alliance"
+				add_to_faction = FAE
+			}
 		}
 	}
 
