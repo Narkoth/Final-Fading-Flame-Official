@@ -16,21 +16,7 @@
 		artillery = {x = 0 y = 1}
 	}
 }
-division_template = {
-	name = "Infantry Mercenary Garrison"	# Divisions were reserves assigned to various military districts
 
-	division_names_group = ROC_INF_01
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-	}
-	support = {
-		artillery = {x = 0 y = 0}
-	}
-}
 division_template = {
 	name = "Cheap Mercenary Group"	# Divisions were reserves assigned to various military districts
 
@@ -143,66 +129,6 @@ units = {
 		location = 9551 # Perth
 		division_template = "Infantry Mercenary Division"
 		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division= {	
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 10212 # Perth
-		division_template = "Infantry Mercenary Garrison"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-	division= {	
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 2
-		}
-		location = 1314 # Perth
-		division_template = "Infantry Mercenary Garrison"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-	division= {	
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 3
-		}
-		location = 3635 # Perth
-		division_template = "Infantry Mercenary Garrison"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-	division= {	
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 4
-		}
-		location = 12337 # Perth
-		division_template = "Infantry Mercenary Garrison"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-	division= {	
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 5
-		}
-		location = 6231 # Perth
-		division_template = "Infantry Mercenary Garrison"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-	division= {	
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 6
-		}
-		location = 9753 # Perth
-		division_template = "Infantry Mercenary Garrison"
-		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division= {	

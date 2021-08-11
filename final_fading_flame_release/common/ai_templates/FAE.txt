@@ -83,12 +83,10 @@ militia_FAE = {
 			
 			support = {
 				engineer  = 1
-				artillery = 1
-                anti_tank = 1
 			}
 			
 			regiments = {
-				militia = 20
+				militia = 12
 			}
 		}
 		

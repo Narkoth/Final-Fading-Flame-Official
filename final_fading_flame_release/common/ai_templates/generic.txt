@@ -690,21 +690,7 @@ infantry_generic = {
 
 	blocked_for = {
 		AMF
-		GER
 		DOC
-		ENG
-		USA
-		ITA
-		SOV
-		CHI
-		PRC 
-		GXC
-		YUN
-		SHX
-		XSM
-		SIK
-		MEN
-		MAN
 	}
 
 	roles = {
@@ -809,21 +795,7 @@ infantry_big_generic = {
 
 	blocked_for = {
 		AMF
-		GER
 		DOC
-		ENG
-		USA
-		ITA
-		SOV
-		CHI
-		PRC 
-		GXC
-		YUN
-		SHX
-		XSM
-		SIK
-		MEN
-		MAN
 	}
 
 	roles = {

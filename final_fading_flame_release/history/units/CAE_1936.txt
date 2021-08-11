@@ -7,8 +7,10 @@ division_template = {
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
 	}
 	support = {
 		artillery = {x = 0 y = 0}
@@ -16,36 +18,21 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Royal Peacekeeping Force"	# Divisions were reserves assigned to various military districts
+	name = "Royal Defense Militia"	# Divisions were reserves assigned to various military districts
 
 	division_names_group = ROC_INF_01
 
 	regiments = {
 		militia = { x = 0 y = 0 }
 		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
 		militia = { x = 1 y = 0 }
 		militia = { x = 1 y = 1 }
-		militia = { x = 2 y = 0 }
-	}
-	support = {
-		engineer =  {x = 0 y = 0}
+		militia = { x = 1 y = 2 }
+		militia = { x = 1 y = 3 }
 	}
 }
-division_template = {
-	name = "Royal Emergency Force"	# Divisions were reserves assigned to various military districts
-
-	division_names_group = ROC_INF_01
-
-	regiments = {
-		militia = { x = 0 y = 0 }
-		militia = { x = 0 y = 1 }
-		militia = { x = 1 y = 0 }
-		militia = { x = 1 y = 1 }
-		militia = { x = 2 y = 0 }
-	}
-
-}
-
 
 
 
@@ -87,7 +74,7 @@ units = {
 			name_order = 1
 		}
 		location = 6841  # Perth
-		division_template = "Royal Peacekeeping Force"
+		division_template = "Royal Defense Militia"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
@@ -97,7 +84,7 @@ units = {
 			name_order = 1
 		}
 		location = 8944  # Perth
-		division_template = "Royal Peacekeeping Force"
+		division_template = "Royal Defense Militia"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
