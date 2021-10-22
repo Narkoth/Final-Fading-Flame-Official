@@ -1,0 +1,12 @@
+leader_traits = {
+	roc_brutal_efficiency = {
+		random = no
+	
+		production_factory_max_efficiency_factor = 0.05
+		stability_factor     = -0.05
+	
+		ai_will_do = {
+			factor = 500
+		}
+	}
+}
