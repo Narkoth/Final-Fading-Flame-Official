@@ -12,6 +12,8 @@ state={
 			arms_factory = 6
 			industrial_complex = 2
 			infrastructure = 5
+			13335 = {bunker = 1}
+			672 = {bunker = 1}
 		}
 		add_core_of = SHI
 	}

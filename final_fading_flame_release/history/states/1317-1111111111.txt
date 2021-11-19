@@ -1,0 +1,25 @@
+state={
+	id=1317
+	name="STATE_1317"
+	provinces={
+		3804 3995 6816 10210 13701 13734 13751 13770 
+	}
+	history={
+		owner = SHC
+		#victory_points = { 13631 5 }
+		buildings = {
+			infrastructure = 5
+			air_base = 2
+			dockyard = 2
+			industrial_complex = 3
+			arms_factory = 1
+			3804 = {naval_base = 5 bunker = 1}
+			10210 = {bunker = 1}
+
+		}
+		add_core_of = SHC
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -5,7 +5,7 @@ state={
 		1016 1538 2931 7994 13323 13449 
 	}
 	history={
-		owner = SHI
+		owner = SHA
 		victory_points = { 2931 10 }
 		buildings = {
 			infrastructure = 3
@@ -15,8 +15,9 @@ state={
 			13323 = {
 				naval_base = 4
 			}
+			2931 = {bunker = 1}
 		}
-		add_core_of = SHI
+		add_core_of = SHA
 	}
 	manpower = 3712555
 	state_category = city

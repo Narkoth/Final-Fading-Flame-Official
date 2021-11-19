@@ -3,6 +3,10 @@
 
 #NEW
 
+SHA =  { color = rgb { 161 162 163 } color_ui = rgb { 161 162 163 }  }
+
+SHC =  { color = rgb { 255 104 119 } color_ui = rgb { 255 104 119 }  }
+
 TIN =  { color = rgb { 120 71 255 } color_ui = rgb { 120 71 255 }  }
 
 AMR = {

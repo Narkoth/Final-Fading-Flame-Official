@@ -3,12 +3,12 @@ focus_tree = {
 	id = shi_focus_tree
 	country = {
 		factor = 0
-		modifier = {
-			add = 10
-			OR = {
-				tag = SHI
-			}
-		}
+		#modifier = {
+		#	add = 10
+		#	OR = {
+		#		tag = SHI
+		#	}
+		#}
 	}
 
 	focus = {

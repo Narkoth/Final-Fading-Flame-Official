@@ -5,7 +5,7 @@ state={
 		856 5150 5261 5413 5872 13347 13365 13470 13504 13524 
 	}
 	history={
-		owner = SHI
+		owner = SHA
 		victory_points = { 13365 5 }
 		buildings = {
 			infrastructure = 3
@@ -14,8 +14,12 @@ state={
 			13365 = {
 				naval_base = 4
 			}
+			13524 = {bunker = 1}
+			856 = {bunker = 1}
+			5872 = {bunker = 1}
+			13347 = {bunker = 1}
 		}
-		add_core_of = SHI
+		add_core_of = SHA
 	}
 	resources = {
 		steel = 46

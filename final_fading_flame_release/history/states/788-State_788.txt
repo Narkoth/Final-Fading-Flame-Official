@@ -15,6 +15,10 @@ state={
 			2339 = {
 				naval_base = 4
 			}
+			2339 = {bunker = 1}
+			9977 = {bunker = 1}
+			2138 = {bunker = 1}
+			13358 = {bunker = 1}
 		}
 		add_core_of = SHI
 	}

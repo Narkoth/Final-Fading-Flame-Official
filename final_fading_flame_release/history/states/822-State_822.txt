@@ -1,9 +1,24 @@
-state={ state_category = city
+
+state={
 	id=822
 	name="STATE_822"
 	provinces={
-		755 1461 3804 3995 4064 4657 4957 5169 6816 6818 7020 7058 7399 7604 8077 8248 8769 8959 9422 10210 13435 13479 13534 13544 13565 13599 13621 13640 13644 13681 13701 13734 13740 13751 13770 
+		4064 4657 4957 5169 7058 7604 8959 9422 13435 13479 13534 13544 13599 13621 13640 13681 
+	}
+	history={
+		owner = SHC
+		#victory_points = { 13631 5 }
+		buildings = {
+			infrastructure = 5
+			air_base = 5
+			industrial_complex = 4
+			arms_factory = 3
+			4657 = {bunker = 1}
+			4957 = {bunker = 1}
+		}
+		add_core_of = SHC
 	}
 	manpower=1000
 	buildings_max_level_factor=1.000
+	state_category=city
 }
