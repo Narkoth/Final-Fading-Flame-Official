@@ -2681,7 +2681,7 @@ technologies = {
 		minimum_training_level = -0.1		
 
 		militia = {
-			max_organisation = 10
+			max_organisation = 5
 		}
 
 		doctrine = yes	

@@ -1,4 +1,4 @@
-state={ state_category = city
+state={ state_category = large_city
 	id=796
 	name="STATE_796"
 	provinces={
@@ -6,19 +6,26 @@ state={ state_category = city
 	}
 	history={
 		owner = SHC
-		#victory_points = { 13631 5 }
+		victory_points = { 5357 10 }
+		victory_points = { 13284 10 }
+		victory_points = { 5377 15 }
+		victory_points = { 2617 15 }
 		buildings = {
 			infrastructure = 5
 			air_base = 2
-			dockyard = 7
-			industrial_complex = 3
+			dockyard = 5
+			industrial_complex = 1
+			tungsten_extractor = 2
+			chromium_extractor = 1
 			5357 = {naval_base = 5}
 			13284 = {naval_base = 3}
 			13475 = {bunker = 1}
 			3864  = {bunker = 1}
 		}
 		add_core_of = SHC
+		add_claim_by = SHA
+		add_claim_by = SHI
 	}
-	manpower=1000
+	manpower=6521000
 	buildings_max_level_factor=1.000
 }

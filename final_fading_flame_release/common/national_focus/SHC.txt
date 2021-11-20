@@ -1,0 +1,639 @@
+
+focus_tree = {
+	id = shi_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = SHC
+			}
+		}
+	}
+
+	focus = {
+		id = shc_improve_our_industry
+		icon = GFX_goal_DOC_carnegia
+		x = 5
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = shc_industry
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_improve_our_industry
+		prerequisite = {focus = shc_improve_our_industry}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			1318 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = shc_communal_farmland
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_industry
+		prerequisite = {focus = shc_industry}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			1318 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = SHC_communal_farmland_idea
+		}
+	}
+
+	focus = {
+		id = shc_military_industry
+		icon = GFX_goal_DOC_carnegia
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_industry
+		prerequisite = {focus = shc_industry}
+		available = {
+		}
+		completion_reward = {
+			822 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = shc_improve_infra
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_communal_farmland
+		prerequisite = {focus = shc_communal_farmland}
+		available = {
+		}
+		completion_reward = {
+			796 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			822 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1318 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1317 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = shc_better_tools
+		icon = GFX_goal_DOC_carnegia
+		x = 2
+		y = 2
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_improve_our_industry
+		prerequisite = {focus = shc_improve_our_industry}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1.5
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+	focus = {
+		id = shc_steel_foundry
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_better_tools
+		prerequisite = {focus = shc_better_tools}
+		available = {
+		}
+		completion_reward = {
+			822 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = steel_foundry
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = shc_heavy_industry
+		icon = GFX_goal_DOC_carnegia
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_improve_infra
+		prerequisite = {focus = shc_improve_infra}
+		prerequisite = {focus = shc_steel_foundry}
+		available = {
+		}
+		completion_reward = {
+			822 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	
+	focus = {
+		id = shc_synth_research
+		icon = GFX_goal_DOC_carnegia
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_better_tools
+		prerequisite = {focus = shc_better_tools}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1.5
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+	focus = {
+		id = shc_synth_refinery
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_synth_research
+		prerequisite = {focus = shc_synth_research}
+		available = {
+		}
+		completion_reward = {
+			796 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = shc_military_situation
+		icon = GFX_goal_DOC_carnegia
+		x = 13
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			army_experience = 15
+			air_experience  = 15
+			navy_experience = 15
+		}
+	}
+
+	focus = {
+		id = shc_army_situation
+		icon = GFX_goal_DOC_carnegia
+		x = -2
+		y = 1
+		cost = 5
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_military_situation
+		prerequisite = {focus = shc_military_situation}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = shc_army_tech
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_army_situation
+		prerequisite = {focus = shc_army_situation}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 2
+				category = infantry_tech
+			}
+		}
+	}
+
+	focus = {
+		id = shc_air_situation
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_military_situation
+		prerequisite = {focus = shc_military_situation}
+		available = {
+		}
+		completion_reward = {
+			air_experience = 25
+		}
+	}
+	focus = {
+		id = shc_air_design_planes
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_air_situation
+		prerequisite = {focus = shc_air_situation}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+	focus = {
+		id = shc_naval_situation
+		icon = GFX_goal_DOC_carnegia
+		x = 2
+		y = 1
+		cost = 5
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_military_situation
+		prerequisite = {focus = shc_military_situation}
+		available = {
+		}
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+	focus = {
+		id = shc_design_new_ships
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_naval_situation
+		prerequisite = {focus = shc_naval_situation}
+		available = {
+		}
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 3
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = shc_increase_production
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_air_design_planes
+		prerequisite = {focus = shc_army_tech OR = shc_air_design_planes }
+		prerequisite = {focus = shc_design_new_ships}
+		available = {
+		}
+		completion_reward = {
+			add_timed_idea = { idea = SHC_increase_production_idea days = 425 }
+		}
+	}
+
+	focus = {
+		id = shc_prepare_for_the_continuation_war
+		icon = GFX_goal_DOC_carnegia
+		x = 20
+		y = 0
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = SHC_call_for_recruitment
+		icon = GFX_goal_DOC_carnegia
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_prepare_for_the_continuation_war
+		prerequisite = {focus = shc_prepare_for_the_continuation_war }
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 125000
+		}
+	}
+
+	focus = {
+		id = SHC_research_artillery
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_prepare_for_the_continuation_war
+		prerequisite = {focus = shc_prepare_for_the_continuation_war }
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = SHC_establish_a_permanent_militia
+		icon = GFX_goal_DOC_carnegia
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_prepare_for_the_continuation_war
+		prerequisite = {focus = shc_prepare_for_the_continuation_war }
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = SHC_permanent_milita
+		}
+	}
+
+	focus = {
+		id = SHC_support_company
+		icon = GFX_goal_DOC_carnegia
+		x = 2
+		y = 1
+		cost = 5
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHC_establish_a_permanent_militia
+		prerequisite = {focus = SHC_establish_a_permanent_militia }
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SHC_finalize_a_military_doctrine
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHC_establish_a_permanent_militia
+		prerequisite = {focus = SHC_establish_a_permanent_militia }
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+			modifier = {
+				factor = 0
+				date < 109.5.1
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SHC_prepare_for_combat
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHC_finalize_a_military_doctrine
+		prerequisite = {focus = SHC_finalize_a_military_doctrine }
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+			modifier = {
+				factor = 0
+				date < 110.1.1
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { idea = deterrence days = 90 }
+		}
+	}
+
+	focus = {
+		id = SHC_declare_war
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHC_prepare_for_combat
+		prerequisite = {focus = SHC_prepare_for_combat }
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+			modifier = {
+				factor = 0
+				has_army_manpower = {
+					size < 249999
+				}
+			}
+		}
+		completion_reward = {
+			set_global_flag = war_soon_in_shi
+			create_wargoal = { type = annex_everything target = SHA }
+			create_wargoal = { type = annex_everything target = SHI }
+		}
+	}
+
+	focus = {
+		id = SHC_form_a_better_infantry_division
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHC_call_for_recruitment
+		prerequisite = {focus = SHC_call_for_recruitment }
+		prerequisite = {focus = SHC_research_artillery }
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SHC_form_a_better_infantry_division_tooltip
+			hidden_effect = {
+				division_template = {
+					name = "Communal Infantry Division"	
+					#division_names_group = DOC_MAR_01 #GROUP FOR HAVING NAMES OF DIVISIONS - VERY IMPORTANT TO HAVE FOR IMMERSION
+
+					regiments = {
+						infantry = {x = 0 y = 0}
+						infantry = {x = 0 y = 1}
+						infantry = {x = 0 y = 2}
+						infantry = {x = 0 y = 3}
+						infantry = {x = 1 y = 0}
+						infantry = {x = 1 y = 1}
+						infantry = {x = 1 y = 2}
+						infantry = {x = 1 y = 3}
+						artillery_brigade = {x = 2 y = 0}
+						artillery_brigade = {x = 2 y = 1}
+					}
+					support = {
+		 				engineer = {x = 0 y = 0}
+ 					}
+					priority = 2 #priority of reinforcement 0 = reserves 1 = normal 2 = high
+				}
+			}	
+		}
+	}
+
+	continuous_focus_position = {x = 1200 y = 700 }
+}
+	

@@ -12,13 +12,16 @@ state={
 			infrastructure = 5
 			dockyard = 4
 			industrial_complex = 3
+			arms_factory = 4
 			13293 = {
 				naval_base = 7
 			}
 		}
 		add_core_of = SHI
+		add_claim_by = SHC
+		add_claim_by = SHA
 	}
 	manpower=5161881
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=large_city
 }

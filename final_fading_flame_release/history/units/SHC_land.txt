@@ -1,11 +1,302 @@
 division_template = {
-	name = "Infantry Division"
+	name = "Freedom Fighters"
+
+	#division_names_group = ROC_INF_01
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		militia = { x = 1 y = 3 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 2 y = 1 }
+		militia = { x = 2 y = 2 }
+		militia = { x = 2 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "Trained Fighters"
+
+	#division_names_group = ROC_INF_01
+
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
 		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
+	}
+	support = {
+	}
+}
+
+
+units = {
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3804
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3804
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10210
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10210
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4657
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4657
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4957
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4957
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13475
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13475
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3864
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3864
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 5357
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 5357
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13284
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13284
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13701
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7399
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 8959
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13435
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 5377
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13382
+		division_template = "Freedom Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.2
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4064
+		division_template = "Trained Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7058
+		division_template = "Trained Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4114
+		division_template = "Trained Fighters"
+		start_experience_factor = 0.0
+		start_equipment_factor = 1.0
+	}
+}
+
+air_wings = {
+	822 = { 
+		fighter_equipment_0 = {
+			owner = "SHC" 
+			amount = 24
+		}
 	}
 }

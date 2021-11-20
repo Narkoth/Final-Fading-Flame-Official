@@ -166,9 +166,7 @@ if = {
 }
 
 add_ideas = {
-	SHI_oligarchy_government
-	SHI_need_food_imports
-	SHI_underfunded_infrastructure
+	SHC_fierce_opposition
 	SHI_naval_dominance_and_experts
 }
 
@@ -182,9 +180,7 @@ set_politics = {
 }
 
 set_popularities = {
-	partnerism = 70
-	unionism = 10
-	totalitarianism = 20
+	partnerism = 100
 }
 
 create_country_leader = {
@@ -208,4 +204,11 @@ create_country_leader = {
 		#
 	}
 }
+
+add_opinion_modifier = { target = SHA modifier = embargo }
+add_opinion_modifier = { target = SHA modifier = intense_hatred }
+
+add_opinion_modifier = { target = SHC modifier = embargo }
+add_opinion_modifier = { target = SHC modifier = intense_hatred }
+
 

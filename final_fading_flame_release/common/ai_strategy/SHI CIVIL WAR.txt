@@ -1,0 +1,56 @@
+SHC_war_with_shis = {
+	enable = {
+		tag = SHC
+		has_global_flag = war_soon_in_shi
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = SHA
+		value = 15
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SHI
+		value = 15
+	}
+}
+
+SHA_war_with_shis = {
+	enable = {
+		tag = SHA
+		has_global_flag = war_soon_in_shi
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = SHC
+		value = 15
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SHI
+		value = 15
+	}
+}
+
+SHI_war_with_shis = {
+	enable = {
+		tag = SHI
+		has_global_flag = war_soon_in_shi
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = SHC
+		value = 15
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SHA
+		value = 15
+	}
+}

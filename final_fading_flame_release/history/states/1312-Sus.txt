@@ -16,6 +16,8 @@ state={
 			672 = {bunker = 1}
 		}
 		add_core_of = SHI
+		add_claim_by = SHC
+		add_claim_by = SHA
 	}
 	resources = {
 		steel = 25

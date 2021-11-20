@@ -6,15 +6,20 @@ state={
 	}
 	history={
 		owner = SHC
-		#victory_points = { 13631 5 }
+		victory_points = { 7020 30 }
+		victory_points = { 1461 10 }
 		buildings = {
 			infrastructure = 5
-			arms_factory = 5
-			industrial_complex = 3
+			arms_factory = 3
+			industrial_complex = 2
+			air_base = 2
+			steel_foundry = 3
 		}
 		add_core_of = SHC
+		add_claim_by = SHA
+		add_claim_by = SHI
 	}
-	manpower=1000
+	manpower=5121000
 	buildings_max_level_factor=1.000
 	state_category=city
 }

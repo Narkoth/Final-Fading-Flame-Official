@@ -12,13 +12,15 @@ state={
 			air_base = 10
 			infrastructure = 10
 			dockyard = 7
-			industrial_complex = 2
-			arms_factory = 3
+			industrial_complex = 4
+			arms_factory = 6
 			13484 = {
 				naval_base = 10
 			}
 		}
 		add_core_of = SHI
+		add_claim_by = SHC
+		add_claim_by = SHA
 	}
 	manpower=10894112
 	state_category = metropolis

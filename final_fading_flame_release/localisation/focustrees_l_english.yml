@@ -804,6 +804,9 @@ cis_national_pride:0 "National Pride"
 cis_standardize_ship_construction_idea:0 "Standardized Ship Construction"
 cis_cheaper_screens:0 "Standardized Light Hull Production"
 
+
+SHC_form_a_better_infantry_division_tooltip:0 "Gain a Superior Infantry Division Template"
+
 shi_form_militia_tooltip:0 "Formalize a Militia Force for the Defense of the Nation" 
 fae_form_militia_tooltip:0 "Rally the People for the Liberation of our Country"
 
