@@ -1,0 +1,23 @@
+ideas = { 
+	country = {
+		SHA_former_military = {
+            #############
+            # THIS IS AN IDEA FOR ALL SHI NATIONS - DO NOT REMOVE NOR CHANGE THIS NAME WITHOUT THIS CONSIDERATION
+            #############
+			allowed = {
+				always = no 
+			}
+			available = {	
+			}
+			allowed_civil_war = {
+				#This determines if the duplicate hoi4 nation that is spawned during civil war will keep this idea or not
+				always = no
+			}
+			modifier = {
+				experience_gain_army = 0.05
+                max_planning = 0.10
+                army_org_factor = 0.075
+			}
+		}
+	}
+}

@@ -52,6 +52,7 @@ set_popularities = {
 
 add_ideas = {
 	SHC_fierce_opposition
+	SHA_former_military
 }
 
 add_opinion_modifier = { target = SHC modifier = embargo }

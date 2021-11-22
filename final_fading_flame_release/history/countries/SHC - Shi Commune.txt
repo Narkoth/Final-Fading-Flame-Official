@@ -52,6 +52,7 @@ set_popularities = {
 
 add_ideas = {
 	SHC_fierce_opposition
+	SHC_freedom_fighters
 }
 
 

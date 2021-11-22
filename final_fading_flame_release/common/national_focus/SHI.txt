@@ -3,776 +3,234 @@ focus_tree = {
 	id = shi_focus_tree
 	country = {
 		factor = 0
-		#modifier = {
-		#	add = 10
-		#	OR = {
-		#		tag = SHI
-		#	}
-		#}
+		modifier = {
+			add = 10
+			OR = {
+				tag = SHI
+			}
+		}
 	}
 
 	focus = {
-		id = shi_a_union
-		icon = GFX_goal_DOC_carnegia
-		x = -1
+		id = SHI_reorganize_assets
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
 		y = 0
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		mutually_exclusive = {focus = shi_rise_of_strata
-							  focus = shi_continue_the_path}
-
-		available = {
-		}
-		completion_reward = {
-			add_ideas = shi_unionism_idea
-			set_country_flag = shi_selected_political_path
-			add_popularity = {
-				ideology = unionism 
-				popularity = 0.15
-			}
-		}
-	}
-
-	focus = {
-		id = shi_reborn
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_a_union}
-		relative_position_id = shi_a_union
-		available = {
-			unionism > 0.35
-		}
-		completion_reward = {
-			set_politics = {
-				ruling_party = unionism
-				elections_allowed = no
-			}
-			add_timed_idea = { idea = shi_economic_restructuring  days = 730 }
-			remove_ideas = SHI_oligarchy_government
-		}
-
-		ai_will_do = { # transition as soon as possible
-			factor = 4000
-		}
-	}
-
-	focus = {
-		id = shi_military_union
-		icon = GFX_goal_DOC_carnegia
-		x = 1
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_reborn}
-		relative_position_id = shi_reborn
-		available = {
-		}
-		completion_reward = {
-			add_ideas = shi_popular_army
-		}
-
-		ai_will_do = { # transition as soon as possible
-			factor = 4000
-		}
-	}
-
-	focus = {
-		id = shi_form_militia_focus
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_military_union}
-		relative_position_id = shi_military_union
-		available = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = shi_form_militia_tooltip
-			hidden_effect = {
-				ROOT = {
-						division_template = { 
-							name = "Militia Defense Force"
-
-							regiments = {
-								militia = {x = 0 y = 0}
-								militia = {x = 0 y = 1}
-								militia = {x = 0 y = 2}
-								militia = {x = 0 y = 3}
-								militia = {x = 0 y = 4}
-								militia = {x = 1 y = 0}
-								militia = {x = 1 y = 1}
-								militia = {x = 1 y = 2}
-								militia = {x = 1 y = 3}
-								militia = {x = 1 y = 4}
-							}
-						priority = 0 #priority of reinforcement 0 = reserves 1 = normal 2 = high
-					    }
-						every_owned_state = {
-							limit = {
-								is_capital = yes
-								is_fully_controlled_by = ROOT 
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-							create_unit = {
-								division = "name = \"Militia Defense Force\" division_template = \"Militia Defense Force\" start_experience_factor = 0.0"  
-								owner = ROOT
-							}
-						} 
-					}
-				}
-		}
-
 		ai_will_do = {
 			factor = 4000
 		}
-	}
-
-	focus = {
-		id = shi_join_the_commune
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 3
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_form_militia_focus}
-		prerequisite = {focus = shi_guranteed_rights}
-		relative_position_id = shi_form_militia_focus
 		available = {
-			country_exists = COC
-			COC = {
-				is_subject = no
-			}
 		}
 		completion_reward = {
-			COC = {
-				country_event = coc_shi.1
-			}
-		}
-
-		ai_will_do = {
-			factor = 4000
+			add_political_power = 100
 		}
 	}
-
 	focus = {
-		id = shi_union_establishment
-		icon = GFX_goal_DOC_carnegia
-		x = -3
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_reborn}
-		relative_position_id = shi_reborn
-		available = {
-			NOT = {
-				has_idea = shi_economic_restructuring
-			}
-		}
-		completion_reward = {
-			add_ideas = shi_union_management
-		}
-
-		ai_will_do = { # transition as soon as possible
-			factor = 4000
-		}
-	}
-
-	focus = {
-		id = shi_builders_union
-		icon = GFX_goal_DOC_carnegia
-		x = -1
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_reborn}
-		relative_position_id = shi_reborn
-		available = {
-			NOT = {
-				has_idea = shi_economic_restructuring
-			}
-		}
-		completion_reward = {
-			add_ideas = shi_builders
-		}
-
-		ai_will_do = { # transition as soon as possible
-			factor = 4000
-		}
-	}
-
-	focus = {
-		id = shi_infra_for_all
-		icon = GFX_goal_DOC_carnegia
+		id = SHI_aquire_foreign_arms_industry
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_builders_union}
-		relative_position_id = shi_builders_union
+		relative_position_id = SHI_reorganize_assets
+		prerequisite = {focus = SHI_reorganize_assets}
 		available = {
 		}
 		completion_reward = {
-			remove_ideas = SHI_underfunded_infrastructure
-			add_timed_idea = {idea = shi_infra_work_on days = 435}
-			add_political_power = -200
-		}
-
-		ai_will_do = { # transition as soon as possible
-			factor = 4000
+			add_offsite_building = { type = arms_factory level = 2 }
 		}
 	}
-
 	focus = {
-		id = shi_university_union
-		icon = GFX_goal_DOC_carnegia
-		x = 1
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_infra_for_all}
-		relative_position_id = shi_infra_for_all
-		available = {
-		}
-		completion_reward = {
-			add_research_slot = 1
-			add_ideas = shi_union_education
-		}
-
-		ai_will_do = { # transition as soon as possible
-			factor = 4000
-		}
-	}
-
-	focus = {
-		id = shi_guranteed_rights
-		icon = GFX_goal_DOC_carnegia
-		x = -1
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_builders_union}
-		prerequisite = {focus = shi_union_establishment}
-		relative_position_id = shi_builders_union
-		available = {
-		}
-		completion_reward = {
-			add_ideas = shi_guranteed_rights_idea
-		}
-
-		ai_will_do = { # transition as soon as possible
-			factor = 4000
-		}
-	}
-
-	
-
-	focus = {
-		id = shi_continue_the_path
-		icon = GFX_goal_DOC_carnegia
-		x = 5
-		y = 0
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		mutually_exclusive = {focus = shi_rise_of_strata
-							  focus = shi_a_union}
-
-		available = {
-		}
-		completion_reward = {
-			add_political_power = 50
-			set_country_flag = shi_selected_political_path
-		}
-	}
-
-	focus = {
-		id = shi_guarantee_free_trade
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_continue_the_path}
-		relative_position_id = shi_continue_the_path
-		available = {
-		}
-		completion_reward = {
-			swap_ideas = {
-				add_idea = SHI_oligarchy_government2
-				remove_idea = SHI_oligarchy_government
-			}
-		}
-	}
-
-	focus = {
-		id = shi_build_luxury_industries
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_guarantee_free_trade}
-		relative_position_id = shi_guarantee_free_trade
-		available = {
-		}
-		completion_reward = {
-			788 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-						type = industrial_complex
-						level = 4
-						instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = shi_begin_manufactoring_zing
-		icon = GFX_goal_DOC_carnegia
-		x = 1
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_guarantee_free_trade}
-		relative_position_id = shi_guarantee_free_trade
-		available = {
-		}
-		completion_reward = {
-			news_event = shi_general.1
-		}
-	}
-
-	focus = {
-		id = shi_build_an_expensive_academy_for_rich
-		icon = GFX_goal_DOC_carnegia
-		x = -2
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_continue_the_path}
-		relative_position_id = shi_continue_the_path
-		available = {
-		}
-		completion_reward = {
-			add_research_slot = 1
-			add_stability = -0.05
-		}
-	}
-
-	focus = {
-		id = shi_services_for_those_who_can_afford_it
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_build_an_expensive_academy_for_rich}
-		relative_position_id = shi_build_an_expensive_academy_for_rich
-		available = {
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SHI_underfunded_infrastructure
-				add_idea = SHI_infrastructure_for_those_who_can_afford_it
-			}
-		}
-	}
-
-	focus = {
-		id = shi_military_industrial_complex
-		icon = GFX_goal_DOC_carnegia
-		x = 3
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_continue_the_path}
-		relative_position_id = shi_continue_the_path
-		available = {
-		}
-		completion_reward = {
-			add_ideas = shi_naval_support
-			1314 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-						type = arms_factory
-						level = 4
-						instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = shi_align_with_ROC
-		icon = GFX_goal_DOC_carnegia
-		x = 3
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_services_for_those_who_can_afford_it OR = shi_build_luxury_industries OR = shi_military_industrial_complex}
-		relative_position_id = shi_services_for_those_who_can_afford_it
-		available = {
-			has_global_flag = castor_in_flames
-		}
-		ai_will_do = {
-			factor = 4000
-		}
-		completion_reward = {
-			ROC = {
-				country_event = ROC_general_events.4
-			}
-		}
-	}
-
-	focus = {
-		id = shi_rise_of_strata
-		icon = GFX_goal_DOC_carnegia
-		x = 12
-		y = 0
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		mutually_exclusive = {focus = shi_continue_the_path
-							  focus = shi_a_union}
-
-		available = {
-		}
-		completion_reward = {
-			add_ideas = SHI_rise_of_strata_idea
-			set_country_flag = shi_selected_political_path
-		}
-	}
-
-	focus = {
-		id = shi_creation_of_shi_youth
-		icon = GFX_goal_DOC_carnegia
+		id = SHI_hire_production_experts
+		icon = GFX_goal_generic_army_doctrines
 		x = 2
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_rise_of_strata}
-		relative_position_id = shi_rise_of_strata
-		available = {
-		}
-		completion_reward = {
-			add_ideas = SHI_shi_youth
-		}
-	}
-
-	focus = {
-		id = shi_visit_doc
-		icon = GFX_goal_DOC_carnegia
-		x = -2
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_rise_of_strata}
-		relative_position_id = shi_rise_of_strata
-		available = {
-		}
-		completion_reward = {
-			country_event = shi_general.2
-		}
-	}
-
-	focus = {
-		id = shi_preach_the_need_for_control
-		icon = GFX_goal_DOC_carnegia
-		x = 0
 		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_rise_of_strata}
-		relative_position_id = shi_rise_of_strata
+		relative_position_id = SHI_reorganize_assets
+		prerequisite = {focus = SHI_reorganize_assets}
 		available = {
-
 		}
 		completion_reward = {
-			add_popularity = {
-				ideology = totalitarianism
-				popularity = 0.15
-			}
+			add_ideas = SHI_production_experts
 		}
 	}
-
 	focus = {
-		id = shi_overthrow_government
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 2
+		id = SHI_hire_mercenary_officers
+		icon = GFX_goal_generic_army_doctrines
+		x = 4
+		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_preach_the_need_for_control}
-		prerequisite = {focus = shi_visit_doc}
-		prerequisite = {focus = shi_creation_of_shi_youth}
-		relative_position_id = shi_preach_the_need_for_control
+		relative_position_id = SHI_reorganize_assets
+		prerequisite = {focus = SHI_reorganize_assets}
 		available = {
-			totalitarianism > 0.55
-		}
-		completion_reward = {
-			set_politics = {
-				ruling_party = totalitarianism
-				elections_allowed = no
-			}
-			add_stability = -0.25
-		}
-	}
-
-	focus = {
-		id = shi_join_the_dominion_against_ronard
-		icon = GFX_goal_DOC_carnegia
-		x = -2
-		y = 3
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_overthrow_government}
-		relative_position_id = shi_overthrow_government
-		available = {
-			has_global_flag = castor_in_flames
 		}
 		ai_will_do = {
 			factor = 4000
 		}
 		completion_reward = {
-			DOC = {
-				country_event = DOC_general_events.6
-			}
-		}
-	}
-
-	focus = {
-		id = shi_destroy_decadence
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_overthrow_government}
-		relative_position_id = shi_overthrow_government
-		available = {
-			totalitarianism > 0.55
-		}
-		completion_reward = {
-			remove_ideas = SHI_oligarchy_government
-			add_ideas = SHI_path_towards_control
-			custom_effect_tooltip = shi_process_of_changing_government
-			set_country_flag = shi_government_change
-		}
-	}
-
-	focus = {
-		id = shi_improve_infastructure
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_destroy_decadence}
-		relative_position_id = shi_destroy_decadence
-		available = {
-		}
-		completion_reward = {
-			set_country_flag = shi_better_infrastructure
-			custom_effect_tooltip = shi_better_infrastructure_tooltip
-		}
-	}
-
-	focus = {
-		id = shi_land_forces
-		icon = GFX_goal_DOC_carnegia
-		x = -9
-		y = 0
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		#mutually_exclusive = {focus = shi_rise_of_strata}
-		available = {
-			has_country_flag = shi_selected_political_path
-		}
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = shi_build_merc_guilds
-		icon = GFX_goal_DOC_carnegia
-		x = -1
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_land_forces}
-		relative_position_id = shi_land_forces
-		available = {
-			NOT = {
-				OR = {
-					has_completed_focus = shi_a_union
-					has_completed_focus = shi_rise_of_strata
-				}
-			}
-		}
-		completion_reward = {
+			army_experience = 30
 			1310 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-						type = merc_guild
-						level = 1
-						instant_build = yes
-				}
-			}
-			790 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-						type = merc_guild
-						level = 1
-						instant_build = yes
-				}
-			}
-			1312 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-						type = merc_guild
-						level = 1
-						instant_build = yes
+					type = merc_guild
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
 	}
-
 	focus = {
-		id = shi_more_effective_control
-		icon = GFX_goal_DOC_carnegia
-		x = 1
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_land_forces}
-		relative_position_id = shi_land_forces
-		available = {
-			has_government = totalitarianism
-		}
-		completion_reward = {
-			add_ideas = SHI_occupation_ministry
-		}
-	}
-
-	focus = {
-		id = shi_doctrinal_reform
-		icon = GFX_goal_DOC_carnegia
+		id = SHI_purchase_foreign_arms
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
-		y = 2
+		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_land_forces}
-		relative_position_id = shi_land_forces
+		relative_position_id = SHI_aquire_foreign_arms_industry
+		prerequisite = {focus = SHI_aquire_foreign_arms_industry}
 		available = {
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 1
-				category = land_doctrine
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3500
+			}
+			
+		}
+	}
+	focus = {
+		id = SHI_purchase_support
+		icon = GFX_goal_generic_army_doctrines
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_aquire_foreign_arms_industry
+		prerequisite = {focus = SHI_aquire_foreign_arms_industry}
+		available = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 200
+			}
+		}
+	}
+	focus = {
+		id = SHI_purchase_planes
+		icon = GFX_goal_generic_army_doctrines
+		x = 4
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_aquire_foreign_arms_industry
+		prerequisite = {focus = SHI_aquire_foreign_arms_industry}
+		available = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 250
+			}
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0
+				amount = 50
 			}
 		}
 	}
 
 	focus = {
-		id = shi_new_guns
-		icon = GFX_goal_DOC_carnegia
-		x = -2
+		id = SHI_air_tech
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
 		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_doctrinal_reform}
-		relative_position_id = shi_doctrinal_reform
+		relative_position_id = SHI_purchase_planes
+		prerequisite = {focus = SHI_purchase_planes}
 		available = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = any_doctrine
+				name = tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = SHI_air_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_air_tech
+		prerequisite = {focus = SHI_air_tech}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
 				bonus = 1
 				uses = 2
-				category = infantry_weapons
+				category = air_doctrine
 			}
 		}
 	}
 
 	focus = {
-		id = shi_arty
-		icon = GFX_goal_DOC_carnegia
-		x = -3
-		y = 2
+		id = SHI_study_weapon_technology
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_doctrinal_reform}
-		relative_position_id = shi_doctrinal_reform
+		relative_position_id = SHI_purchase_foreign_arms
+		prerequisite = {focus = SHI_purchase_foreign_arms}
 		available = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = any_doctrine
+				name = tech_bonus
 				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SHI_study_support_and_arty
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_purchase_support
+		prerequisite = {focus = SHI_purchase_support}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 0.5
 				uses = 1
 				category = artillery
 			}
@@ -780,622 +238,195 @@ focus_tree = {
 	}
 
 	focus = {
-		id = shi_armor
-		icon = GFX_goal_DOC_carnegia
-		x = -1
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_doctrinal_reform}
-		relative_position_id = shi_doctrinal_reform
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 1
-				category = armor
-			}
-		}
-	}
-
-	focus = {
-		id = shi_support
-		icon = GFX_goal_DOC_carnegia
-		x = 0
+		id = SHI_army_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		x = 1
 		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_doctrinal_reform}
-		relative_position_id = shi_doctrinal_reform
+		relative_position_id = SHI_study_weapon_technology
+		prerequisite = {focus = SHI_study_weapon_technology OR = SHI_study_support_and_arty}
 		available = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = any_doctrine
+				name = tech_bonus
 				bonus = 1
-				uses = 1
-				category = support_tech
-			}
-		}
-	}
-
-	focus = {
-		id = shi_support
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_doctrinal_reform}
-		relative_position_id = shi_doctrinal_reform
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 1
-				category = support_tech
-			}
-		}
-	}
-
-	focus = {
-		id = shi_military_academy
-		icon = GFX_goal_DOC_carnegia
-		x = 2
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_doctrinal_reform}
-		relative_position_id = shi_doctrinal_reform
-		available = {
-		}
-		completion_reward = {
-			add_ideas = SHI_professional_military_academy
-		}
-	}
-
-	focus = {
-		id = shi_special_forces
-		icon = GFX_goal_DOC_carnegia
-		x = 3
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_doctrinal_reform}
-		relative_position_id = shi_doctrinal_reform
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 1
-				category = marine_tech
-				category = para_tech
-			}
-		}
-	}
-
-	focus = {
-		id = shi_expert_logistics
-		icon = GFX_goal_DOC_carnegia
-		x = -1
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_military_academy}
-		relative_position_id = shi_military_academy
-		available = {
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SHI_professional_military_academy
-				add_idea = SHI_experts_in_logistics
-			}
-		}
-	}
-
-	focus = {
-		id = shi_expand_weapon_manufactories
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 3
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_arty OR = shi_armor OR = shi_expert_logistics OR = shi_special_forces}
-		relative_position_id = shi_doctrinal_reform
-		available = {
-		}
-		completion_reward = {
-			add_timed_idea = { idea = SHI_build_military_industry  days = 420 }
-		}
-		ai_will_do = {
-			factor = 15
-			modifier = {
-				factor = 0
-				has_idea = shi_economic_restructuring
-			}
-		}
-	}
-
-	focus = {
-		id = shi_refinery_technology
-		icon = GFX_goal_DOC_carnegia
-		x = -2
-		y = 4
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_arty OR = shi_armor OR = shi_expert_logistics OR = shi_special_forces}
-		relative_position_id = shi_doctrinal_reform
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1.5
 				uses = 2
-				category = synth_resources
+				category = land_doctrine
 			}
 		}
 	}
 
 	focus = {
-		id = shi_advanced_tech
-		icon = GFX_goal_DOC_carnegia
-		x = 2
-		y = 4
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_arty OR = shi_armor OR = shi_expert_logistics OR = shi_special_forces}
-		relative_position_id = shi_doctrinal_reform
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 1
-				category = cat_mechanized_equipment
-			}
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 1
-				category = rocketry
-			}
-		}
-	}
-
-	focus = {
-		id = shi_air_and_navy
-		icon = GFX_goal_DOC_carnegia
-		x = 19
+		id = SHI_naval_power
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 6
 		y = 0
-		cost = 7
+		cost = 4
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		#mutually_exclusive = {focus = shi_rise_of_strata}
 		available = {
-			has_country_flag = shi_selected_political_path
 		}
 		completion_reward = {
-			air_experience = 25
+			navy_experience = 15
+		}
+	}
+
+	focus = {
+		id = SHI_improve_naval_war_college
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_naval_power
+		prerequisite = {focus = SHI_naval_power}
+		available = {
+		}
+		completion_reward = {
+			#Here, because swap idea often looks like it is taking something away when it isn't
+			custom_effect_tooltip = SHI_better_naval_officers_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = SHI_naval_dominance_and_experts
+					add_idea = SHI_naval_dominance_and_experts_1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHI_send_naval_officers_abroad
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_naval_power
+		prerequisite = {focus = SHI_naval_power}
+		available = {
+		}
+		completion_reward = {
 			navy_experience = 25
 		}
 	}
 
 	focus = {
-		id = shi_new_fighter
-		icon = GFX_goal_DOC_carnegia
-		x = -1
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_air_and_navy}
-		relative_position_id = shi_air_and_navy
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 1
-				category = light_fighter
-			}
-		}
-	}
-
-	focus = {
-		id = shi_new_cas
-		icon = GFX_goal_DOC_carnegia
-		x = -3
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_air_and_navy}
-		relative_position_id = shi_air_and_navy
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 1
-				category = cas_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = shi_new_naval_bomber
-		icon = GFX_goal_DOC_carnegia
+		id = SHI_new_ship_designs
+		icon = GFX_focus_rom_royal_dictatorship
 		x = 1
 		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_air_and_navy}
-		relative_position_id = shi_air_and_navy
+		relative_position_id = SHI_improve_naval_war_college
+		prerequisite = {focus = SHI_improve_naval_war_college}
+		prerequisite = {focus = SHI_send_naval_officers_abroad}
 		available = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
+				name = tech_bonus
+				bonus = 2
 				uses = 1
-				category = cas_bomber
+				category = naval_equipment
 			}
 		}
 	}
-
 	focus = {
-		id = shi_air_doctrine_research
-		icon = GFX_goal_DOC_carnegia
-		x = 0
+		id = SHI_naval_air_research
+		icon = GFX_focus_rom_royal_dictatorship
+		x = -1
 		y = 2
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_new_naval_bomber OR = shi_new_fighter OR = shi_new_cas}
-		relative_position_id = shi_new_naval_bomber
+		relative_position_id = SHI_new_ship_designs
+		prerequisite = {focus = SHI_new_ship_designs}
+		prerequisite = {focus = SHI_air_tech}
 		available = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
+				name = tech_bonus
+				bonus = 0.5
 				uses = 2
-				category = air_doctrine
+				category = naval_air
 			}
 		}
 	}
-
 	focus = {
-		id = shi_air_heroism
-		icon = GFX_goal_DOC_carnegia
-		x = 0
+		id = SHI_naval_doctrine
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 1
 		y = 2
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_air_doctrine_research}
-		relative_position_id = shi_air_doctrine_research
-		available = {
-		}
-		completion_reward = {
-			air_experience = 50
-			add_ideas = SHI_air_heroism_idea
-		}
-	}
-
-	focus = {
-		id = shi_radar_research
-		icon = GFX_goal_DOC_carnegia
-		x = 2
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_new_naval_bomber OR = shi_new_fighter OR = shi_new_cas OR = shi_naval_doctrinal_research}
-		relative_position_id = shi_new_naval_bomber
+		relative_position_id = SHI_new_ship_designs
+		prerequisite = {focus = SHI_new_ship_designs}
 		available = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 2
-				category = air_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = shi_naval_spotting_and_air_warning
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 3
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_radar_research}
-		relative_position_id = shi_radar_research
-		available = {
-		}
-		completion_reward = {
-			add_ideas = SHI_advanced_radar
-		}
-	}
-
-	focus = {
-		id = shi_standardize_light_hull_production
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_new_fighter}
-		prerequisite = {focus = shi_new_cas}
-		prerequisite = {focus = shi_new_naval_bomber}
-		relative_position_id = shi_new_fighter
-		available = {
-		}
-		completion_reward = {
-			add_ideas = SHI_standardize_fighters
-		}
-	}
-
-	focus = {
-		id = shi_naval_doctrinal_research
-		icon = GFX_goal_DOC_carnegia
-		x = 6
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_air_and_navy}
-		relative_position_id = shi_air_and_navy
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
+				name = tech_bonus
 				bonus = 1
 				uses = 2
 				category = naval_doctrine
 			}
 		}
 	}
-
 	focus = {
-		id = shi_screen_technology
-		icon = GFX_goal_DOC_carnegia
-		x = 4
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_naval_doctrinal_research}
-		relative_position_id = shi_naval_doctrinal_research
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 2
-				category = dd_tech
-				category = cl_tech
-			}
-		}
-	}
-
-	focus = {
-		id = shi_submarine_tech
-		icon = GFX_goal_DOC_carnegia
+		id = SHI_further_naval_research
+		icon = GFX_focus_rom_royal_dictatorship
 		x = 2
 		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_naval_doctrinal_research}
-		relative_position_id = shi_naval_doctrinal_research
+		relative_position_id = SHI_new_ship_designs
+		prerequisite = {focus = SHI_new_ship_designs}
 		available = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1.5
-				uses = 1
-				category = ss_tech
-			}
-			add_tech_bonus = {
-				name = any_doctrine
+				name = tech_bonus
 				bonus = 1
 				uses = 2
-				category = trade_interdiction_tree
+				category = naval_equipment
 			}
 		}
 	}
 
 	focus = {
-		id = shi_heavy_naval_tech
-		icon = GFX_goal_DOC_carnegia
-		x = 1
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_naval_doctrinal_research}
-		relative_position_id = shi_naval_doctrinal_research
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 2
-				category = ca_tech
-				category = bc_tech
-			}
-		}
-	}
-
-	focus = {
-		id = shi_capital_ship
-		icon = GFX_goal_DOC_carnegia
-		x = 3
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_naval_doctrinal_research}
-		relative_position_id = shi_naval_doctrinal_research
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 2
-				category = bb_tech
-				category = shbb_tech
-			}
-		}
-	}
-
-	focus = {
-		id = shi_fleet_in_being
-		icon = GFX_goal_DOC_carnegia
-		x = -1
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_capital_ship OR = shi_heavy_naval_tech}
-		relative_position_id = shi_capital_ship
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 2
-				category = cat_fleet_in_being
-			}
-		}
-	}
-
-
-	focus = {
-		id = shi_carrier
-		icon = GFX_goal_DOC_carnegia
-		x = -1
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_naval_doctrinal_research}
-		relative_position_id = shi_naval_doctrinal_research
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1.5
-				uses = 1
-				category = cv_tech
-			}
-		}
-	}
-
-	focus = {
-		id = shi_naval_air_research
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_naval_doctrinal_research}
-		relative_position_id = shi_naval_doctrinal_research
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1.5
-				uses = 1
-				category = cv_tech
-			}
-		}
-	}
-
-	focus = {
-		id = shi_base_strike_research
-		icon = GFX_goal_DOC_carnegia
+		id = SHI_new_military_academy
+		icon = GFX_focus_rom_royal_dictatorship
 		x = 0
 		y = 3
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_carrier}
-		prerequisite = {focus = shi_air_doctrine_research}
-		relative_position_id = shi_naval_doctrinal_research
+		relative_position_id = SHI_new_ship_designs
+		prerequisite = {focus = SHI_army_doctrine}
+		prerequisite = {focus = SHI_air_doctrine}
+		prerequisite = {focus = SHI_naval_doctrine}
 		available = {
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 2
-				category = cat_base_strike
-			}
+			add_research_slot = 1
 		}
 	}
 
 	focus = {
-		id = shi_convoy_defense_research
-		icon = GFX_goal_DOC_carnegia
-		x = 0
-		y = 2
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_screen_technology}
-		relative_position_id = shi_screen_technology
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1
-				uses = 2
-				category = convoy_defense_tree
-			}
-		}
-	}
-
-	focus = {
-		id = shi_standardize_ship_production
-		icon = GFX_goal_DOC_carnegia
-		x = -2
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_naval_doctrinal_research}
-		relative_position_id = shi_naval_doctrinal_research
-		available = {
-		}
-		completion_reward = {
-			add_ideas = SHI_increase_naval_production
-		}
-	}
-
-	focus = {
-		id = shi_industrial_effort
-		icon = GFX_goal_DOC_carnegia
-		x = 33
+		id = SHI_industrial_renewal
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 13
 		y = 0
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		available = {
-			has_country_flag = shi_selected_political_path
-		}
 		ai_will_do = {
-			factor = 4000 
+			factor = 4000
+		}
+		available = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = any_doctrine
+				name = tech_bonus
 				bonus = 1
 				uses = 1
 				category = industry
@@ -1404,75 +435,83 @@ focus_tree = {
 	}
 
 	focus = {
-		id = shi_state_transportation_effort
-		icon = GFX_goal_DOC_carnegia
-		x = -1
+		id = SHI_purchase_additional_overseas_factories
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
 		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_industrial_effort}
-		relative_position_id = shi_industrial_effort
+		relative_position_id = SHI_industrial_renewal
+		prerequisite = {focus = SHI_industrial_renewal}
 		available = {
 		}
 		completion_reward = {
-			add_timed_idea = { idea = SHI_build_infra  days = 720 }
+			add_offsite_building = {type = industrial_complex level = 4}
 		}
-		ai_will_do = {
-			factor = 15
-			modifier = {
-				factor = 0
-				has_idea = shi_economic_restructuring
+	}
+
+	focus = {
+		id = SHI_improve_construction_efforts
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_purchase_additional_overseas_factories
+		prerequisite = {focus = SHI_purchase_additional_overseas_factories}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 1
+				category = construction_tech
 			}
 		}
 	}
 
 	focus = {
-		id = shi_create_electronics_factories
-		icon = GFX_goal_DOC_carnegia
+		id = SHI_create_more_land_for_industry
+		icon = GFX_focus_rom_royal_dictatorship
 		x = -2
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_industrial_renewal
+		prerequisite = {focus = SHI_industrial_renewal}
+		available = {
+		}
+		completion_reward = {
+			1310 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			790 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			1312 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			788 = {
+				add_extra_state_shared_building_slots = 4
+			}
+		}
+	}
+
+	focus = {
+		id = SHI_excavation_efforts
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
 		y = 2
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_industrial_effort}
-		relative_position_id = shi_industrial_effort
-		available = {
-			has_tech = radio
-			has_tech = mechanical_computing
-		}
-		completion_reward = {
-			1316 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-				}
-			}
-			add_tech_bonus = {
-				name = any_doctrine
-				bonus = 1.5
-				uses = 1
-				category = electronics
-			}
-		}
-	}
-
-	
-
-	focus = {
-		id = shi_excavation_effort
-		icon = GFX_goal_DOC_carnegia
-		x = 1
-		y = 1
-		cost = 7
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_industrial_effort}
-		relative_position_id = shi_industrial_effort
+		relative_position_id = SHI_create_more_land_for_industry
+		prerequisite = {focus = SHI_create_more_land_for_industry}
 		available = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = any_doctrine
+				name = tech_bonus
 				bonus = 1
 				uses = 1
 				category = excavation_tech
@@ -1481,106 +520,206 @@ focus_tree = {
 	}
 
 	focus = {
-		id = shi_increase_dockyards
-		icon = GFX_goal_DOC_carnegia
+		id = SHI_increase_infrastructure
+		icon = GFX_focus_rom_royal_dictatorship
 		x = 2
-		y = 2
+		y = 1
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_industrial_effort}
-		relative_position_id = shi_industrial_effort
+		relative_position_id = SHI_industrial_renewal
+		prerequisite = {focus = SHI_industrial_renewal}
 		available = {
 		}
-		ai_will_do = {
-			factor = 4000
-		}
 		completion_reward = {
-			1313 = {
-				add_extra_state_shared_building_slots = 2
+			790 = {
 				add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
 			}
-			1315 = {
-				add_extra_state_shared_building_slots = 2
+			1312 = {
 				add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			788 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = shi_civ_investment
-		icon = GFX_goal_DOC_carnegia
+		id = SHI_merge_the_construction_companies
+		icon = GFX_focus_rom_royal_dictatorship
 		x = 0
 		y = 2
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_industrial_effort}
-		relative_position_id = shi_industrial_effort
+		relative_position_id = SHI_increase_infrastructure
+		prerequisite = {focus = SHI_increase_infrastructure}
+		prerequisite = {focus = SHI_improve_construction_efforts}
 		available = {
-			OR = {
-				has_tech = concentrated_industry
-				has_tech = dispersed_industry
-			}
 		}
 		completion_reward = {
-			add_timed_idea = { idea = SHI_civ_construction_speed  days = 365 }
-		}
-		ai_will_do = {
-			factor = 15
-			modifier = {
-				factor = 0
-				has_idea = shi_economic_restructuring
-			}
+			add_ideas = SHI_merged_construction_companies
 		}
 	}
 
 	focus = {
-		id = shi_invest_in_foreign_companies
-		icon = GFX_goal_DOC_carnegia
-		x = 1
+		id = SHI_heavy_industry
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
 		y = 2
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_create_electronics_factories}
-		prerequisite = {focus = shi_civ_investment}
-		relative_position_id = shi_create_electronics_factories
+		relative_position_id = SHI_improve_construction_efforts
+		prerequisite = {focus = SHI_improve_construction_efforts}
+		prerequisite = {focus = SHI_merge_the_construction_companies}
 		available = {
-			NOT = {
-				OR = {
-					has_completed_focus = shi_a_union
-					has_completed_focus = shi_rise_of_strata
-				}
-			}
 		}
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = {type = industrial_complex level = 3}
+			add_ideas = SHI_heavy_industry_focus
 		}
 	}
 
 	focus = {
-		id = shi_work_on_food_issue
-		icon = GFX_goal_DOC_carnegia
-		x = 3
-		y = 3
+		id = SHI_crush_the_rebels
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 18
+		y = 0
 		cost = 7
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {focus = shi_industrial_effort}
-		relative_position_id = shi_industrial_effort
+		ai_will_do = {
+			factor = 4000
+		}
 		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 20
+			navy_experience = 20
+			air_experience  = 20
+		}
+	}
+
+	focus = {
+		id = SHI_build_additional_refineries
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_crush_the_rebels
+		prerequisite = {focus = SHI_crush_the_rebels}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 2
+				uses = 1
+				category = synth_resources
+			}
+			790 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHI_increase_merc_recruitment
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 3
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_crush_the_rebels
+		prerequisite = {focus = SHI_crush_the_rebels}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = SHI_merc_building
+			788 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = merc_guild
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHI_establish_a_marine_corp
+		icon = GFX_focus_rom_royal_dictatorship
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_crush_the_rebels
+		prerequisite = {focus = SHI_crush_the_rebels}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 3
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+
+
+	focus = {
+		id = SHI_increase_special_forces
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_establish_a_marine_corp
+		prerequisite = {focus = SHI_establish_a_marine_corp}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = SHI_special_forces_expansion
+		}
+	}
+
+	focus = {
+		id = SHI_annex_the_rebels
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 4
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHI_crush_the_rebels
+		prerequisite = {focus = SHI_crush_the_rebels}
+		available = {
+			date > 110.5.1
 		}
 		ai_will_do = {
 			factor = 4000
 		}
 		completion_reward = {
-			custom_effect_tooltip = SHI_food_problem
-			set_country_flag = shi_imports
+			set_global_flag = war_soon_in_shi
+			create_wargoal = { type = annex_everything target = SHA }
+			create_wargoal = { type = annex_everything target = SHC }
 		}
 	}
 

@@ -808,6 +808,7 @@ cis_cheaper_screens:0 "Standardized Light Hull Production"
 SHC_form_a_better_infantry_division_tooltip:0 "Gain a Superior Infantry Division Template"
 
 shi_form_militia_tooltip:0 "Formalize a Militia Force for the Defense of the Nation" 
+SHI_better_naval_officers_tooltip:0 "Improve the Starting Level by 1 of Our New Naval Officers"
 fae_form_militia_tooltip:0 "Rally the People for the Liberation of our Country"
 
 general.4.t:0 "Castor Lore"
