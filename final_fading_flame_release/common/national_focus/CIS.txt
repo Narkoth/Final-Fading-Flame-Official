@@ -963,6 +963,10 @@ focus_tree = {
 					has_completed_focus = ROC_dealings_with_cis
 				}
 			}
+			modifier = { #To ensure that CIS AI doesn't declare too early when Ronard is trying to catch up with their foci somtimes
+				factor = 0
+				date < 115.6.5
+			}
 		}
 		available = {
 			surrender_progress < 1.0

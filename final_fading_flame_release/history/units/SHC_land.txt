@@ -30,6 +30,8 @@ division_template = {
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
 		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
 	}
 	support = {
 	}
@@ -45,7 +47,7 @@ units = {
 		location = 3804
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -55,7 +57,7 @@ units = {
 		location = 3804
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -65,7 +67,7 @@ units = {
 		location = 10210
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -75,7 +77,7 @@ units = {
 		location = 10210
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -85,7 +87,7 @@ units = {
 		location = 4657
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -95,7 +97,7 @@ units = {
 		location = 4657
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -105,7 +107,7 @@ units = {
 		location = 4957
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -115,7 +117,7 @@ units = {
 		location = 4957
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -125,7 +127,7 @@ units = {
 		location = 13475
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -135,7 +137,7 @@ units = {
 		location = 13475
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -145,7 +147,7 @@ units = {
 		location = 3864
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -155,7 +157,7 @@ units = {
 		location = 3864
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 
 	division= {	
@@ -166,7 +168,7 @@ units = {
 		location = 5357
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -176,7 +178,7 @@ units = {
 		location = 5357
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 
 	division= {	
@@ -187,7 +189,7 @@ units = {
 		location = 13284
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -197,7 +199,7 @@ units = {
 		location = 13284
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -207,7 +209,7 @@ units = {
 		location = 13701
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -217,7 +219,7 @@ units = {
 		location = 7399
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -227,7 +229,7 @@ units = {
 		location = 8959
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -237,7 +239,7 @@ units = {
 		location = 13435
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -247,7 +249,7 @@ units = {
 		location = 5377
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 	division= {	
 		division_name = {
@@ -257,7 +259,7 @@ units = {
 		location = 13382
 		division_template = "Freedom Fighters"
 		start_experience_factor = 0.0
-		start_equipment_factor = 0.2
+		start_equipment_factor = 1.0
 	}
 
 	division= {	

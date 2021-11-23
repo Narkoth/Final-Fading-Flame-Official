@@ -37,9 +37,6 @@ COC_send_volunteers_to_FAE = {
 	enable = {
 		tag = COC
 		country_exists = FAE
-		COC = {
-			has_completed_focus = coc_send_volunteers
-		}
 	}
 	
 	abort = {
@@ -66,6 +63,37 @@ COC_send_volunteers_to_FAE = {
 		value = 5000
 	}
 
+}
+
+COC_send_volunteers_to_SHC = {
+	enable = {
+		tag = COC
+		country_exists = SHC
+	}
+	
+	abort = {
+		NOT = { 
+			country_exists = SHC
+		}
+	}
+	
+   ai_strategy = {
+		type = send_volunteers_desire
+		id = SHC
+		value = 5000
+	}
+
+	ai_strategy = {
+		type = support
+		id = SHC
+		value = 5000
+	}
+
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SHC
+		value = 5000
+	}
 }
 
 COC_stike_at_fae_enemies = {

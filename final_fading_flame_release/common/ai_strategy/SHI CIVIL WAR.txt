@@ -1,3 +1,24 @@
+#Encourage the Shis to build up their army to ready for the war against each other
+shi_build_army = {
+	enable = {
+		#Below is because war will probably happen within 90~ish days so start stocking up on weapons instead of building more divisions
+		NOT = {
+			has_global_flag = war_soon_in_shi
+		}
+        OR = {
+			tag = SHA
+			tag = SHI
+			tag = SHC
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 100
+    }
+}
+
 SHC_war_with_shis = {
 	enable = {
 		tag = SHC

@@ -429,6 +429,63 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SHC_call_for_aid_from_others
+		icon = GFX_goal_DOC_carnegia
+		x = 6
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = shc_prepare_for_the_continuation_war
+		prerequisite = {focus = shc_prepare_for_the_continuation_war }
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2000
+			}
+		}
+	}
+
+	focus = {
+		id = SHC_aid_from_castor_commune
+		icon = GFX_goal_DOC_carnegia
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = SHC_call_for_aid_from_others
+		prerequisite = {focus = SHC_call_for_aid_from_others }
+		available = {
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = COC modifier = huge_increase}
+			COC = {
+				add_opinion_modifier = { target = SHC modifier = huge_increase}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 75
+			}
+		}
+	}
+
+	focus = {
 		id = SHC_call_for_recruitment
 		icon = GFX_goal_DOC_carnegia
 		x = -2

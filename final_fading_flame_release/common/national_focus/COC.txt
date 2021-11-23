@@ -1121,6 +1121,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
+			#Permanent Idea so that COC can help other communal nations that get into conflicts dynamically
+			add_ideas = foreign_expeditions_focus
 		}
 	}
 
@@ -1184,25 +1186,6 @@ focus_tree = {
 
 			custom_effect_tooltip = COC_caer_aid_decisions_tooltip
 			set_country_flag = COC_aid_caer_decision
-		}
-	}
-
-	focus = {
-		id = coc_send_volunteers
-		icon = GFX_focus_generic_little_entente
-		x = -2
-		y = 2
-		cost = 2
-		ai_will_do = {
-			factor = 4000
-		}
-		relative_position_id = coc_war_in_caer
-		prerequisite = {focus = coc_war_in_caer}
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		available = {
-		}
-		completion_reward = {
-			add_ideas = coc_increase_volunteers
 		}
 	}
 

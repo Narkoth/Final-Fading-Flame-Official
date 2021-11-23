@@ -13,13 +13,13 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = DOC
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.30
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.10
 			}
 			targeted_modifier = {
 				tag = CAE
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.30
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.10
 			}
 		}
 		FAE_defend_homeland = {
